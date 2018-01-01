@@ -1,0 +1,3 @@
+@function color-var($palette, $tone: 'base') {
+    @return map-get(map-get($themes, $palette), $tone);
+}

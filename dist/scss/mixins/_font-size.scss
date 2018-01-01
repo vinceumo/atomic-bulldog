@@ -1,0 +1,66 @@
+// Typography mixing to make life easier :)
+// (fontSize, LineHeight, FontWeight, LetterSpacing)
+// https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/
+
+@mixin font-size($fs-map, $fs-breakpoints: $grid-breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == base {
+            @include make-font-size($fs-font-size);
+        }
+        @else {
+            // If $fs-font-size is a key that exists in
+            // $fs-breakpoints, use the value
+            @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+                $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+            }
+
+            @media screen and (min-width: $fs-breakpoint) { //add + 'px' if not using BS4 grid
+                @include make-font-size($fs-font-size);
+            }
+        }
+    }
+}
+
+
+// Utility function for mixin font-size
+// (fontSize, LineHeight, FontWeight, LetterSpacing, style, margin)
+@mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size) == "list" {
+        font-size: nth($fs-font-size, 1);
+
+        @if length($fs-font-size) > 1 {
+            @if nth($fs-font-size, 2) != null {
+                line-height: nth($fs-font-size, 2);
+            }
+        }
+
+        @if length($fs-font-size) > 2 {
+            @if nth($fs-font-size, 3) != null {
+                font-weight: nth($fs-font-size, 3);
+            }
+        }
+
+        @if length($fs-font-size) > 3 {
+            @if nth($fs-font-size, 4) != null {
+                letter-spacing: nth($fs-font-size, 4);
+            }
+        }
+
+        @if length($fs-font-size) > 4 {
+            @if nth($fs-font-size, 5) != null {
+                font-style: nth($fs-font-size, 5);
+            }
+        }
+
+        @if length($fs-font-size) > 5 {
+            @if nth($fs-font-size, 6) != null {
+                margin: nth($fs-font-size, 6);
+            }
+        }
+    }
+    @else {
+        font-size: $fs-font-size;
+    }
+}
