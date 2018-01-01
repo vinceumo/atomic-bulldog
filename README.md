@@ -9,15 +9,15 @@
 ### Mixins
 
 - [x] Min Max mediaquerie
-- [] Refactor font-size mixin
+- [ ] Refactor font-size mixin
 
 ### Variables
 
-- [] Use CSS custom variables
-- [] Add option to not use CSS custom var (true/false)
+- [ ] Use CSS custom variables
+- [ ] Add option to not use CSS custom var (true/false)
 
 
 ### Grid 
 
-- [] Default grid CSS grid Layout
-- [] Option for a secondary grid using Flex
+- [ ] Default grid CSS grid Layout
+- [ ] Option for a secondary grid using Flex
