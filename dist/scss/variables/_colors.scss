@@ -1,5 +1,5 @@
 $color-prefix: --color-;
-$use-css-var-color: false;
+$use-css-var-color: true;
 
 $color-themes: (
     primary: ( 
@@ -7,6 +7,13 @@ $color-themes: (
         dark: darken(#4c5c8c, 15%), 
         light: lighten(#4c5c8c, 15%),
         trans: transparentize(#4c5c8c, 0.5),
+        contrast: #ffffff
+    ),
+    secondary: ( 
+        base: #c65556, 
+        dark: darken(#c65556, 15%), 
+        light: lighten(#c65556, 15%),
+        trans: transparentize(#c65556, 0.5),
         contrast: #ffffff
     ),
 );
