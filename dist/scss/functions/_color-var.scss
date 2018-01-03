@@ -7,11 +7,11 @@
         // color variant is optional
         @if ($color-variant != null) {
             // map inception, need two deep
-            @return map-get(map-get(color-themes,$color-name),$color-variant);
+            @return map-get(map-get($color-themes,$color-name),$color-variant);
     
         } @else {
             // single-level color, one deep
-            @return map-get(color-themes,$color-name);
+            @return map-get($color-themes,$color-name);
     
         }
         // if we're only returning the CSS4 variable
@@ -27,5 +27,16 @@
     
         }
         }
+  } @else{
+      // color variant is optional
+      @if ($color-variant != null) {
+        // map inception, need two deep
+        @return map-get(map-get($color-themes,$color-name),$color-variant);
+
+    } @else {
+        // single-level color, one deep
+        @return map-get($color-themes,$color-name);
+
+    }
   }
 }

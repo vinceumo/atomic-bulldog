@@ -15,13 +15,13 @@
 @each $name, $theme in $color-themes {
     .btn.-#{$name} {
         // color: map-get($theme, 'contrast');
-        color: var(#{$color-prefix}#{$name}-contrast);
+        color: color($name,contrast);
         // background-color: map-get($theme, 'base');
-        background-color: var(#{$color-prefix}#{$name}-base);
+        background-color: color($name,base);
 
         &:hover, &:focus{
             // background-color: map-get($theme, 'lighten');
-            background-color: var(#{$color-prefix}#{$name}-lighten);
+            background-color: color($name,lighten);
         }
     }
 }
