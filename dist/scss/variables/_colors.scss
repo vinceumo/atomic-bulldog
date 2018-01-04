@@ -10,10 +10,52 @@ $color-themes: (
         contrast: #ffffff
     ),
     secondary: ( 
+        base: #494949, 
+        dark: darken(#494949, 15%), 
+        light: lighten(#494949, 15%),
+        trans: transparentize(#494949, 0.5),
+        contrast: #ffffff
+    ),
+    link: ( 
+        base: #4b7e9e, 
+        dark: darken(#4b7e9e, 15%), 
+        light: lighten(#4b7e9e, 15%),
+        trans: transparentize(#4b7e9e, 0.5),
+        contrast: #ffffff
+    ),
+    success: ( 
+        base: #4b9b50, 
+        dark: darken(#4b9b50, 15%), 
+        light: lighten(#4b9b50, 15%),
+        trans: transparentize(#4b9b50, 0.5),
+        contrast: #ffffff
+    ),
+    danger: ( 
         base: #c65556, 
         dark: darken(#c65556, 15%), 
         light: lighten(#c65556, 15%),
         trans: transparentize(#c65556, 0.5),
         contrast: #ffffff
     ),
+    warning: ( 
+        base: #d3b354, 
+        dark: darken(#d3b354, 15%), 
+        light: lighten(#d3b354, 15%),
+        trans: transparentize(#d3b354, 0.5),
+        contrast: #ffffff
+    ),
+    light: ( 
+        base: #efe5cf, 
+        dark: darken(#efe5cf, 15%), 
+        light: lighten(#efe5cf, 15%),
+        trans: transparentize(#efe5cf, 0.5),
+        contrast: #343a40
+    ),
+    dark: ( 
+        base: #343a40, 
+        dark: darken(#343a40, 15%), 
+        light: lighten(#343a40, 15%),
+        trans: transparentize(#343a40, 0.5),
+        contrast: #efe5cf
+    )
 );
