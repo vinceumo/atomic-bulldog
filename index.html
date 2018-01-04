@@ -6,15 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="static/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/themes/theme-invert.css">
 </head>
 <body>
-    <button class="btn -primary">primary</button>
-    <button class="btn -secondary">secondary</button>
-    <button class="btn -link">link</button>
-    <button class="btn -success">success</button>
-    <button class="btn -danger">danger</button>
-    <button class="btn -warning">warning</button>
-    <button class="btn -light">light</button>
-    <button class="btn -dark">dark</button>
+    <style>
+        .box{
+            width: 100%;
+            height: 50px;
+        }
+    </style>
+    <div class="container">
+        <button class="btn -primary">primary</button>
+        <button class="btn -secondary">secondary</button>
+        <button class="btn -link">link</button>
+        <button class="btn -success">success</button>
+        <button class="btn -danger">danger</button>
+        <button class="btn -warning">warning</button>
+        <button class="btn -light">light</button>
+        <button class="btn -dark">dark</button>
+    
+        <div class="box -bg-primary"></div>
+        <div class="box -bg-secondary"></div>
+        <div class="box -bg-link"></div>
+        <div class="box -bg-success"></div>
+        <div class="box -bg-danger"></div>
+        <div class="box -bg-warning"></div>
+        <div class="box -bg-light"></div>
+        <div class="box -bg-dark"></div>
+    </div>
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+              crossorigin="anonymous"></script>
+              
+    <script>
+        $('.btn').on('click', function(){
+            $('.container').toggleClass('theme-invert');
+        });
+        var html = document.getElementsByTagName('html')[0];
+        // html.style.cssText = "--color-primary-base: red";
+    </script>
+    <!-- <style>
+        :root{
+            --color-secondary-base: green;
+        }
+    </style> -->
 </body>
 </html>
