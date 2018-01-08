@@ -12,7 +12,7 @@
     <style>
         .box{
             width: 100%;
-            height: 50px;
+            min-height: 50px;
         }
     </style>
     <div class="container">
@@ -25,7 +25,9 @@
         <button class="btn is-light">light</button>
         <button class="btn is-dark">dark</button>
     
-        <div class="box has-bg-primary"></div>
+        <div class="box has-bg-primary has-font-light">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qua tu etiam inprudens utebare non numquam. Duo Reges: constructio interrete. Quamquam te quidem video minime esse deterritum. Ex ea difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt. Roges enim Aristonem, bonane ei videantur haec: vacuitas doloris, divitiae, valitudo; </p>
+        </div>
         <div class="box has-bg-secondary"></div>
         <div class="box has-bg-link"></div>
         <div class="box has-bg-success"></div>
@@ -39,7 +41,7 @@
 			  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
               crossorigin="anonymous"></script>
               
-    <script>
+    <!-- <script>
         $('.btn').on('click', function(){
             $('.container').toggleClass('theme-invert');
         });
@@ -50,6 +52,6 @@
         :root{
             --color-secondary-base: green;
         }
-    </style>
+    </style> -->
 </body>
 </html>

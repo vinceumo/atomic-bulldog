@@ -1,9 +1,6 @@
-// Button color variations
+// background color variations
 @each $name, $theme in $color-themes {
     .has-bg-#{$name} {
-        // color: map-get($theme, 'contrast');
-        color: color($name, contrast);
-        // background-color: map-get($theme, 'base');
         background-color: color($name, base);
     }
 }
