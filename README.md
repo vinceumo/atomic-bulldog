@@ -6,6 +6,10 @@
 
 ## MVP implementation
 
+## Naming convention
+- Modifiers
+    - Use 'has-'or 'is-', for exemple 'class="btn is-big is-primary"'
+
 ### Mixins
 
 - [x] Min Max mediaquerie

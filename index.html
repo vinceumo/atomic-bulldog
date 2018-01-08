@@ -16,23 +16,23 @@
         }
     </style>
     <div class="container">
-        <button class="btn -primary">primary</button>
-        <button class="btn -secondary">secondary</button>
-        <button class="btn -link">link</button>
-        <button class="btn -success">success</button>
-        <button class="btn -danger">danger</button>
-        <button class="btn -warning">warning</button>
-        <button class="btn -light">light</button>
-        <button class="btn -dark">dark</button>
+        <button class="btn is-primary">primary</button>
+        <button class="btn is-secondary">secondary</button>
+        <button class="btn is-link">link</button>
+        <button class="btn is-success">success</button>
+        <button class="btn is-danger">danger</button>
+        <button class="btn is-warning">warning</button>
+        <button class="btn is-light">light</button>
+        <button class="btn is-dark">dark</button>
     
-        <div class="box -bg-primary"></div>
-        <div class="box -bg-secondary"></div>
-        <div class="box -bg-link"></div>
-        <div class="box -bg-success"></div>
-        <div class="box -bg-danger"></div>
-        <div class="box -bg-warning"></div>
-        <div class="box -bg-light"></div>
-        <div class="box -bg-dark"></div>
+        <div class="box has-bg-primary"></div>
+        <div class="box has-bg-secondary"></div>
+        <div class="box has-bg-link"></div>
+        <div class="box has-bg-success"></div>
+        <div class="box has-bg-danger"></div>
+        <div class="box has-bg-warning"></div>
+        <div class="box has-bg-light"></div>
+        <div class="box has-bg-dark"></div>
     </div>
     <script
 			  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -44,12 +44,12 @@
             $('.container').toggleClass('theme-invert');
         });
         var html = document.getElementsByTagName('html')[0];
-        // html.style.cssText = "--color-primary-base: red";
+        html.style.cssText = "--color-primary-base: red";
     </script>
-    <!-- <style>
+    <style>
         :root{
             --color-secondary-base: green;
         }
-    </style> -->
+    </style>
 </body>
 </html>
