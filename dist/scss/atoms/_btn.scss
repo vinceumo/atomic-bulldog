@@ -1,9 +1,3 @@
-// Buttons
-//
-// Lorem ipsum
-//
-// Styleguide Atoms.Buttons
-
 .btn {
     font-weight: normal;
     line-height: 1.25;
@@ -40,3 +34,22 @@
         }
     }
 }
+
+// Buttons
+//
+//
+//
+// Markup:
+// <button class="btn {{modifier_class}}">Button</button>
+// <button class="btn {{modifier_class}} is-outlined">Button outlined</button>
+//
+// .is-primary - Primary color.
+// .is-secondary - Secondary color.
+// .is-link - Link color.
+// .is-success - Success color.
+// .is-danger - Danger color.
+// .is-warning - warning color.
+// .is-light - light color.
+// .is-dark - dark color.
+//
+// Styleguide Atoms.button
