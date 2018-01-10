@@ -17,6 +17,6 @@
     "michelangelo": "^0.6.1"
   },
   "scripts": {
-    "kss": "kss --config kss-config.json"
+    "kss": "kss --config dist/scss/kss-config.json"
   }
 }

@@ -12,6 +12,7 @@ var purgeSourcemaps = require('gulp-purge-sourcemaps');
 
 var inputScss = "./dist/scss/**/*.scss"; /*watches sub folders inside sass folder */
 var output = "./static/css";
+var kss = require('kss');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -36,9 +37,11 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(output));
 });
 
+gulp.task('styleguide', function() {
+  return kss(options.styleGuide);
+});
+
 gulp.task('watch-scss', function () {
   gulp.watch(inputScss, ['scss']);
-
   gutil.log(process.version);
-  gutil.log("You must be running on node version 6.1.x or higher for the compiler to work. Note: Visual Studio may need to path to your version of node, otherwise it defaults to an older version, Follow this link for more details: https://stackoverflow.com/questions/43849585/update-node-version-in-visual-studio-2017");
 });
