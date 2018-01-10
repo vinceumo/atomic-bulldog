@@ -9,6 +9,7 @@
     transition: all 0.6s ease-in-out;
     min-width: 175px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 // Button color variations
@@ -18,7 +19,7 @@
         background-color: color($name, base);
         border-color: color($name, base);
 
-        &:hover, &:focus{
+        &:hover, &.is-hovered, &:focus, &.is-focused{
             background-color: color($name, dark);
             border-color: color($name, dark);
         }
@@ -35,12 +36,22 @@
     }
 }
 
+
 /*
 Buttons
 
 Markup:
-<button class="btn {{modifier_class}}">Button</button>
-<button class="btn {{modifier_class}} is-outlined">Button outlined</button>
+<button class="btn {{modifier_class}}">.btn</button>
+<button class="btn {{modifier_class}} is-outlined">.btn .is-outlined</button>
+<button class="btn {{modifier_class}} is-hovered">.btn .is-hover</button>
+<button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
+<button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
+<button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
+<button class="btn {{modifier_class}} disabled">.btn disabled</button>
+<button class="btn {{modifier_class}} is-big">.btn .is-big</button>
+<button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
+<button class="btn {{modifier_class}} is-small">.btn .is-small</button>
+<button class="btn {{modifier_class}} is-theme-invert">.btn .is-theme-invert</button>
 
 .is-primary - Primary color.
 .is-secondary - Secondary color.
@@ -59,8 +70,17 @@ Buttons
 
 Markup:
 <div class="theme-invert">
-    <button class="btn {{modifier_class}}">Button</button>
-    <button class="btn {{modifier_class}} is-outlined">Button outlined</button>
+    <button class="btn {{modifier_class}}">.btn</button>
+    <button class="btn {{modifier_class}} is-outlined">.btn .is-outlined</button>
+    <button class="btn {{modifier_class}} is-hovered">.btn .is-hover</button>
+    <button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
+    <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
+    <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
+    <button class="btn {{modifier_class}} disabled">.btn disabled</button>
+    <button class="btn {{modifier_class}} is-big">.btn .is-big</button>
+    <button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
+    <button class="btn {{modifier_class}} is-small">.btn .is-small</button>
+    <button class="btn {{modifier_class}} is-theme-default">.btn .is-theme-default</button>
 <div>
 
 .is-primary - Primary color.
