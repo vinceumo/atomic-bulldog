@@ -53,3 +53,24 @@ Markup:
 
 Styleguide Atoms.button
 */
+
+/*
+Buttons
+
+Markup:
+<div class="theme-invert">
+    <button class="btn {{modifier_class}}">Button</button>
+    <button class="btn {{modifier_class}} is-outlined">Button outlined</button>
+<div>
+
+.is-primary - Primary color.
+.is-secondary - Secondary color.
+.is-link - Link color.
+.is-success - Success color.
+.is-danger - Danger color.
+.is-warning - warning color.
+.is-light - light color.
+.is-dark - dark color.
+
+Styleguide Themes.Invert.Atoms.button
+*/

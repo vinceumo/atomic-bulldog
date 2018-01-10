@@ -4,6 +4,7 @@
     "destination": "../../static/styleguide/",
     "builder": "../../node_modules/michelangelo/kss_styleguide/custom-template/",
     "css": [
-      "../css/screen.min.css"
+      "../css/screen.min.css",
+      "../css/themes/theme-invert.min.css"
     ]
 }

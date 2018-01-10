@@ -12,7 +12,6 @@ var purgeSourcemaps = require('gulp-purge-sourcemaps');
 
 var inputScss = "./dist/scss/**/*.scss"; /*watches sub folders inside sass folder */
 var output = "./static/css";
-var kss = require('kss');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -35,10 +34,6 @@ gulp.task('scss', function () {
       keepSpecialComments: 0
     }))
     .pipe(gulp.dest(output));
-});
-
-gulp.task('styleguide', function() {
-  return kss(options.styleGuide);
 });
 
 gulp.task('watch-scss', function () {
