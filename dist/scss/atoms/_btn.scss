@@ -5,11 +5,50 @@
     white-space: nowrap;
     vertical-align: middle;
     border: 2px solid transparent;
+    border-radius: 0;
     padding: 0.85rem 1rem;
     transition: all 0.6s ease-in-out;
     min-width: 175px;
     cursor: pointer;
     background-color: transparent;
+
+    &.is-rounded{
+        border-radius: 1000px;
+    }
+
+    &[disabled]{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    &.is-loading{
+        color: transparent !important;
+        pointer-events: none;
+        position: relative;
+        &:before{
+            content: "";
+            animation: spin 400ms infinite linear;
+            display: block;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            //transform: translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 // Button color variations
@@ -19,7 +58,10 @@
         background-color: color($name, base);
         border-color: color($name, base);
 
-        &:hover, &.is-hovered, &:focus, &.is-focused{
+        &:hover:not([disabled]),
+        &.is-hovered:not([disabled]),
+        &:focus:not([disabled]),
+        &.is-focused:not([disabled]){
             background-color: color($name, dark);
             border-color: color($name, dark);
         }
@@ -29,9 +71,18 @@
         background-color: transparent;
         border-color: color($name, base);
 
-        &:hover, &:focus{
+        &:hover:not([disabled]),
+        &.is-hovered:not([disabled]),
+        &:focus:not([disabled]),
+        &.is-focused:not([disabled]){
             color: color($name, contrast);
             background-color: color($name, base);
+        }
+    }
+    .btn.is-#{$name}.is-loading{
+        &:before{
+            border-left-color: color($name, contrast);
+            border-bottom-color: color($name, contrast);
         }
     }
 }
@@ -47,7 +98,7 @@ Markup:
 <button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
 <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
 <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
-<button class="btn {{modifier_class}} disabled">.btn disabled</button>
+<button class="btn {{modifier_class}}" disabled>.btn disabled</button>
 <button class="btn {{modifier_class}} is-big">.btn .is-big</button>
 <button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
 <button class="btn {{modifier_class}} is-small">.btn .is-small</button>
@@ -76,7 +127,7 @@ Markup:
     <button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
     <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
     <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
-    <button class="btn {{modifier_class}} disabled">.btn disabled</button>
+    <button class="btn {{modifier_class}}" disabled>.btn disabled</button>
     <button class="btn {{modifier_class}} is-big">.btn .is-big</button>
     <button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
     <button class="btn {{modifier_class}} is-small">.btn .is-small</button>
