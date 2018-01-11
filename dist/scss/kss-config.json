@@ -1,6 +1,8 @@
 {
     "title": "Atomic Bulldog",
     "source": "",
+    "mask": "*.scss",
+    "placeholder": "[modifier]",
     "destination": "../../static/styleguide/",
     "builder": "../../node_modules/michelangelo/kss_styleguide/custom-template/",
     "css": [

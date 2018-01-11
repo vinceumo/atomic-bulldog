@@ -1,6 +1,6 @@
 $color-prefix: --color-;
 $use-css-var-color: true;
-$test: #4c5c8c;
+
 $color-themes: (
     primary: ( 
         base: #4c5c8c, 
@@ -63,7 +63,10 @@ $color-themes: (
 /*
 Colors
 
-$test - #4c5c8c, primary blue
+colors use
+
+$test - #4c5c8c, color(primary, base)
+$test - #4c5c8c, color(primary, base)
 
 Styleguide Variables.colors
 */
