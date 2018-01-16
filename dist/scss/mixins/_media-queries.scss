@@ -1,5 +1,4 @@
 /*Min and Max mixins*/
-
 @mixin min($bp, $max: 'null', $device: 'screen') {
     $bp: em($bp);
     @if $max == 'null' {
