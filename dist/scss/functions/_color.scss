@@ -1,7 +1,7 @@
 // retrieve color from map with Sass ie. `color(primary, base)`
 @function color($color-name, $color-variant:null, $true-val:false) {
     // if we enable css var
-  @if $use-css-var == true{
+  @if $use-css-var == true {
     // we need to return the color value
     @if $true-val == true {
         // color variant is optional

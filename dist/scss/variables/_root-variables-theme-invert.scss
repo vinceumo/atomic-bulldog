@@ -1,7 +1,7 @@
 :root{
     .theme-invert, .is-theme-invert{
     // each item in color map
-    @if $use-css-var-color == true{
+    @if $use-css-var == true{
         @each $name, $color in $color-themes {
             // maps require a second loop 
             @if type-of($color) == "map" {

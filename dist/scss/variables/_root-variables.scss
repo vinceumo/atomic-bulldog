@@ -1,31 +1,31 @@
 :root{
     // each item in color map
-    @if $use-css-var-color == true{
+    @if $use-css-var == true{
         @each $name, $color in $color-themes {
-        
             // maps require a second loop
             @if type-of($color) == "map" {
-            
                 // each item in sub map
                 @each $subname, $subcolor in $color {  
                     // --color-primary-base
                     #{$color-prefix}#{$name}-#{$subname}: $subcolor;
                 }
-            
             // normal colors
             } @elseif type-of($color) == "color" {
-            
             // --color-background
             #{$color-prefix}#{$name}: $color;
-            
             }
+        }
+
+        @each $name, $bp in $grid-breakpoints {
+            $bp: em($bp);
+            #{$bp-prefix}#{$name}: #{$bp};
         }
     } 
 }
 
 :root{
     .theme-default, .is-theme-default{
-        @if $use-css-var-color == true{
+        @if $use-css-var == true{
             @each $name, $color in $color-themes {
                 @if type-of($color) == "map" {
                     @each $subname, $subcolor in $color {  
