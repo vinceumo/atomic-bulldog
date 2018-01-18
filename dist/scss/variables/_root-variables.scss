@@ -1,6 +1,8 @@
 :root{
-    // each item in color map
+    
     @if $use-css-var == true{
+
+        //Color variables
         @each $name, $color in $color-themes {
             // maps require a second loop
             @if type-of($color) == "map" {
@@ -16,16 +18,19 @@
             }
         }
 
+        //Breakpoint variables
         @each $name, $bp in $grid-breakpoints {
-            $bp: em($bp);
-            #{$bp-prefix}#{$name}: #{$bp};
+            #{$bp-prefix}#{$name}: em($bp);
         }
     } 
 }
 
 :root{
     .theme-default, .is-theme-default{
+        
         @if $use-css-var == true{
+
+            //Color variables
             @each $name, $color in $color-themes {
                 @if type-of($color) == "map" {
                     @each $subname, $subcolor in $color {  
@@ -35,6 +40,11 @@
                 #{$color-prefix}#{$name}: $color;
                 }
             }
-        }
+
+            //Breakpoint variables
+            @each $name, $bp in $grid-breakpoints {
+                #{$bp-prefix}#{$name}: em($bp);
+            }
+        } 
     }
 }

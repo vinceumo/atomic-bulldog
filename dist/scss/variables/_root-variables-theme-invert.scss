@@ -1,26 +1,17 @@
 :root{
     .theme-invert, .is-theme-invert{
-    // each item in color map
-    @if $use-css-var == true{
-        @each $name, $color in $color-themes {
-            // maps require a second loop 
-            @if type-of($color) == "map" {
-            
-            // each item in sub map
-            @each $subname, $subcolor in $color {  
-                // --color-primary-base
-                #{$color-prefix}#{$name}-#{$subname}: $subcolor;
-            }
-            
-            // normal colors
-            } @elseif type-of($color) == "color" {
-            
-            // --color-background
-            #{$color-prefix}#{$name}: $color;
-            
-            }
-        }
-    } 
-    }
+        @if $use-css-var == true{
 
+            //Color variables
+            @each $name, $color in $color-themes {
+                @if type-of($color) == "map" {
+                    @each $subname, $subcolor in $color {  
+                        #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+                    }
+                } @elseif type-of($color) == "color" {
+                #{$color-prefix}#{$name}: $color;
+                }
+            }
+        } 
+    }
 }

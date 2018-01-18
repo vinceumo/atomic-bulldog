@@ -1,5 +1,5 @@
 //Global settings
-@import "_atomic-bulldog-settings.scss";
+@import "settings/atomic-bulldog-settings";
 
 //variables
 @import "variables/breakpoints";
@@ -10,9 +10,6 @@
 @import "variables/spacing";
 @import "variables/z-index";
 
-//Need to be at the end
-@import "variables/root-variables";
-
 //functions
 @import "functions/bp";
 @import "functions/color";
@@ -22,6 +19,9 @@
 //mixins
 @import "mixins/font-size";
 @import "mixins/media-queries";
+
+//Root Variables (Need to be call after mixins and functions)
+@import "variables/root-variables";
 
 //vendors
 @import "vendors/bootstrap-reboot";
