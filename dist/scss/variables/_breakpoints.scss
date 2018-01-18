@@ -1,11 +1,11 @@
 $bp-prefix: --bp-;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 );
 
 
@@ -13,7 +13,7 @@ $grid-breakpoints: (
 /*
 Breakpoints
 
-The breakpoint Map is set in px and is converted to em.
+The breakpoint Map is set in px and is converted to em with the em function.
 Em as better support for media queries compare to px and rem, https://zellwk.com/blog/media-query-units/
 This map can be use with the media query mixin and the breakpoint mixin
 
