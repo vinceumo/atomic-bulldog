@@ -1,5 +1,4 @@
 // Used for "min" and "max" media query mixins
 @function em($target, $context: 16) {
-
     @return (($target/ 1px) / $context) + 0em;
 }
