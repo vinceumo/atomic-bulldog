@@ -1,5 +1,4 @@
 :root{
-    
     @if $use-css-var == true{
 
         //Color variables
@@ -22,12 +21,16 @@
         @each $name, $bp in $grid-breakpoints {
             #{$bp-prefix}#{$name}: em($bp);
         }
+
+        //font-sizes font-sizes
+        @each $name, $font-size in $font-sizes {
+            #{$font-size-prefix}#{$name}: $font-size;
+        }
     } 
 }
 
 :root{
     .theme-default, .is-theme-default{
-        
         @if $use-css-var == true{
 
             //Color variables
@@ -45,6 +48,7 @@
             @each $name, $bp in $grid-breakpoints {
                 #{$bp-prefix}#{$name}: em($bp);
             }
+
         } 
     }
 }

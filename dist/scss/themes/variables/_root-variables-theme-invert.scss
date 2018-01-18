@@ -9,7 +9,7 @@
                         #{$color-prefix}#{$name}-#{$subname}: $subcolor;
                     }
                 } @elseif type-of($color) == "color" {
-                #{$color-prefix}#{$name}: $color;
+                    #{$color-prefix}#{$name}: $color;
                 }
             }
             

@@ -2,10 +2,10 @@
 @import "../settings/atomic-bulldog-settings";
 
 //variables
-@import "../variables/colors-theme-invert";
+@import "variables/colors-theme-invert";
 
 //Need to be at the end
-@import "../variables/root-variables-theme-invert";
+@import "variables/root-variables-theme-invert";
 
 //functions
 @import "../functions/em";

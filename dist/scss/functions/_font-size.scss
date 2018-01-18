@@ -1,0 +1,7 @@
+@function font-size($font-sizes) {
+    @if $use-css-var == true{
+        @return var(#{$font-size-prefix}#{$font-sizes});
+    } @else {
+        @return map-get($font-sizes);
+    }
+}
