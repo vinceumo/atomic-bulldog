@@ -1,25 +1,20 @@
-:root{
+:root, .theme-default, .is-theme-default{
     @if $use-css-var == true{
 
         //Color variables
         @each $name, $color in $color-themes {
-            // maps require a second loop
             @if type-of($color) == "map" {
-                // each item in sub map
                 @each $subname, $subcolor in $color {  
-                    // --color-primary-base
                     #{$color-prefix}#{$name}-#{$subname}: $subcolor;
                 }
-            // normal colors
             } @elseif type-of($color) == "color" {
-            // --color-background
-            #{$color-prefix}#{$name}: $color;
+                #{$color-prefix}#{$name}: $color;
             }
         }
 
         //Breakpoint variables
-        @each $name, $bp in $grid-breakpoints {
-            #{$bp-prefix}#{$name}: em($bp);
+        @each $name, $bp in $breakpoints {
+            #{$bp-prefix}#{$name}: $bp; //Not using em as not being use in media queries
         }
 
         //font-sizes font-sizes
@@ -27,28 +22,4 @@
             #{$font-size-prefix}#{$name}: $font-size;
         }
     } 
-}
-
-:root{
-    .theme-default, .is-theme-default{
-        @if $use-css-var == true{
-
-            //Color variables
-            @each $name, $color in $color-themes {
-                @if type-of($color) == "map" {
-                    @each $subname, $subcolor in $color {  
-                        #{$color-prefix}#{$name}-#{$subname}: $subcolor;
-                    }
-                } @elseif type-of($color) == "color" {
-                #{$color-prefix}#{$name}: $color;
-                }
-            }
-
-            //Breakpoint variables
-            @each $name, $bp in $grid-breakpoints {
-                #{$bp-prefix}#{$name}: em($bp);
-            }
-
-        } 
-    }
 }
