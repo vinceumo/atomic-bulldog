@@ -1,7 +1,4 @@
-// @function bp($grid-breakpoints) {
-//     @if $use-css-var == false{
-//         @return var(#{$bp-prefix}#{$grid-breakpoints});
-//     } @else {
-//         @return em(map-get($grid-breakpoints));
-//     }
-// }
+//Can't use CSS variables in media queries
+@function bp($bp) {
+    @return em(map-get($grid-breakpoints, $bp));
+}

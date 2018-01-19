@@ -1,7 +1,11 @@
-@function font-size($font-sizes) {
-    @if $use-css-var == true{
-        @return var(#{$font-size-prefix}#{$font-sizes});
+@function font-size($font-size, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+        @return map-get($font-sizes, $font-size); //True Val
     } @else {
-        @return map-get($font-sizes);
+        @return var(#{$font-size-prefix}#{$font-size}); //CSS Var
     }
+  } @else{
+      @return map-get($font-sizes, $font-size); //Disabled CSS Var
+  }
 }
