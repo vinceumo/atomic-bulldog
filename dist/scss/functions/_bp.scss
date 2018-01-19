@@ -1,7 +1,7 @@
-@function bp($grid-breakpoints) {
-    @if $use-css-var == true{
-        @return var(#{$bp-prefix}#{$grid-breakpoints});
-    } @else {
-        @return em(map-get($grid-breakpoints));
-    }
-}
+// @function bp($grid-breakpoints) {
+//     @if $use-css-var == false{
+//         @return var(#{$bp-prefix}#{$grid-breakpoints});
+//     } @else {
+//         @return em(map-get($grid-breakpoints));
+//     }
+// }

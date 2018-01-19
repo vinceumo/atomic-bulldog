@@ -1,11 +1,13 @@
-$root-font-size: 16px;
+//$root-font-size: 16px;
 $font-size-prefix: --font-size-;
 
 $font-sizes:(
+    root: 16px,
     paragraph: 1rem,
     heading1: 2.8125rem,
     heading2: 2.5rem,
     heading3: 1.25rem,
     heading4: 1.50rem,
     heading5: 1rem,
+    button: 1rem,
 );
