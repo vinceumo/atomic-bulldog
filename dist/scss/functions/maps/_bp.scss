@@ -11,6 +11,6 @@
           @return var(#{$bp-prefix}#{$bp}); //CSS Var
       }
     } @else{
-        @return map-get($breakpoints, $font-size); //Disabled CSS Var
+        @return map-get($breakpoints, $bp); //Disabled CSS Var
     }
-  }
+}

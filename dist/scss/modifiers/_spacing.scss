@@ -1,0 +1,29 @@
+@each $key, $spacer in $spacers {
+    //Padding
+    .has-py-#{$key}, .has-pt-#{$key}{
+        padding-top: #{spacer(#{$key})};
+    }
+    .has-py-#{$key}, .has-pb-#{$key}{
+        padding-bottom: #{spacer(#{$key})};
+    }
+    .has-px-#{$key}, .has-pl-#{$key}{
+        padding-left: #{spacer(#{$key})};
+    }
+    .has-px-#{$key}, .has-pr-#{$key}{
+        padding-right: #{spacer(#{$key})};
+    }
+
+    //Margin
+    .has-my-#{$key}, .has-mt-#{$key}{
+        margin-top: #{spacer(#{$key})};
+    }
+    .has-my-#{$key}, .has-mb-#{$key}{
+        margin-bottom: #{spacer(#{$key})};
+    }
+    .has-mx-#{$key}, .has-ml-#{$key}{
+        margin-left: #{spacer(#{$key})};
+    }
+    .has-mx-#{$key}, .has-mr-#{$key}{
+        margin-right: #{spacer(#{$key})};
+    }
+}

@@ -1,0 +1,11 @@
+@function spacer($spacer, $true-val:false) {
+    @if $use-css-var == true {
+      @if $true-val == true {
+          @return map-get($spacers, $spacer); //True Val
+      } @else {
+          @return var(#{$spacer-prefix}#{$spacer}); //CSS Var
+      }
+    } @else{
+        @return map-get($spacers, $spacer); //Disabled CSS Var
+    }
+}

@@ -1,5 +1,9 @@
-:root, .theme-default, .is-theme-default{
-    @if $use-css-var == true{
+@if $use-css-var == true{
+    :root, .theme-default, .is-theme-default{
+        //Breakpoint variables
+        @each $name, $bp in $breakpoints {
+            #{$bp-prefix}#{$name}: $bp; //Not using em as not being use in media queries
+        }
 
         //Color variables
         @each $name, $color in $color-themes {
@@ -12,14 +16,19 @@
             }
         }
 
-        //Breakpoint variables
-        @each $name, $bp in $breakpoints {
-            #{$bp-prefix}#{$name}: $bp; //Not using em as not being use in media queries
+        //Container-sizes variables
+        @each $name, $container-size in $container-sizes {
+            #{$container-size-prefix}#{$name}: $container-size;
         }
 
-        //font-sizes font-sizes
+        //font-sizes
         @each $name, $font-size in $font-sizes {
             #{$font-size-prefix}#{$name}: $font-size;
+        }
+
+        //font-sizes
+        @each $name, $spacer in $spacers {
+            #{$spacer-prefix}#{$name}: $spacer;
         }
     } 
 }

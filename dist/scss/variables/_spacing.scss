@@ -1,10 +1,12 @@
-$spacer: 1rem;
+$spacer-reference: 1rem;
+$spacer-prefix: --spacer-;
+
 $spacers: (
   0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.25),
-  5: ($spacer * 1.5),
-  6: ($spacer * 3)
+  1: ($spacer-reference * .25),
+  2: ($spacer-reference * .5),
+  3: $spacer-reference,
+  4: ($spacer-reference * 1.25),
+  5: ($spacer-reference * 1.5),
+  6: ($spacer-reference * 3)
 );
