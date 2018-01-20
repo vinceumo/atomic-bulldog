@@ -11,7 +11,7 @@
                 @each $subname, $subcolor in $color {  
                     #{$color-prefix}#{$name}-#{$subname}: $subcolor;
                 }
-            } @elseif type-of($color) == "color" {
+            } @else if type-of($color) == "color" {
                 #{$color-prefix}#{$name}: $color;
             }
         }

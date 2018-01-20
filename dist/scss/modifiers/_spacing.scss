@@ -3,58 +3,58 @@
         @each $key, $spacer in $spacers {
             @include min(#{bp(#{$bp})}){
                 .has-py-#{$bp}-#{$key}, .has-pt-#{$bp}-#{$key}, .has-p-#{$bp}-#{$key}{
-                    padding-top: #{spacer(#{$key})};
+                    padding-top: spacer($key);
                 }
                 .has-py-#{$bp}-#{$key}, .has-pb-#{$bp}-#{$key}, .has-p-#{$bp}-#{$key}{
-                    padding-bottom: #{spacer(#{$key})};
+                    padding-bottom: spacer($key);
                 }
                 .has-px-#{$bp}-#{$key}, .has-pl-#{$bp}-#{$key}, .has-p-#{$bp}-#{$key}{
-                    padding-left: #{spacer(#{$key})};
+                    padding-left: spacer($key);
                 }
                 .has-px-#{$bp}-#{$key}, .has-pr-#{$bp}-#{$key}, .has-p-#{$bp}-#{$key}{
-                    padding-right: #{spacer(#{$key})};
+                    padding-right: spacer($key);
                 }
     
                 .has-my-#{$bp}-#{$key}, .has-mt-#{$bp}-#{$key}, .has-m-#{$bp}-#{$key}{
-                    margin-top: #{spacer(#{$key})};
+                    margin-top: spacer($key);
                 }
                 .has-my-#{$bp}-#{$key}, .has-mb-#{$bp}-#{$key}, .has-m-#{$bp}-#{$key}{
-                    margin-bottom: #{spacer(#{$key})};
+                    margin-bottom: spacer($key);
                 }
                 .has-mx-#{$bp}-#{$key}, .has-ml-#{$bp}-#{$key}, .has-m-#{$bp}-#{$key}{
-                    margin-left: #{spacer(#{$key})};
+                    margin-left: spacer($key);
                 }
                 .has-mx-#{$bp}-#{$key}, .has-mr-#{$bp}-#{$key}, .has-m-#{$bp}-#{$key}{
-                    margin-right: #{spacer(#{$key})};
+                    margin-right: spacer($key);
                 }
             }
         }
-    } @else{
+    } @else {
         @each $key, $spacer in $spacers {
             .has-py-#{$key}, .has-pt-#{$key}, .has-p-#{$key}{
-                padding-top: #{spacer(#{$key})};
+                padding-top: spacer($key);
             }
             .has-py-#{$key}, .has-pb-#{$key}, .has-p-#{$key}{
-                padding-bottom: #{spacer(#{$key})};
+                padding-bottom: spacer($key);
             }
             .has-px-#{$key}, .has-pl-#{$key}, .has-p-#{$key}{
-                padding-left: #{spacer(#{$key})};
+                padding-left: spacer($key);
             }
             .has-px-#{$key}, .has-pr-#{$key}, .has-p-#{$key}{
-                padding-right: #{spacer(#{$key})};
+                padding-right: spacer($key);
             }
 
             .has-my-#{$key}, .has-mt-#{$key}, .has-m-#{$key}{
-                margin-top: #{spacer(#{$key})};
+                margin-top: spacer($key);
             }
             .has-my-#{$key}, .has-mb-#{$key}, .has-m-#{$key}{
-                margin-bottom: #{spacer(#{$key})};
+                margin-bottom: spacer($key);
             }
             .has-mx-#{$key}, .has-ml-#{$key}, .has-m-#{$key}{
-                margin-left: #{spacer(#{$key})};
+                margin-left: spacer($key);
             }
             .has-mx-#{$key}, .has-mr-#{$key}, .has-m-#{$key}{
-                margin-right: #{spacer(#{$key})};
+                margin-right: spacer($key);
             }
         }
     }
