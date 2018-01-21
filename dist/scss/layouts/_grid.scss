@@ -1,16 +1,51 @@
 .grid{
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
-    grid-gap: $grid-gap;
+    grid-gap: spacer(1);
+
+    @each $bp, $bpKey in $breakpoints {
+        @if $bp != xs{
+            @each $key, $spacer in $spacers {
+                @include min(#{bp(#{$bp})}){
+                    @for $i from 1 through $grid-columns{
+                        .col-#{$bp}-#{$i}{
+                            grid-column: span $i;
+                        }
+                    }
+                
+                    @for $i from 1 through 10{
+                        .row-#{$bp}-#{$i}{
+                            grid-row: span $i;
+                        }
+                    }
+                    
+                    &.has-grid-gap-#{$bp}-#{$key}{
+                        grid-gap: spacer($key);
+                    }
+                }
+            }
+        } @else {
+            @for $i from 1 through $grid-columns{
+                .col-#{$i}{
+                    grid-column: span $i;
+                }
+            }
+        
+            @for $i from 1 through 10{
+                .row-#{$i}{
+                    grid-row: span $i;
+                }
+            }
+
+            @each $key, $spacer in $spacers {
+                &.has-grid-gap-#{$key}{
+                    grid-gap: spacer($key);
+                }
+            }
+        }
+    }
 }
 
-.col-4{
-    grid-column: span 4;
-}
-.col-3{
-    grid-column: span 3;
-}
-
-.row-2{
-    grid-row: span 2;
-}
+//Create rows
+//Create cols
+//Create gap link to spacers
