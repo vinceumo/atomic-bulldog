@@ -1,7 +1,21 @@
+//Add justify and align content + items classes + self
+
 .grid{
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
     grid-gap: spacer(1);
+
+    &.is-dense{
+        grid-auto-flow: dense;
+    }
+
+    [class^="col-"]{
+        transition: grid-column 2s ease-in-out;
+    }
+
+    [class^="row-"]{
+        transition: grid-row 2s ease-in-out;
+    }
 
     @each $bp, $bpKey in $breakpoints {
         @if $bp != xs{
@@ -45,7 +59,3 @@
         }
     }
 }
-
-//Create rows
-//Create cols
-//Create gap link to spacers
