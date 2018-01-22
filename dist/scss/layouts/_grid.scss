@@ -1,5 +1,22 @@
 //Add justify and align content + items classes + self
 
+.auto-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: spacer(1);
+}
+
+.col-all {
+    grid-column: 1 / -1;
+}
+
+.row-all {
+    grid-row: 1 / -1;
+}
+
+
+
+
 .grid{
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
