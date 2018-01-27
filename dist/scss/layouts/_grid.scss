@@ -1,21 +1,6 @@
 //Add justify and align content + items classes + self
 
-.auto-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: spacer(1);
-}
-
-.col-all {
-    grid-column: 1 / -1;
-}
-
-.row-all {
-    grid-row: 1 / -1;
-}
-
-
-
+//@supports ??
 
 .grid{
     display: grid;
@@ -26,12 +11,18 @@
         grid-auto-flow: dense;
     }
 
-    [class^="col-"]{
-        transition: grid-column 2s ease-in-out;
+    .col-all {
+        grid-column: 1 / -1;
+    }
+    
+    .row-all {
+        grid-row: 1 / -1;
     }
 
-    [class^="row-"]{
-        transition: grid-row 2s ease-in-out;
+    @each $size, $sizeKey in $grid-item-sizes {
+        &.has-items-#{$size}{
+            grid-template-columns: repeat(auto-fit, minmax($sizeKey, 1fr));
+        }
     }
 
     @each $bp, $bpKey in $breakpoints {
