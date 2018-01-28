@@ -1,27 +1,21 @@
-//Add justify and align content + items classes + self
-
-//@supports ??
-
 .grid{
     display: grid;
-    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
     grid-gap: spacer(1);
 
     &.is-dense{
         grid-auto-flow: dense;
     }
 
-    .col-all {
-        grid-column: 1 / -1;
-    }
-    
-    .row-all {
-        grid-row: 1 / -1;
+    .item{
+        width: 100%;
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     @each $size, $sizeKey in $grid-item-sizes {
         &.has-items-#{$size}{
-            grid-template-columns: repeat(auto-fit, minmax($sizeKey, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(#{grid-item-size($size)}, 1fr));
         }
     }
 
@@ -29,14 +23,22 @@
         @if $bp != xs{
             @each $key, $spacer in $spacers {
                 @include min(#{bp(#{$bp})}){
+                    .has-col-#{$bp}-all {
+                        grid-column: 1 / -1;
+                    }
+                    
+                    .has-row-#{$bp}-all {
+                        grid-row: 1 / -1;
+                    }
+
                     @for $i from 1 through $grid-columns{
-                        .col-#{$bp}-#{$i}{
+                        .has-col-#{$bp}-#{$i}{
                             grid-column: span $i;
                         }
                     }
                 
                     @for $i from 1 through 10{
-                        .row-#{$bp}-#{$i}{
+                        .has-row-#{$bp}-#{$i}{
                             grid-row: span $i;
                         }
                     }
@@ -47,14 +49,22 @@
                 }
             }
         } @else {
+            .has-col-all {
+                grid-column: 1 / -1;
+            }
+            
+            .has-row-all {
+                grid-row: 1 / -1;
+            }
+
             @for $i from 1 through $grid-columns{
-                .col-#{$i}{
+                .has-col-#{$i}{
                     grid-column: span $i;
                 }
             }
         
             @for $i from 1 through 10{
-                .row-#{$i}{
+                .has-row-#{$i}{
                     grid-row: span $i;
                 }
             }

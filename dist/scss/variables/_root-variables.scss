@@ -30,5 +30,10 @@
         @each $name, $spacer in $spacers {
             #{$spacer-prefix}#{$name}: $spacer;
         }
+
+        //grid-sizes
+        @each $name, $grid-item-size in $grid-item-sizes {
+            #{$grid-item-size-prefix}#{$name}: $grid-item-size;
+        }
     } 
 }

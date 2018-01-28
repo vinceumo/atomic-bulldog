@@ -16,6 +16,7 @@
 @import "functions/maps/color";
 @import "functions/maps/container";
 @import "functions/maps/font-size";
+@import "functions/maps/grid-item-size";
 @import "functions/maps/spacer";
 @import "functions/em";
 @import "functions/z-index";
@@ -33,6 +34,7 @@
 //layouts
 @import "layouts/container";
 @import "layouts/grid";
+@import "layouts/grid-flex";
 @import "layouts/z-index";
 
 //utilities

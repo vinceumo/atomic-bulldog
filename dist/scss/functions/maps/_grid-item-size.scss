@@ -1,0 +1,11 @@
+@function grid-item-size($grid-item-size, $true-val:false) {
+    @if $use-css-var == true {
+      @if $true-val == true {
+          @return map-get($grid-item-sizes, $grid-item-size); //True Val
+      } @else {
+          @return var(#{$grid-item-size-prefix}#{$grid-item-size}); //CSS Var
+      }
+    } @else{
+        @return map-get($grid-item-sizes, $grid-item-size); //Disabled CSS Var
+    }
+}
