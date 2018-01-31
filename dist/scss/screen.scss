@@ -1,31 +1,21 @@
 //Global settings
 @import "settings/atomic-bulldog-settings";
 
-//variables
-@import "variables/breakpoints";
-@import "variables/colors";
-@import "variables/container-sizes";
-@import "variables/fonts";
-@import "variables/font-sizes";
-@import "variables/grid";
-@import "variables/spacing";
-@import "variables/z-index";
-
 //functions
-@import "functions/maps/bp";
-@import "functions/maps/color";
-@import "functions/maps/container";
-@import "functions/maps/font-size";
-@import "functions/maps/grid-item-size";
-@import "functions/maps/spacer";
 @import "functions/em";
 @import "functions/z-index";
 
 //mixins
 @import "mixins/media-queries";
 
-//Root Variables (Need to be call after mixins and functions)
-@import "variables/root-variables";
+//variables
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/container-sizes";
+@import "variables/font-sizes";
+@import "variables/grid";
+@import "variables/spacing";
+@import "variables/z-index";
 
 //vendors
 @import "vendors/bootstrap-reboot";

@@ -1,8 +1,0 @@
-$container-size-prefix: --container-size-;
-
-$container-sizes: (
-  sm: map-get($breakpoints, sm) - 36px,
-  md: map-get($breakpoints, md) - 48px,
-  lg: map-get($breakpoints, lg) - 32px,
-  xl: map-get($breakpoints, xl) - 60px
-);

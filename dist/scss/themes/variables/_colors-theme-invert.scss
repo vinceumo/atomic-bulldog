@@ -1,5 +1,3 @@
-$color-prefix: --color-;
-
 $color-themes: (
     primary: ( 
         base: invert(#4c5c8c), 
@@ -59,3 +57,19 @@ $color-themes: (
         contrast: invert(#efe5cf)
     )
 );
+
+// Root inverted Theme
+@if $use-css-var == true{
+    :root .theme-invert, :root .is-theme-invert{
+        //Color variables
+        @each $name, $color in $color-themes {
+            @if type-of($color) == "map" {
+                @each $subname, $subcolor in $color {  
+                    #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+                }
+            } @else if type-of($color) == "color" {
+                #{$color-prefix}#{$name}: $color;
+            }
+        }
+    } 
+}

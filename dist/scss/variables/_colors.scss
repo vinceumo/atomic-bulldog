@@ -59,6 +59,66 @@ $color-themes: (
     )
 );
 
+// Set color function
+// retrieve color from map with Sass ie. `color(primary, base)`
+@function color($color-name, $color-variant:null, $true-val:false) {
+    // if we enable css var
+  @if $use-css-var == true {
+    // we need to return the color value
+    @if $true-val == true {
+        // color variant is optional
+        @if ($color-variant != null) {
+            // map inception, need two deep
+            @return map-get(map-get($color-themes,$color-name),$color-variant);
+    
+        } @else {
+            // single-level color, one deep
+            @return map-get($color-themes,$color-name);
+    
+        }
+        // if we're only returning the CSS4 variable
+        } @else {
+        // color variant is optional
+        @if ($color-variant != null) {
+            // map inception, need two names
+            @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+    
+        } @else {
+            // single-level color, one name
+            @return var(#{$color-prefix}#{$color-name});
+    
+        }
+        }
+  } @else{
+      // color variant is optional
+      @if ($color-variant != null) {
+        // map inception, need two deep
+        @return map-get(map-get($color-themes,$color-name),$color-variant);
+
+    } @else {
+        // single-level color, one deep
+        @return map-get($color-themes,$color-name);
+
+    }
+  }
+}
+
+// Set root variable
+@if $use-css-var == true{
+    :root, .theme-default, .is-theme-default{
+        @each $name, $color in $color-themes {
+            @if type-of($color) == "map" {
+                @each $subname, $subcolor in $color {  
+                    #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+                }
+            } @else if type-of($color) == "color" {
+                #{$color-prefix}#{$name}: $color;
+            }
+        }
+    } 
+}
+
+// KSS Documentation
 /*
 Colors
 
