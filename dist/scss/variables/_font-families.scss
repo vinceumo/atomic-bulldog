@@ -1,7 +1,7 @@
 // ------------------------------
 // Import fonts
 // ------------------------------
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
 // ------------------------------
@@ -9,9 +9,9 @@
 // ------------------------------
 $font-family-prefix: --font-family-;
 $font-families: (
-  paragraph: ("Lato", sans-serif),
-  title: ("Pacifico", cursive),
-  highlight: ("Pacifico", cursive)
+  paragraph: ("Lato", "Helvetica Neue", Arial, sans-serif),
+  title: ("Rubik", "Helvetica Neue", Arial, sans-serif),
+  highlight: ("Rubik", "Helvetica Neue", Arial, sans-serif)
 );
 
 // ------------------------------
