@@ -1,4 +1,5 @@
 # Atomic Bulldog
+
 > Style Guide
 
 ## Introduction
@@ -8,5 +9,5 @@
 ## Project Structure
 
 ## Resources
-https://css-tricks.com/build-style-guide-straight-sass/
 
+https://css-tricks.com/build-style-guide-straight-sass/

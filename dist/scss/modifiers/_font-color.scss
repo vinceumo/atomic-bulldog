@@ -1,6 +1,7 @@
 // font color variations
 @each $name, $theme in $color-themes {
-    .has-font-#{$name}, .has-font-#{$name} * {
-        color: color($name, base);
-    }
+  .has-font-#{$name},
+  .has-font-#{$name} * {
+    color: color($name, base);
+  }
 }

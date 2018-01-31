@@ -1,6 +1,6 @@
 // background color variations
 @each $name, $theme in $color-themes {
-    .has-bg-#{$name} {
-        background-color: color($name, base);
-    }
+  .has-bg-#{$name} {
+    background-color: color($name, base);
+  }
 }

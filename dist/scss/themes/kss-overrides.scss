@@ -13,16 +13,16 @@ $kss-theme-color: color(danger, base);
 .kss-modifiers__name,
 .kss-markdown h1,
 .kss-markdown h2,
-.kss-markdown h3,{
-    color: $kss-theme-color;
+.kss-markdown h3 {
+  color: $kss-theme-color;
 }
 
-.kss-header__hamburger{
-    color: $kss-theme-color;
-    background: $kss-theme-color;
+.kss-header__hamburger {
+  color: $kss-theme-color;
+  background: $kss-theme-color;
 }
 
 .kss-header__hamburger::before,
-.kss-header__hamburger::after{
-    background: $kss-theme-color;
+.kss-header__hamburger::after {
+  background: $kss-theme-color;
 }

@@ -9,8 +9,7 @@
     &:first-child {
       @content;
     }
-  }
-  @else {
+  } @else {
     &:nth-child(-n + #{$num}) {
       @content;
     }
@@ -83,7 +82,6 @@
   }
 }
 
-
 /// Select all children but `$num`.
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
@@ -126,7 +124,6 @@
   }
 }
 
-
 /// Select the item in the middle of `$num` child. Only works with odd number
 /// chain.
 /// @group with-arguments
@@ -138,7 +135,6 @@
   }
 }
 
-
 /// Select all children between the `$num` first and the `$num` last.
 /// @group with-arguments
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
@@ -148,7 +144,6 @@
     @content;
   }
 }
-
 
 /// This quantity-query mixin will only select the first of `$limit` items. It will not
 /// work if there is not as much as item as you set in `$limit`.
@@ -211,7 +206,8 @@
   $child: nth(nth($selector, -1), -1);
 
   &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child,
-  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child ~ #{$child} {
+  &:nth-last-child(n + #{$min}):nth-last-child(-n + #{$max}):first-child
+    ~ #{$child} {
     @content;
   }
 }
@@ -221,7 +217,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin first-child() {
   &:first-of-type {
-    @content
+    @content;
   }
 }
 
@@ -230,7 +226,7 @@
 /// @content [Write the style you want to apply to the children, and it will be added within the @content directive]
 @mixin last-child() {
   &:last-of-type {
-    @content
+    @content;
   }
 }
 
@@ -291,7 +287,6 @@
   }
 }
 
-
 /// This mixin is used to automatically sort z-index in numerical order. But it
 /// can also sort them in anti-numerical order, depending the parameters you use.
 /// @group using functions
@@ -299,15 +294,14 @@
 /// @param {number} $num - Number of children
 /// @param {string} $direction [forward] - Direction of the sort
 /// @param {number} $index [0] - Index of the sorting
-@mixin child-index($num, $direction: 'forward', $index: 0) {
+@mixin child-index($num, $direction: "forward", $index: 0) {
   @for $i from 1 through $num {
-    @if ($direction == 'forward') {
+    @if ($direction == "forward") {
       &:nth-child(#{$i}) {
         z-index: order-index($i, $index);
         @content;
       }
-    }
-    @else if ($direction == 'backward') {
+    } @else if ($direction == "backward") {
       &:nth-last-child(#{$i}) {
         z-index: order-index($i, $index);
         @content;

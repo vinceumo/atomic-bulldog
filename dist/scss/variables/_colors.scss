@@ -3,61 +3,69 @@
 // ------------------------------
 $color-prefix: --color-;
 $color-themes: (
-    primary: ( 
-        base: #4c5c8c, 
-        dark: darken(#4c5c8c, 15%), 
-        light: lighten(#4c5c8c, 15%),
-        transparent: transparentize(#4c5c8c, 0.5),
-        contrast: #ffffff
+  primary:
+    (
+      base: #4c5c8c,
+      dark: darken(#4c5c8c, 15%),
+      light: lighten(#4c5c8c, 15%),
+      transparent: transparentize(#4c5c8c, 0.5),
+      contrast: #ffffff
     ),
-    secondary: ( 
-        base: #494949, 
-        dark: darken(#494949, 15%), 
-        light: lighten(#494949, 15%),
-        transparent: transparentize(#494949, 0.5),
-        contrast: #ffffff
+  secondary:
+    (
+      base: #494949,
+      dark: darken(#494949, 15%),
+      light: lighten(#494949, 15%),
+      transparent: transparentize(#494949, 0.5),
+      contrast: #ffffff
     ),
-    link: ( 
-        base: #4b7e9e, 
-        dark: darken(#4b7e9e, 15%), 
-        light: lighten(#4b7e9e, 15%),
-        transparent: transparentize(#4b7e9e, 0.5),
-        contrast: #ffffff
+  link:
+    (
+      base: #4b7e9e,
+      dark: darken(#4b7e9e, 15%),
+      light: lighten(#4b7e9e, 15%),
+      transparent: transparentize(#4b7e9e, 0.5),
+      contrast: #ffffff
     ),
-    success: ( 
-        base: #4b9b50, 
-        dark: darken(#4b9b50, 15%), 
-        light: lighten(#4b9b50, 15%),
-        transparent: transparentize(#4b9b50, 0.5),
-        contrast: #ffffff
+  success:
+    (
+      base: #4b9b50,
+      dark: darken(#4b9b50, 15%),
+      light: lighten(#4b9b50, 15%),
+      transparent: transparentize(#4b9b50, 0.5),
+      contrast: #ffffff
     ),
-    danger: ( 
-        base: #c65556, 
-        dark: darken(#c65556, 15%), 
-        light: lighten(#c65556, 15%),
-        transparent: transparentize(#c65556, 0.5),
-        contrast: #ffffff
+  danger:
+    (
+      base: #c65556,
+      dark: darken(#c65556, 15%),
+      light: lighten(#c65556, 15%),
+      transparent: transparentize(#c65556, 0.5),
+      contrast: #ffffff
     ),
-    warning: ( 
-        base: #d3b354, 
-        dark: darken(#d3b354, 15%), 
-        light: lighten(#d3b354, 15%),
-        transparent: transparentize(#d3b354, 0.5),
-        contrast: #ffffff
+  warning:
+    (
+      base: #d3b354,
+      dark: darken(#d3b354, 15%),
+      light: lighten(#d3b354, 15%),
+      transparent: transparentize(#d3b354, 0.5),
+      contrast: #ffffff
     ),
-    light: ( 
-        base: #efe5cf, 
-        dark: darken(#efe5cf, 15%), 
-        light: lighten(#efe5cf, 15%),
-        transparent: transparentize(#efe5cf, 0.5),
-        contrast: #343a40
+  light:
+    (
+      base: #efe5cf,
+      dark: darken(#efe5cf, 15%),
+      light: lighten(#efe5cf, 15%),
+      transparent: transparentize(#efe5cf, 0.5),
+      contrast: #343a40
     ),
-    dark: ( 
-        base: #343a40, 
-        dark: darken(#343a40, 15%), 
-        light: lighten(#343a40, 15%),
-        transparent: transparentize(#343a40, 0.5),
-        contrast: #efe5cf
+  dark:
+    (
+      base: #343a40,
+      dark: darken(#343a40, 15%),
+      light: lighten(#343a40, 15%),
+      transparent: transparentize(#343a40, 0.5),
+      contrast: #efe5cf
     )
 );
 
@@ -66,43 +74,37 @@ $color-themes: (
 // ------------------------------
 // retrieve color from map with Sass ie. `color(primary, base)`
 @function color($color-name, $color-variant:null, $true-val:false) {
-    // if we enable css var
+  // if we enable css var
   @if $use-css-var == true {
     // we need to return the color value
     @if $true-val == true {
-        // color variant is optional
-        @if ($color-variant != null) {
-            // map inception, need two deep
-            @return map-get(map-get($color-themes,$color-name),$color-variant);
-    
-        } @else {
-            // single-level color, one deep
-            @return map-get($color-themes,$color-name);
-    
-        }
-        // if we're only returning the CSS4 variable
-        } @else {
-        // color variant is optional
-        @if ($color-variant != null) {
-            // map inception, need two names
-            @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
-    
-        } @else {
-            // single-level color, one name
-            @return var(#{$color-prefix}#{$color-name});
-    
-        }
-        }
-  } @else{
       // color variant is optional
       @if ($color-variant != null) {
         // map inception, need two deep
         @return map-get(map-get($color-themes,$color-name),$color-variant);
-
-    } @else {
+      } @else {
         // single-level color, one deep
         @return map-get($color-themes,$color-name);
-
+      }
+      // if we're only returning the CSS4 variable
+    } @else {
+      // color variant is optional
+      @if ($color-variant != null) {
+        // map inception, need two names
+        @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+      } @else {
+        // single-level color, one name
+        @return var(#{$color-prefix}#{$color-name});
+      }
+    }
+  } @else {
+    // color variant is optional
+    @if ($color-variant != null) {
+      // map inception, need two deep
+      @return map-get(map-get($color-themes,$color-name),$color-variant);
+    } @else {
+      // single-level color, one deep
+      @return map-get($color-themes,$color-name);
     }
   }
 }
@@ -110,18 +112,18 @@ $color-themes: (
 // ------------------------------
 // Set root variables
 // ------------------------------
-@if $use-css-var == true{
-    #{$root-default} {
-        @each $name, $color in $color-themes {
-            @if type-of($color) == "map" {
-                @each $subname, $subcolor in $color {  
-                    #{$color-prefix}#{$name}-#{$subname}: $subcolor;
-                }
-            } @else if type-of($color) == "color" {
-                #{$color-prefix}#{$name}: $color;
-            }
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $color in $color-themes {
+      @if type-of($color) == "map" {
+        @each $subname, $subcolor in $color {
+          #{$color-prefix}#{$name}-#{$subname}: $subcolor;
         }
-    } 
+      } @else if type-of($color) == "color" {
+        #{$color-prefix}#{$name}: $color;
+      }
+    }
+  }
 }
 
 // ------------------------------

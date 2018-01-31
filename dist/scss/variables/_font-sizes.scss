@@ -2,43 +2,41 @@
 // Sass Variables
 // ------------------------------
 $font-size-prefix: --font-size-;
-$font-sizes:(
-    root: 16px,
-    paragraph: 1rem,
-    heading1: 2.8125rem,
-    heading2: 2.5rem,
-    heading3: 1.25rem,
-    heading4: 1.50rem,
-    heading5: 1rem,
-    button: 1rem,
+$font-sizes: (
+  root: 16px,
+  paragraph: 1rem,
+  heading1: 2.8125rem,
+  heading2: 2.5rem,
+  heading3: 1.25rem,
+  heading4: 1.5rem,
+  heading5: 1rem,
+  button: 1rem
 );
 
 // ------------------------------
 // Set font-size function
 // ------------------------------
 @function font-size($font-size, $true-val:false) {
-    @if $use-css-var == true {
-      @if $true-val == true {
-            @return map-get($font-sizes, $font-size); //True Val
-        } @else {
-            @return var(#{$font-size-prefix}#{$font-size}); //CSS Var
-        }
-    } @else{
-        @return map-get($font-sizes, $font-size); //Disabled CSS Var
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($font-sizes, $font-size); // True Val
+    } @else {
+      @return var(#{$font-size-prefix}#{$font-size}); // CSS Var
     }
+  } @else {
+    @return map-get($font-sizes, $font-size); // Disabled CSS Var
+  }
 }
-
 // ------------------------------
 // Set root variables
 // ------------------------------
-@if $use-css-var == true{
-    #{$root-default}{
-        @each $name, $font-size in $font-sizes {
-            #{$font-size-prefix}#{$name}: $font-size;
-        }
-    } 
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $font-size in $font-sizes {
+      #{$font-size-prefix}#{$name}: $font-size;
+    }
+  }
 }
-
 // ------------------------------
 // KSS Documentation
 // ------------------------------

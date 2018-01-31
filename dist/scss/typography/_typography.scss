@@ -1,18 +1,23 @@
 html {
-    font-size: calc(#{font-size(root)} + 2px);
-    font-family: font-family(paragraph);
+  font-size: calc(#{font-size(root)} + 2px);
+  font-family: font-family(paragraph);
 
-    @include min(#{bp(sm)}) {
-        font-size: font-size(root);
-    }
+  @include min(#{bp(sm)}) {
+    font-size: font-size(root);
+  }
 }
 
-h1, .is-h1,
-h2, .is-h2,
-h3, .is-h3,
-h4, .is-h4,
-h5, .is-h5,
-h6, .is-h6,
-{
-    font-family: font-family(title);
+h1,
+.is-h1,
+h2,
+.is-h2,
+h3,
+.is-h3,
+h4,
+.is-h4,
+h5,
+.is-h5,
+h6,
+.is-h6 {
+  font-family: font-family(title);
 }

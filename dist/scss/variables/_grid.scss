@@ -5,40 +5,37 @@ $grid-columns: 12;
 $grid-item-sizes-base: 80px;
 $grid-item-size-prefix: --grid-item-size-;
 $grid-item-sizes: (
-    xs: $grid-item-sizes-base,
-    sm: $grid-item-sizes-base * 2.5,
-    md: $grid-item-sizes-base * 4,
-    lg: $grid-item-sizes-base * 5,
-    xl: $grid-item-sizes-base * 6,
-    xxl: $grid-item-sizes-base * 8
+  xs: $grid-item-sizes-base,
+  sm: $grid-item-sizes-base * 2.5,
+  md: $grid-item-sizes-base * 4,
+  lg: $grid-item-sizes-base * 5,
+  xl: $grid-item-sizes-base * 6,
+  xxl: $grid-item-sizes-base * 8
 );
-
 // ------------------------------
 // Set grid-item-size function
 // ------------------------------
 @function grid-item-size($grid-item-size, $true-val:false) {
-    @if $use-css-var == true {
-      @if $true-val == true {
-          @return map-get($grid-item-sizes, $grid-item-size); //True Val
-      } @else {
-          @return var(#{$grid-item-size-prefix}#{$grid-item-size}); //CSS Var
-      }
-    } @else{
-        @return map-get($grid-item-sizes, $grid-item-size); //Disabled CSS Var
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($grid-item-sizes, $grid-item-size); // True Val
+    } @else {
+      @return var(#{$grid-item-size-prefix}#{$grid-item-size}); // CSS Var
     }
+  } @else {
+    @return map-get($grid-item-sizes, $grid-item-size); // Disabled CSS Var
+  }
 }
-
 // ------------------------------
 // Set root variables
 // ------------------------------
-@if $use-css-var == true{
-    #{$root-default}{
-        @each $name, $grid-item-size in $grid-item-sizes {
-            #{$grid-item-size-prefix}#{$name}: $grid-item-size;
-        }
-    } 
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $grid-item-size in $grid-item-sizes {
+      #{$grid-item-size-prefix}#{$name}: $grid-item-size;
+    }
+  }
 }
-
 // ------------------------------
 // KSS Documentation
 // ------------------------------

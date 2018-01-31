@@ -5,8 +5,8 @@ $spacer-reference: 1rem;
 $spacer-prefix: --spacer-;
 $spacers: (
   0: 0,
-  1: ($spacer-reference * .25),
-  2: ($spacer-reference * .5),
+  1: ($spacer-reference * 0.25),
+  2: ($spacer-reference * 0.5),
   3: $spacer-reference,
   4: ($spacer-reference * 1.25),
   5: ($spacer-reference * 1.5),
@@ -19,24 +19,24 @@ $spacers: (
 @function spacer($spacer, $true-val:false) {
   @if $use-css-var == true {
     @if $true-val == true {
-        @return map-get($spacers, $spacer); //True Val
+      @return map-get($spacers, $spacer); //True Val
     } @else {
-        @return var(#{$spacer-prefix}#{$spacer}); //CSS Var
+      @return var(#{$spacer-prefix}#{$spacer}); //CSS Var
     }
-  } @else{
-      @return map-get($spacers, $spacer); //Disabled CSS Var
+  } @else {
+    @return map-get($spacers, $spacer); //Disabled CSS Var
   }
 }
 
 // ------------------------------
 // Set root variables
 // ------------------------------
-@if $use-css-var == true{
-    #{$root-default}{
-      @each $name, $spacer in $spacers {
-          #{$spacer-prefix}#{$name}: $spacer;
-      }
-  } 
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $spacer in $spacers {
+      #{$spacer-prefix}#{$name}: $spacer;
+    }
+  }
 }
 
 // ------------------------------

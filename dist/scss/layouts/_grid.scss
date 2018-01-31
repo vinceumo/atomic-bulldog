@@ -1,79 +1,82 @@
-.grid{
-    display: grid;
-    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
-    grid-gap: spacer(1);
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+  grid-gap: spacer(1);
 
-    &.is-dense{
-        grid-auto-flow: dense;
+  &.is-dense {
+    grid-auto-flow: dense;
+  }
+
+  .item {
+    width: 100%;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  @each $size, $sizeKey in $grid-item-sizes {
+    &.has-items-#{$size} {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(#{grid-item-size($size)}, 1fr)
+      );
     }
+  }
 
-    .item{
-        width: 100%;
-        grid-column: span 1;
-        grid-row: span 1;
-    }
+  @each $bp, $bpKey in $breakpoints {
+    @if $bp != xs {
+      @each $key, $spacer in $spacers {
+        @include min(#{bp(#{$bp})}) {
+          .has-col-#{$bp}-all {
+            grid-column: 1 / -1;
+          }
 
-    @each $size, $sizeKey in $grid-item-sizes {
-        &.has-items-#{$size}{
-            grid-template-columns: repeat(auto-fit, minmax(#{grid-item-size($size)}, 1fr));
+          .has-row-#{$bp}-all {
+            grid-row: 1 / -1;
+          }
+
+          @for $i from 1 through $grid-columns {
+            .has-col-#{$bp}-#{$i} {
+              grid-column: span $i;
+            }
+          }
+
+          @for $i from 1 through 10 {
+            .has-row-#{$bp}-#{$i} {
+              grid-row: span $i;
+            }
+          }
+
+          &.has-grid-gap-#{$bp}-#{$key} {
+            grid-gap: spacer($key);
+          }
         }
-    }
+      }
+    } @else {
+      .has-col-all {
+        grid-column: 1 / -1;
+      }
 
-    @each $bp, $bpKey in $breakpoints {
-        @if $bp != xs{
-            @each $key, $spacer in $spacers {
-                @include min(#{bp(#{$bp})}){
-                    .has-col-#{$bp}-all {
-                        grid-column: 1 / -1;
-                    }
-                    
-                    .has-row-#{$bp}-all {
-                        grid-row: 1 / -1;
-                    }
+      .has-row-all {
+        grid-row: 1 / -1;
+      }
 
-                    @for $i from 1 through $grid-columns{
-                        .has-col-#{$bp}-#{$i}{
-                            grid-column: span $i;
-                        }
-                    }
-                
-                    @for $i from 1 through 10{
-                        .has-row-#{$bp}-#{$i}{
-                            grid-row: span $i;
-                        }
-                    }
-                    
-                    &.has-grid-gap-#{$bp}-#{$key}{
-                        grid-gap: spacer($key);
-                    }
-                }
-            }
-        } @else {
-            .has-col-all {
-                grid-column: 1 / -1;
-            }
-            
-            .has-row-all {
-                grid-row: 1 / -1;
-            }
-
-            @for $i from 1 through $grid-columns{
-                .has-col-#{$i}{
-                    grid-column: span $i;
-                }
-            }
-        
-            @for $i from 1 through 10{
-                .has-row-#{$i}{
-                    grid-row: span $i;
-                }
-            }
-
-            @each $key, $spacer in $spacers {
-                &.has-grid-gap-#{$key}{
-                    grid-gap: spacer($key);
-                }
-            }
+      @for $i from 1 through $grid-columns {
+        .has-col-#{$i} {
+          grid-column: span $i;
         }
+      }
+
+      @for $i from 1 through 10 {
+        .has-row-#{$i} {
+          grid-row: span $i;
+        }
+      }
+
+      @each $key, $spacer in $spacers {
+        &.has-grid-gap-#{$key} {
+          grid-gap: spacer($key);
+        }
+      }
     }
+  }
 }

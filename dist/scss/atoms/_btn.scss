@@ -1,94 +1,93 @@
 .btn {
-    font-size: font-size(button);
-    font-family: font-family(paragraph);
-    font-weight: normal;
-    line-height: 1.25;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    border: 2px solid transparent;
-    border-radius: 0;
-    padding: 0.85rem 1rem;
-    transition: all 0.6s ease-in-out;
-    min-width: 175px;
-    cursor: pointer;
-    background-color: transparent;
+  font-size: font-size(button);
+  font-family: font-family(paragraph);
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.85rem 1rem;
+  transition: all 0.6s ease-in-out;
+  min-width: 175px;
+  cursor: pointer;
+  background-color: transparent;
 
-    &.is-rounded{
-        border-radius: 1000px;
-    }
+  &.is-rounded {
+    border-radius: 1000px;
+  }
 
-    &[disabled]{
-        opacity: 0.6;
-        cursor: not-allowed;
-    }
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 
-    &.is-loading{
-        color: transparent !important;
-        pointer-events: none;
-        position: relative;
-        &:before{
-            content: "";
-            animation: spin 400ms infinite linear;
-            display: block;
-            border: 2px solid transparent;
-            border-radius: 50%;
-            height: 1rem;
-            width: 1rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            //transform: translate(-50%, -50%);
-            transform-origin: 50% 50%;
-        }
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+    &:before {
+      content: "";
+      animation: spin 400ms infinite linear;
+      display: block;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      //transform: translate(-50%, -50%);
+      transform-origin: 50% 50%;
     }
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 // Button color variations
 @each $name, $theme in $color-themes {
-    .btn.is-#{$name}:not(.is-outlined) {
-        color: color($name, contrast);
-        background-color: color($name, base);
-        border-color: color($name, base);
+  .btn.is-#{$name}:not(.is-outlined) {
+    color: color($name, contrast);
+    background-color: color($name, base);
+    border-color: color($name, base);
 
-        &:hover:not([disabled]),
-        &.is-hovered:not([disabled]),
-        &:focus:not([disabled]),
-        &.is-focused:not([disabled]){
-            background-color: color($name, dark);
-            border-color: color($name, dark);
-        }
+    &:hover:not([disabled]),
+    &.is-hovered:not([disabled]),
+    &:focus:not([disabled]),
+    &.is-focused:not([disabled]) {
+      background-color: color($name, dark);
+      border-color: color($name, dark);
     }
-    .btn.is-#{$name}.is-outlined {
-        color: color($name, base);
-        background-color: transparent;
-        border-color: color($name, base);
+  }
+  .btn.is-#{$name}.is-outlined {
+    color: color($name, base);
+    background-color: transparent;
+    border-color: color($name, base);
 
-        &:hover:not([disabled]),
-        &.is-hovered:not([disabled]),
-        &:focus:not([disabled]),
-        &.is-focused:not([disabled]){
-            color: color($name, contrast);
-            background-color: color($name, base);
-        }
+    &:hover:not([disabled]),
+    &.is-hovered:not([disabled]),
+    &:focus:not([disabled]),
+    &.is-focused:not([disabled]) {
+      color: color($name, contrast);
+      background-color: color($name, base);
     }
-    .btn.is-#{$name}.is-loading{
-        &:before{
-            border-left-color: color($name, contrast);
-            border-bottom-color: color($name, contrast);
-        }
+  }
+  .btn.is-#{$name}.is-loading {
+    &:before {
+      border-left-color: color($name, contrast);
+      border-bottom-color: color($name, contrast);
     }
+  }
 }
-
 
 /*
 Buttons
