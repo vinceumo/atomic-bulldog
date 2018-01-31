@@ -1,0 +1,33 @@
+$container-size-prefix: --container-size-;
+
+$container-sizes: (
+  sm: map-get($breakpoints, sm) - 36px,
+  md: map-get($breakpoints, md) - 48px,
+  lg: map-get($breakpoints, lg) - 32px,
+  xl: map-get($breakpoints, xl) - 60px
+);
+
+// Set container function
+@function container($container-size, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+        @return map-get($container-sizes, $container-size); //True Val
+    } @else {
+        @return var(#{$container-size-prefix}#{$container-size}); //CSS Var
+    }
+  } @else{
+      @return map-get($container-sizes, $container-size); //Disabled CSS Var
+  }
+}
+
+//Set root variable
+@if $use-css-var == true{
+  :root, .theme-default, .is-theme-default{
+      @each $name, $container-size in $container-sizes {
+          #{$container-size-prefix}#{$name}: $container-size;
+      }
+  } 
+}
+
+// KSS Documentation
+// TODO Documentation
