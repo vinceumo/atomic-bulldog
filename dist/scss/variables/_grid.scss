@@ -1,11 +1,12 @@
 $grid-columns: 12;
 $grid-item-size-prefix: --grid-item-size-;
+$grid-item-sizes-base: 80px;
 
 $grid-item-sizes: (
-    xs: 100px,
-    sm: 250px,
-    md: 350px,
-    lg: 400px,
-    xl: 500px,
-    xxl: 600px
+    xs: $grid-item-sizes-base,
+    sm: $grid-item-sizes-base * 2.5,
+    md: $grid-item-sizes-base * 4,
+    lg: $grid-item-sizes-base * 5,
+    xl: $grid-item-sizes-base * 6,
+    xxl: $grid-item-sizes-base * 8
 )
