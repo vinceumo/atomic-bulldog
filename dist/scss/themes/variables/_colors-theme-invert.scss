@@ -60,7 +60,7 @@ $color-themes: (
 
 // Root inverted Theme
 @if $use-css-var == true{
-    :root .theme-invert, :root .is-theme-invert{
+    #{$root-invert-theme}{
         //Color variables
         @each $name, $color in $color-themes {
             @if type-of($color) == "map" {

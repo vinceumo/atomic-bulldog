@@ -1,5 +1,7 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
 $bp-prefix: --bp-;
-
 $breakpoints: (
   xs: 0px,
   sm: 576px,
@@ -8,7 +10,9 @@ $breakpoints: (
   xl: 1200px
 );
 
-//Set function variables
+// ------------------------------
+// Set bp function
+// ------------------------------
 //Can't use CSS variables in media queries the bp var only print the value the bp-var function will print the variable
 @function bp($bp) {
   @return em(map-get($breakpoints, $bp));
@@ -26,16 +30,20 @@ $breakpoints: (
   }
 }
 
-//Set root variables
+// ------------------------------
+// Set root variables
+// ------------------------------
 @if $use-css-var == true{
-  :root, .theme-default, .is-theme-default{
+  #{$root-default} {
       @each $name, $bp in $breakpoints {
           #{$bp-prefix}#{$name}: $bp; //Not using em as not being use in media queries
       }
   } 
 }
 
+// ------------------------------
 // KSS Documentation
+// ------------------------------
 /*
 Breakpoints
 

@@ -1,6 +1,8 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
 $spacer-reference: 1rem;
 $spacer-prefix: --spacer-;
-
 $spacers: (
   0: 0,
   1: ($spacer-reference * .25),
@@ -11,7 +13,9 @@ $spacers: (
   6: ($spacer-reference * 3)
 );
 
+// ------------------------------
 // Set spacer function
+// ------------------------------
 @function spacer($spacer, $true-val:false) {
   @if $use-css-var == true {
     @if $true-val == true {
@@ -24,13 +28,17 @@ $spacers: (
   }
 }
 
+// ------------------------------
 // Set root variables
+// ------------------------------
 @if $use-css-var == true{
-  :root, .theme-default, .is-theme-default{
+    #{$root-default}{
       @each $name, $spacer in $spacers {
           #{$spacer-prefix}#{$name}: $spacer;
       }
   } 
 }
 
+// ------------------------------
 //KSS Documentation
+// ------------------------------

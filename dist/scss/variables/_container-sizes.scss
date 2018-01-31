@@ -1,5 +1,7 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
 $container-size-prefix: --container-size-;
-
 $container-sizes: (
   sm: map-get($breakpoints, sm) - 36px,
   md: map-get($breakpoints, md) - 48px,
@@ -7,7 +9,9 @@ $container-sizes: (
   xl: map-get($breakpoints, xl) - 60px
 );
 
+// ------------------------------
 // Set container function
+// ------------------------------
 @function container($container-size, $true-val:false) {
   @if $use-css-var == true {
     @if $true-val == true {
@@ -20,14 +24,17 @@ $container-sizes: (
   }
 }
 
-//Set root variable
+// ------------------------------
+// Set root variables
+// ------------------------------
 @if $use-css-var == true{
-  :root, .theme-default, .is-theme-default{
+    #{$root-default} {
       @each $name, $container-size in $container-sizes {
           #{$container-size-prefix}#{$name}: $container-size;
       }
   } 
 }
 
+// ------------------------------
 // KSS Documentation
-// TODO Documentation
+// ------------------------------

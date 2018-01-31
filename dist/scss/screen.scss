@@ -3,12 +3,12 @@
 
 //functions
 @import "functions/em";
-@import "functions/z-index";
 
 //mixins
 @import "mixins/media-queries";
 
 //variables
+@import "variables/root-classes";
 @import "variables/breakpoints";
 @import "variables/colors";
 @import "variables/container-sizes";
@@ -44,3 +44,6 @@
 @import "modifiers/bg-color";
 @import "modifiers/font-color";
 @import "modifiers/spacing";
+
+//themes
+@import "themes/theme-invert";

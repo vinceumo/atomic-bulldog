@@ -1,5 +1,7 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
 $font-size-prefix: --font-size-;
-
 $font-sizes:(
     root: 16px,
     paragraph: 1rem,
@@ -11,7 +13,9 @@ $font-sizes:(
     button: 1rem,
 );
 
-//Set font-size function
+// ------------------------------
+// Set font-size function
+// ------------------------------
 @function font-size($font-size, $true-val:false) {
     @if $use-css-var == true {
       @if $true-val == true {
@@ -24,11 +28,17 @@ $font-sizes:(
     }
 }
 
+// ------------------------------
 // Set root variables
+// ------------------------------
 @if $use-css-var == true{
-    :root, .theme-default, .is-theme-default{
+    #{$root-default}{
         @each $name, $font-size in $font-sizes {
             #{$font-size-prefix}#{$name}: $font-size;
         }
     } 
 }
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------

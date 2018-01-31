@@ -1,7 +1,9 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
 $grid-columns: 12;
 $grid-item-sizes-base: 80px;
 $grid-item-size-prefix: --grid-item-size-;
-
 $grid-item-sizes: (
     xs: $grid-item-sizes-base,
     sm: $grid-item-sizes-base * 2.5,
@@ -11,7 +13,9 @@ $grid-item-sizes: (
     xxl: $grid-item-sizes-base * 8
 );
 
+// ------------------------------
 // Set grid-item-size function
+// ------------------------------
 @function grid-item-size($grid-item-size, $true-val:false) {
     @if $use-css-var == true {
       @if $true-val == true {
@@ -24,13 +28,17 @@ $grid-item-sizes: (
     }
 }
 
+// ------------------------------
 // Set root variables
+// ------------------------------
 @if $use-css-var == true{
-    :root, .theme-default, .is-theme-default{
+    #{$root-default}{
         @each $name, $grid-item-size in $grid-item-sizes {
             #{$grid-item-size-prefix}#{$name}: $grid-item-size;
         }
     } 
 }
 
-//KSS Documentation
+// ------------------------------
+// KSS Documentation
+// ------------------------------
