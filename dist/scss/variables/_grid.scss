@@ -42,6 +42,8 @@ $grid-item-sizes: (
 
 // Grid
 //
+// This project use by default CSS grid layout `display: grid` for its grid. The grid can be use a rigid with a number of set columns define by `$grid-columns` (here 12 columns).
+// Or the grid can be use as fluid using the map `$grid-item-sizes` with `$grid-item-sizes-base` (here 80px) See The grid section in layout for more informations
 //
 // ---------------
 // * `xs`: $grid-item-sizes-base,
