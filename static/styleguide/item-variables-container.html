@@ -71,18 +71,47 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-container">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_container-sizes.scss</span>, line <span>42</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-container">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.3</span>
+                  <span class="kss-section__name">Container Sizes</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Container sizes are sets in the map <code>$container-sizes</code></p>
+<hr>
+<ul>
+<li><code>sm</code></li>
+<li><code>md</code></li>
+<li><code>lg</code></li>
+<li><code>xl</code></li>
+</ul>
+<hr>
+<p>Container Sizes can be call in the sass project using the function:</p>
+<p><code>container($container-size, $true-val:false)</code>.</p>
+<p>Function examples to call the map:</p>
+<ul>
+<li><code>container(md);</code> =&gt; <code>var(--container-size-sm);</code> If $use-css-var = true</li>
+<li><code>container(md);</code> =&gt; <code>720px;</code> If $use-css-var = false</li>
+<li><code>container(md, true)</code> =&gt; <code>720px;</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

@@ -26,3 +26,7 @@ $kss-theme-color: color(danger, base);
 .kss-header__hamburger::after {
   background: $kss-theme-color;
 }
+
+.kss-modifiers__name{
+  margin-top: 2.5rem;
+}

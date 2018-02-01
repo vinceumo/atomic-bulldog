@@ -71,18 +71,42 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-functions-container">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_container-sizes.scss</span>, line <span>62</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-functions-container">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.2</span>
+                  <span class="kss-section__name">container($container-size, $true-val:false)</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p><code>container()</code> call the <code>$container-sizes</code> map</p>
+<p>Parameters:</p>
+<ul>
+<li><code>$container-size</code> - size from the map</li>
+<li><code>$true-val</code> - Optional value. If set to true it will output the value in px</li>
+</ul>
+<p>Function examples:</p>
+<ul>
+<li><code>container(md);</code> =&gt; <code>var(--container-size-sm);</code> If $use-css-var = true</li>
+<li><code>container(md);</code> =&gt; <code>720px;</code> If $use-css-var = false</li>
+<li><code>container(md, true)</code> =&gt; <code>720px;</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

@@ -43,3 +43,24 @@ $font-families: (
 // ------------------------------
 // KSS Documentation
 // ------------------------------
+
+// Font Families
+//
+// Font Families are sets in the map `$font-families`
+//
+// ---------------
+// * `paragraph`: Lato,
+// * `title`: Rubik,
+// * `highlight`: Rubik
+// ---------------
+//
+// Font Families can be call in the sass project using the functions:
+//
+// `font-family($font-family, $true-val:false)` which will outpout by default the the css variable
+//
+// Usage of font-family():
+// * `font-family(title)` => `var(--font-family-title)` If $use-css-var = true
+// * `font-family(title)` => `"Rubik", "Helvetica Neue", Arial, sans-serif` If $use-css-var = false
+// * `font-family(title, true)` => `"Rubik", "Helvetica Neue", Arial, sans-serif`
+//
+// Styleguide Variables.fontfamilies

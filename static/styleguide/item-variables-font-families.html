@@ -71,18 +71,46 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-variables-font-families">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_font-families.scss</span>, line <span>47</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-font-families">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.4.1</span>
+                  <span class="kss-section__name">Font Families</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Font Families are sets in the map <code>$font-families</code></p>
+<hr>
+<ul>
+<li><code>paragraph</code>: Lato,</li>
+<li><code>title</code>: Rubik,</li>
+<li><code>highlight</code>: Rubik</li>
+</ul>
+<hr>
+<p>Font Families can be call in the sass project using the functions:</p>
+<p><code>font-family($font-family, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of font-family():</p>
+<ul>
+<li><code>font-family(title)</code> =&gt; <code>var(--font-family-title)</code> If $use-css-var = true</li>
+<li><code>font-family(title)</code> =&gt; <code>&quot;Rubik&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif</code> If $use-css-var = false</li>
+<li><code>font-family(title, true)</code> =&gt; <code>&quot;Rubik&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

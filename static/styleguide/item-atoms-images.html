@@ -71,18 +71,42 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-atoms-images">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>atoms/_img-fluid.scss</span>, line <span>10</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-atoms-images">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">1.2</span>
+                  <span class="kss-section__name">Images fluid</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Responsive images class</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><img clas="img-fluid" src="https://source.unsplash.com/random/300*600" alt="image description"></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;img clas&#x3D;&quot;img-fluid&quot; src&#x3D;&quot;https://source.unsplash.com/random/300*600&quot; alt&#x3D;&quot;image description&quot;&gt;</code></pre>
+                </article>
+
+            </header>
     </section>
     <!-- /documentation. -->
 

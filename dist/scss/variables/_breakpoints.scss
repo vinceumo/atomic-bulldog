@@ -47,8 +47,28 @@ $breakpoints: (
 
 // Breakpoints
 //
-// The breakpoint Map is set in px and is converted to em with the em function.
-// Em as better support for media queries compare to px and rem, https://zellwk.com/blog/media-query-units/
-// This map can be use with the media query mixin and the breakpoint mixin
+// Breakpoints are sets in the map `$breakpoints`
 //
-// Styleguide Variables.Break points
+// ---------------
+// * `xs`: 0px,
+// * `sm`: 576px,
+// * `md`: 768px,
+// * `lg`: 992px,
+// * `xl`: 1200px
+// ---------------
+//
+// Breakpoints can be call in the sass project using the functions:
+//
+// `bp($bp)` which will outpout a value in em
+//
+// `bp-var($bp, $true-val:false)` which will outpout the css variable
+//
+// Usage of bp():
+// * `bp(sm);` => `36em`
+//
+// Usage of bp-var():
+// * `bp-var(sm);` => `var(--bp-sm);` If $use-css-var = true
+// * `bp-var(sm);` => `576px;` If $use-css-var = false
+// * `bp-var(sm, true)` => `576px;`
+//
+// Styleguide Variables.breakpoints

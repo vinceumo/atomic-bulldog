@@ -47,10 +47,18 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-functions.html">
+            <a class="kss-state-active" href="section-functions.html">
               <span class="kss-nav__ref">2</span>
               <span class="kss-nav__name">Functions</span>
             </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-functions.html#kssref-functions-em">
+                        <span class="kss-nav__ref">2.1</span>
+                        <span class="kss-nav__name">em($size, $context: 16)</span>
+                      </a>
+                    </li>
+                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-themes.html">
@@ -71,18 +79,28 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-functions">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-functions">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">2</span>
+                  <span class="kss-section__name">Functions</span>
+                </h1>
+              </a>
+
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

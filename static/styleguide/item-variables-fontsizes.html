@@ -71,18 +71,52 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-fontsizes">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_font-sizes.scss</span>, line <span>45</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-fontsizes">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.5</span>
+                  <span class="kss-section__name">Font Sizes</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Font Sizes are sets in the map <code>$font-sizes</code></p>
+<hr>
+<ul>
+<li><code>root</code>: 16px,</li>
+<li><code>paragraph</code>: 1rem,</li>
+<li><code>heading1</code>: 2.8125rem,</li>
+<li><code>heading2</code>: 2.5rem,</li>
+<li><code>heading3</code>: 1.5rem,</li>
+<li><code>heading4</code>: 1.25rem,</li>
+<li><code>heading5</code>: 1rem,</li>
+<li><code>heading6</code>: 1rem,</li>
+<li><code>button</code>: 1rem</li>
+</ul>
+<hr>
+<p>Font sizes can be call in the sass project using the functions:</p>
+<p><code>font-sizes($font-size, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of font-size():</p>
+<ul>
+<li><code>font-family(heading2)</code> =&gt; <code>var(--font-size-heading2)</code> If $use-css-var = true</li>
+<li><code>font-family(heading2)</code> =&gt; <code>2.5rem</code> If $use-css-var = false</li>
+<li><code>font-family(heading2, true)</code> =&gt; <code>2.5rem</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

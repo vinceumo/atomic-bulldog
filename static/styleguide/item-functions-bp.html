@@ -71,18 +71,46 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-functions-bp">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_breakpoints.scss</span>, line <span>74</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-functions-bp">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.1</span>
+                  <span class="kss-section__name">bp($bp) and bp-var($bp, $true-val:false)</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p><code>$breakpoints</code> map can be call in the sass project using the function <code>bp($bp)</code> which will outpout a value in em (Not to be use in media queries as css variables do not work in this case) or using <code>bp-var($bp, $true-val:false)</code></p>
+<p>Parameters:</p>
+<ul>
+<li><code>$bp</code> - breakpoint from the map</li>
+<li><code>$true-val</code> - Optional value. If set to true it will output the value in px</li>
+</ul>
+<p>Usage of bp():</p>
+<ul>
+<li><code>bp(sm);</code> =&gt; <code>36em</code></li>
+</ul>
+<p>Usage of bp-var():</p>
+<ul>
+<li><code>bp-var(sm);</code> =&gt; <code>var(--bp-sm);</code> If $use-css-var = true</li>
+<li><code>bp-var(sm);</code> =&gt; <code>576px;</code> If $use-css-var = false</li>
+<li><code>bp-var(sm, true)</code> =&gt; <code>576px;</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

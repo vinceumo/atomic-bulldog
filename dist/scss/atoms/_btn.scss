@@ -82,6 +82,7 @@
       }
     }
   }
+  
   .btn.is-#{$name}.is-outlined {
     color: color($name, base);
     background-color: transparent;
@@ -118,9 +119,6 @@
 // <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
 // <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
 // <button class="btn {{modifier_class}}" disabled>.btn disabled</button>
-// <button class="btn {{modifier_class}} is-big">.btn .is-big</button>
-// <button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
-// <button class="btn {{modifier_class}} is-small">.btn .is-small</button>
 // <button class="btn {{modifier_class}} is-theme-invert">.btn .is-theme-invert</button>
 //
 // .is-primary - Primary color.
@@ -145,9 +143,6 @@
 //     <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
 //     <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
 //     <button class="btn {{modifier_class}}" disabled>.btn disabled</button>
-//     <button class="btn {{modifier_class}} is-big">.btn .is-big</button>
-//     <button class="btn {{modifier_class}} is-medium">.btn .is-medium</button>
-//     <button class="btn {{modifier_class}} is-small">.btn .is-small</button>
 //     <button class="btn {{modifier_class}} is-theme-default">.btn .is-theme-default</button>
 // <div>
 //

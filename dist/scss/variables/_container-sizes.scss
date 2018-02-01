@@ -38,3 +38,25 @@ $container-sizes: (
 // ------------------------------
 // KSS Documentation
 // ------------------------------
+
+// Container Sizes
+//
+// Container sizes are sets in the map `$container-sizes`
+//
+// --------
+// * `sm`
+// * `md`
+// * `lg`
+// * `xl`
+// --------
+//
+// Container Sizes can be call in the sass project using the function:
+//
+// `container($container-size, $true-val:false)`.
+//
+// Function examples to call the map:
+// * `container(md);` => `var(--container-size-sm);` If $use-css-var = true
+// * `container(md);` => `720px;` If $use-css-var = false
+// * `container(md, true)` => `720px;`
+//
+// Styleguide Variables.container

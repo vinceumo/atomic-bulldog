@@ -71,18 +71,48 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-grid">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_grid.scss</span>, line <span>43</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-grid">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.6</span>
+                  <span class="kss-section__name">Grid</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><hr>
+<ul>
+<li><code>xs</code>: $grid-item-sizes-base,</li>
+<li><code>sm</code>: $grid-item-sizes-base * 2.5,</li>
+<li><code>md</code>: $grid-item-sizes-base * 4,</li>
+<li><code>lg</code>: $grid-item-sizes-base * 5,</li>
+<li><code>xl</code>: $grid-item-sizes-base * 6,</li>
+<li><code>xxl</code>: $grid-item-sizes-base * 8</li>
+</ul>
+<hr>
+<p>Grid Item sizes can be call in the sass project using the functions:</p>
+<p><code>grid-item-size($grid-item-size, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of grid-item-size():</p>
+<ul>
+<li><code>grid-item-size(md)</code> =&gt; <code>var(--grid-item-size-md)</code> If $use-css-var = true</li>
+<li><code>grid-item-size(md)</code> =&gt; <code>320px</code> If $use-css-var = false</li>
+<li><code>grid-item-size(md, true)</code> =&gt; <code>320px</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 

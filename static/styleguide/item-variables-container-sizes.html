@@ -71,18 +71,48 @@
 
     <!-- documentation. -->
     <section class="kss-documentation">
-        <article class="kss-markdown">
-          <h1 id="atomic-bulldog">Atomic Bulldog</h1>
-<blockquote>
-<p>Style Guide</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<h2 id="atomic-design">Atomic Design</h2>
-<h2 id="project-structure">Project Structure</h2>
-<h2 id="resources">Resources</h2>
-<p><a href="https://css-tricks.com/build-style-guide-straight-sass/">https://css-tricks.com/build-style-guide-straight-sass/</a></p>
 
-        </article>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-variables-container-sizes">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_container-sizes.scss</span>, line <span>38</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-container-sizes">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.3.1</span>
+                  <span class="kss-section__name">------------------------------ KSS Documentation ------------------------------ Container Sizes</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><hr>
+<h2 id="kss-documentation">KSS Documentation</h2>
+<p>Container Sizes</p>
+<p>Breakpoints are sets in the map <code>$breakpoints</code></p>
+<ul>
+<li><code>xs</code>: 0px,</li>
+<li><code>sm</code>: 576px,</li>
+<li><code>md</code>: 768px,</li>
+<li><code>lg</code>: 992px,</li>
+<li><code>xl</code>: 1200px</li>
+</ul>
+<p>Breakpoints can be call in the sass project using the function <code>bp($bp)</code> which will outpout a value in em or using <code>bp-var($bp, $true-val:false)</code></p>
+<p>Functions example:</p>
+<ul>
+<li><code>bp(sm);</code> - Output 36em;</li>
+<li><code>bp-var(sm)</code> - If <code>$use-css-var</code> is set to true the output will be <code>var(--bp-sm)</code>; else it will output the value in px <code>576px</code></li>
+<li><code>bp-var(sm, true)</code> Output the value in px <code>576px</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </header>
     </section>
     <!-- /documentation. -->
 
