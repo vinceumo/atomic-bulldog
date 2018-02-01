@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
     <link rel="stylesheet" href="kss-assets/vendor/prism.css">
     <link rel="stylesheet" href="kss-assets/css/kss.css">
-    <link rel="stylesheet" href="../css/screen.min.css">
+    <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
+<link rel="stylesheet" href="../css/screen.min.css">
+<link rel="stylesheet" href="../css/themes/theme-invert.min.css">
 
   </head>
 
@@ -45,9 +47,9 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-theme-invert.html">
+            <a class="" href="section-themes.html">
               <span class="kss-nav__ref">2</span>
-              <span class="kss-nav__name">theme invert</span>
+              <span class="kss-nav__name">Themes</span>
             </a>
           </li>
           <li class="kss-nav__item">
@@ -69,17 +71,22 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-theme-invert-atoms">
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-break-points">
 
             <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_breakpoints.scss</span>, line <span>48</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-theme-invert-atoms">
+              <a class="kss-section__permalink" href="#kssref-variables-break-points">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">theme invert.Atoms</span>
+                  <span class="kss-section__ref">3.1</span>
+                  <span class="kss-section__name">Breakpoints</span>
                 </h2>
               </a>
 
+                <div class="kss-section__description"><p>The breakpoint Map is set in px and is converted to em with the em function.
+Em as better support for media queries compare to px and rem, <a href="https://zellwk.com/blog/media-query-units/">https://zellwk.com/blog/media-query-units/</a>
+This map can be use with the media query mixin and the breakpoint mixin</p>
+</div>
 
             </article>
 
