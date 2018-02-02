@@ -139,7 +139,13 @@ $color-themes: (
 #kss-map-colors{
   .kss-color-item{
     .kss-color-item-child{
-      min-height: 10px;
+      padding: 2px;
+      padding-top: 80px;
+
+      .kss-color-item-legend{
+        
+        background-color: #ffffff;
+      }
     }
   }
 }

@@ -25,12 +25,14 @@ function kssShowColors() {
       var colorVal = getCssVar(colorPrefix, value);
       var colorItemHtml =
         '<div class="kss-color-item-child" style="background-color:' + colorVal +'">' +
+        '<div class="kss-color-item-legend">'+
         '<p>color(' + color + ', ' + subValue +')</p>' +
         '<p>' + colorVal + '</p>' +
         '<p>' + colorVal +'</p>' +
+        '</div>' +
         '</div>';
-      console.log(colorItemHtml);
-      kssColorItemBlock.insertAdjacentHTML( 'afterend', colorItemHtml );
+
+      kssColorItemBlock.insertAdjacentHTML( 'afterbegin', colorItemHtml );
     });
   });
 }
