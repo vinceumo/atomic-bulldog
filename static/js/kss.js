@@ -23,12 +23,13 @@ function kssShowColors() {
       var subValue = el;
       var value = color + "-" + subValue;
       var colorVal = getCssVar(colorPrefix, value);
+      var cssVar = "--" + colorPrefix + "-" + value;
       var colorItemHtml =
-        '<div class="kss-color-item-child" style="background-color:' + colorVal +'">' +
+        '<div class="kss-color-item-child" style="background-color: var(' + cssVar +')">' +
         '<div class="kss-color-item-legend">'+
         '<p>color(' + color + ', ' + subValue +')</p>' +
         '<p>' + colorVal + '</p>' +
-        '<p>' + colorVal +'</p>' +
+        '<p>' + cssVar +'</p>' +
         '</div>' +
         '</div>';
 
