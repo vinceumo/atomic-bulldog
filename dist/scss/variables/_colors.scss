@@ -140,11 +140,12 @@ $color-themes: (
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  
+
   .kss-color-item{
     .kss-color-item-child{
       padding: 2px;
       padding-top: 80px;
+      margin-bottom: 1rem;
 
       .kss-color-item-legend{
         
