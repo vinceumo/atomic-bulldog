@@ -42,3 +42,28 @@ $spacers: (
 // ------------------------------
 //KSS Documentation
 // ------------------------------
+
+// Spacing
+//
+// Spacing is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)
+//
+// ---------------
+// * `0`: 0,
+// * `1`: ($spacer-reference * 0.25),
+// * `2`: ($spacer-reference * 0.5),
+// * `3`: $spacer-reference,
+// * `4`: ($spacer-reference * 1.25),
+// * `5`: ($spacer-reference * 1.5),
+// * `6`: ($spacer-reference * 3)
+// ---------------
+//
+// spacer sizes can be call in the sass project using the functions:
+//
+// `spacer($spacer, $true-val:false)` which will outpout by default the the css variable
+//
+// Usage of grid-item-size():
+// * `spacer(4)` => `var(--spacer-4)` If $use-css-var = true
+// * `spacer(4)` => `1.25rem` If $use-css-var = false
+// * `spacer(4, true)` => `1.25rem`
+//
+// Styleguide Variables.spacing

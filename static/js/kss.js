@@ -29,11 +29,11 @@ function kssShowColors() {
         '<div class="kss-color-item-legend">'+
         '<p>color(' + color + ', ' + subValue +')</p>' +
         '<p>' + colorVal + '</p>' +
-        '<p>' + cssVar +'</p>' +
+        '<p>var(' + cssVar +')</p>' +
         '</div>' +
         '</div>';
 
-      kssColorItemBlock.insertAdjacentHTML( 'afterbegin', colorItemHtml );
+      kssColorItemBlock.insertAdjacentHTML( 'beforeend', colorItemHtml );
     });
   });
 }

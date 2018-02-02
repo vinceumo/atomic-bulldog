@@ -76,6 +76,12 @@
                         <span class="kss-nav__name">Colors</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-variables.html#kssref-variables-colors-swatches">
+                        <span class="kss-nav__ref">4.2.1</span>
+                        <span class="kss-nav__name">Color Swatches</span>
+                      </a>
+                    </li>
                     <li class="kss-nav__item ">
                       <a href="section-variables.html#kssref-variables-container">
                         <span class="kss-nav__ref">4.3</span>
@@ -98,6 +104,12 @@
                       <a href="section-variables.html#kssref-variables-grid">
                         <span class="kss-nav__ref">4.6</span>
                         <span class="kss-nav__name">Grid</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-variables.html#kssref-variables-spacing">
+                        <span class="kss-nav__ref">4.7</span>
+                        <span class="kss-nav__name">Spacing</span>
                       </a>
                     </li>
                 </ul>
@@ -184,11 +196,75 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>colors use</p>
+                <div class="kss-section__description"><p>Colors are set in the map <code>$color-themes</code>. Each color themes have 5 variables:</p>
+<ul>
+<li>Base</li>
+<li>Dark</li>
+<li>Light</li>
+<li>Transparent</li>
+<li>Contrast</li>
+</ul>
+<p>Colors can be call in the sass project using the functions:</p>
+<p><code>color($color-name, $color-variant:null, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of font-family():</p>
+<ul>
+<li><code>color(danger)</code> =&gt; <code>var(--color-danger-base)</code> If $use-css-var = true</li>
+<li><code>color(danger)</code> =&gt; <code>#c65556</code> If $use-css-var = false</li>
+<li><code>color(success, base, true)</code> =&gt; <code>#c65556</code></li>
+<li><code>color(success, light)</code> =&gt; <code>var(--color-success-light)</code> If $use-css-var = true</li>
+<li><code>color(success, light)</code> =&gt; <code>#76bd7a</code> If $use-css-var = false</li>
+<li><code>color(success, light, true)</code> =&gt; <code>#76bd7a</code></li>
+</ul>
 </div>
 
             </article>
 
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-variables-colors-swatches">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_colors.scss</span>, line <span>154</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-colors-swatches">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.2.1</span>
+                  <span class="kss-section__name">Color Swatches</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><!--ONLY FOR KSS-->
+<div id="kss-map-colors">
+    <div class="kss-color-item" data-color="primary"></div>
+    <div class="kss-color-item" data-color="link"></div>
+    <div class="kss-color-item" data-color="success"></div>
+    <div class="kss-color-item" data-color="danger"></div>
+    <div class="kss-color-item" data-color="warning"></div>
+    <div class="kss-color-item" data-color="light"></div>
+    <div class="kss-color-item" data-color="dark"></div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;!--ONLY FOR KSS--&gt;
+&lt;div id&#x3D;&quot;kss-map-colors&quot;&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;primary&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;link&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;success&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;danger&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;warning&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;light&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;dark&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </section>
             <section class="kss-section kss-section--depth-2" id="kssref-variables-container">
@@ -238,7 +314,7 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Font Families are sets in the map <code>$font-families</code></p>
+                <div class="kss-section__description"><p>Font Families are set in the map <code>$font-families</code></p>
 <hr>
 <ul>
 <li><code>paragraph</code>: Lato,</li>
@@ -338,6 +414,44 @@ Or the grid can be use as fluid using the map <code>$grid-item-sizes</code> with
 
 
             </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-variables-spacing">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_spacing.scss</span>, line <span>46</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-variables-spacing">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.7</span>
+                  <span class="kss-section__name">Spacing</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Spacing is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)</p>
+<hr>
+<ul>
+<li><code>0</code>: 0,</li>
+<li><code>1</code>: ($spacer-reference * 0.25),</li>
+<li><code>2</code>: ($spacer-reference * 0.5),</li>
+<li><code>3</code>: $spacer-reference,</li>
+<li><code>4</code>: ($spacer-reference * 1.25),</li>
+<li><code>5</code>: ($spacer-reference * 1.5),</li>
+<li><code>6</code>: ($spacer-reference * 3)</li>
+</ul>
+<hr>
+<p>spacer sizes can be call in the sass project using the functions:</p>
+<p><code>spacer($spacer, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of grid-item-size():</p>
+<ul>
+<li><code>spacer(4)</code> =&gt; <code>var(--spacer-4)</code> If $use-css-var = true</li>
+<li><code>spacer(4)</code> =&gt; <code>1.25rem</code> If $use-css-var = false</li>
+<li><code>spacer(4, true)</code> =&gt; <code>1.25rem</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </section>
     </section>
     <!-- /documentation. -->
 
@@ -347,7 +461,8 @@ Or the grid can be use as fluid using the map <code>$grid-item-sizes</code> with
   <script src="kss-assets/vendor/jquery.js"></script>
   <script src="kss-assets/vendor/prism.js"></script>
   <script src="kss-assets/js/kss.js"></script>
-  
+  <script src="../js/kss.js"></script>
+
   <!-- /scripts. -->
 
   </body>

@@ -89,7 +89,25 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>colors use</p>
+                <div class="kss-section__description"><p>Colors are set in the map <code>$color-themes</code>. Each color themes have 5 variables:</p>
+<ul>
+<li>Base</li>
+<li>Dark</li>
+<li>Light</li>
+<li>Transparent</li>
+<li>Contrast</li>
+</ul>
+<p>Colors can be call in the sass project using the functions:</p>
+<p><code>color($color-name, $color-variant:null, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of font-family():</p>
+<ul>
+<li><code>color(danger)</code> =&gt; <code>var(--color-danger-base)</code> If $use-css-var = true</li>
+<li><code>color(danger)</code> =&gt; <code>#c65556</code> If $use-css-var = false</li>
+<li><code>color(success, base, true)</code> =&gt; <code>#c65556</code></li>
+<li><code>color(success, light)</code> =&gt; <code>var(--color-success-light)</code> If $use-css-var = true</li>
+<li><code>color(success, light)</code> =&gt; <code>#76bd7a</code> If $use-css-var = false</li>
+<li><code>color(success, light, true)</code> =&gt; <code>#76bd7a</code></li>
+</ul>
 </div>
 
             </article>
@@ -105,7 +123,8 @@
   <script src="kss-assets/vendor/jquery.js"></script>
   <script src="kss-assets/vendor/prism.js"></script>
   <script src="kss-assets/js/kss.js"></script>
-  
+  <script src="../js/kss.js"></script>
+
   <!-- /scripts. -->
 
   </body>

@@ -130,27 +130,39 @@ $color-themes: (
 
 // Colors
 //
-// colors use
+// Colors are set in the map `$color-themes`. Each color themes have 5 variables:
+// * Base
+// * Dark
+// * Light
+// * Transparent
+// * Contrast
 //
+// Colors can be call in the sass project using the functions:
+//
+// `color($color-name, $color-variant:null, $true-val:false)` which will outpout by default the the css variable
+//
+// Usage of font-family():
+// * `color(danger)` => `var(--color-danger-base)` If $use-css-var = true
+// * `color(danger)` => `#c65556` If $use-css-var = false
+// * `color(success, base, true)` => `#c65556`
+// * `color(success, light)` => `var(--color-success-light)` If $use-css-var = true
+// * `color(success, light)` => `#76bd7a` If $use-css-var = false
+// * `color(success, light, true)` => `#76bd7a`
 //
 // Styleguide Variables.colors
 
-
-#kss-map-colors{
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  .kss-color-item{
-    .kss-color-item-child{
-      padding: 2px;
-      padding-top: 80px;
-      margin-bottom: 1rem;
-
-      .kss-color-item-legend{
-        
-        background-color: #ffffff;
-      }
-    }
-  }
-}
+// Color Swatches
+//
+// markup:
+// <!--ONLY FOR KSS-->
+// <div id="kss-map-colors">
+//     <div class="kss-color-item" data-color="primary"></div>
+//     <div class="kss-color-item" data-color="link"></div>
+//     <div class="kss-color-item" data-color="success"></div>
+//     <div class="kss-color-item" data-color="danger"></div>
+//     <div class="kss-color-item" data-color="warning"></div>
+//     <div class="kss-color-item" data-color="light"></div>
+//     <div class="kss-color-item" data-color="dark"></div>
+// </div>
+//
+// Styleguide Variables.colors.swatches

@@ -9,5 +9,8 @@
     "../css/themes/kss-overrides.min.css",
     "../css/screen.min.css",
     "../css/themes/theme-invert.min.css"
+  ],
+  "js": [
+    "../js/kss.js"
   ]
 }

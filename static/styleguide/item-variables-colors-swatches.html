@@ -77,38 +77,50 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-functions-bp">
+            <header class="kss-section kss-section--depth-3" id="kssref-variables-colors-swatches">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>variables/_breakpoints.scss</span>, line <span>74</span></p>
+                <p class="kss-section__source">Source: <span>variables/_colors.scss</span>, line <span>154</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-functions-bp">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">bp($bp) and bp-var($bp, $true-val:false)</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-variables-colors-swatches">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.2.1</span>
+                  <span class="kss-section__name">Color Swatches</span>
+                </h3>
               </a>
 
-                <div class="kss-section__description"><p><code>$breakpoints</code> map can be call in the sass project using the function <code>bp($bp)</code> which will outpout a value in em (Not to be use in media queries as css variables do not work in this case) or using <code>bp-var($bp, $true-val:false)</code></p>
-<p>Parameters:</p>
-<ul>
-<li><code>$bp</code> - breakpoint from the map</li>
-<li><code>$true-val</code> - Optional value. If set to true it will output the value in px</li>
-</ul>
-<p>Usage of bp():</p>
-<ul>
-<li><code>bp(sm);</code> =&gt; <code>36em</code></li>
-</ul>
-<p>Usage of bp-var():</p>
-<ul>
-<li><code>bp-var(sm);</code> =&gt; <code>var(--bp-sm);</code> If $use-css-var = true</li>
-<li><code>bp-var(sm);</code> =&gt; <code>576px;</code> If $use-css-var = false</li>
-<li><code>bp-var(sm, true)</code> =&gt; <code>576px;</code></li>
-</ul>
-</div>
 
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><!--ONLY FOR KSS-->
+<div id="kss-map-colors">
+    <div class="kss-color-item" data-color="primary"></div>
+    <div class="kss-color-item" data-color="link"></div>
+    <div class="kss-color-item" data-color="success"></div>
+    <div class="kss-color-item" data-color="danger"></div>
+    <div class="kss-color-item" data-color="warning"></div>
+    <div class="kss-color-item" data-color="light"></div>
+    <div class="kss-color-item" data-color="dark"></div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;!--ONLY FOR KSS--&gt;
+&lt;div id&#x3D;&quot;kss-map-colors&quot;&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;primary&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;link&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;success&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;danger&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;warning&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;light&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;kss-color-item&quot; data-color&#x3D;&quot;dark&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </header>
     </section>
@@ -120,7 +132,8 @@
   <script src="kss-assets/vendor/jquery.js"></script>
   <script src="kss-assets/vendor/prism.js"></script>
   <script src="kss-assets/js/kss.js"></script>
-  
+  <script src="../js/kss.js"></script>
+
   <!-- /scripts. -->
 
   </body>
