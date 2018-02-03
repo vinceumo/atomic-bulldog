@@ -71,10 +71,24 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-vendors.html">
+            <a class="kss-state-active" href="section-vendors.html">
               <span class="kss-nav__ref">6</span>
               <span class="kss-nav__name">Vendors</span>
             </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-vendors.html#kssref-vendors-family">
+                        <span class="kss-nav__ref">6.1</span>
+                        <span class="kss-nav__name">Family.scss</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-vendors.html#kssref-vendors-reboot">
+                        <span class="kss-nav__ref">6.2</span>
+                        <span class="kss-nav__name">bootstrap-reboot.scss</span>
+                      </a>
+                    </li>
+                </ul>
           </li>
       </ul>
     </section>
@@ -89,39 +103,17 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-functions-em">
+            <header class="kss-section kss-section--depth-1" id="kssref-vendors">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>functions/_em.scss</span>, line <span>10</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-functions-em">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">em($size, $context: 16)</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-vendors">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">6</span>
+                  <span class="kss-section__name">Vendors</span>
+                </h1>
               </a>
 
-                <div class="kss-section__description"><p>The em function convert px value into an em value. By default the function use the base 16px.
-This function is use to set the media queries with em value.
-Resources:</p>
-<ul>
-<li><a href="https://css-tricks.com/em-based-media-queries-are-based-on/">https://css-tricks.com/em-based-media-queries-are-based-on/</a></li>
-<li><a href="https://zellwk.com/blog/media-query-units/">https://zellwk.com/blog/media-query-units/</a></li>
-</ul>
-<p>Parameters:</p>
-<ul>
-<li><code>$size</code> - Size in px to be converted in em</li>
-<li><code>$context</code> - Optional value. By default $context is equal to 16 as this function is mostly use for media queries</li>
-</ul>
-<p>Usage:</p>
-<ul>
-<li><code>em(400px);</code></li>
-</ul>
-<p>Output:</p>
-<ul>
-<li><code>25em;</code></li>
-</ul>
-</div>
 
             </article>
 

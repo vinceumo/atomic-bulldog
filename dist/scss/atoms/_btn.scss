@@ -112,14 +112,14 @@
 // Buttons
 //
 // Markup:
-// <button class="btn {{modifier_class}}">.btn</button>
-// <button class="btn {{modifier_class}} is-outlined">.btn .is-outlined</button>
-// <button class="btn {{modifier_class}} is-hovered">.btn .is-hover</button>
-// <button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
-// <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
-// <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
-// <button class="btn {{modifier_class}}" disabled>.btn disabled</button>
-// <button class="btn {{modifier_class}} is-theme-invert">.btn .is-theme-invert</button>
+// <button class="btn {{modifier_class}}">.btn .{{modifier_class}}</button>
+// <button class="btn {{modifier_class}} is-outlined">.btn .{{modifier_class}} .is-outlined</button>
+// <button class="btn {{modifier_class}} is-hovered">.btn .{{modifier_class}} .is-hover</button>
+// <button class="btn {{modifier_class}} is-focused">.btn .{{modifier_class}} .is-focused</button>
+// <button class="btn {{modifier_class}} is-rounded">.btn .{{modifier_class}} .is-rounded</button>
+// <button class="btn {{modifier_class}} is-loading">.btn .{{modifier_class}} .is-loading</button>
+// <button class="btn {{modifier_class}}" disabled>.btn .{{modifier_class}} disabled</button>
+// <button class="btn {{modifier_class}} is-theme-default">.btn .{{modifier_class}} .is-theme-default</button>
 //
 // .is-primary - Primary color
 // .is-secondary - Secondary color
@@ -132,18 +132,22 @@
 //
 // Styleguide Atoms.button
 
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
 // Buttons Inverted
 //
 // Markup:
 // <div class="theme-invert">
-//     <button class="btn {{modifier_class}}">.btn</button>
-//     <button class="btn {{modifier_class}} is-outlined">.btn .is-outlined</button>
-//     <button class="btn {{modifier_class}} is-hovered">.btn .is-hover</button>
-//     <button class="btn {{modifier_class}} is-focused">.btn .is-focused</button>
-//     <button class="btn {{modifier_class}} is-rounded">.btn .is-rounded</button>
-//     <button class="btn {{modifier_class}} is-loading">.btn .is-loading</button>
-//     <button class="btn {{modifier_class}}" disabled>.btn disabled</button>
-//     <button class="btn {{modifier_class}} is-theme-default">.btn .is-theme-default</button>
+//     <button class="btn {{modifier_class}}">.btn .{{modifier_class}}</button>
+//     <button class="btn {{modifier_class}} is-outlined">.btn .{{modifier_class}} .is-outlined</button>
+//     <button class="btn {{modifier_class}} is-hovered">.btn .{{modifier_class}} .is-hover</button>
+//     <button class="btn {{modifier_class}} is-focused">.btn .{{modifier_class}} .is-focused</button>
+//     <button class="btn {{modifier_class}} is-rounded">.btn .{{modifier_class}} .is-rounded</button>
+//     <button class="btn {{modifier_class}} is-loading">.btn .{{modifier_class}} .is-loading</button>
+//     <button class="btn {{modifier_class}}" disabled>.btn .{{modifier_class}} disabled</button>
+//     <button class="btn {{modifier_class}} is-theme-default">.btn .{{modifier_class}} .is-theme-default</button>
 // <div>
 //
 // .is-primary - Primary color

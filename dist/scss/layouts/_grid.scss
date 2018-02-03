@@ -1,18 +1,20 @@
+// ------------------------------
+// Grid, using CSS Grid Layout
+// ------------------------------
 .grid {
   display: grid;
   grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
   grid-gap: spacer(1);
+  grid-auto-flow: dense;
 
-  &.is-dense {
-    grid-auto-flow: dense;
-  }
-
+  // Set item size
   .item {
     width: 100%;
     grid-column: span 1;
     grid-row: span 1;
   }
 
+  // Set item sizes for fluid grid
   @each $size, $sizeKey in $grid-item-sizes {
     &.has-items-#{$size} {
       grid-template-columns: repeat(
@@ -22,30 +24,36 @@
     }
   }
 
+  // Set grid responsive classes
   @each $bp, $bpKey in $breakpoints {
     @if $bp != xs {
-      @each $key, $spacer in $spacers {
-        @include min(#{bp(#{$bp})}) {
-          .has-col-#{$bp}-all {
-            grid-column: 1 / -1;
-          }
+      @include min(#{bp(#{$bp})}) {
+        // Full col item
+        .has-col-#{$bp}-all {
+          grid-column: 1 / -1;
+        }
 
-          .has-row-#{$bp}-all {
-            grid-row: 1 / -1;
-          }
+        // Full row item
+        .has-row-#{$bp}-all {
+          grid-row: 1 / -1;
+        }
 
-          @for $i from 1 through $grid-columns {
-            .has-col-#{$bp}-#{$i} {
-              grid-column: span $i;
-            }
+        // Set item number of col
+        @for $i from 1 through $grid-columns {
+          .has-col-#{$bp}-#{$i} {
+            grid-column: span $i;
           }
+        }
 
-          @for $i from 1 through 10 {
-            .has-row-#{$bp}-#{$i} {
-              grid-row: span $i;
-            }
+        // Set item number of row
+        @for $i from 1 through $grid-columns {
+          .has-row-#{$bp}-#{$i} {
+            grid-row: span $i;
           }
+        }
 
+        // Set grid gap
+        @each $key, $spacer in $spacers {
           &.has-grid-gap-#{$bp}-#{$key} {
             grid-gap: spacer($key);
           }
@@ -87,15 +95,36 @@
 
 // Grid
 //
-// Atomic Bulldog use CSS grid layout for its grid. We have two ways of creating a grid first one the `fluid` way, second option is the `rigid` way.
+// Atomic Bulldog use CSS grid layout for its grid. We have two ways of creating a grid. First one the `fluid` way, second option is the `rigid` way.
 //
 // Styleguide Layout.Grid
 
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
 // Grid - Rigid
 //
-// 
+//
+// The rigid grid is base 12 col, This grid is two dimentional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).
+//
+// {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)
+//
+// markup:
+// <div class="grid has-grid-gap-3">
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3 box">1</div>
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">2</div>
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 box">3</div>
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">4</div>
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">5</div>
+//     <div class="item has-col-6 has-col-md-3 has-col-lg-8 box">6</div>
+// </div>
 //
 // Styleguide Layout.Grid.rigid
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
 
 // Grid - Fluid
 //
@@ -116,7 +145,7 @@
 //     <div class="item box">9</div>
 //     <div class="item box">10</div>
 // </div>
-// 
+//
 // .has-items-xs - xs Fuild items
 // .has-items-sm - sm Fuild items
 // .has-items-md - md Fuild items
@@ -125,3 +154,51 @@
 // .has-items-xxl - xxl Fuild items
 //
 // Styleguide Layout.Grid.fluid
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Row
+//
+// Styleguide Layout.Grid.modifiers
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Col
+//
+// Styleguide Layout.Grid.modifiers
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Gaps
+//
+// Grid gap can be change using `.has-grid-gap-{size}` class. This class use the $spacers map variables
+//
+// markup:
+// <div class="grid has-items-md {{modifier_class}}">
+//     <div class="item box">1</div>
+//     <div class="item box">2</div>
+//     <div class="item box">3</div>
+//     <div class="item box">4</div>
+//     <div class="item box">5</div>
+//     <div class="item box">6</div>
+//     <div class="item box">7</div>
+//     <div class="item box">8</div>
+//     <div class="item box">9</div>
+//     <div class="item box">10</div>
+// </div>
+//
+// .has-grid-gap-0 - Grid Gap 0
+// .has-grid-gap-1 - Grid Gap 1
+// .has-grid-gap-2 - Grid Gap 2
+// .has-grid-gap-3 - Grid Gap 3
+// .has-grid-gap-4 - Grid Gap 4
+// .has-grid-gap-5 - Grid Gap 5
+// .has-grid-gap-6 - Grid Gap 6
+//
+// Styleguide Layout.Grid.modifiers

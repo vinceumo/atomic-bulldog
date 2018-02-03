@@ -89,37 +89,37 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-functions-em">
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-spacers">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>functions/_em.scss</span>, line <span>10</span></p>
+                <p class="kss-section__source">Source: <span>variables/_spacers.scss</span>, line <span>46</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-functions-em">
+              <a class="kss-section__permalink" href="#kssref-variables-spacers">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">em($size, $context: 16)</span>
+                  <span class="kss-section__ref">5.7</span>
+                  <span class="kss-section__name">Spacers</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>The em function convert px value into an em value. By default the function use the base 16px.
-This function is use to set the media queries with em value.
-Resources:</p>
+                <div class="kss-section__description"><p>Spacers is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)</p>
+<hr>
 <ul>
-<li><a href="https://css-tricks.com/em-based-media-queries-are-based-on/">https://css-tricks.com/em-based-media-queries-are-based-on/</a></li>
-<li><a href="https://zellwk.com/blog/media-query-units/">https://zellwk.com/blog/media-query-units/</a></li>
+<li><code>0</code>: 0,</li>
+<li><code>1</code>: ($spacer-reference * 0.25),</li>
+<li><code>2</code>: ($spacer-reference * 0.5),</li>
+<li><code>3</code>: $spacer-reference,</li>
+<li><code>4</code>: ($spacer-reference * 1.25),</li>
+<li><code>5</code>: ($spacer-reference * 1.5),</li>
+<li><code>6</code>: ($spacer-reference * 3)</li>
 </ul>
-<p>Parameters:</p>
+<hr>
+<p>spacer sizes can be call in the sass project using the functions:</p>
+<p><code>spacer($spacer, $true-val:false)</code> which will outpout by default the the css variable</p>
+<p>Usage of grid-item-size():</p>
 <ul>
-<li><code>$size</code> - Size in px to be converted in em</li>
-<li><code>$context</code> - Optional value. By default $context is equal to 16 as this function is mostly use for media queries</li>
-</ul>
-<p>Usage:</p>
-<ul>
-<li><code>em(400px);</code></li>
-</ul>
-<p>Output:</p>
-<ul>
-<li><code>25em;</code></li>
+<li><code>spacer(4)</code> =&gt; <code>var(--spacer-4)</code> If $use-css-var = true</li>
+<li><code>spacer(4)</code> =&gt; <code>1.25rem</code> If $use-css-var = false</li>
+<li><code>spacer(4, true)</code> =&gt; <code>1.25rem</code></li>
 </ul>
 </div>
 
