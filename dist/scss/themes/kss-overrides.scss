@@ -31,6 +31,14 @@ $kss-theme-color: color(danger, base);
   margin-top: 2.5rem;
 }
 
+.kss-modifiers__example{
+  .box{
+    background: $kss-theme-color;
+    color: #ffffff;
+    padding: 1rem;
+  }
+}
+
 #kss-map-colors{
   .kss-color-item{
     display: grid;
