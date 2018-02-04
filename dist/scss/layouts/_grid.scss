@@ -120,7 +120,7 @@
 //     <div class="item has-col-6 has-col-md-3 has-col-lg-8 box">6</div>
 // </div>
 //
-// Styleguide Layout.Grid.rigid
+// Styleguide Layout.Grid.a
 
 // ------------------------------
 /////////////////////////////////
@@ -153,7 +153,7 @@
 // .has-items-xl - xl Fuild items
 // .has-items-xxl - xxl Fuild items
 //
-// Styleguide Layout.Grid.fluid
+// Styleguide Layout.Grid.b
 
 // ------------------------------
 /////////////////////////////////
@@ -161,7 +161,24 @@
 
 // Row
 //
-// Styleguide Layout.Grid.modifiers
+// Rows can be expended using the class `has-row-{breakpoint}-{size}` sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
+//`grid-template-rows` set, so the item can grow depending of the number of rows.
+//
+// markup:
+// <div class="grid has-items-sm has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
+//     <div class="item box has-row-all">1</div>
+//     <div class="item box">2</div>
+//     <div class="item box">3</div>
+//     <div class="item box">4</div>
+//     <div class="item box has-row-2">5</div>
+//     <div class="item box">6</div>
+//     <div class="item box">7</div>
+//     <div class="item box">8</div>
+//     <div class="item box">9</div>
+//     <div class="item box">10</div>
+// </div>
+//
+// Styleguide Layout.Grid.modifiers.row
 
 // ------------------------------
 /////////////////////////////////
@@ -169,7 +186,23 @@
 
 // Col
 //
-// Styleguide Layout.Grid.modifiers
+// Columns can be expended using the class `has-col-{breakpoint}-{size}` sizes goes from 0 to 12. .has-col-all can be use as well, the item will then take the full width.
+//
+// markup:
+// <div class="grid has-items-sm has-grid-gap-2">
+//     <div class="item box has-col-all">1</div>
+//     <div class="item box">2</div>
+//     <div class="item box">3</div>
+//     <div class="item box">4</div>
+//     <div class="item box has-col-2">5</div>
+//     <div class="item box">6</div>
+//     <div class="item box">7</div>
+//     <div class="item box">8</div>
+//     <div class="item box">9</div>
+//     <div class="item box">10</div>
+// </div>
+//
+// Styleguide Layout.Grid.modifiers.col
 
 // ------------------------------
 /////////////////////////////////
@@ -201,4 +234,4 @@
 // .has-grid-gap-5 - Grid Gap 5
 // .has-grid-gap-6 - Grid Gap 6
 //
-// Styleguide Layout.Grid.modifiers
+// Styleguide Layout.Grid.modifiers.gap
