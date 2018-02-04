@@ -16,3 +16,38 @@
 // ------------------------------
 // KSS Documentation
 // ------------------------------
+
+// Container
+//
+// Atomic Bulldog comes with two containers classes that you can chose from. One fluid container, that will take all the available space.
+// One fixed width container (sizes are set in variables/_container-sizes.scss).
+//
+// Styleguide Layout.Container
+
+// Container Fluid
+//
+// `.container.is-fluid`
+//
+// markup:
+// <div class="container-fluid is-fluid">
+//   <div class="box">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. Explicabo
+//    neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste?
+//   </div>
+// </div>
+//
+// Styleguide Layout.Container.fluid
+
+// Container fixed
+//
+// `.container`
+//
+// markup:
+// <div class="container">
+//   <div class="box">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. Explicabo
+//    neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste?
+//   </div>
+// </div>
+//
+// Styleguide Layout.Container.fixed
