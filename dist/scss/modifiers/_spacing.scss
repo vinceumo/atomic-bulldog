@@ -95,3 +95,30 @@
 // ------------------------------
 // KSS Documentation
 // ------------------------------
+
+// Spacing
+//
+// This classes allow to set padding (p) and margin (m)
+//
+// The classes are named using the format has-{property}{sides}-{size} for xs and has-{property}{sides}-{breakpoint}-{size} for the other breakpoints.
+//
+// Parameters:
+// * `size` - Size from the map $spacers from 0 to 6
+// * `sides` - Optional value. If no set then the 4 sides will be targeted, `x` target left and right, `y` top and bottom, `r` right, `l` left, `t` top, `b` bottom.
+// * `property` - `m` for margin, `p` for padding.
+//
+// Usage:
+// * `has-mt-3` => has margin top var(--spacer-3) => margin-top: var(--spacer-3);
+// * `has-p-sm-3` => has padding var(--spacer-3) from sm breakpoint
+// * `has-mx-lg-3` => has margin left and right var(--spacer-3) from lg breakpoint
+//
+// markup:
+// <div class="has-bg-primary has-p-1 has-p-sm-6 has-p-md-1 has-p-lg-6">
+//  <div class="has-bg-success has-p-1">
+//    <p class="has-mt-6 has-mx-sm-1 has-mx-md-5 has-mt-lg-3">
+//      Age, inquies, ista parva sunt. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Non potes, nisi retexueris illa. De hominibus dici non necesse est. Nam quid possumus facere melius? Erit enim mecum, si tecum erit.
+//    </p>
+//  </div>
+// </div>
+//
+// Styleguide Modifiers.Spacing
