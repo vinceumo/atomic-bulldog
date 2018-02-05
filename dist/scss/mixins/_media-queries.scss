@@ -32,8 +32,8 @@
 // `@include min($bp, $max: "null", $device: "screen"){}`
 //
 // Parameters:
-// * `$bp` - Breakpoints are defines in the map variables `$breakpoints`, breakpoints can be called with the funtion `bp()`. As we call a function
-// inside a mixin we will need to use sass interpolation, `#{bp()}`. This will retur a velue in em.
+// * `$bp` - Breakpoints are defines in the map variables `$breakpoints`, breakpoints can be called with the function `bp()`. As we call a function
+// inside a mixin we will need to use sass interpolation, `#{bp()}`. This will return a value in em.
 // * `$max` - Optional max value, using $breakpoints map
 // * `$device` - Default screen
 //
@@ -56,8 +56,8 @@
 // /!\ Atomic Bulldog is mobile first, it is not recommended to use max media queries
 //
 // Parameters:
-// * `$bp` - Breakpoints are defines in the map variables `$breakpoints`, breakpoints can be called with the funtion `bp()`. As we call a function
-// inside a mixin we will need to use sass interpolation, `#{bp()}`. This will retur a velue in em.
+// * `$bp` - Breakpoints are defines in the map variables `$breakpoints`, breakpoints can be called with the function `bp()`. As we call a function
+// inside a mixin we will need to use sass interpolation, `#{bp()}`. This will return a value in em.
 // * `$min` - Optional min value, using $breakpoints map
 // * `$device` - Default screen
 //

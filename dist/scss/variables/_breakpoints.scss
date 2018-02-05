@@ -59,9 +59,9 @@ $breakpoints: (
 //
 // Breakpoints can be call in the sass project using the functions:
 //
-// `bp($bp)` which will outpout a value in em
+// `bp($bp)` which will output a value in em
 //
-// `bp-var($bp, $true-val:false)` which will outpout the css variable
+// `bp-var($bp, $true-val:false)` which will output the CSS variable
 //
 // Usage of bp():
 // * `bp(sm);` => `36em`

@@ -139,7 +139,7 @@ $color-themes: (
 //
 // Colors can be call in the sass project using the functions:
 //
-// `color($color-name, $color-variant:null, $true-val:false)` which will outpout by default the the css variable
+// `color($color-name, $color-variant:null, $true-val:false)` which will output by default the CSS variable
 //
 // Usage of font-family():
 // * `color(danger)` => `var(--color-danger-base)` If $use-css-var = true

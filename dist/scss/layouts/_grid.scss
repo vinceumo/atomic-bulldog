@@ -106,7 +106,7 @@
 // Grid - Rigid
 //
 //
-// The rigid grid is base 12 col, This grid is two dimentional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).
+// The rigid grid is base 12 col, This grid is two dimensional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).
 //
 // {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)
 //
@@ -130,7 +130,7 @@
 //
 // The fluid grid is set by adding .has-items-{size}. We need as well to give the .grid children the class of .item.
 //
-// This option do not use media queries, We automaticly adjust the grid depending on the size of the items using `grid-template-columns: repeat(auto-fit,minmax(#{grid-item-size($size)}, 1fr));`.
+// This option do not use media queries, We automatically adjust the grid depending on the size of the items using `grid-template-columns: repeat(auto-fit,minmax(#{grid-item-size($size)}, 1fr));`.
 //
 // markup:
 // <div class="grid {{modifier_class}} has-grid-gap-3">
@@ -146,12 +146,12 @@
 //     <div class="item box">10</div>
 // </div>
 //
-// .has-items-xs - xs Fuild items
-// .has-items-sm - sm Fuild items
-// .has-items-md - md Fuild items
-// .has-items-lg - lg Fuild items
-// .has-items-xl - xl Fuild items
-// .has-items-xxl - xxl Fuild items
+// .has-items-xs - xs Fluid items
+// .has-items-sm - sm Fluid items
+// .has-items-md - md Fluid items
+// .has-items-lg - lg Fluid items
+// .has-items-xl - xl Fluid items
+// .has-items-xxl - xxl Fluid items
 //
 // Styleguide Layout.Grid.b
 

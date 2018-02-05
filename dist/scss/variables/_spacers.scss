@@ -59,7 +59,7 @@ $spacers: (
 //
 // spacer sizes can be call in the sass project using the functions:
 //
-// `spacer($spacer, $true-val:false)` which will outpout by default the the css variable
+// `spacer($spacer, $true-val:false)` which will output by default the CSS variable
 //
 // Usage of grid-item-size():
 // * `spacer(4)` => `var(--spacer-4)` If $use-css-var = true

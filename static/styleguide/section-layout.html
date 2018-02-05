@@ -115,20 +115,32 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-themes.html">
+            <a class="" href="section-settings.html">
               <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-themes.html">
+              <span class="kss-nav__ref">7</span>
               <span class="kss-nav__name">Themes</span>
             </a>
           </li>
           <li class="kss-nav__item">
+            <a class="" href="section-typography.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Typography</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
             <a class="" href="section-variables.html">
-              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__ref">9</span>
               <span class="kss-nav__name">Variables</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-vendors.html">
-              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__ref">10</span>
               <span class="kss-nav__name">Vendors</span>
             </a>
           </li>
@@ -293,7 +305,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>The rigid grid is base 12 col, This grid is two dimentional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).</p>
+                <div class="kss-section__description"><p>The rigid grid is base 12 col, This grid is two dimensional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).</p>
 <p>{breakpoint} is set from the <code>$breakpoints</code> map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)</p>
 </div>
 
@@ -339,7 +351,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
               </a>
 
                 <div class="kss-section__description"><p>The fluid grid is set by adding .has-items-{size}. We need as well to give the .grid children the class of .item.</p>
-<p>This option do not use media queries, We automaticly adjust the grid depending on the size of the items using <code>grid-template-columns: repeat(auto-fit,minmax(#{grid-item-size($size)}, 1fr));</code>.</p>
+<p>This option do not use media queries, We automatically adjust the grid depending on the size of the items using <code>grid-template-columns: repeat(auto-fit,minmax(#{grid-item-size($size)}, 1fr));</code>.</p>
 </div>
 
             </article>
@@ -364,7 +376,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 
                   <h2 class="kss-modifiers__name">.has-items-xs</h2>
 
-                  <p class="kss-modifiers__description">xs Fuild items</p>
+                  <p class="kss-modifiers__description">xs Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-xs has-grid-gap-3">
     <div class="item box">1</div>
@@ -380,7 +392,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 </div></div>
                   <h2 class="kss-modifiers__name">.has-items-sm</h2>
 
-                  <p class="kss-modifiers__description">sm Fuild items</p>
+                  <p class="kss-modifiers__description">sm Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-sm has-grid-gap-3">
     <div class="item box">1</div>
@@ -396,7 +408,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 </div></div>
                   <h2 class="kss-modifiers__name">.has-items-md</h2>
 
-                  <p class="kss-modifiers__description">md Fuild items</p>
+                  <p class="kss-modifiers__description">md Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-md has-grid-gap-3">
     <div class="item box">1</div>
@@ -412,7 +424,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 </div></div>
                   <h2 class="kss-modifiers__name">.has-items-lg</h2>
 
-                  <p class="kss-modifiers__description">lg Fuild items</p>
+                  <p class="kss-modifiers__description">lg Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-lg has-grid-gap-3">
     <div class="item box">1</div>
@@ -428,7 +440,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 </div></div>
                   <h2 class="kss-modifiers__name">.has-items-xl</h2>
 
-                  <p class="kss-modifiers__description">xl Fuild items</p>
+                  <p class="kss-modifiers__description">xl Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-xl has-grid-gap-3">
     <div class="item box">1</div>
@@ -444,7 +456,7 @@ One fixed width container (sizes are set in variables/_container-sizes.scss).</p
 </div></div>
                   <h2 class="kss-modifiers__name">.has-items-xxl</h2>
 
-                  <p class="kss-modifiers__description">xxl Fuild items</p>
+                  <p class="kss-modifiers__description">xxl Fluid items</p>
 
                   <div class="kss-modifiers__example"><div class="grid has-items-xxl has-grid-gap-3">
     <div class="item box">1</div>

@@ -26,7 +26,7 @@ $z-indexes: (
 
 // z-index
 //
-// z-index are sets in the map `$z-indexes`. The first entry will get the highest value and the last one le lowest. You can find an exemple in this pen
+// z-index are sets in the map `$z-indexes`. The first entry will get the highest value and the last one the lowest. You can find an example in this pen
 //
 // ---------------
 // * `skip-navigation`
@@ -35,7 +35,7 @@ $z-indexes: (
 //
 // z-index indexes can be call in the sass project using the functions:
 //
-// `z($name)` which will outpout the reverse index of $name time 10
+// `z($name)` which will output the reverse index of $name time 10
 //
 // Usage of font-size():
 // * `z(main-navigation)` => `10`

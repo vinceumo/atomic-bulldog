@@ -3,3 +3,12 @@ $use-css-var: true;
 // ------------------------------
 // KSS Documentation
 // ------------------------------
+
+// Use CSS variable Flag
+//
+// `$use-css-var` 
+// 
+// By default Atomic Bulldog use CSS variables. You can compile to the real values by changing this flag to false. It is not recommended to do so as it will break some theming options.
+// More over postCSS can be use to compile CSS variables.
+//
+// Styleguide Settings.useCssVar

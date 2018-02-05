@@ -59,24 +59,10 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="kss-state-active" href="section-mixins.html">
+            <a class="" href="section-mixins.html">
               <span class="kss-nav__ref">4</span>
               <span class="kss-nav__name">Mixins</span>
             </a>
-                <ul class="kss-nav__subnav">
-                    <li class="kss-nav__item ">
-                      <a href="section-mixins.html#kssref-mixins-max">
-                        <span class="kss-nav__ref">4.1</span>
-                        <span class="kss-nav__name">max(#{bp(your bp)}){}</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-mixins.html#kssref-mixins-min">
-                        <span class="kss-nav__ref">4.2</span>
-                        <span class="kss-nav__name">min(#{bp(your bp)}){}</span>
-                      </a>
-                    </li>
-                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-modifiers.html">
@@ -97,10 +83,24 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-typography.html">
+            <a class="kss-state-active" href="section-typography.html">
               <span class="kss-nav__ref">8</span>
               <span class="kss-nav__name">Typography</span>
             </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-typography.html#kssref-typography-font-sizes">
+                        <span class="kss-nav__ref">8.1</span>
+                        <span class="kss-nav__name">Font sizes</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-typography.html#kssref-typography-titles">
+                        <span class="kss-nav__ref">8.2</span>
+                        <span class="kss-nav__name">Titles</span>
+                      </a>
+                    </li>
+                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-variables.html">
@@ -127,14 +127,14 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-1" id="kssref-mixins">
+            <header class="kss-section kss-section--depth-1" id="kssref-typography">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-mixins">
+              <a class="kss-section__permalink" href="#kssref-typography">
                 <h1 class="kss-section__item kss-section__item--depth-1">
-                  <span class="kss-section__ref">4</span>
-                  <span class="kss-section__name">Mixins</span>
+                  <span class="kss-section__ref">8</span>
+                  <span class="kss-section__name">Typography</span>
                 </h1>
               </a>
 
@@ -143,73 +143,92 @@
 
 
             </header>
-            <section class="kss-section kss-section--depth-2" id="kssref-mixins-max">
+            <section class="kss-section kss-section--depth-2" id="kssref-typography-font-sizes">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>mixins/_media-queries.scss</span>, line <span>52</span></p>
+                <p class="kss-section__source">Source: <span>typography/_typography.scss</span>, line <span>120</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-mixins-max">
+              <a class="kss-section__permalink" href="#kssref-typography-font-sizes">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.1</span>
-                  <span class="kss-section__name">max(#{bp(your bp)}){}</span>
+                  <span class="kss-section__ref">8.1</span>
+                  <span class="kss-section__name">Font sizes</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p><code>@include max($bp, $min: &quot;null&quot;, $device: &quot;screen&quot;){}</code></p>
-<p>/!\ Atomic Bulldog is mobile first, it is not recommended to use max media queries</p>
-<p>Parameters:</p>
-<ul>
-<li><code>$bp</code> - Breakpoints are defines in the map variables <code>$breakpoints</code>, breakpoints can be called with the function <code>bp()</code>. As we call a function
-inside a mixin we will need to use sass interpolation, <code>#{bp()}</code>. This will return a value in em.</li>
-<li><code>$min</code> - Optional min value, using $breakpoints map</li>
-<li><code>$device</code> - Default screen</li>
-</ul>
-<p>Usage:</p>
-<ul>
-<li><code>h2{@include max(#{bp(sm)}){font-size: font-size(heading2);}}</code></li>
-</ul>
-<p>Output:</p>
-<ul>
-<li><code>@media only screen and (max-width: 36em) {h2{font-size: 2.5rem;}</code></li>
-</ul>
-</div>
 
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><p clas="has-font-size-1">lorem ipsum font size 1</p>
+<p clas="has-font-size-2">lorem ipsum font size 2</p>
+<p clas="has-font-size-3">lorem ipsum font size 3</p>
+<p clas="has-font-size-4">lorem ipsum font size 4</p>
+<p clas="has-font-size-5">lorem ipsum font size 5</p>
+<p clas="has-font-size-6">lorem ipsum font size 6</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;p clas&#x3D;&quot;has-font-size-1&quot;&gt;lorem ipsum font size 1&lt;/p&gt;
+&lt;p clas&#x3D;&quot;has-font-size-2&quot;&gt;lorem ipsum font size 2&lt;/p&gt;
+&lt;p clas&#x3D;&quot;has-font-size-3&quot;&gt;lorem ipsum font size 3&lt;/p&gt;
+&lt;p clas&#x3D;&quot;has-font-size-4&quot;&gt;lorem ipsum font size 4&lt;/p&gt;
+&lt;p clas&#x3D;&quot;has-font-size-5&quot;&gt;lorem ipsum font size 5&lt;/p&gt;
+&lt;p clas&#x3D;&quot;has-font-size-6&quot;&gt;lorem ipsum font size 6&lt;/p&gt;</code></pre>
+                </article>
 
             </section>
-            <section class="kss-section kss-section--depth-2" id="kssref-mixins-min">
+            <section class="kss-section kss-section--depth-2" id="kssref-typography-titles">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>mixins/_media-queries.scss</span>, line <span>30</span></p>
+                <p class="kss-section__source">Source: <span>typography/_typography.scss</span>, line <span>98</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-mixins-min">
+              <a class="kss-section__permalink" href="#kssref-typography-titles">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.2</span>
-                  <span class="kss-section__name">min(#{bp(your bp)}){}</span>
+                  <span class="kss-section__ref">8.2</span>
+                  <span class="kss-section__name">Titles</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p><code>@include min($bp, $max: &quot;null&quot;, $device: &quot;screen&quot;){}</code></p>
-<p>Parameters:</p>
-<ul>
-<li><code>$bp</code> - Breakpoints are defines in the map variables <code>$breakpoints</code>, breakpoints can be called with the function <code>bp()</code>. As we call a function
-inside a mixin we will need to use sass interpolation, <code>#{bp()}</code>. This will return a value in em.</li>
-<li><code>$max</code> - Optional max value, using $breakpoints map</li>
-<li><code>$device</code> - Default screen</li>
-</ul>
-<p>Usage:</p>
-<ul>
-<li><code>h2{@include min(#{bp(sm)}){font-size: font-size(heading2);}}</code></li>
-</ul>
-<p>Output:</p>
-<ul>
-<li><code>@media only screen and (min-width: 36em) {h2{font-size: 2.5rem;}</code></li>
-</ul>
-</div>
 
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><h1>lorem ipsum heading 1</h1>
+<h2>lorem ipsum heading 2</h2>
+<h3>lorem ipsum heading 3</h3>
+<h4>lorem ipsum heading 4</h4>
+<h5>lorem ipsum heading 5</h5>
+<h6>lorem ipsum heading 6</h6>
+<p clas="is-h1">lorem ipsum heading 1</p>
+<p clas="is-h2">lorem ipsum heading 2</p>
+<p clas="is-h3">lorem ipsum heading 3</p>
+<p clas="is-h4">lorem ipsum heading 4</p>
+<p clas="is-h5">lorem ipsum heading 5</p>
+<p clas="is-h6">lorem ipsum heading 6</p></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;h1&gt;lorem ipsum heading 1&lt;/h1&gt;
+&lt;h2&gt;lorem ipsum heading 2&lt;/h2&gt;
+&lt;h3&gt;lorem ipsum heading 3&lt;/h3&gt;
+&lt;h4&gt;lorem ipsum heading 4&lt;/h4&gt;
+&lt;h5&gt;lorem ipsum heading 5&lt;/h5&gt;
+&lt;h6&gt;lorem ipsum heading 6&lt;/h6&gt;
+&lt;p clas&#x3D;&quot;is-h1&quot;&gt;lorem ipsum heading 1&lt;/p&gt;
+&lt;p clas&#x3D;&quot;is-h2&quot;&gt;lorem ipsum heading 2&lt;/p&gt;
+&lt;p clas&#x3D;&quot;is-h3&quot;&gt;lorem ipsum heading 3&lt;/p&gt;
+&lt;p clas&#x3D;&quot;is-h4&quot;&gt;lorem ipsum heading 4&lt;/p&gt;
+&lt;p clas&#x3D;&quot;is-h5&quot;&gt;lorem ipsum heading 5&lt;/p&gt;
+&lt;p clas&#x3D;&quot;is-h6&quot;&gt;lorem ipsum heading 6&lt;/p&gt;</code></pre>
+                </article>
 
             </section>
     </section>
