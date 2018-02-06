@@ -89,78 +89,10 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="kss-state-active" href="section-variables.html">
+            <a class="" href="section-variables.html">
               <span class="kss-nav__ref">9</span>
               <span class="kss-nav__name">Variables</span>
             </a>
-                <ul class="kss-nav__subnav">
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-breakpoints">
-                        <span class="kss-nav__ref">9.1</span>
-                        <span class="kss-nav__name">Breakpoints</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-colors">
-                        <span class="kss-nav__ref">9.2</span>
-                        <span class="kss-nav__name">Colors</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-variables.html#kssref-variables-colors-grays">
-                        <span class="kss-nav__ref">9.2.1</span>
-                        <span class="kss-nav__name">Grays</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-variables.html#kssref-variables-colors-swatches">
-                        <span class="kss-nav__ref">9.2.2</span>
-                        <span class="kss-nav__name">Color Swatches</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-container">
-                        <span class="kss-nav__ref">9.3</span>
-                        <span class="kss-nav__name">Container Sizes</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-fontfamilies">
-                        <span class="kss-nav__ref">9.4</span>
-                        <span class="kss-nav__name">Font Families</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-fontsizes">
-                        <span class="kss-nav__ref">9.5</span>
-                        <span class="kss-nav__name">Font Sizes</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-grid">
-                        <span class="kss-nav__ref">9.6</span>
-                        <span class="kss-nav__name">Grid</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-spacers">
-                        <span class="kss-nav__ref">9.7</span>
-                        <span class="kss-nav__name">Spacers</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-themeclasses">
-                        <span class="kss-nav__ref">9.8</span>
-                        <span class="kss-nav__name">Theme classes</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item ">
-                      <a href="section-variables.html#kssref-variables-zindex">
-                        <span class="kss-nav__ref">9.9</span>
-                        <span class="kss-nav__name">z-index</span>
-                      </a>
-                    </li>
-                </ul>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-vendors.html">
@@ -181,17 +113,37 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-1" id="kssref-variables">
+            <header class="kss-section kss-section--depth-3" id="kssref-variables-colors-grays">
 
             <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>variables/_colors.scss</span>, line <span>189</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-variables">
-                <h1 class="kss-section__item kss-section__item--depth-1">
-                  <span class="kss-section__ref">9</span>
-                  <span class="kss-section__name">Variables</span>
-                </h1>
+              <a class="kss-section__permalink" href="#kssref-variables-colors-grays">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">9.2.1</span>
+                  <span class="kss-section__name">Grays</span>
+                </h3>
               </a>
 
+                <div class="kss-section__description"><p>Grays are set in the map <code>$gray-themes</code>. This maps darken white (#ffffff) to black 10% by 10%</p>
+<p>Grays can be call in the sass project using the functions:</p>
+<p><code>color-gray($gray-theme, $true-val:false)</code> which will output by default the CSS variable</p>
+<p>Usage of font-family():</p>
+<ul>
+<li><code>color-gray(0)</code> =&gt; <code>var(--color-gray-0)</code> If $use-css-var = true</li>
+<li><code>color-gray(100)</code> =&gt; <code>#000000</code> If $use-css-var = false</li>
+<li><code>color-gray(60)</code> =&gt; <code>#666666</code> If $use-css-var = false</li>
+</ul>
+<div class="has-bg-gray-0 has-p-3">0</div>
+<div class="has-bg-gray-20 has-p-3">20</div>
+<div class="has-bg-gray-30 has-p-3">30</div>
+<div class="has-bg-gray-40 has-p-3">40</div>
+<div class="has-bg-gray-50 has-p-3">50</div>
+<div class="has-bg-gray-60 has-p-3">60</div>
+<div class="has-bg-gray-70 has-p-3">70</div>
+<div class="has-bg-gray-80 has-p-3">80</div>
+<div class="has-bg-gray-90 has-p-3">90</div>
+<div class="has-bg-gray-100 has-p-3">100</div></div>
 
             </article>
 

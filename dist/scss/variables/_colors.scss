@@ -2,6 +2,7 @@
 // Sass Variables
 // ------------------------------
 $color-prefix: --color-;
+$color-gray-prefix: --color-gray-;
 $color-themes: (
   primary:
     (
@@ -69,6 +70,20 @@ $color-themes: (
     )
 );
 
+$gray-themes: (
+  0: #ffffff,
+  10: darken(#ffffff, 10%),
+  20: darken(#ffffff, 20%),
+  30: darken(#ffffff, 30%),
+  40: darken(#ffffff, 40%),
+  50: darken(#ffffff, 50%),
+  60: darken(#ffffff, 60%),
+  70: darken(#ffffff, 70%),
+  80: darken(#ffffff, 80%),
+  90: darken(#ffffff, 90%),
+  100: #000000
+);
+
 // ------------------------------
 // Set color function
 // ------------------------------
@@ -108,6 +123,18 @@ $color-themes: (
     }
   }
 }
+
+@function color-gray($gray-theme, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($gray-themes, $gray-theme); //True Val
+    } @else {
+      @return var(#{$color-gray-prefix}#{$gray-theme}); //CSS Var
+    }
+  } @else {
+    @return map-get($gray-themes, $gray-theme); //Disabled CSS Var
+  }
+}
 // ------------------------------
 // Set root variables
 // ------------------------------
@@ -122,8 +149,12 @@ $color-themes: (
         #{$color-prefix}#{$name}: $color;
       }
     }
+    @each $name, $gray-theme in $gray-themes {
+      #{$color-gray-prefix}#{$name}: $gray-theme;
+    }
   }
 }
+
 // ------------------------------
 // KSS Documentation
 // ------------------------------
@@ -150,6 +181,37 @@ $color-themes: (
 // * `color(success, light, true)` => `#76bd7a`
 //
 // Styleguide Variables.colors
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Grays
+//
+// Grays are set in the map `$gray-themes`. This maps darken white (#ffffff) to black 10% by 10%
+//
+// Grays can be call in the sass project using the functions:
+//
+// `color-gray($gray-theme, $true-val:false)` which will output by default the CSS variable
+//
+// Usage of font-family():
+// * `color-gray(0)` => `var(--color-gray-0)` If $use-css-var = true
+// * `color-gray(100)` => `#000000` If $use-css-var = false
+// * `color-gray(60)` => `#666666` If $use-css-var = false
+//
+// <div class="has-bg-gray-0 has-p-3">0</div>
+// <div class="has-bg-gray-20 has-p-3">20</div>
+// <div class="has-bg-gray-30 has-p-3">30</div>
+// <div class="has-bg-gray-40 has-p-3">40</div>
+// <div class="has-bg-gray-50 has-p-3">50</div>
+// <div class="has-bg-gray-60 has-p-3">60</div>
+// <div class="has-bg-gray-70 has-p-3">70</div>
+// <div class="has-bg-gray-80 has-p-3">80</div>
+// <div class="has-bg-gray-90 has-p-3">90</div>
+// <div class="has-bg-gray-100 has-p-3">100</div>
+// 
+//
+// Styleguide Variables.colors.grays
 
 // ------------------------------
 /////////////////////////////////

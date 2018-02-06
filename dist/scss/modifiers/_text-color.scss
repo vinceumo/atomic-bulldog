@@ -6,6 +6,13 @@
   }
 }
 
+@each $name, $theme in $gray-themes {
+  .has-text-gray-#{$name},
+  .has-text-gray-#{$name} * {
+    color: color-gray($name);
+  }
+}
+
 // ------------------------------
 // KSS Documentation
 // ------------------------------
@@ -28,6 +35,16 @@
 // .has-text-warning - warning color
 // .has-text-light - light color
 // .has-text-dark - dark color
+// .has-text-gray-0 - gray 0
+// .has-text-gray-10 - gray 10
+// .has-text-gray-20 - gray 20
+// .has-text-gray-30 - gray 30
+// .has-text-gray-40 - gray 40
+// .has-text-gray-50 - gray 50
+// .has-text-gray-60 - gray 60
+// .has-text-gray-70 - gray 70
+// .has-text-gray-80 - gray 80
+// .has-text-gray-100 - gray 100
 //
 // Styleguide Modifiers.textcolor
 
