@@ -50,12 +50,11 @@ $breakpoints: (
 // Breakpoints are sets in the map `$breakpoints`
 //
 // ---------------
-// * `xs`: 320px,   // Smartphone
-// * `sm`: 576px,   // Smartphone Landscape
-// * `md`: 768px,   // Tablets
-// * `lg`: 992px,   // Tablets Landscape and small desktops
-// * `xl`: 1200px,  // Desktops
-// * `xxl`: 1800px  // Large Desktop
+// * `xs`: 320px, // Smartphone
+// * `sm`: 600px, // Tablets
+// * `md`: 900px, // Tablets Landscape and small desktops
+// * `lg`: 1200px, // Desktops
+// * `xl`: 1800px, // Large Desktop
 // ---------------
 //
 // Breakpoints can be call in the sass project using the functions:
