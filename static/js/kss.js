@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function getCssVar(prefix, value) {
-  var htmlStyles = window.getComputedStyle(document.querySelector("html"));
+  var htmlStyles = window.getComputedStyle(document.querySelector("#kss-map-colors"));
   var cssVar = "--" + prefix + "-" + value;
   var cssVarResult = htmlStyles.getPropertyValue(cssVar);
 
