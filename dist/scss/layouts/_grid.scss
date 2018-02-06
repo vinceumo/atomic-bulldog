@@ -24,64 +24,62 @@
     }
   }
 
+  .has-col-all {
+    grid-column: 1 / -1;
+  }
+
+  .has-row-all {
+    grid-row: 1 / -1;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .has-col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    .has-row-#{$i} {
+      grid-row: span $i;
+    }
+  }
+
+  @each $key, $spacer in $spacers {
+    &.has-grid-gap-#{$key} {
+      grid-gap: spacer($key);
+    }
+  }
+
   // Set grid responsive classes
   @each $bp, $bpKey in $breakpoints {
-    @if $bp != xs {
-      @include min(#{bp(#{$bp})}) {
-        // Full col item
-        .has-col-#{$bp}-all {
-          grid-column: 1 / -1;
-        }
-
-        // Full row item
-        .has-row-#{$bp}-all {
-          grid-row: 1 / -1;
-        }
-
-        // Set item number of col
-        @for $i from 1 through $grid-columns {
-          .has-col-#{$bp}-#{$i} {
-            grid-column: span $i;
-          }
-        }
-
-        // Set item number of row
-        @for $i from 1 through $grid-columns {
-          .has-row-#{$bp}-#{$i} {
-            grid-row: span $i;
-          }
-        }
-
-        // Set grid gap
-        @each $key, $spacer in $spacers {
-          &.has-grid-gap-#{$bp}-#{$key} {
-            grid-gap: spacer($key);
-          }
-        }
-      }
-    } @else {
-      .has-col-all {
+    @include min(#{bp(#{$bp})}) {
+      // Full col item
+      .has-col-#{$bp}-all {
         grid-column: 1 / -1;
       }
 
-      .has-row-all {
+      // Full row item
+      .has-row-#{$bp}-all {
         grid-row: 1 / -1;
       }
 
+      // Set item number of col
       @for $i from 1 through $grid-columns {
-        .has-col-#{$i} {
+        .has-col-#{$bp}-#{$i} {
           grid-column: span $i;
         }
       }
 
-      @for $i from 1 through 10 {
-        .has-row-#{$i} {
+      // Set item number of row
+      @for $i from 1 through $grid-columns {
+        .has-row-#{$bp}-#{$i} {
           grid-row: span $i;
         }
       }
 
+      // Set grid gap
       @each $key, $spacer in $spacers {
-        &.has-grid-gap-#{$key} {
+        &.has-grid-gap-#{$bp}-#{$key} {
           grid-gap: spacer($key);
         }
       }

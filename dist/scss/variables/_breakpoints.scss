@@ -3,11 +3,12 @@
 // ------------------------------
 $bp-prefix: --bp-;
 $breakpoints: (
-  xs: 0px,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  xs: 320px, // Smartphone
+  sm: 576px, // Smartphone Landscape
+  md: 768px, // Tablets
+  lg: 992px, // Tablets Landscape and small desktops
+  xl: 1200px, // Desktops
+  xxl: 1800px // Large Desktop
 );
 
 // ------------------------------
@@ -50,11 +51,12 @@ $breakpoints: (
 // Breakpoints are sets in the map `$breakpoints`
 //
 // ---------------
-// * `xs`: 0px,
-// * `sm`: 576px,
-// * `md`: 768px,
-// * `lg`: 992px,
-// * `xl`: 1200px
+// * `xs`: 320px,   // Smartphone
+// * `sm`: 576px,   // Smartphone Landscape
+// * `md`: 768px,   // Tablets
+// * `lg`: 992px,   // Tablets Landscape and small desktops
+// * `xl`: 1200px,  // Desktops
+// * `xxl`: 1800px  // Large Desktop
 // ---------------
 //
 // Breakpoints can be call in the sass project using the functions:
