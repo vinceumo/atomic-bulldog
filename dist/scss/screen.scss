@@ -29,7 +29,11 @@
 //utilities
 
 //typography
-@import "typography/typography";
+@import "typography/blockquotes";
+@import "typography/lists";
+@import "typography/paragraph";
+@import "typography/titles";
+@import "typography/typography-global";
 
 //atoms
 @import "atoms/btn";
