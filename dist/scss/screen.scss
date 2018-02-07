@@ -8,6 +8,7 @@
 @import "mixins/media-queries";
 
 //variables
+@import "variables/aspect-ratios";
 @import "variables/root-classes";
 @import "variables/breakpoints";
 @import "variables/colors";
@@ -37,6 +38,7 @@
 
 //atoms
 @import "atoms/btn";
+@import "atoms/container-aspect-ratio";
 @import "atoms/img-fluid";
 
 //organisms
@@ -48,6 +50,7 @@
 @import "modifiers/spacing";
 @import "modifiers/text-color";
 @import "modifiers/text-position";
+@import "modifiers/text-transform";
 
 //themes
 @import "themes/theme-invert";

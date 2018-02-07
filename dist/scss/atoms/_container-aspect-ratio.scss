@@ -1,0 +1,25 @@
+.container-aspect-ratio {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    //padding-top: ($height / $width) * 100%;
+  }
+  > .aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @each $aspect-ratio in $aspect-ratios {
+    &.is-#{$aspect-ratio}{
+      &:before {
+        padding-top: map-get(map-get($aspect-ratios,$aspect-ratio), width) * 100%; 
+      }
+    }
+    //#{$color-gray-prefix}#{$name}: $gray-theme;
+  }
+}

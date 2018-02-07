@@ -5,6 +5,7 @@
 ## Introduction
 
 ## Atomic Design
+![atomic design exemple](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
 
 ## Project Structure
 
