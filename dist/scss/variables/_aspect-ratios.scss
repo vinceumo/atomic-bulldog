@@ -24,3 +24,22 @@ $aspect-ratios: (
     height: 1
   )
 );
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Aspect ratios
+//
+// Aspect ratios are sets in the map `$aspect-ratios`. They are use to define ratios for `.aspect-ratio-container` (Atom)
+//
+// ---------------
+// * `1x1`
+// * `16x9`
+// * `4x3`
+// * `golden`
+// * `silver`
+// ---------------
+//
+//
+// Styleguide Variables.Aspectratio

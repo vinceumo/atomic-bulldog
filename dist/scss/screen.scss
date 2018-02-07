@@ -3,6 +3,7 @@
 
 //functions
 @import "functions/em";
+@import "functions/map-deep-get";
 
 //mixins
 @import "mixins/media-queries";
@@ -37,9 +38,10 @@
 @import "typography/typography-global";
 
 //atoms
+@import "atoms/aspect-ratio-container";
 @import "atoms/btn";
-@import "atoms/container-aspect-ratio";
 @import "atoms/img-fluid";
+@import "atoms/media-cover";
 
 //organisms
 

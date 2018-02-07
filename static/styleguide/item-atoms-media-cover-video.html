@@ -113,42 +113,60 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-variables-spacers">
+            <header class="kss-section kss-section--depth-3" id="kssref-atoms-media-cover-video">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>variables/_spacers.scss</span>, line <span>46</span></p>
+                <p class="kss-section__source">Source: <span>atoms/_media-cover.scss</span>, line <span>70</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-variables-spacers">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">9.8</span>
-                  <span class="kss-section__name">Spacers</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-atoms-media-cover-video">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.4.1</span>
+                  <span class="kss-section__name">Media cover responsive embeded video</span>
+                </h3>
               </a>
 
-                <div class="kss-section__description"><p>Spacers is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)</p>
-<hr>
-<ul>
-<li><code>0</code>: 0,</li>
-<li><code>1</code>: ($spacer-reference * 0.25),</li>
-<li><code>2</code>: ($spacer-reference * 0.5),</li>
-<li><code>3</code>: $spacer-reference,</li>
-<li><code>4</code>: ($spacer-reference * 1.25),</li>
-<li><code>5</code>: ($spacer-reference * 1.5),</li>
-<li><code>6</code>: ($spacer-reference * 3)</li>
-</ul>
-<hr>
-<p>spacer sizes can be call in the sass project using the functions:</p>
-<p><code>spacer($spacer, $true-val:false)</code> which will output by default the CSS variable</p>
-<p>Usage of grid-item-size():</p>
-<ul>
-<li><code>spacer(4)</code> =&gt; <code>var(--spacer-4)</code> If $use-css-var = true</li>
-<li><code>spacer(4)</code> =&gt; <code>1.25rem</code> If $use-css-var = false</li>
-<li><code>spacer(4, true)</code> =&gt; <code>1.25rem</code></li>
-</ul>
+                <div class="kss-section__description"><p>Can use with video as well</p>
 </div>
 
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div style="max-width: 500px"> <!-- Just for kss -->
+ <div class="aspect-ratio-container is-silver">
+   <div class="aspect-ratio-content">
+     <iframe class="media-cover" width="560" height="315" src="https://www.youtube.com/embed/aILlVYUSwPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   </div>
+ </div>
+</div>
+<div style="max-width: 500px; margin-top: 1rem"> <!-- Just for kss -->
+ <div class="aspect-ratio-container is-1x1">
+   <div class="aspect-ratio-content">
+     <iframe class="media-cover" width="560" height="315" src="https://www.youtube.com/embed/aILlVYUSwPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   </div>
+ </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div style&#x3D;&quot;max-width: 500px&quot;&gt; &lt;!-- Just for kss --&gt;
+ &lt;div class&#x3D;&quot;aspect-ratio-container is-silver&quot;&gt;
+   &lt;div class&#x3D;&quot;aspect-ratio-content&quot;&gt;
+     &lt;iframe class&#x3D;&quot;media-cover&quot; width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https://www.youtube.com/embed/aILlVYUSwPg&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style&#x3D;&quot;max-width: 500px; margin-top: 1rem&quot;&gt; &lt;!-- Just for kss --&gt;
+ &lt;div class&#x3D;&quot;aspect-ratio-container is-1x1&quot;&gt;
+   &lt;div class&#x3D;&quot;aspect-ratio-content&quot;&gt;
+     &lt;iframe class&#x3D;&quot;media-cover&quot; width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;https://www.youtube.com/embed/aILlVYUSwPg&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </header>
     </section>

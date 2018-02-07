@@ -113,38 +113,28 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-variables-spacers">
+            <header class="kss-section kss-section--depth-2" id="kssref-variables-aspectratio">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>variables/_spacers.scss</span>, line <span>46</span></p>
+                <p class="kss-section__source">Source: <span>variables/_aspect-ratios.scss</span>, line <span>32</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-variables-spacers">
+              <a class="kss-section__permalink" href="#kssref-variables-aspectratio">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">9.8</span>
-                  <span class="kss-section__name">Spacers</span>
+                  <span class="kss-section__ref">9.1</span>
+                  <span class="kss-section__name">Aspect ratios</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Spacers is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)</p>
+                <div class="kss-section__description"><p>Aspect ratios are sets in the map <code>$aspect-ratios</code>. They are use to define ratios for <code>.aspect-ratio-container</code> (Atom)</p>
 <hr>
 <ul>
-<li><code>0</code>: 0,</li>
-<li><code>1</code>: ($spacer-reference * 0.25),</li>
-<li><code>2</code>: ($spacer-reference * 0.5),</li>
-<li><code>3</code>: $spacer-reference,</li>
-<li><code>4</code>: ($spacer-reference * 1.25),</li>
-<li><code>5</code>: ($spacer-reference * 1.5),</li>
-<li><code>6</code>: ($spacer-reference * 3)</li>
+<li><code>1x1</code></li>
+<li><code>16x9</code></li>
+<li><code>4x3</code></li>
+<li><code>golden</code></li>
+<li><code>silver</code></li>
 </ul>
 <hr>
-<p>spacer sizes can be call in the sass project using the functions:</p>
-<p><code>spacer($spacer, $true-val:false)</code> which will output by default the CSS variable</p>
-<p>Usage of grid-item-size():</p>
-<ul>
-<li><code>spacer(4)</code> =&gt; <code>var(--spacer-4)</code> If $use-css-var = true</li>
-<li><code>spacer(4)</code> =&gt; <code>1.25rem</code> If $use-css-var = false</li>
-<li><code>spacer(4, true)</code> =&gt; <code>1.25rem</code></li>
-</ul>
 </div>
 
             </article>

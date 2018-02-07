@@ -58,6 +58,12 @@
                         <span class="kss-nav__name">em($size, $context: 16)</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-functions.html#kssref-functions-mapdeepget">
+                        <span class="kss-nav__ref">2.2</span>
+                        <span class="kss-nav__name">map-deep-get($map, $keys...)</span>
+                      </a>
+                    </li>
                 </ul>
           </li>
           <li class="kss-nav__item">
@@ -168,6 +174,39 @@ Resources:</p>
 <p>Output:</p>
 <ul>
 <li><code>25em;</code></li>
+</ul>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-functions-mapdeepget">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>functions/_map-deep-get.scss</span>, line <span>12</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-functions-mapdeepget">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.2</span>
+                  <span class="kss-section__name">map-deep-get($map, $keys...)</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>The map-deep-get functionallow to get and set values from the nested tree.
+This function is use to set the media queries with em value.
+Source:</p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/sass/deep-getset-maps/">https://css-tricks.com/snippets/sass/deep-getset-maps/</a></li>
+</ul>
+<p>Parameters:</p>
+<ul>
+<li><code>$map</code> - targeted map</li>
+<li><code>$keys</code> - Keys to taget</li>
+</ul>
+<p>Usage:</p>
+<ul>
+<li><code>map-deep-get($aspect-ratios, 1x1, width)</code></li>
 </ul>
 </div>
 
