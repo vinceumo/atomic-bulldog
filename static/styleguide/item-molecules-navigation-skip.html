@@ -119,40 +119,48 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-variables-colors-grays">
+            <header class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-skip">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>variables/_colors.scss</span>, line <span>189</span></p>
+                <p class="kss-section__source">Source: <span>molecules/_skip-navigation.scss</span>, line <span>33</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-variables-colors-grays">
+              <a class="kss-section__permalink" href="#kssref-molecules-navigation-skip">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">10.3.1</span>
-                  <span class="kss-section__name">Grays</span>
+                  <span class="kss-section__ref">6.1.1</span>
+                  <span class="kss-section__name">Skip Navigation</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Grays are set in the map <code>$gray-themes</code>. This maps darken white (#ffffff) to black 10% by 10%</p>
-<p>Grays can be call in the sass project using the functions:</p>
-<p><code>color-gray($gray-theme, $true-val:false)</code> which will output by default the CSS variable</p>
-<p>Usage of font-family():</p>
+                <div class="kss-section__description"><p>Tab from here to reveal the skip navigation.</p>
+<p>This navigation is needed for accessiblity reasons. It allow the users using screen readers to go directly
+to the main content</p>
 <ul>
-<li><code>color-gray(0)</code> =&gt; <code>var(--color-gray-0)</code> If $use-css-var = true</li>
-<li><code>color-gray(100)</code> =&gt; <code>#000000</code> If $use-css-var = false</li>
-<li><code>color-gray(60)</code> =&gt; <code>#666666</code> If $use-css-var = false</li>
+<li><a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html">https://www.w3.org/TR/WCAG20-TECHS/G1.html</a></li>
+<li><a href="https://a11yproject.com/posts/skip-nav-links/">https://a11yproject.com/posts/skip-nav-links/</a></li>
 </ul>
-<div class="has-bg-gray-0 has-p-3">0</div>
-<div class="has-bg-gray-20 has-p-3">20</div>
-<div class="has-bg-gray-30 has-p-3">30</div>
-<div class="has-bg-gray-40 has-p-3">40</div>
-<div class="has-bg-gray-50 has-p-3">50</div>
-<div class="has-bg-gray-60 has-p-3">60</div>
-<div class="has-bg-gray-70 has-p-3">70</div>
-<div class="has-bg-gray-80 has-p-3">80</div>
-<div class="has-bg-gray-90 has-p-3">90</div>
-<div class="has-bg-gray-100 has-p-3">100</div></div>
+</div>
 
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div id="skip-navigation">
+  <a href="#main-content">Skip to content</a>
+  <a href="#">Skip to navigation</a>
+  <a href="#">Accessibility settings</a>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div id&#x3D;&quot;skip-navigation&quot;&gt;
+  &lt;a href&#x3D;&quot;#main-content&quot;&gt;Skip to content&lt;/a&gt;
+  &lt;a href&#x3D;&quot;#&quot;&gt;Skip to navigation&lt;/a&gt;
+  &lt;a href&#x3D;&quot;#&quot;&gt;Accessibility settings&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </header>
     </section>

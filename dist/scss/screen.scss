@@ -43,9 +43,10 @@
 @import "atoms/img-fluid";
 @import "atoms/media-cover";
 
-//organisms
-
 //molecules
+@import "molecules/skip-navigation";
+
+//organisms
 
 //modifiers
 @import "modifiers/bg-color";

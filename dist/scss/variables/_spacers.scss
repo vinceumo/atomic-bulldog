@@ -10,7 +10,10 @@ $spacers: (
   3: $spacer-reference,
   4: ($spacer-reference * 1.25),
   5: ($spacer-reference * 1.5),
-  6: ($spacer-reference * 3)
+  6: ($spacer-reference * 3),
+  7: ($spacer-reference * 6),
+  8: ($spacer-reference * 9),
+  9: ($spacer-reference * 12)
 );
 
 // ------------------------------
@@ -54,7 +57,10 @@ $spacers: (
 // * `3`: $spacer-reference,
 // * `4`: ($spacer-reference * 1.25),
 // * `5`: ($spacer-reference * 1.5),
-// * `6`: ($spacer-reference * 3)
+// * `6`: ($spacer-reference * 3),
+// * `7`: ($spacer-reference * 6),
+// * `8`: ($spacer-reference * 9),
+// * `9`: ($spacer-reference * 12)
 // ---------------
 //
 // spacer sizes can be call in the sass project using the functions:
