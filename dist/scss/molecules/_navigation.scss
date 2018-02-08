@@ -1,0 +1,66 @@
+$nav-bp: bp(md);
+
+.navigation{
+  .burger{
+    @include min($nav-bp){
+      display: none;
+    }
+  }
+
+  .navigation-items{
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: none;
+
+    @include min($nav-bp){
+      display: flex;
+
+      li{
+        margin-right: spacer(3);
+        display: block;
+    
+        @include last(1){
+          margin-right: 0;
+        }
+      }
+    }
+
+    a{
+      color: color(primary);
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Main navigation
+//
+// Resize me
+//
+// markup:
+// <nav id="main-navigation" class="navigation">
+//     <button class="burger"><span class="burger-icon"><span></span></span> Menu</button>
+//     <ul class="navigation-items">
+//         <li>
+//             <a href="#">Home</a>
+//         </li>
+//         <li>
+//             <a href="#">Shop</a>
+//         </li>
+//         <li>
+//             <a href="#">Space Bears</a>
+//         </li>
+//         <li>
+//             <a href="#">Mars Cars</a>
+//         </li>
+//         <li>
+//             <a href="#">Contact</a>
+//         </li>
+//     </ul>
+// </nav>
+//
+//
+// Styleguide Molecules.navigation.mainnavigation

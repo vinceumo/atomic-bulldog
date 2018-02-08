@@ -1,0 +1,29 @@
+.brand {
+  a {
+    font-size: font-size(heading4);
+    color: color(danger);
+
+    span {
+      font-size: font-size(heading5);
+      color: color(danger, transparent);
+      margin-left: spacer(2);
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Brand
+//
+// Use in Navigation bar
+//
+// Markup:
+// <div class="brand">
+//     <a href="#">Brand
+//         <span>v1.0.0</span>
+//     </a>
+// </div>
+//
+// Styleguide Atoms.brand

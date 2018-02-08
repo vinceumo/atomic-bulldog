@@ -39,14 +39,21 @@
 
 //atoms
 @import "atoms/aspect-ratio-container";
+@import "atoms/brand";
 @import "atoms/btn";
+@import "atoms/burger";
 @import "atoms/img-fluid";
 @import "atoms/media-cover";
 
 //molecules
 @import "molecules/skip-navigation";
+@import "molecules/navigation";
 
 //organisms
+@import "organisms/navigation-bar";
+
+//templates
+@import "templates/main-template";
 
 //modifiers
 @import "modifiers/bg-color";

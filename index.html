@@ -10,18 +10,52 @@
 </head>
 
 <body>
-    <div class="page-container" style="height: 100vh">
+    <div class="page-container">
         <div id="skip-navigation">
             <a href="#main-content">Skip to content</a>
-            <a href="#">Skip to navigation</a>
+            <a href="#main-navigation">Skip to navigation</a>
             <a href="#">Accessibility settings</a>
         </div>
-        <header class="has-bg-primary has-text-gray-0 has-py-6">
+
+
+        <div class="has-bg-primary has-text-gray-0 has-py-9">
             <div class="container">
                 <h1>Atomic Bulldog 2018</h1>
                 <p class="has-font-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, deserunt praesentium adipisci nostrum laboriosam
                     magnam obcaecati ullam corrupti numquam. Tenetur ullam dolores voluptatibus iusto, aspernatur repudiandae
                     iste voluptate maiores assumenda.</p>
+            </div>
+        </div>
+        <header class="navigation-bar has-py-3">
+            <div class="container navigation-bar-items">
+                <div class="brand">
+                    <a href="#">Atomic Bulldog
+                        <span>v1.0.0</span>
+                    </a>
+                </div>
+                <nav id="main-navigation" class="navigation">
+                    <button class="burger">
+                        <span class="burger-icon">
+                            <span></span>
+                        </span> Menu</button>
+                    <ul class="list-inline navigation-items">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#">Space Bears</a>
+                        </li>
+                        <li>
+                            <a href="#">Mars Cars</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main id="main-content" class="has-mt-6">
@@ -48,7 +82,7 @@
                         </p>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=1" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=1" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quas repudiandae quae corrupti
@@ -62,7 +96,7 @@
                             similique et delectus vitae eaque?</p>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=2" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=2" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor delectus recusandae magni
@@ -74,7 +108,7 @@
                         <h3>Heading 3</h3>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=3" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=3" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id officiis perferendis ea eum odit reiciendis,
@@ -89,7 +123,7 @@
                         <h3>Heading 3</h3>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=4" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=4" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga ea vero ducimus consequuntur
@@ -103,7 +137,7 @@
                             explicabo assumenda optio temporibus similique voluptate.</p>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=5" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=5" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptate quidem debitis earum
@@ -126,7 +160,7 @@
                         <h3>Heading 3</h3>
                         <div class="aspect-ratio-container is-silver">
                             <div class="aspect-ratio-content">
-                                <img class="media-cover" src="https://source.unsplash.com/random?sig=6" />
+                                <img class="media-cover" src="https://source.unsplash.com/random?sig=6" alt="img description" />
                             </div>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere illum autem iste. Tempora, corporis
@@ -168,6 +202,25 @@
             </div>
         </footer>
     </div>
+
+    <!-- Navigation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var burgerButton = document.querySelectorAll('button.burger');
+
+            Array.prototype.forEach.call(burgerButton, function (el, i) {
+                burgerButton[i].addEventListener('click', function () {
+                    var clickBurgerButton = this,
+                        navigationBar = clickBurgerButton.closest('.navigation-bar'),
+                        navigationItems = clickBurgerButton.closest('.navigation');
+
+                    clickBurgerButton.classList.toggle('is-active');
+                    navigationBar.classList.toggle('is-active');
+                    navigationItems.classList.toggle('is-active');
+                }).bind(burgerButton[i], i);
+            });
+        });
+    </script>
 </body>
 
 </html>

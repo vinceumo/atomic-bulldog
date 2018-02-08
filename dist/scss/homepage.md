@@ -9,6 +9,10 @@
 
 ## Project Structure
 
+## Recomanded vendors
+
+- https://github.com/edenspiekermann/a11y-dialog 
+
 ## Resources
 
 https://css-tricks.com/build-style-guide-straight-sass/
