@@ -12,6 +12,7 @@
 ## Recomanded vendors
 
 - https://github.com/edenspiekermann/a11y-dialog 
+- https://a11yproject.com/patterns
 
 ## Resources
 

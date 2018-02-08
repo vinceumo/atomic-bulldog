@@ -1,6 +1,16 @@
 // ------------------------------
 // Base button
 // ------------------------------
+button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 .btn {
   font-size: font-size(button);
   font-family: font-family(paragraph);

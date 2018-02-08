@@ -17,6 +17,7 @@ var keyList = {
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {
+  // Navigation
   var burgerButton = document.querySelectorAll("button.burger");
 
   Array.prototype.forEach.call(burgerButton, function(el, i) {
@@ -51,6 +52,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     };
   });
+
+  // Accessible Settings
+  var a11yCtas = {
+    fontSize: document.querySelectorAll("button.a11y-change-font-size"),
+    theme: document.querySelectorAll("button.a11y-change-theme")
+  }
+
+  //Change Theme
+  Array.prototype.forEach.call(a11yCtas.theme, function(el, i){
+    var currentCta = a11yCtas.theme[i];
+    currentCta.addEventListener("click", function() {
+      var getCurrentTheme = document.querySelectorAll("body")[0].getAttribute('class');
+      var targetTheme = currentCta.getAttribute('data-target-theme');
+      document.querySelectorAll("body")[0].classList.remove(getCurrentTheme);
+      document.querySelectorAll("body")[0].classList.add(targetTheme);
+    });
+  });
+
+  //Change Font
+  Array.prototype.forEach.call(a11yCtas.fontSize, function(el, i){
+    var currentCta = a11yCtas.fontSize[i];
+    currentCta.addEventListener("click", function() {
+      var targetFontSize = currentCta.getAttribute('data-target-font-size');
+      var body = getComputedStyle(document.body);
+      var currentFontSize = body.getPropertyValue('--font-size-root');
+
+      console.log(currentFontSize);
+
+    });
+  });
+  
 });
 
 function trapTabKey(container, event) {
