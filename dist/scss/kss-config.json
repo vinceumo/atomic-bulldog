@@ -11,7 +11,7 @@
     "../css/themes/theme-invert.min.css"
   ],
   "js": [
-    "../js/kss.js"
+    "../js/kss.js",
     "../js/atomic-bulldog.js"
   ]
 }
