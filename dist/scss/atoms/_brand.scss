@@ -1,12 +1,20 @@
 .brand {
   a {
-    font-size: font-size(heading4);
+    font-size: calc(#{font-size(heading4)} * 0.8);
     color: color(danger);
 
+    @include min(bp(md)){
+      font-size: font-size(heading4);
+    }
+
     span {
-      font-size: font-size(heading5);
+      font-size: calc(#{font-size(heading5)} * 0.8);
       color: color(danger, transparent);
       margin-left: spacer(2);
+
+      @include min(bp(md)){
+        font-size: font-size(heading5);
+      }
     }
   }
 }

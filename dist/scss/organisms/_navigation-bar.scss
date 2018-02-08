@@ -1,6 +1,6 @@
 .navigation-bar{
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: z(navigation-bar);
   border-bottom: 1px solid color-gray(20);
   background-color: color-gray(0);
@@ -9,5 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &.is-active{
+    position: fixed;
+    width: 100%;
+
+    .brand, .burger{
+      position: relative;
+      z-index: 1;
+    }
   }
 }

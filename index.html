@@ -27,7 +27,7 @@
             </div>
         </div>
         <header class="navigation-bar has-py-3">
-            <div class="container navigation-bar-items">
+            <div class="container navigation-bar-items" role="dialog">
                 <div class="brand">
                     <a href="#">Atomic Bulldog
                         <span>v1.0.0</span>
@@ -202,25 +202,7 @@
             </div>
         </footer>
     </div>
-
-    <!-- Navigation Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            var burgerButton = document.querySelectorAll('button.burger');
-
-            Array.prototype.forEach.call(burgerButton, function (el, i) {
-                burgerButton[i].addEventListener('click', function () {
-                    var clickBurgerButton = this,
-                        navigationBar = clickBurgerButton.closest('.navigation-bar'),
-                        navigationItems = clickBurgerButton.closest('.navigation');
-
-                    clickBurgerButton.classList.toggle('is-active');
-                    navigationBar.classList.toggle('is-active');
-                    navigationItems.classList.toggle('is-active');
-                }).bind(burgerButton[i], i);
-            });
-        });
-    </script>
+    <script src="static/js/atomic-bulldog.js"></script>
 </body>
 
 </html>

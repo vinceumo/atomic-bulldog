@@ -10,11 +10,11 @@ $nav-bp: bp(md);
   .navigation-items{
     margin-bottom: 0;
     padding-left: 0;
-    list-style: none;
     display: none;
 
     @include min($nav-bp){
       display: flex;
+      list-style: none;
 
       li{
         margin-right: spacer(3);
@@ -28,6 +28,29 @@ $nav-bp: bp(md);
 
     a{
       color: color(primary);
+    }
+  }
+
+  &.is-active{
+    .navigation-items{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: color-gray(0);
+      width: 100%;
+      height: 100vh;
+
+      li{
+        margin-right: 0;
+
+        a{
+          font-size: font-size(heading4);
+        }
+      }
     }
   }
 }
