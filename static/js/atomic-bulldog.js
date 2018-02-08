@@ -57,32 +57,54 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var a11yCtas = {
     fontSize: document.querySelectorAll("button.a11y-change-font-size"),
     theme: document.querySelectorAll("button.a11y-change-theme")
-  }
+  };
 
   //Change Theme
-  Array.prototype.forEach.call(a11yCtas.theme, function(el, i){
+  Array.prototype.forEach.call(a11yCtas.theme, function(el, i) {
     var currentCta = a11yCtas.theme[i];
     currentCta.addEventListener("click", function() {
-      var getCurrentTheme = document.querySelectorAll("body")[0].getAttribute('class');
-      var targetTheme = currentCta.getAttribute('data-target-theme');
+      var getCurrentTheme = document
+        .querySelectorAll("body")[0]
+        .getAttribute("class");
+      var targetTheme = currentCta.getAttribute("data-target-theme");
       document.querySelectorAll("body")[0].classList.remove(getCurrentTheme);
       document.querySelectorAll("body")[0].classList.add(targetTheme);
     });
   });
 
   //Change Font
-  Array.prototype.forEach.call(a11yCtas.fontSize, function(el, i){
+  Array.prototype.forEach.call(a11yCtas.fontSize, function(el, i) {
     var currentCta = a11yCtas.fontSize[i];
     currentCta.addEventListener("click", function() {
-      var targetFontSize = currentCta.getAttribute('data-target-font-size');
+      var targetFontSize = currentCta.getAttribute("data-target-font-size");
+      var html = document.getElementsByTagName("html")[0];
       var body = getComputedStyle(document.body);
-      var currentFontSize = body.getPropertyValue('--font-size-root');
+      var currentFontSize = parseInt(
+        body.getPropertyValue("--font-size-root"),
+        10
+      );
 
-      console.log(currentFontSize);
-
+      if (targetFontSize == "increase") {
+        currentFontSize++;
+        document.documentElement.style.setProperty(
+          "--font-size-root",
+          currentFontSize + "px"
+        );
+      } else if (targetFontSize == "decrease") {
+        currentFontSize--;
+        document.documentElement.style.setProperty(
+          "--font-size-root",
+          currentFontSize + "px"
+        );
+      } else if (targetFontSize == "reset") {
+        currentFontSize = 16;
+        document.documentElement.style.setProperty(
+          "--font-size-root",
+          currentFontSize + "px"
+        );
+      }
     });
   });
-  
 });
 
 function trapTabKey(container, event) {
