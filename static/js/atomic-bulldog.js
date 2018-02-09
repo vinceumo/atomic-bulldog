@@ -72,17 +72,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   });
 
-  //Change Font
+  //Change Font Size
   Array.prototype.forEach.call(a11yCtas.fontSize, function(el, i) {
     var currentCta = a11yCtas.fontSize[i];
     currentCta.addEventListener("click", function() {
       var targetFontSize = currentCta.getAttribute("data-target-font-size");
       var html = document.getElementsByTagName("html")[0];
       var body = getComputedStyle(document.body);
-      var currentFontSize = parseInt(
-        body.getPropertyValue("--font-size-root"),
-        10
-      );
+      var currentFontSize = parseInt(body.getPropertyValue("font-size"));
 
       if (targetFontSize == "increase") {
         currentFontSize++;
