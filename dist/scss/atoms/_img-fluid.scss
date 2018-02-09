@@ -7,11 +7,13 @@
 // KSS Documentation
 // ------------------------------
 
-// Images fluid
+// Images
 //
 // Responsive images class
 //
 // Markup:
-// <img class="img-fluid" src="https://source.unsplash.com/random" alt="image description">
+// <img class="{{modifier_class}}" src="https://source.unsplash.com/random" alt="image description">
+//
+// .img-fluid - image is fluid
 //
 // Styleguide Atoms.images
