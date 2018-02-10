@@ -1,0 +1,58 @@
+.has-font-weight-bold,
+.has-font-weight-bold *{
+  font-weight: bold;
+}
+
+.has-font-weight-normal,
+.has-font-weight-normal *{
+  font-weight: normal;
+}
+
+.has-font-weight-light,
+.has-font-weight-light *{
+  font-weight: lighter;
+}
+
+.has-text-italic,
+.has-text-italic *{
+  font-style: italic;
+}
+
+.has-text-uppercase,
+.has-text-uppercase *{
+  text-transform: uppercase;
+}
+
+.has-text-lowercase,
+.has-text-lowercase *{
+  text-transform: lowercase;
+}
+
+.has-text-capitalize,
+.has-text-capitalize *{
+  text-transform: capitalize;
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Text transform
+//
+// markup:
+//  <p class="{{modifier_class}}">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. 
+//    Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+//    Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+//    Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+//  </p>
+//
+// .has-font-weight-light - Font weight light
+// .has-font-weight-normal - Font weight normal
+// .has-font-weight-bold - Font weight bold
+// .has-text-italic - Text italic
+// .has-text-uppercase - Text uppercase
+// .has-text-lowercase - Text lowercase
+// .has-text-capitalize - Text capitalize
+//
+// Styleguide Atoms.Modifiers.texttransform

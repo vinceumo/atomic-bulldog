@@ -1,0 +1,34 @@
+.has-text-center,
+.has-text-center *{
+  text-align: center;
+}
+
+.has-text-left,
+.has-text-left *{
+  text-align: left;
+}
+
+.has-text-right,
+.has-text-right *{
+  text-align: right;
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Text position
+//
+// markup:
+//  <p class="{{modifier_class}}">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. 
+//    Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+//    Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+//    Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+//  </p>
+//
+// .has-text-center - Text center
+// .has-text-left - Text Left
+// .has-text-right - Text Right
+//
+// Styleguide Atoms.Modifiers.textposition

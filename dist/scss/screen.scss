@@ -28,15 +28,6 @@
 @import "layouts/container";
 @import "layouts/grid";
 
-//utilities
-
-//typography
-@import "typography/blockquotes";
-@import "typography/lists";
-@import "typography/paragraph";
-@import "typography/titles";
-@import "typography/typography-global";
-
 //atoms
 @import "atoms/aspect-ratio-container";
 @import "atoms/brand";
@@ -44,6 +35,22 @@
 @import "atoms/burger";
 @import "atoms/img-fluid";
 @import "atoms/media-cover";
+
+    //typography
+    @import "atoms/typography/blockquotes";
+    @import "atoms/typography/lists";
+    @import "atoms/typography/paragraph";
+    @import "atoms/typography/titles";
+    @import "atoms/typography/typography-global";
+
+    //modifiers
+    @import "atoms/modifiers/bg-color";
+    @import "atoms/modifiers/no-scroll";
+    @import "atoms/modifiers/rounded";
+    @import "atoms/modifiers/spacing";
+    @import "atoms/modifiers/text-color";
+    @import "atoms/modifiers/text-position";
+    @import "atoms/modifiers/text-transform";
 
 //molecules
 @import "molecules/skip-navigation";
@@ -54,15 +61,6 @@
 
 //templates
 @import "templates/main-template";
-
-//modifiers
-@import "modifiers/bg-color";
-@import "modifiers/no-scroll";
-@import "modifiers/rounded";
-@import "modifiers/spacing";
-@import "modifiers/text-color";
-@import "modifiers/text-position";
-@import "modifiers/text-transform";
 
 //themes
 @import "themes/theme-invert";
