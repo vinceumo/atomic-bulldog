@@ -12,7 +12,9 @@
 // Responsive images class
 //
 // Markup:
-// <img class="{{modifier_class}}" src="https://source.unsplash.com/random" alt="image description">
+// <div style="max-width: 600px"> <!-- Just for KSS -->
+//  <img class="{{modifier_class}}" src="https://source.unsplash.com/random" alt="image description">
+// </div>
 //
 // .img-fluid - image is fluid
 //
