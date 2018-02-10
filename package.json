@@ -19,11 +19,11 @@
     "browser-sync": "^2.18.13"
   },
   "scripts": {
-    "start":
+    "startBrowserSync":
       "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Mozilla Firefox\\firefox.exe\"",
     "kssWatch": "onchange \"dist/scss/**/*.scss\" -- npm run kss",
     "kss": "kss --config dist/scss/kss-config.json",
     "gulp": "gulp",
-    "watchScss": "start npm run kssWatch && start npm run gulp watch-scss"
+    "startAtomicBulldog": "start npm run kssWatch && start npm run gulp watch-scss && npm run startBrowserSync"
   }
 }

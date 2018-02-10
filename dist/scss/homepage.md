@@ -49,3 +49,5 @@ Example:
 
 * https://css-tricks.com/build-style-guide-straight-sass/
 * http://styleguides.io/
+* https://marijohannessen.github.io/color-contrast-checker/
+* https://www.w3.org/TR/WCAG20/
