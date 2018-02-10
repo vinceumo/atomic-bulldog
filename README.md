@@ -11,17 +11,8 @@
 * Modifiers
   * Use 'has-'or 'is-', for exemple 'class="btn is-big is-primary"'
 
-### Mixins
-
-* [x] Min Max mediaquerie
-* [ ] Refactor font-size mixin
+### Mixi
 
 ### Variables
 
-* [ ] Use CSS custom variables
-* [ ] Add option to not use CSS custom var (true/false)
-
-### Grid
-
-* [ ] Default grid CSS grid Layout
 * [ ] Option for a secondary grid using Flex

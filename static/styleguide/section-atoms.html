@@ -85,7 +85,7 @@
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-atoms.html#kssref-atoms-media-cover-video">
                         <span class="kss-nav__ref">1.6.1</span>
-                        <span class="kss-nav__name">Media cover responsive embeded video</span>
+                        <span class="kss-nav__name">Media cover responsive embedded video</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
@@ -125,14 +125,20 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-atoms.html#kssref-atoms-modifiers-textposition">
+                      <a href="section-atoms.html#kssref-atoms-modifiers-textcolor">
                         <span class="kss-nav__ref">1.7.6</span>
+                        <span class="kss-nav__name">Text colors</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-atoms.html#kssref-atoms-modifiers-textposition">
+                        <span class="kss-nav__ref">1.7.7</span>
                         <span class="kss-nav__name">Text position</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-atoms.html#kssref-atoms-modifiers-texttransform">
-                        <span class="kss-nav__ref">1.7.7</span>
+                        <span class="kss-nav__ref">1.7.8</span>
                         <span class="kss-nav__name">Text transform</span>
                       </a>
                     </li>
@@ -187,50 +193,44 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-modifiers.html">
-              <span class="kss-nav__ref">5</span>
-              <span class="kss-nav__name">Modifiers</span>
-            </a>
-          </li>
-          <li class="kss-nav__item">
             <a class="" href="section-molecules.html">
-              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__ref">5</span>
               <span class="kss-nav__name">Molecules</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-organisms.html">
-              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__ref">6</span>
               <span class="kss-nav__name">Organisms</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-settings.html">
-              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__ref">7</span>
               <span class="kss-nav__name">Settings</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-templates.html">
-              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__ref">8</span>
               <span class="kss-nav__name">Templates</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-themes.html">
-              <span class="kss-nav__ref">10</span>
+              <span class="kss-nav__ref">9</span>
               <span class="kss-nav__name">Themes</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-variables.html">
-              <span class="kss-nav__ref">11</span>
+              <span class="kss-nav__ref">10</span>
               <span class="kss-nav__name">Variables</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-vendors.html">
-              <span class="kss-nav__ref">12</span>
+              <span class="kss-nav__ref">11</span>
               <span class="kss-nav__name">Vendors</span>
             </a>
           </li>
@@ -742,7 +742,7 @@
               <a class="kss-section__permalink" href="#kssref-atoms-media-cover-video">
                 <h3 class="kss-section__item kss-section__item--depth-3">
                   <span class="kss-section__ref">1.6.1</span>
-                  <span class="kss-section__name">Media cover responsive embeded video</span>
+                  <span class="kss-section__name">Media cover responsive embedded video</span>
                 </h3>
               </a>
 
@@ -873,6 +873,11 @@
                   <p class="kss-modifiers__description">gray 0</p>
 
                   <div class="kss-modifiers__example"><div class="has-bg-gray-0 has-p-3">Content...</div></div>
+                  <h2 class="kss-modifiers__name">.has-bg-gray-5</h2>
+
+                  <p class="kss-modifiers__description">gray 5</p>
+
+                  <div class="kss-modifiers__example"><div class="has-bg-gray-5 has-p-3">Content...</div></div>
                   <h2 class="kss-modifiers__name">.has-bg-gray-10</h2>
 
                   <p class="kss-modifiers__description">gray 10</p>
@@ -1008,7 +1013,7 @@
                 <div class="kss-modifiers__example"><div style="max-width: 500px; margin-top: 1rem"> <!-- Just for kss -->
  <div class="aspect-ratio-container is-1x1 is-rounded">
    <div class="aspect-ratio-content">
-     <img class="media-cover" src="https://source.unsplash.com/random?sig=1" alt="image description">
+     <img class="media-cover" src="https://source.unsplash.com/random" alt="image description">
    </div>
  </div>
 </div></div>
@@ -1019,7 +1024,7 @@
                   <pre><code class="language-markup">&lt;div style&#x3D;&quot;max-width: 500px; margin-top: 1rem&quot;&gt; &lt;!-- Just for kss --&gt;
  &lt;div class&#x3D;&quot;aspect-ratio-container is-1x1 is-rounded&quot;&gt;
    &lt;div class&#x3D;&quot;aspect-ratio-content&quot;&gt;
-     &lt;img class&#x3D;&quot;media-cover&quot; src&#x3D;&quot;https://source.unsplash.com/random?sig&#x3D;1&quot; alt&#x3D;&quot;image description&quot;&gt;
+     &lt;img class&#x3D;&quot;media-cover&quot; src&#x3D;&quot;https://source.unsplash.com/random&quot; alt&#x3D;&quot;image description&quot;&gt;
    &lt;/div&gt;
  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1081,6 +1086,225 @@
                 </article>
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-atoms-modifiers-textcolor">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>atoms/modifiers/_text-color.scss</span>, line <span>20</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-atoms-modifiers-textcolor">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.7.6</span>
+                  <span class="kss-section__name">Text colors</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"> <p class="[modifier]">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+
+                  <h2 class="kss-modifiers__name">.has-text-primary</h2>
+
+                  <p class="kss-modifiers__description">Primary color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-primary">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-secondary</h2>
+
+                  <p class="kss-modifiers__description">Secondary color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-secondary">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-link</h2>
+
+                  <p class="kss-modifiers__description">Link color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-link">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-success</h2>
+
+                  <p class="kss-modifiers__description">Success color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-success">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-danger</h2>
+
+                  <p class="kss-modifiers__description">Danger color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-danger">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-warning</h2>
+
+                  <p class="kss-modifiers__description">warning color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-warning">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-light</h2>
+
+                  <p class="kss-modifiers__description">light color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-light">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-dark</h2>
+
+                  <p class="kss-modifiers__description">dark color</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-dark">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-0</h2>
+
+                  <p class="kss-modifiers__description">gray 0</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-0">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-10</h2>
+
+                  <p class="kss-modifiers__description">gray 10</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-10">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-20</h2>
+
+                  <p class="kss-modifiers__description">gray 20</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-20">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-30</h2>
+
+                  <p class="kss-modifiers__description">gray 30</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-30">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-40</h2>
+
+                  <p class="kss-modifiers__description">gray 40</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-40">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-50</h2>
+
+                  <p class="kss-modifiers__description">gray 50</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-50">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-60</h2>
+
+                  <p class="kss-modifiers__description">gray 60</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-60">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-70</h2>
+
+                  <p class="kss-modifiers__description">gray 70</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-70">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-80</h2>
+
+                  <p class="kss-modifiers__description">gray 80</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-80">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+                  <h2 class="kss-modifiers__name">.has-text-gray-100</h2>
+
+                  <p class="kss-modifiers__description">gray 100</p>
+
+                  <div class="kss-modifiers__example"> <p class="has-text-gray-100">
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ </p></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup"> &lt;p class&#x3D;&quot;[modifier]&quot;&gt;
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint.
+   Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? &lt;br&gt;
+   Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+   Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+ &lt;/p&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-3" id="kssref-atoms-modifiers-textposition">
 
             <article class="kss-section__content">
@@ -1088,7 +1312,7 @@
 
               <a class="kss-section__permalink" href="#kssref-atoms-modifiers-textposition">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.7.6</span>
+                  <span class="kss-section__ref">1.7.7</span>
                   <span class="kss-section__name">Text position</span>
                 </h3>
               </a>
@@ -1157,7 +1381,7 @@
 
               <a class="kss-section__permalink" href="#kssref-atoms-modifiers-texttransform">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.7.7</span>
+                  <span class="kss-section__ref">1.7.8</span>
                   <span class="kss-section__name">Text transform</span>
                 </h3>
               </a>
