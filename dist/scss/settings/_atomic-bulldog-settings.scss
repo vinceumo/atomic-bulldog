@@ -1,4 +1,5 @@
 $use-css-var: true;
+$a11yCSS: false;
 
 // ------------------------------
 // KSS Documentation
@@ -12,3 +13,14 @@ $use-css-var: true;
 // More over postCSS can be use to compile CSS variables.
 //
 // Styleguide Settings.useCssVar
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Show A11y css helper
+//
+// `$a11yCSS` 
+// 
+// In development this flag should be change to true to improve accessibility.
+// By default Atomic Bulldog use a11y.css (See vendors)

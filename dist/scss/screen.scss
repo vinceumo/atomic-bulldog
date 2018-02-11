@@ -24,6 +24,12 @@
 @import "vendors/bootstrap-reboot";
 @import "vendors/family";
 
+// For accessibility testing to be remove in prod
+// @import "vendors/a11y/a11y-en";
+// @import "vendors/a11y/a11y-en_error";
+// @import "vendors/a11y/a11y-en_obsolete";
+// @import "vendors/a11y/a11y-en_warning";
+
 //layouts
 @import "layouts/container";
 @import "layouts/grid";

@@ -40,7 +40,7 @@ Example:
 
 ## Project Structure
 
-## Recomanded vendors
+## Recommended vendors
 
 * https://github.com/edenspiekermann/a11y-dialog
 * https://a11yproject.com/patterns
@@ -51,3 +51,6 @@ Example:
 * http://styleguides.io/
 * https://marijohannessen.github.io/color-contrast-checker/
 * https://www.w3.org/TR/WCAG20/
+* https://github.com/brunopulis/awesome-a11y
+* https://github.com/Khan/tota11y
+* https://github.com/github/lightcrawler
