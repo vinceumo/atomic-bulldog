@@ -11,8 +11,13 @@
 * Modifiers
   * Use 'has-'or 'is-', for exemple 'class="btn is-big is-primary"'
 
-### Mixi
+### TODO
 
-### Variables
-
-* [ ] Option for a secondary grid using Flex
+* [ ] Fall back for css grid
+* [ ] a11y js integration with a11y.css need to set a flag or something
+* [ ] Atoms inputs
+* [ ] Atoms card
+* [ ] Atoms modifiers display flex grid + other classes to position 
+* [ ] Create a theme for kss
+* [ ] Dark theme
+* [ ] Contrast Theme
