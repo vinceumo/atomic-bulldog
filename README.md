@@ -23,4 +23,5 @@
 * [ ] Dark theme
 * [ ] Contrast Theme
 * [ x ] Variables redefine gray theme
+* [ x ] Icons
 
