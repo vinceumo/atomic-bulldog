@@ -9,10 +9,18 @@ $color-themes: (
     ),
   secondary:
     (
-      base: invert(#494949),
-      dark: invert(darken(#494949, 15%)),
-      light: invert(lighten(#494949, 15%)),
-      trans: invert(transparentize(#494949, 0.5)),
+      base: invert(#212529),
+      dark: invert(darken(#212529, 15%)),
+      light: invert(lighten(#212529, 15%)),
+      trans: invert(transparentize(#212529, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  text:
+    (
+      base: invert(#212529),
+      dark: invert(darken(#212529, 15%)),
+      light: invert(lighten(#212529, 15%)),
+      trans: invert(transparentize(#212529, 0.5)),
       contrast: invert(#ffffff)
     ),
   link:
@@ -90,6 +98,8 @@ $color-themes: (
 // <!--ONLY FOR KSS-->
 // <div id="kss-map-colors" class="theme-invert">
 //     <div class="kss-color-item" data-color="primary"></div>
+//     <div class="kss-color-item" data-color="secondary"></div>
+//     <div class="kss-color-item" data-color="text"></div>
 //     <div class="kss-color-item" data-color="link"></div>
 //     <div class="kss-color-item" data-color="success"></div>
 //     <div class="kss-color-item" data-color="danger"></div>

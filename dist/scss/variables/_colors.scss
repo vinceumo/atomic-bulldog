@@ -14,10 +14,18 @@ $color-themes: (
     ),
   secondary:
     (
-      base: #494949,
-      dark: darken(#494949, 15%),
-      light: lighten(#494949, 15%),
-      transparent: transparentize(#494949, 0.5),
+      base: #212529,
+      dark: darken(#212529, 15%),
+      light: lighten(#212529, 15%),
+      transparent: transparentize(#212529, 0.5),
+      contrast: #ffffff
+    ),
+  text:
+    (
+      base: #212529,
+      dark: darken(#212529, 15%),
+      light: lighten(#212529, 15%),
+      transparent: transparentize(#212529, 0.5),
       contrast: #ffffff
     ),
   link:
@@ -72,16 +80,15 @@ $color-themes: (
 
 $gray-themes: (
   0: #ffffff,
-  5: darken(#ffffff, 5%),
-  10: darken(#ffffff, 10%),
-  20: darken(#ffffff, 20%),
-  30: darken(#ffffff, 30%),
-  40: darken(#ffffff, 40%),
-  50: darken(#ffffff, 50%),
-  60: darken(#ffffff, 60%),
-  70: darken(#ffffff, 70%),
-  80: darken(#ffffff, 80%),
-  90: darken(#ffffff, 90%),
+  10: #f8f9fa,
+  20: #e9ecef,
+  30: #dee2e6,
+  40: #ced4da,
+  50: #adb5bd,
+  60: #6c757d,
+  70: #495057,
+  80: #343a40,
+  90: #212529,
   100: #000000
 );
 
@@ -101,8 +108,7 @@ $gray-themes: (
       } @else {
         // Default color
         @return map-get(map-get($color-themes,$color-name), base);
-      }
-      // if we're only returning the CSS4 variable
+      } // if we're only returning the CSS4 variable
     } @else {
       // color variant is optional
       @if ($color-variant != null) {
@@ -124,18 +130,19 @@ $gray-themes: (
     }
   }
 }
-
 @function color-gray($gray-theme, $true-val:false) {
   @if $use-css-var == true {
     @if $true-val == true {
-      @return map-get($gray-themes, $gray-theme); //True Val
+      @return map-get($gray-themes, $gray-theme); // True Val
     } @else {
-      @return var(#{$color-gray-prefix}#{$gray-theme}); //CSS Var
+      @return var(#{$color-gray-prefix}#{$gray-theme});
+      // CSS Var
     }
   } @else {
-    @return map-get($gray-themes, $gray-theme); //Disabled CSS Var
+    @return map-get($gray-themes, $gray-theme); // Disabled CSS Var
   }
 }
+
 // ------------------------------
 // Set root variables
 // ------------------------------
@@ -155,7 +162,6 @@ $gray-themes: (
     }
   }
 }
-
 // ------------------------------
 // KSS Documentation
 // ------------------------------
@@ -184,7 +190,7 @@ $gray-themes: (
 // Styleguide Variables.colors
 
 // ------------------------------
-/////////////////////////////////
+// ///////////////////////////////
 // ------------------------------
 
 // Grays
@@ -201,7 +207,6 @@ $gray-themes: (
 // * `color-gray(60)` => `#666666` If $use-css-var = false
 //
 // <div class="has-bg-gray-0 has-p-3">0</div>
-// <div class="has-bg-gray-5 has-p-3">5</div>
 // <div class="has-bg-gray-10 has-p-3">10</div>
 // <div class="has-bg-gray-20 has-p-3">20</div>
 // <div class="has-bg-gray-30 has-p-3">30</div>
@@ -212,25 +217,27 @@ $gray-themes: (
 // <div class="has-bg-gray-80 has-p-3">80</div>
 // <div class="has-bg-gray-90 has-p-3">90</div>
 // <div class="has-bg-gray-100 has-p-3">100</div>
-// 
+//
 //
 // Styleguide Variables.colors.grays
 
 // ------------------------------
-/////////////////////////////////
+// ///////////////////////////////
 // ------------------------------
 
 // Color Swatches
 //
 // <!--ONLY FOR KSS-->
 // <div id="kss-map-colors" class="theme-default">
-//     <div class="kss-color-item" data-color="primary"></div>
-//     <div class="kss-color-item" data-color="link"></div>
-//     <div class="kss-color-item" data-color="success"></div>
-//     <div class="kss-color-item" data-color="danger"></div>
-//     <div class="kss-color-item" data-color="warning"></div>
-//     <div class="kss-color-item" data-color="light"></div>
-//     <div class="kss-color-item" data-color="dark"></div>
+// <div class="kss-color-item" data-color="primary"></div>
+// <div class="kss-color-item" data-color="secondary"></div>
+// <div class="kss-color-item" data-color="text"></div>
+// <div class="kss-color-item" data-color="link"></div>
+// <div class="kss-color-item" data-color="success"></div>
+// <div class="kss-color-item" data-color="danger"></div>
+// <div class="kss-color-item" data-color="warning"></div>
+// <div class="kss-color-item" data-color="light"></div>
+// <div class="kss-color-item" data-color="dark"></div>
 // </div>
 //
 // Styleguide Variables.colors.swatches
