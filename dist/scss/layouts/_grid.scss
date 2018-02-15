@@ -8,14 +8,14 @@
     grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
     grid-gap: spacer(1);
     grid-auto-flow: dense;
-  
+
     // Set item size
     .item {
       width: 100%;
       grid-column: span 1;
       grid-row: span 1;
     }
-  
+
     // Set item sizes for fluid grid
     @each $size, $sizeKey in $grid-item-sizes {
       &.has-items-#{$size} {
@@ -25,33 +25,33 @@
         );
       }
     }
-  
+
     .has-col-all {
       grid-column: 1 / -1;
     }
-  
+
     .has-row-all {
       grid-row: 1 / -1;
     }
-  
+
     @for $i from 1 through $grid-columns {
       .has-col-#{$i} {
         grid-column: span $i;
       }
     }
-  
+
     @for $i from 1 through 10 {
       .has-row-#{$i} {
         grid-row: span $i;
       }
     }
-  
+
     @each $key, $spacer in $spacers {
       &.has-grid-gap-#{$key} {
         grid-gap: spacer($key);
       }
     }
-  
+
     // Set grid responsive classes
     @each $bp, $bpKey in $breakpoints {
       @include min(#{bp(#{$bp})}) {
@@ -59,26 +59,26 @@
         .has-col-#{$bp}-all {
           grid-column: 1 / -1;
         }
-  
+
         // Full row item
         .has-row-#{$bp}-all {
           grid-row: 1 / -1;
         }
-  
+
         // Set item number of col
         @for $i from 1 through $grid-columns {
           .has-col-#{$bp}-#{$i} {
             grid-column: span $i;
           }
         }
-  
+
         // Set item number of row
         @for $i from 1 through $grid-columns {
           .has-row-#{$bp}-#{$i} {
             grid-row: span $i;
           }
         }
-  
+
         // Set grid gap
         @each $key, $spacer in $spacers {
           &.has-grid-gap-#{$bp}-#{$key} {
@@ -90,16 +90,83 @@
   }
 }
 
- /* Progressive Enhancement for browsers not supporting grid */
+/* Progressive Enhancement for browsers not supporting grid */
 @supports not (display: grid) {
   @supports (display: flex) {
-    
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-right: spacer(3, true) * -1;
+      margin-left: spacer(3, true) * -1;
+
+      .item {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%; //IE
+        min-height: 1px;
+        padding-right: spacer(3, true);
+        padding-left: spacer(3, true);
+
+        @for $i from 1 through $grid-columns {
+          &.has-col-#{$i} {
+            flex: 0 0 percentage($i / $grid-columns);
+            max-width: percentage($i / $grid-columns);
+          }
+        }
+
+        @each $bp, $bpKey in $breakpoints {
+          @include min(#{bp(#{$bp})}) {
+            @for $i from 1 through $grid-columns {
+              &.has-col-#{$bp}-#{$i} {
+                flex: 0 0 percentage($i / $grid-columns);
+                max-width: percentage($i / $grid-columns);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-/* IE10 and 11 Fallback to be remove when < 1%*/  
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
-  
+/* IE10 and 11 Fallback to be remove when < 1%*/
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: spacer(3, true) * -1;
+    margin-left: spacer(3, true) * -1;
+
+    .item {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%; //IE
+      min-height: 1px;
+      padding-right: spacer(3, true);
+      padding-left: spacer(3, true);
+
+      @for $i from 1 through $grid-columns {
+        &.has-col-#{$i} {
+          flex: 0 0 percentage($i / $grid-columns);
+          max-width: percentage($i / $grid-columns);
+        }
+      }
+
+      @each $bp, $bpKey in $breakpoints {
+        @include min(#{bp(#{$bp})}) {
+          @for $i from 1 through $grid-columns {
+            &.has-col-#{$bp}-#{$i} {
+              flex: 0 0 percentage($i / $grid-columns);
+              max-width: percentage($i / $grid-columns);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ------------------------------
@@ -258,6 +325,8 @@
 // ------------------------------
 
 // Grid Fallback
+//
+// Atomic Bulldog grid use progressive enhancement for browsers not supporting CSS grid layout. It will use an alternative grid base on flexbox. Not all classes are supported.
 //
 // <p class="ciu_embed" data-feature="css-supports-api" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
 //   <a href="http://caniuse.com/#feat=css-supports-api">Can I Use css-supports-api?</a> Data on support for the css-supports-api feature across the major browsers from caniuse.com.

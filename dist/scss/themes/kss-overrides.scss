@@ -36,6 +36,10 @@ $kss-theme-color: color(primary, base, true);
     background: lighten($kss-theme-color, 20%);
     color: #000000;
     padding: 1rem;
+
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+      border: 1px solid white;
+    }
   }
 }
 .kss-iframe{
