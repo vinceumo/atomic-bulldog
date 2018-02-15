@@ -1,3 +1,7 @@
+input{
+  cursor: pointer;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -20,6 +24,15 @@ textarea,
   }
 }
 
+input[type="radio"],
+input[type="checkbox"]{
+  width: 1rem;
+  height: 1rem;
+}
+
+
+
+
 // ------------------------------
 // KSS Documentation
 // ------------------------------
@@ -32,5 +45,14 @@ textarea,
 // <input type="password" name="test3" placeholder="password">
 // <input type="tel" name="test4" placeholder="tel">
 // <input type="text" name="test5" placeholder="text">
+// <input type="radio" name="test6" value="radio">
+// <input type="checkbox" name="test7" value="checkbox">
+// <textarea></textarea>
+// <select>
+//   <option value="option1">option1</option>
+//   <option value="option2">option2</option>
+//   <option value="option3">option3</option>
+//   <option value="option4">option4</option>
+// </select>
 //
 // Styleguide Atoms.Forms.inputs
