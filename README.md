@@ -13,8 +13,8 @@
 
 ### TODO
 
-* [ ] Fall back for css grid
-* [ ] a11y js integration with a11y.css need to set a flag or something
+* [ ] Fall back for css grid https://github.com/zurb/foundation-sites/issues/10661
+* [ x ] a11y js integration with a11y.css
 * [ ] Atoms inputs
 * [ ] molecule card
 * [ ] molecule table
@@ -24,4 +24,3 @@
 * [ ] Contrast Theme
 * [ x ] Variables redefine gray theme
 * [ x ] Icons
-

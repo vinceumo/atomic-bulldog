@@ -11,15 +11,8 @@ $use-css-var: true;
 // By default Atomic Bulldog use CSS variables. You can compile to the real values by changing this flag to false. It is not recommended to do so as it will break some theming options.
 // More over postCSS can be use to compile CSS variables.
 //
-// Styleguide Settings.useCssVar
-
-// ------------------------------
-/////////////////////////////////
-// ------------------------------
-
-// Show A11y css helper
+// <p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+//  <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
+// </p>
 //
-// `$a11yCSS` 
-// 
-// In development this flag should be change to true to improve accessibility.
-// By default Atomic Bulldog use a11y.css (See vendors)
+// Styleguide Settings.useCssVar

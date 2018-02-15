@@ -25,8 +25,7 @@ gulp.task('scss', function () {
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
-      browsers: ['> 1%'],
-      grid: true
+      browsers: ['> 1%']
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(output))

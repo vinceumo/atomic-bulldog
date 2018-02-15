@@ -12,6 +12,8 @@
   ],
   "js": [
     "../js/kss.js",
-    "../js/atomic-bulldog.js"
+    "../js/atomic-bulldog.js",
+    "https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js",
+    "../js/polyfill/css-supports-polyfill.js"
   ]
 }
