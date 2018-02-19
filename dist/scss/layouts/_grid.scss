@@ -90,43 +90,10 @@
   }
 }
 
-/* Progressive Enhancement for browsers not supporting grid */
+/* Progressive Enhancement for browsers not supporting grid except IE */
 @supports not (display: grid) {
   @supports (display: flex) {
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      margin-right: spacer(3, true) * -1;
-      margin-left: spacer(3, true) * -1;
 
-      .item {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%; //IE
-        min-height: 1px;
-        padding-right: spacer(3, true);
-        padding-left: spacer(3, true);
-
-        @for $i from 1 through $grid-columns {
-          &.has-col-#{$i} {
-            flex: 0 0 percentage($i / $grid-columns);
-            max-width: percentage($i / $grid-columns);
-          }
-        }
-
-        @each $bp, $bpKey in $breakpoints {
-          @include min(#{bp(#{$bp})}) {
-            @for $i from 1 through $grid-columns {
-              &.has-col-#{$bp}-#{$i} {
-                flex: 0 0 percentage($i / $grid-columns);
-                max-width: percentage($i / $grid-columns);
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -137,16 +104,47 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-right: spacer(3, true) * -1;
-    margin-left: spacer(3, true) * -1;
+    margin-right: (spacer(3, true) * -1) / 2;
+    margin-left: (spacer(3, true) * -1) / 2;
+
+    @each $key, $spacer in $spacers {
+      &.has-grid-gap-#{$key} {
+        margin-right: (spacer($key, true) * -1) / 2;
+        margin-left: (spacer($key, true) * -1) / 2;
+
+        .item{
+          padding-right: spacer($key, true) / 2;
+          padding-left: spacer($key, true) / 2;
+          margin-bottom: spacer($key, true);
+        }
+      }
+    }
+
+    @each $bp, $bpKey in $breakpoints {
+      @include min(#{bp(#{$bp})}) {
+        @each $key, $spacer in $spacers {
+          &.has-grid-gap-#{$bp}-#{$key} {
+            margin-right: (spacer($key, true) * -1) / 2;
+            margin-left: (spacer($key, true) * -1) / 2;
+    
+            .item{
+              padding-right: spacer($key, true) / 2;
+              padding-left: spacer($key, true) / 2;
+              margin-bottom: spacer($key, true);
+            }
+          }
+        }
+      }
+    }
 
     .item {
       flex-basis: 0;
       flex-grow: 1;
       max-width: 100%; //IE
       min-height: 1px;
-      padding-right: spacer(3, true);
-      padding-left: spacer(3, true);
+      padding-right: spacer(3, true) / 2;
+      padding-left: spacer(3, true) / 2;
+      margin-bottom: spacer(3, true);
 
       @for $i from 1 through $grid-columns {
         &.has-col-#{$i} {
@@ -196,12 +194,24 @@
 //
 // markup:
 // <div class="grid has-grid-gap-3">
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3 box">1</div>
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">2</div>
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 box">3</div>
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">4</div>
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-4 box">5</div>
-//     <div class="item has-col-6 has-col-md-3 has-col-lg-8 box">6</div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3">
+//     <div class="box">1</div>
+//   </div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//       <div class="box">2</div>
+//   </div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2">
+//       <div class="box">3</div>
+//   </div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//       <div class="box">4</div>
+//   </div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//       <div class="box">5</div>
+//   </div>
+//   <div class="item has-col-6 has-col-md-3 has-col-lg-8">
+//       <div class="box">6</div>
+//   </div>
 // </div>
 //
 // Styleguide Layout.Grid.a
@@ -218,16 +228,36 @@
 //
 // markup:
 // <div class="grid {{modifier_class}} has-grid-gap-3">
-//     <div class="item box">1</div>
-//     <div class="item box">2</div>
-//     <div class="item box">3</div>
-//     <div class="item box">4</div>
-//     <div class="item box">5</div>
-//     <div class="item box">6</div>
-//     <div class="item box">7</div>
-//     <div class="item box">8</div>
-//     <div class="item box">9</div>
-//     <div class="item box">10</div>
+//   <div class="item">
+//     <div class="box">1</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">2</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">3</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">4</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">5</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">6</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">7</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">8</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">9</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">10</div>
+//   </div>
 // </div>
 //
 // .has-items-xs - xs Fluid items
@@ -250,16 +280,36 @@
 //
 // markup:
 // <div class="grid has-items-sm has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
-//     <div class="item box has-row-all">1</div>
-//     <div class="item box">2</div>
-//     <div class="item box">3</div>
-//     <div class="item box">4</div>
-//     <div class="item box has-row-2">5</div>
-//     <div class="item box">6</div>
-//     <div class="item box">7</div>
-//     <div class="item box">8</div>
-//     <div class="item box">9</div>
-//     <div class="item box">10</div>
+//   <div class="item has-row-all">
+//     <div class="box">1</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">2</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">3</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">4</div>
+//   </div>
+//   <div class="item has-row-2">
+//       <div class="box">5</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">6</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">7</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">8</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">9</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">10</div>
+//   </div>
 // </div>
 //
 // Styleguide Layout.Grid.modifiers.row
@@ -274,16 +324,36 @@
 //
 // markup:
 // <div class="grid has-items-sm has-grid-gap-2">
-//     <div class="item box has-col-all">1</div>
-//     <div class="item box">2</div>
-//     <div class="item box">3</div>
-//     <div class="item box">4</div>
-//     <div class="item box has-col-2">5</div>
-//     <div class="item box">6</div>
-//     <div class="item box">7</div>
-//     <div class="item box">8</div>
-//     <div class="item box">9</div>
-//     <div class="item box">10</div>
+//   <div class="item has-col-all">
+//       <div class="box">1</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">2</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">3</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">4</div>
+//   </div>
+//   <div class="item  has-col-2">
+//       <div class="box">5</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">6</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">7</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">8</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">9</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">10</div>
+//   </div>
 // </div>
 //
 // Styleguide Layout.Grid.modifiers.col
@@ -298,16 +368,36 @@
 //
 // markup:
 // <div class="grid has-items-md {{modifier_class}}">
-//     <div class="item box">1</div>
-//     <div class="item box">2</div>
-//     <div class="item box">3</div>
-//     <div class="item box">4</div>
-//     <div class="item box">5</div>
-//     <div class="item box">6</div>
-//     <div class="item box">7</div>
-//     <div class="item box">8</div>
-//     <div class="item box">9</div>
-//     <div class="item box">10</div>
+//   <div class="item">
+//     <div class="box">1</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">2</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">3</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">4</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">5</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">6</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">7</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">8</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">9</div>
+//   </div>
+//   <div class="item">
+//       <div class="box">10</div>
+//   </div>
 // </div>
 //
 // .has-grid-gap-0 - Grid Gap 0
