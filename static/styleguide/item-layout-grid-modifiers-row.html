@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="kss-assets/vendor/prism.css">
     <link rel="stylesheet" href="kss-assets/css/kss.css">
     <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
-<link rel="stylesheet" href="../css/screen.min.css">
+<link rel="stylesheet" href="../css/screen.css">
 <link rel="stylesheet" href="../css/themes/theme-invert.min.css">
+<link rel="stylesheet" href="../css/screen-fallback.css">
 
   </head>
 
@@ -122,17 +123,18 @@
             <header class="kss-section kss-section--depth-4" id="kssref-layout-grid-modifiers-row">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>layouts/_grid.scss</span>, line <span>276</span></p>
+                <p class="kss-section__source">Source: <span>layouts/_grid.scss</span>, line <span>189</span></p>
 
               <a class="kss-section__permalink" href="#kssref-layout-grid-modifiers-row">
                 <h4 class="kss-section__item kss-section__item--depth-4">
-                  <span class="kss-section__ref">4.2.3.3</span>
+                  <span class="kss-section__ref">4.2.2.3</span>
                   <span class="kss-section__name">Row</span>
                 </h4>
               </a>
 
-                <div class="kss-section__description"><p>Rows can be expended using the class <code>has-row-{breakpoint}-{size}</code> sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
-<code>grid-template-rows</code> set, so the item can grow depending of the number of rows.</p>
+                <div class="kss-section__description"><p>Rows can be expended using the class <code>has-row-{breakpoint}-{size}</code>. Sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
+<code>grid-template-rows</code> set, so the can grow depending of the number of rows.</p>
+<p>There is no fallback for these classes.</p>
 </div>
 
             </article>
@@ -141,35 +143,35 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><div class="grid has-items-sm has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
-  <div class="item has-row-all">
+                <div class="kss-modifiers__example"><div class="grid has-cols-3 has-cols-sm-5 has-cols-md-4 has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
+  <div class="has-row-all">
     <div class="box">1</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">2</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">3</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">4</div>
   </div>
-  <div class="item has-row-2">
+  <div class="has-row-2">
       <div class="box">5</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">6</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">7</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">8</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">9</div>
   </div>
-  <div class="item">
+  <div>
       <div class="box">10</div>
   </div>
 </div></div>
@@ -177,35 +179,35 @@
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid has-items-sm has-grid-gap-2&quot; style&#x3D;&quot;grid-template-rows: repeat(5, 1fr)&quot;&gt; &lt;!-- Set grid-template-rows for .has-row-all--&gt;
-  &lt;div class&#x3D;&quot;item has-row-all&quot;&gt;
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid has-cols-3 has-cols-sm-5 has-cols-md-4 has-grid-gap-2&quot; style&#x3D;&quot;grid-template-rows: repeat(5, 1fr)&quot;&gt; &lt;!-- Set grid-template-rows for .has-row-all--&gt;
+  &lt;div class&#x3D;&quot;has-row-all&quot;&gt;
     &lt;div class&#x3D;&quot;box&quot;&gt;1&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;2&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;3&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;4&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item has-row-2&quot;&gt;
+  &lt;div class&#x3D;&quot;has-row-2&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;5&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;6&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;7&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;8&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;9&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;item&quot;&gt;
+  &lt;div&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;10&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>

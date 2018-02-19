@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="kss-assets/vendor/prism.css">
     <link rel="stylesheet" href="kss-assets/css/kss.css">
     <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
-<link rel="stylesheet" href="../css/screen.min.css">
+<link rel="stylesheet" href="../css/screen.css">
 <link rel="stylesheet" href="../css/themes/theme-invert.min.css">
+<link rel="stylesheet" href="../css/screen-fallback.css">
 
   </head>
 
@@ -520,7 +521,7 @@ Most of this variables are define in maps and can be call using a function link 
             <section class="kss-section kss-section--depth-2" id="kssref-variables-grid">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>variables/_grid.scss</span>, line <span>43</span></p>
+                <p class="kss-section__source">Source: <span>variables/_grid.scss</span>, line <span>10</span></p>
 
               <a class="kss-section__permalink" href="#kssref-variables-grid">
                 <h2 class="kss-section__item kss-section__item--depth-2">
@@ -529,26 +530,8 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>This project use by default CSS grid layout <code>display: grid</code> for its grid. The grid can be use a rigid with a number of set columns define by <code>$grid-columns</code> (here 12 columns).
-Or the grid can be use as fluid using the map <code>$grid-item-sizes</code> with <code>$grid-item-sizes-base</code> (here 80px) See The grid section in layout for more informations</p>
-<hr>
-<ul>
-<li><code>xs</code>: $grid-item-sizes-base,</li>
-<li><code>sm</code>: $grid-item-sizes-base * 2.5,</li>
-<li><code>md</code>: $grid-item-sizes-base * 4,</li>
-<li><code>lg</code>: $grid-item-sizes-base * 5,</li>
-<li><code>xl</code>: $grid-item-sizes-base * 6,</li>
-<li><code>xxl</code>: $grid-item-sizes-base * 8</li>
-</ul>
-<hr>
-<p>Grid Item sizes can be call in the sass project using the functions:</p>
-<p><code>grid-item-size($grid-item-size, $true-val:false)</code> which will output by default the CSS variable</p>
-<p>Usage of grid-item-size():</p>
-<ul>
-<li><code>grid-item-size(md)</code> =&gt; <code>var(--grid-item-size-md)</code> If $use-css-var = true</li>
-<li><code>grid-item-size(md)</code> =&gt; <code>320px</code> If $use-css-var = false</li>
-<li><code>grid-item-size(md, true)</code> =&gt; <code>320px</code></li>
-</ul>
+                <div class="kss-section__description"><p>This project use by default CSS grid layout <code>display: grid</code> for its grid with a fallback on flexbox for older browsers.
+<code>$grid-columns</code> allow to set the number of columns we want per grid.</p>
 </div>
 
             </article>

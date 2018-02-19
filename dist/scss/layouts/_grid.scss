@@ -9,23 +9,6 @@
     grid-gap: spacer(1);
     grid-auto-flow: dense;
 
-    // Set item size
-    .item {
-      width: 100%;
-      grid-column: span 1;
-      grid-row: span 1;
-    }
-
-    // Set item sizes for fluid grid
-    @each $size, $sizeKey in $grid-item-sizes {
-      &.has-items-#{$size} {
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(#{grid-item-size($size)}, 1fr)
-        );
-      }
-    }
-
     .has-col-all {
       grid-column: 1 / -1;
     }
@@ -37,6 +20,10 @@
     @for $i from 1 through $grid-columns {
       .has-col-#{$i} {
         grid-column: span $i;
+      }
+
+      &.has-cols-#{$i} {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
       }
     }
 
@@ -65,14 +52,18 @@
           grid-row: 1 / -1;
         }
 
-        // Set item number of col
+        // Set number of col
         @for $i from 1 through $grid-columns {
           .has-col-#{$bp}-#{$i} {
             grid-column: span $i;
           }
+
+          &.has-cols-#{$bp}-#{$i} {
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+          }
         }
 
-        // Set item number of row
+        // Set number of row
         @for $i from 1 through $grid-columns {
           .has-row-#{$bp}-#{$i} {
             grid-row: span $i;
@@ -90,103 +81,17 @@
   }
 }
 
-/* Progressive Enhancement for browsers not supporting grid except IE */
-@supports not (display: grid) {
-  @supports (display: flex) {
-
-  }
-}
-
-/* IE10 and 11 Fallback to be remove when < 1%*/
-@media screen and (-ms-high-contrast: active),
-  screen and (-ms-high-contrast: none) {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-right: (spacer(3, true) * -1) / 2;
-    margin-left: (spacer(3, true) * -1) / 2;
-
-    @each $key, $spacer in $spacers {
-      &.has-grid-gap-#{$key} {
-        margin-right: (spacer($key, true) * -1) / 2;
-        margin-left: (spacer($key, true) * -1) / 2;
-
-        .item{
-          padding-right: spacer($key, true) / 2;
-          padding-left: spacer($key, true) / 2;
-          margin-bottom: spacer($key, true);
-        }
-      }
-    }
-
-    @each $bp, $bpKey in $breakpoints {
-      @include min(#{bp(#{$bp})}) {
-        @each $key, $spacer in $spacers {
-          &.has-grid-gap-#{$bp}-#{$key} {
-            margin-right: (spacer($key, true) * -1) / 2;
-            margin-left: (spacer($key, true) * -1) / 2;
-    
-            .item{
-              padding-right: spacer($key, true) / 2;
-              padding-left: spacer($key, true) / 2;
-              margin-bottom: spacer($key, true);
-            }
-          }
-        }
-      }
-    }
-
-    .item {
-      flex-basis: 0;
-      flex-grow: 1;
-      max-width: 100%; //IE
-      min-height: 1px;
-      padding-right: spacer(3, true) / 2;
-      padding-left: spacer(3, true) / 2;
-      margin-bottom: spacer(3, true);
-
-      @for $i from 1 through $grid-columns {
-        &.has-col-#{$i} {
-          flex: 0 0 percentage($i / $grid-columns);
-          max-width: percentage($i / $grid-columns);
-        }
-      }
-
-      @each $bp, $bpKey in $breakpoints {
-        @include min(#{bp(#{$bp})}) {
-          @for $i from 1 through $grid-columns {
-            &.has-col-#{$bp}-#{$i} {
-              flex: 0 0 percentage($i / $grid-columns);
-              max-width: percentage($i / $grid-columns);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 // ------------------------------
 // KSS Documentation
 // ------------------------------
 
 // Grid
 //
-// Atomic Bulldog use CSS grid layout for its grid. We have two ways of creating a grid. First one the `fluid` way, second option is the `rigid` way.
+// Atomic Bulldog use CSS grid layout for its grid.
 //
 // <p class="ciu_embed" data-feature="css-grid" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
 //   <a href="http://caniuse.com/#feat=css-grid">Can I Use css-grid?</a> Data on support for the css-grid feature across the major browsers from caniuse.com.
 // </p>
-//
-// Styleguide Layout.Grid
-
-// ------------------------------
-/////////////////////////////////
-// ------------------------------
-
-// Grid - Rigid
-//
 //
 // The rigid grid is base 12 col, This grid is two dimensional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).
 //
@@ -194,78 +99,86 @@
 //
 // markup:
 // <div class="grid has-grid-gap-3">
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3">
 //     <div class="box">1</div>
 //   </div>
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-4">
 //       <div class="box">2</div>
 //   </div>
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2">
 //       <div class="box">3</div>
 //   </div>
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-4">
 //       <div class="box">4</div>
 //   </div>
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-4">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-4">
 //       <div class="box">5</div>
 //   </div>
-//   <div class="item has-col-6 has-col-md-3 has-col-lg-8">
+//   <div class="has-col-6 has-col-md-3 has-col-lg-8">
 //       <div class="box">6</div>
 //   </div>
 // </div>
 //
-// Styleguide Layout.Grid.a
+// Styleguide Layout.Grid
 
 // ------------------------------
 /////////////////////////////////
 // ------------------------------
 
-// Grid - Fluid
+// Grid - Set number of columns
 //
-// The fluid grid is set by adding .has-items-{size}. We need as well to give the .grid children the class of .item.
+// The number of columns can be change by adding .has-cols-{bp}-{num-of-cols}. bp is optional, number of columns goes from 1 to 12.
 //
-// This option do not use media queries, We automatically adjust the grid depending on the size of the items using `grid-template-columns: repeat(auto-fit,minmax(#{grid-item-size($size)}, 1fr));`.
+// {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)
+//
+// Resize the window to see changes
 //
 // markup:
-// <div class="grid {{modifier_class}} has-grid-gap-3">
-//   <div class="item">
+// <div class="grid {{modifier_class}} has-cols-5 has-grid-gap-3">
+//   <div>
 //     <div class="box">1</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">2</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">3</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">4</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">5</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">6</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">7</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">8</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">9</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">10</div>
 //   </div>
 // </div>
 //
-// .has-items-xs - xs Fluid items
-// .has-items-sm - sm Fluid items
-// .has-items-md - md Fluid items
-// .has-items-lg - lg Fluid items
-// .has-items-xl - xl Fluid items
-// .has-items-xxl - xxl Fluid items
+// .has-cols-md-1 - 1 col layout
+// .has-cols-md-2 - 2 cols layout
+// .has-cols-md-3 - 3 cols layout
+// .has-cols-md-4 - 4 cols layout
+// .has-cols-md-5 - 5 cols layout
+// .has-cols-md-6 - 6 cols layout
+// .has-cols-md-7 - 7 cols layout
+// .has-cols-md-8 - 8 cols layout
+// .has-cols-md-9 - 9 cols layout
+// .has-cols-md-10 - 10 cols layout
+// .has-cols-md-11 - 11 cols layout
+// .has-cols-md-12 - 12 cols layout
 //
 // Styleguide Layout.Grid.b
 
@@ -275,39 +188,41 @@
 
 // Row
 //
-// Rows can be expended using the class `has-row-{breakpoint}-{size}` sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
-//`grid-template-rows` set, so the item can grow depending of the number of rows.
+// Rows can be expended using the class `has-row-{breakpoint}-{size}`. Sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
+//`grid-template-rows` set, so the can grow depending of the number of rows.
+//
+// There is no fallback for these classes.
 //
 // markup:
-// <div class="grid has-items-sm has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
-//   <div class="item has-row-all">
+// <div class="grid has-cols-3 has-cols-sm-5 has-cols-md-4 has-grid-gap-2" style="grid-template-rows: repeat(5, 1fr)"> <!-- Set grid-template-rows for .has-row-all-->
+//   <div class="has-row-all">
 //     <div class="box">1</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">2</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">3</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">4</div>
 //   </div>
-//   <div class="item has-row-2">
+//   <div class="has-row-2">
 //       <div class="box">5</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">6</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">7</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">8</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">9</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">10</div>
 //   </div>
 // </div>
@@ -320,38 +235,38 @@
 
 // Col
 //
-// Columns can be expended using the class `has-col-{breakpoint}-{size}` sizes goes from 0 to 12. .has-col-all can be use as well, the item will then take the full width.
+// Columns can be expended using the class `has-col-{breakpoint}-{size}`. Sizes goes from 0 to 12. .has-col-all can be use as well, grid item will then take the full width.
 //
 // markup:
-// <div class="grid has-items-sm has-grid-gap-2">
-//   <div class="item has-col-all">
+// <div class="grid has-cols-5 has-grid-gap-2">
+//   <div class="has-col-all">
 //       <div class="box">1</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">2</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">3</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">4</div>
 //   </div>
-//   <div class="item  has-col-2">
+//   <div class=" has-col-2">
 //       <div class="box">5</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">6</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">7</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">8</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">9</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">10</div>
 //   </div>
 // </div>
@@ -367,35 +282,35 @@
 // Grid gap can be change using `.has-grid-gap-{size}` class. This class use the $spacers map variables
 //
 // markup:
-// <div class="grid has-items-md {{modifier_class}}">
-//   <div class="item">
+// <div class="grid has-cols-5 {{modifier_class}}">
+//   <div>
 //     <div class="box">1</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">2</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">3</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">4</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">5</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">6</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">7</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">8</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">9</div>
 //   </div>
-//   <div class="item">
+//   <div>
 //       <div class="box">10</div>
 //   </div>
 // </div>
@@ -409,20 +324,3 @@
 // .has-grid-gap-6 - Grid Gap 6
 //
 // Styleguide Layout.Grid.modifiers.gap
-
-// ------------------------------
-/////////////////////////////////
-// ------------------------------
-
-// Grid Fallback
-//
-// Atomic Bulldog grid use progressive enhancement for browsers not supporting CSS grid layout. It will use an alternative grid base on flexbox. Not all classes are supported.
-//
-// <p class="ciu_embed" data-feature="css-supports-api" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
-//   <a href="http://caniuse.com/#feat=css-supports-api">Can I Use css-supports-api?</a> Data on support for the css-supports-api feature across the major browsers from caniuse.com.
-// </p>
-// <p class="ciu_embed" data-feature="flexbox" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
-//   <a href="http://caniuse.com/#feat=flexbox">Can I Use flexbox?</a> Data on support for the flexbox feature across the major browsers from caniuse.com.
-// </p>
-//
-// Styleguide Layout.Grid.z
