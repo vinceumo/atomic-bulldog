@@ -84,6 +84,11 @@
 //
 // This grid will compile in screen-fallback.css
 //
+// For now the fallback grid only works with the following classes:
+// * `.grid`
+// * `.has-cols-{bp}-{num-of-col}`
+// * `.has-grid-gap-{num}`
+//
 // <p class="ciu_embed" data-feature="css-supports-api" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
 //   <a href="http://caniuse.com/#feat=css-supports-api">Can I Use css-supports-api?</a> Data on support for the css-supports-api feature across the major browsers from caniuse.com.
 // </p>
