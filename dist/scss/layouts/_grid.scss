@@ -103,23 +103,23 @@
 // {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns) by default or 0 up to 12 base on the number of columns set using `.has-cols-{bp}-{size}`
 //
 // markup:
-// <div class="grid has-grid-gap-1 has-cols-3 has-cols-md-5 has-cols-lg-7">
-//   <div class="has-col-1 has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2">
+// <div class="grid has-grid-gap-2 has-cols-3 has-cols-md-5 has-cols-lg-7">
+//   <div class="has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2">
 //     <div class="box">1</div>
 //   </div>
 //   <div class="has-col-3 has-col-md-2 has-col-lg-1">
 //       <div class="box">2</div>
 //   </div>
-//   <div class="has-col-1 has-col-md-1 has-col-lg-1">
+//   <div>
 //       <div class="box">3</div>
 //   </div>
-//   <div class="has-col-1 has-col-md-2 has-col-lg-3">
+//   <div class="has-col-md-2 has-col-lg-3">
 //       <div class="box">4</div>
 //   </div>
-//   <div class="has-col-1 has-col-md-2 has-col-lg-6">
+//   <div class="has-col-md-2 has-col-lg-6">
 //       <div class="box">5</div>
 //   </div>
-//   <div class="has-col-1 has-col-md-1 has-col-lg-1">
+//   <div>
 //       <div class="box">6</div>
 //   </div>
 // </div>
