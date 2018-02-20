@@ -120,25 +120,20 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-skip">
+            <header class="kss-section kss-section--depth-3" id="kssref-atoms-forms-formtext">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>molecules/_skip-navigation.scss</span>, line <span>33</span></p>
+                <p class="kss-section__source">Source: <span>atoms/forms/_form-text.scss</span>, line <span>20</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-molecules-navigation-skip">
+              <a class="kss-section__permalink" href="#kssref-atoms-forms-formtext">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">2.2.2</span>
-                  <span class="kss-section__name">Skip Navigation</span>
+                  <span class="kss-section__ref">1.5.1</span>
+                  <span class="kss-section__name">Form Text</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Tab from here to reveal the skip navigation.</p>
-<p>This navigation is needed for accessibility reasons. It allow the users using screen readers to go directly
-to the main content</p>
-<ul>
-<li><a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html">https://www.w3.org/TR/WCAG20-TECHS/G1.html</a></li>
-<li><a href="https://a11yproject.com/posts/skip-nav-links/">https://a11yproject.com/posts/skip-nav-links/</a></li>
-</ul>
+                <div class="kss-section__description"><p>Use to describe the input or form-group. Use an id for <code>aria-describedby</code></p>
+<p>This class can be use to show an error message with <code>.has-error</code> or a valid message with <code>.is-valid</code>. These messages are display none by default, see <code>molecule/form-group</code></p>
 </div>
 
             </article>
@@ -147,20 +142,16 @@ to the main content</p>
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><div id="skip-navigation">
-  <a href="#main-content">Skip to content</a>
-  <a href="#">Skip to navigation</a>
-  <a href="#">Accessibility settings</a>
-</div></div>
+                <div class="kss-modifiers__example"><p id="emailHelp" class="form-text">We'll never share your email with anyone else.</p>
+<p class="form-text has-error" style="display: block">Opps, please enter a valid email.</p> <!-style="display: block" just for KSS-->
+<p class="form-text is-valid" style="display: block">Email is valid.</p> <!-style="display: block" just for KSS--></div>
 
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div id&#x3D;&quot;skip-navigation&quot;&gt;
-  &lt;a href&#x3D;&quot;#main-content&quot;&gt;Skip to content&lt;/a&gt;
-  &lt;a href&#x3D;&quot;#&quot;&gt;Skip to navigation&lt;/a&gt;
-  &lt;a href&#x3D;&quot;#&quot;&gt;Accessibility settings&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;p id&#x3D;&quot;emailHelp&quot; class&#x3D;&quot;form-text&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/p&gt;
+&lt;p class&#x3D;&quot;form-text has-error&quot; style&#x3D;&quot;display: block&quot;&gt;Opps, please enter a valid email.&lt;/p&gt; &lt;!-style&#x3D;&quot;display: block&quot; just for KSS--&gt;
+&lt;p class&#x3D;&quot;form-text is-valid&quot; style&#x3D;&quot;display: block&quot;&gt;Email is valid.&lt;/p&gt; &lt;!-style&#x3D;&quot;display: block&quot; just for KSS--&gt;</code></pre>
                 </article>
 
             </header>

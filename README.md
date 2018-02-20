@@ -13,7 +13,7 @@
 
 ### TODO
 
-* [ ] Fall back for css grid https://github.com/zurb/foundation-sites/issues/10661
+* [ x ] Fall back for css grid https://github.com/zurb/foundation-sites/issues/10661
 * [ x ] a11y js integration with a11y.css
 * [ ] Atoms inputs
 * [ ] molecule card

@@ -1,3 +1,44 @@
-.form-group{
-  
+// $textual-form-inputs-class is declare in atoms/form/inputs
+
+.form-group {
+  margin-bottom: spacer(3);
+
+  &.is-valid {
+    .form-text.is-valid {
+      display: block;
+    }
+
+    #{$textual-form-inputs-class} {
+      border-color: color(success);
+    }
+  }
+
+  &.has-error {
+    .form-text.has-error {
+      display: block;
+    }
+
+    #{$textual-form-inputs-class} {
+      border-color: color(danger);
+    }
+  }
 }
+
+// Main navigation
+//
+// Form Group
+//
+// markup:
+// <div class="form-group {{modifier_class}}">
+//   <label for="exampleEmail1">Email address</label>
+//   <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+//   <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+//   <p class="form-text has-error">Opps, please enter a valid email.</p>
+//   <p class="form-text is-valid">Email is valid.</p>
+// </div>
+//
+// .is-valid - Form group is valid
+// .has-error - Form group has error
+//
+//
+// Styleguide Molecules.form.formgroup

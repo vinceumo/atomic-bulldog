@@ -38,7 +38,7 @@
 // * `$device` - Default screen
 //
 // Usage:
-// * `h2{@include min(#{bp(sm)}){font-size: font-size(heading2);}}`
+// * `h2{@include min(#{bp(sm)}){font-size: font-size(2);}}`
 // 
 // Output:
 // * `@media only screen and (min-width: 36em) {h2{font-size: 2.5rem;}`
@@ -62,7 +62,7 @@
 // * `$device` - Default screen
 //
 // Usage:
-// * `h2{@include max(#{bp(sm)}){font-size: font-size(heading2);}}`
+// * `h2{@include max(#{bp(sm)}){font-size: font-size(2);}}`
 // 
 // Output:
 // * `@media only screen and (max-width: 36em) {h2{font-size: 2.5rem;}`

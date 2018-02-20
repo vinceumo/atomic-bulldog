@@ -120,46 +120,67 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-skip">
+            <header class="kss-section kss-section--depth-3" id="kssref-molecules-form-formgroup">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>molecules/_skip-navigation.scss</span>, line <span>33</span></p>
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>27</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-molecules-navigation-skip">
+              <a class="kss-section__permalink" href="#kssref-molecules-form-formgroup">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">2.2.2</span>
-                  <span class="kss-section__name">Skip Navigation</span>
+                  <span class="kss-section__ref">2.1.1</span>
+                  <span class="kss-section__name">Main navigation</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Tab from here to reveal the skip navigation.</p>
-<p>This navigation is needed for accessibility reasons. It allow the users using screen readers to go directly
-to the main content</p>
-<ul>
-<li><a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html">https://www.w3.org/TR/WCAG20-TECHS/G1.html</a></li>
-<li><a href="https://a11yproject.com/posts/skip-nav-links/">https://a11yproject.com/posts/skip-nav-links/</a></li>
-</ul>
+                <div class="kss-section__description"><p>Form Group</p>
 </div>
 
             </article>
 
               <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Example</h1>
+                <h1 class="kss-modifiers__heading">Examples</h1>
 
+                  <h2 class="kss-modifiers__name">Default styling</h2>
 
-                <div class="kss-modifiers__example"><div id="skip-navigation">
-  <a href="#main-content">Skip to content</a>
-  <a href="#">Skip to navigation</a>
-  <a href="#">Accessibility settings</a>
+                <div class="kss-modifiers__example"><div class="form-group [modifier]">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
 </div></div>
 
+                  <h2 class="kss-modifiers__name">.is-valid</h2>
+
+                  <p class="kss-modifiers__description">Form group is valid</p>
+
+                  <div class="kss-modifiers__example"><div class="form-group is-valid">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-error</h2>
+
+                  <p class="kss-modifiers__description">Form group has error</p>
+
+                  <div class="kss-modifiers__example"><div class="form-group has-error">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
+</div></div>
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div id&#x3D;&quot;skip-navigation&quot;&gt;
-  &lt;a href&#x3D;&quot;#main-content&quot;&gt;Skip to content&lt;/a&gt;
-  &lt;a href&#x3D;&quot;#&quot;&gt;Skip to navigation&lt;/a&gt;
-  &lt;a href&#x3D;&quot;#&quot;&gt;Accessibility settings&lt;/a&gt;
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label for&#x3D;&quot;exampleEmail1&quot;&gt;Email address&lt;/label&gt;
+  &lt;input type&#x3D;&quot;email&quot; id&#x3D;&quot;exampleEmail1&quot; aria-describedby&#x3D;&quot;emailHelp&quot; placeholder&#x3D;&quot;Enter email&quot;&gt;
+  &lt;p id&#x3D;&quot;emailHelp&quot; class&#x3D;&quot;form-text mb-0&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please enter a valid email.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;Email is valid.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                 </article>
 

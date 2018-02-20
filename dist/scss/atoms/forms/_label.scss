@@ -1,5 +1,8 @@
 label{
   font-weight: bold;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: calc(#{font-size(6)} + 0.05rem);
 }
 
 // ------------------------------
