@@ -21,9 +21,15 @@ input {
   color: color(text);
   transition: border-color 0.3s ease-in-out;
   border-radius: 5px;
+  outline: none;
 
   &:hover {
     border-color: color-gray(60);
+  }
+
+  &:focus{
+    border-color: color(primary);
+    box-shadow:0 0 5px color(primary);
   }
 
   &::placeholder {

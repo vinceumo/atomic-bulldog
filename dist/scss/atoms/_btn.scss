@@ -83,6 +83,7 @@ button{
     &.is-focused:not([disabled]) {
       background-color: color($name, dark);
       border-color: color($name, dark);
+      outline: none;
     }
 
     &.is-loading {
@@ -104,6 +105,7 @@ button{
     &.is-focused:not([disabled]) {
       color: color($name, contrast);
       background-color: color($name, base);
+      outline: none;
     }
 
     &.is-loading {

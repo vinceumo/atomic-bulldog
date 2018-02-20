@@ -62,7 +62,7 @@
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-molecules.html#kssref-molecules-form-formgroup">
                         <span class="kss-nav__ref">2.1.1</span>
-                        <span class="kss-nav__name">Main navigation</span>
+                        <span class="kss-nav__name">Form Group</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
@@ -190,16 +190,21 @@
             <section class="kss-section kss-section--depth-3" id="kssref-molecules-form-formgroup">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>27</span></p>
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>37</span></p>
 
               <a class="kss-section__permalink" href="#kssref-molecules-form-formgroup">
                 <h3 class="kss-section__item kss-section__item--depth-3">
                   <span class="kss-section__ref">2.1.1</span>
-                  <span class="kss-section__name">Main navigation</span>
+                  <span class="kss-section__name">Form Group</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Form Group</p>
+                <div class="kss-section__description"><p><code>.form-group</code> helps get even spacing in the form. It helps as well to style form validation with its modifiers.</p>
+<p>Modifiers classes</p>
+<ul>
+<li><code>.is-valid</code> - Form group is valid</li>
+<li><code>.has-error</code> - Form group has error</li>
+</ul>
 </div>
 
             </article>
@@ -215,6 +220,41 @@
   <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
   <p class="form-text has-error">Opps, please enter a valid email.</p>
   <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label>Select an option</label>
+  <select>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group [modifier]">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
 </div></div>
 
                   <h2 class="kss-modifiers__name">.is-valid</h2>
@@ -227,6 +267,41 @@
   <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
   <p class="form-text has-error">Opps, please enter a valid email.</p>
   <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label>Select an option</label>
+  <select>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group is-valid">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
 </div></div>
                   <h2 class="kss-modifiers__name">.has-error</h2>
 
@@ -238,6 +313,41 @@
   <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
   <p class="form-text has-error">Opps, please enter a valid email.</p>
   <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label>Select an option</label>
+  <select>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group has-error">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
 </div></div>
               </article>
 
@@ -248,6 +358,41 @@
   &lt;p id&#x3D;&quot;emailHelp&quot; class&#x3D;&quot;form-text mb-0&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/p&gt;
   &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please enter a valid email.&lt;/p&gt;
   &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;Email is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label for&#x3D;&quot;message1&quot;&gt;Your message&lt;/label&gt;
+  &lt;textarea id&#x3D;&quot;message1&quot; placeholder&#x3D;&quot;Your message&quot;&gt;&lt;/textarea&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please enter a message.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;Message is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label&gt;Select an option&lt;/label&gt;
+  &lt;select&gt;
+   &lt;option value&#x3D;&quot;option1&quot;&gt;option1&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option2&quot;&gt;option2&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option3&quot;&gt;option3&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option4&quot;&gt;option4&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please select a value.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label&gt;What do you thing?&lt;/label&gt;
+  &lt;div class&#x3D;&quot;input-group&quot;&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio1&quot;&gt; Yes&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio2&quot;&gt; No&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio3&quot;&gt; Not sure&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+ &lt;label&gt;Do you agree?&lt;/label&gt;
+  &lt;div&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;test8&quot; value&#x3D;&quot;checkbox&quot;&gt; I agree with &lt;a href&#x3D;&quot;#&quot;&gt;Terms and conditions&lt;/a&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                 </article>
 

@@ -1,0 +1,29 @@
+*:focus {
+  outline-color: color(primary);
+  border-color: color(primary);
+  box-shadow:0 0 5px color(primary);
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Focus - global style
+//
+// Focus on this elements
+//
+// Markup:
+// <a href="#">Test Focus</a>
+// <button class="btn is-danger" href="#">Test Focus</button>
+// <input type="text" name="test5" placeholder="Test Focus">
+// <textarea></textarea>
+// <input type="radio" name="test6" value="radio">
+// <input type="checkbox" name="test7" value="checkbox">
+// <select>
+//   <option value="option1">option1</option>
+//   <option value="option2">option2</option>
+//   <option value="option3">option3</option>
+//   <option value="option4">option4</option>
+// </select>
+//
+// Styleguide Atoms.focus
