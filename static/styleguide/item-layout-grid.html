@@ -132,13 +132,17 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Atomic Bulldog use CSS grid layout for its grid.</p>
+                <div class="kss-section__description"><p>Atomic Bulldog use CSS grid layout for its grid. It only apply this grid to supported browsers using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40supports">CSS <code>@supports</code></a> rule.</p>
+<p>See <code>Grid fallback</code> if you need to use the fallback grid.</p>
 <p class="ciu_embed" data-feature="css-grid" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
   <a href="http://caniuse.com/#feat=css-grid">Can I Use css-grid?</a> Data on support for the css-grid feature across the major browsers from caniuse.com.
 </p>
+<p class="ciu_embed" data-feature="css-supports-api" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+  <a href="http://caniuse.com/#feat=css-supports-api">Can I Use css-supports-api?</a> Data on support for the css-supports-api feature across the major browsers from caniuse.com.
+</p>
 
-<p>The rigid grid is base 12 col, This grid is two dimensional, meaning it can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).</p>
-<p>{breakpoint} is set from the <code>$breakpoints</code> map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)</p>
+<p>The  grid is by default 12 columns base, This grid is two dimensional, meaning grid items can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).</p>
+<p>{breakpoint} is set from the <code>$breakpoints</code> map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns) by default or 0 up to 12 base on the number of columns set using <code>.has-cols-{bp}-{size}</code></p>
 </div>
 
             </article>
@@ -147,23 +151,23 @@
                 <h1 class="kss-modifiers__heading">Example</h1>
 
 
-                <div class="kss-modifiers__example"><div class="grid has-grid-gap-3">
-  <div class="has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3">
+                <div class="kss-modifiers__example"><div class="grid has-grid-gap-1 has-cols-3 has-cols-md-5 has-cols-lg-7">
+  <div class="has-col-1 has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2">
     <div class="box">1</div>
   </div>
-  <div class="has-col-6 has-col-md-3 has-col-lg-4">
+  <div class="has-col-3 has-col-md-2 has-col-lg-1">
       <div class="box">2</div>
   </div>
-  <div class="has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2">
+  <div class="has-col-1 has-col-md-1 has-col-lg-1">
       <div class="box">3</div>
   </div>
-  <div class="has-col-6 has-col-md-3 has-col-lg-4">
+  <div class="has-col-1 has-col-md-2 has-col-lg-3">
       <div class="box">4</div>
   </div>
-  <div class="has-col-6 has-col-md-3 has-col-lg-4">
+  <div class="has-col-1 has-col-md-2 has-col-lg-6">
       <div class="box">5</div>
   </div>
-  <div class="has-col-6 has-col-md-3 has-col-lg-8">
+  <div class="has-col-1 has-col-md-1 has-col-lg-1">
       <div class="box">6</div>
   </div>
 </div></div>
@@ -171,23 +175,23 @@
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid has-grid-gap-3&quot;&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2 has-row-lg-3&quot;&gt;
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid has-grid-gap-1 has-cols-3 has-cols-md-5 has-cols-lg-7&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-1 has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2&quot;&gt;
     &lt;div class&#x3D;&quot;box&quot;&gt;1&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-4&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-3 has-col-md-2 has-col-lg-1&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;2&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-4 has-row-md-2&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-1 has-col-md-1 has-col-lg-1&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;3&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-4&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-1 has-col-md-2 has-col-lg-3&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;4&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-4&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-1 has-col-md-2 has-col-lg-6&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;5&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-6 has-col-md-3 has-col-lg-8&quot;&gt;
+  &lt;div class&#x3D;&quot;has-col-1 has-col-md-1 has-col-lg-1&quot;&gt;
       &lt;div class&#x3D;&quot;box&quot;&gt;6&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
