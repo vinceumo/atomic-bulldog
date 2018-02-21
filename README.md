@@ -1,10 +1,8 @@
 # Atomic Bulldog :collision: :dog:
 
-> Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
+![logo](https://image.ibb.co/mmS6Hc/Artboard_1.png)
 
-<p align="center">
-  <img style="max-width: 250px" scr="/static/img/atomic-bulldog-logo.svg" />
-</p>
+> Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
 
 ## :boom: Atomic Design
 
@@ -168,13 +166,13 @@ Atomic Bulldog:
 
 ### :pencil2: TODO
 
-* [ x ] Fall back for css grid MVP
-* [ x ] a11y js integration with a11y.css MVP
-* [ x ] Atoms inputs MVP
-* [ x ] Variables redefine gray theme MVP
-* [ x ] Icons MVP
-* [  ] Atoms modifiers display flex grid + other classes to position MVP
-* [  ] Update documentation
-* [  ] Create a theme for kss
-* [  ] Dark theme
-* [  ] Contrast Theme
+* [x] Fall back for css grid MVP
+* [x] a11y js integration with a11y.css MVP
+* [x] Atoms inputs MVP
+* [x] Variables redefine gray theme MVP
+* [x] Icons MVP
+* [ ] Atoms modifiers display flex grid + other classes to position MVP
+* [ ] Update documentation
+* [ ] Create a theme for kss
+* [ ] Dark theme
+* [ ] Contrast Theme
