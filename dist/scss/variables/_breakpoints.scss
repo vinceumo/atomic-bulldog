@@ -47,7 +47,7 @@ $breakpoints: (
 
 // Breakpoints
 //
-// Breakpoints are sets in the map `$breakpoints`
+// Breakpoints are in the map `$breakpoints`
 //
 // ---------------
 // * `xs`: 320px, // Smartphone
@@ -57,7 +57,7 @@ $breakpoints: (
 // * `xl`: 1800px, // Large Desktop
 // ---------------
 //
-// Breakpoints can be call in the sass project using the functions:
+// Breakpoints can be called in the sass project using the functions:
 //
 // `bp($bp)` which will output a value in em
 //

@@ -48,7 +48,7 @@ $spacers: (
 
 // Spacers
 //
-// Spacers is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)
+// Spacers is use to for padding and margin grid-gap in the project. The base value is set with $spacer-reference (1rem)
 //
 // ---------------
 // * `0`: 0,
@@ -63,7 +63,7 @@ $spacers: (
 // * `9`: ($spacer-reference * 12)
 // ---------------
 //
-// spacer sizes can be call in the sass project using the functions:
+// spacer sizes can be called in the sass project using the functions:
 //
 // `spacer($spacer, $true-val:false)` which will output by default the CSS variable
 //

@@ -276,7 +276,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Breakpoints are sets in the map <code>$breakpoints</code></p>
+                <div class="kss-section__description"><p>Breakpoints are in the map <code>$breakpoints</code></p>
 <hr>
 <ul>
 <li><code>xs</code>: 320px, // Smartphone</li>
@@ -286,7 +286,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li><code>xl</code>: 1800px, // Large Desktop</li>
 </ul>
 <hr>
-<p>Breakpoints can be call in the sass project using the functions:</p>
+<p>Breakpoints can be called in the sass project using the functions:</p>
 <p><code>bp($bp)</code> which will output a value in em</p>
 <p><code>bp-var($bp, $true-val:false)</code> which will output the CSS variable</p>
 <p>Usage of bp():</p>
@@ -317,7 +317,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Colors are set in the map <code>$color-themes</code>. Each color themes have 5 variables:</p>
+                <div class="kss-section__description"><p>Colors are in the map <code>$color-themes</code>. Each color themes have 5 variables:</p>
 <ul>
 <li>Base</li>
 <li>Dark</li>
@@ -325,7 +325,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li>Transparent</li>
 <li>Contrast</li>
 </ul>
-<p>Colors can be call in the sass project using the functions:</p>
+<p>Colors can be called in the sass project using the functions:</p>
 <p><code>color($color-name, $color-variant:null, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of font-family():</p>
 <ul>
@@ -354,8 +354,8 @@ Most of this variables are define in maps and can be call using a function link 
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Grays are set in the map <code>$gray-themes</code>. This maps darken white (#ffffff) to black 10% by 10%</p>
-<p>Grays can be call in the sass project using the functions:</p>
+                <div class="kss-section__description"><p>Grays are in the map <code>$gray-themes</code>. This maps darken white (#ffffff) to black 10% by 10%</p>
+<p>Grays can be called in the sass project using the functions:</p>
 <p><code>color-gray($gray-theme, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of font-family():</p>
 <ul>
@@ -420,7 +420,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Container sizes are sets in the map <code>$container-sizes</code></p>
+                <div class="kss-section__description"><p>Container sizes are in the map <code>$container-sizes</code></p>
 <hr>
 <ul>
 <li><code>sm</code></li>
@@ -429,7 +429,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li><code>xl</code></li>
 </ul>
 <hr>
-<p>Container Sizes can be call in the sass project using the function:</p>
+<p>Container Sizes can be called in the sass project using the function:</p>
 <p><code>container($container-size, $true-val:false)</code>.</p>
 <p>Function examples to call the map:</p>
 <ul>
@@ -455,7 +455,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Font Families are set in the map <code>$font-families</code></p>
+                <div class="kss-section__description"><p>Font Families are in the map <code>$font-families</code></p>
 <hr>
 <ul>
 <li><code>paragraph</code>: Lato,</li>
@@ -464,7 +464,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li><code>icon</code>: icomoon</li>
 </ul>
 <hr>
-<p>Font Families can be call in the sass project using the functions:</p>
+<p>Font Families can be called in the sass project using the functions:</p>
 <p><code>font-family($font-family, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of font-family():</p>
 <ul>
@@ -490,7 +490,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Font Sizes are sets in the map <code>$font-sizes</code></p>
+                <div class="kss-section__description"><p>Font Sizes are in the map <code>$font-sizes</code></p>
 <hr>
 <ul>
 <li><code>root</code>: 16px,</li>
@@ -504,7 +504,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li><code>button</code>: 1rem</li>
 </ul>
 <hr>
-<p>Font sizes can be call in the sass project using the functions:</p>
+<p>Font sizes can be called in the sass project using the functions:</p>
 <p><code>font-sizes($font-size, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of font-size():</p>
 <ul>
@@ -531,7 +531,7 @@ Most of this variables are define in maps and can be call using a function link 
               </a>
 
                 <div class="kss-section__description"><p>This project use by default CSS grid layout <code>display: grid</code> for its grid with a fallback on flexbox for older browsers.
-<code>$grid-columns</code> allow to set the number of columns we want per grid.</p>
+<code>$grid-columns</code> allow setting the number of columns we want per grid.</p>
 </div>
 
             </article>
@@ -551,12 +551,12 @@ Most of this variables are define in maps and can be call using a function link 
               </a>
 
                 <div class="kss-section__description"><p>Icon font are generated using <a href="https://icomoon.io/">https://icomoon.io/</a> (See vendors)</p>
-<p>Icomoon give sass files but this ones use variables. For better maintainability and theming the vendor have been change so it use a map instead of variables.</p>
+<p>Icomoon give sass files but these ones use variables. For better maintainability and theming the vendor have been changed so it uses a map instead of variables.</p>
 <p>Variables can be converted to a map using this tool:</p>
 <p><p data-height="700" data-theme-id="dark" data-slug-hash="QQgGNb" data-default-tab="result" data-user="vinceumo" data-embed-version="2" data-pen-title="Convert Sass variables to map" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/QQgGNb/">Convert Sass variables to map</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p></p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<p>Icons can be call in the sass project using the functions:</p>
+<p>Icons can be called in the sass project using the functions:</p>
 <p><code>icon($icon, $true-val:false)</code> which will output by default the CSS variable, You will need to set the font family as <code>font-family: font-family(icon)</code></p>
 <p>Usage of icon():</p>
 <ul>
@@ -1102,7 +1102,7 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Spacers is use to set padding and margin in the project. The base value is set with $spacer-reference (1rem)</p>
+                <div class="kss-section__description"><p>Spacers is use to for padding and margin grid-gap in the project. The base value is set with $spacer-reference (1rem)</p>
 <hr>
 <ul>
 <li><code>0</code>: 0,</li>
@@ -1117,7 +1117,7 @@ Most of this variables are define in maps and can be call using a function link 
 <li><code>9</code>: ($spacer-reference * 12)</li>
 </ul>
 <hr>
-<p>spacer sizes can be call in the sass project using the functions:</p>
+<p>spacer sizes can be called in the sass project using the functions:</p>
 <p><code>spacer($spacer, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of grid-item-size():</p>
 <ul>
@@ -1166,14 +1166,14 @@ Most of this variables are define in maps and can be call using a function link 
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>z-index are sets in the map <code>$z-indexes</code>. The first entry will get the highest value and the last one the lowest. You can find an example in this pen</p>
+                <div class="kss-section__description"><p>z-index are in the map <code>$z-indexes</code>. The first entry will get the highest value and the last one the lowest. You can find an example in this pen</p>
 <hr>
 <ul>
 <li><code>skip-navigation</code></li>
 <li><code>main-navigation</code></li>
 </ul>
 <hr>
-<p>z-index indexes can be call in the sass project using the functions:</p>
+<p>z-index indexes can be called in the sass project using the functions:</p>
 <p><code>z($name)</code> which will output the reverse index of $name time 10</p>
 <p>Usage of font-size():</p>
 <ul>

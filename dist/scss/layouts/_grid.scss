@@ -87,7 +87,7 @@
 
 // Grid
 //
-// Atomic Bulldog use CSS grid layout for its grid. It only apply this grid to supported browsers using the [CSS `@supports`](https://developer.mozilla.org/en-US/docs/Web/CSS/%40supports) rule.
+// Atomic Bulldog uses CSS grid layout for its grid. It only applies this grid to supported browsers using the [CSS `@supports`](https://developer.mozilla.org/en-US/docs/Web/CSS/%40supports) rule.
 //
 // See `Grid fallback` if you need to use the fallback grid.
 //
@@ -100,7 +100,7 @@
 //
 // The  grid is by default 12 columns base, This grid is two dimensional, meaning grid items can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).
 //
-// {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns) by default or 0 up to 12 base on the number of columns set using `.has-cols-{bp}-{size}`
+// {breakpoint} is set from the `$breakpoints` map (see variables), {size} is set as well in variables. It goes from 0 to 12 ($grid-columns) by default or 0 up to 12 base on the number of columns set using `.has-cols-{bp}-{size}`
 //
 // markup:
 // <div class="grid has-grid-gap-2 has-cols-3 has-cols-md-5 has-cols-lg-7">
@@ -134,9 +134,9 @@
 //
 // The number of columns can be change by adding .has-cols-{bp}-{num-of-cols}. bp is optional, number of columns goes from 1 to 12.
 //
-// {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns)
+// {breakpoint} is set from the `$breakpoints` map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns).
 //
-// Resize the window to see changes
+// Resize the window to see changes.
 //
 // markup:
 // <div class="grid {{modifier_class}} has-cols-5 has-grid-gap-3">
@@ -201,8 +201,8 @@
 
 // Row
 //
-// Rows can be expended using the class `has-row-{breakpoint}-{size}`. Sizes goes from 0 to 12. .has-row-all can be use as well but in this case the grid need to have
-//`grid-template-rows` set, so the can grow depending of the number of rows.
+// Rows can be expended using the class `has-row-{breakpoint}-{size}`. Sizes go from 0 to 12. .has-row-all can be used as well but in this case, the grid needs to have
+//`grid-template-rows` set, so the can grow depending on the number of rows.
 //
 // There is no fallback for these classes.
 //
@@ -248,7 +248,7 @@
 
 // Col
 //
-// Columns can be expended using the class `has-col-{breakpoint}-{size}`. Sizes goes from 0 to 12. .has-col-all can be use as well, grid item will then take the full width.
+// Columns can be expended using the class `has-col-{breakpoint}-{size}`. Sizes go from 0 to 12. .has-col-all can be used as well, grid item will then take the full width.
 //
 // markup:
 // <div class="grid has-cols-5 has-grid-gap-2">

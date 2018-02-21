@@ -47,7 +47,7 @@ $font-families: (
 
 // Font Families
 //
-// Font Families are set in the map `$font-families`
+// Font Families are in the map `$font-families`
 //
 // ---------------
 // * `paragraph`: Lato,
@@ -56,7 +56,7 @@ $font-families: (
 // * `icon`: icomoon
 // ---------------
 //
-// Font Families can be call in the sass project using the functions:
+// Font Families can be called in the sass project using the functions:
 //
 // `font-family($font-family, $true-val:false)` which will output by default the CSS variable
 //

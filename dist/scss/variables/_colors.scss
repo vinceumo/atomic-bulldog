@@ -168,14 +168,14 @@ $gray-themes: (
 
 // Colors
 //
-// Colors are set in the map `$color-themes`. Each color themes have 5 variables:
+// Colors are in the map `$color-themes`. Each color themes have 5 variables:
 // * Base
 // * Dark
 // * Light
 // * Transparent
 // * Contrast
 //
-// Colors can be call in the sass project using the functions:
+// Colors can be called in the sass project using the functions:
 //
 // `color($color-name, $color-variant:null, $true-val:false)` which will output by default the CSS variable
 //
@@ -195,9 +195,9 @@ $gray-themes: (
 
 // Grays
 //
-// Grays are set in the map `$gray-themes`. This maps darken white (#ffffff) to black 10% by 10%
+// Grays are in the map `$gray-themes`. This maps darken white (#ffffff) to black 10% by 10%
 //
-// Grays can be call in the sass project using the functions:
+// Grays can be called in the sass project using the functions:
 //
 // `color-gray($gray-theme, $true-val:false)` which will output by default the CSS variable
 //

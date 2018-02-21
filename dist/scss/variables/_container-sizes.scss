@@ -41,7 +41,7 @@ $container-sizes: (
 
 // Container Sizes
 //
-// Container sizes are sets in the map `$container-sizes`
+// Container sizes are in the map `$container-sizes`
 //
 // --------
 // * `sm`
@@ -50,7 +50,7 @@ $container-sizes: (
 // * `xl`
 // --------
 //
-// Container Sizes can be call in the sass project using the function:
+// Container Sizes can be called in the sass project using the function:
 //
 // `container($container-size, $true-val:false)`.
 //
