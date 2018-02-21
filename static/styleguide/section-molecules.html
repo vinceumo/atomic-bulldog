@@ -56,7 +56,7 @@
                     <li class="kss-nav__item ">
                       <a href="section-molecules.html#kssref-molecules-form">
                         <span class="kss-nav__ref">2.1</span>
-                        <span class="kss-nav__name">Molecules.form</span>
+                        <span class="kss-nav__name">Form</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
@@ -65,10 +65,16 @@
                         <span class="kss-nav__name">Form Group</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-molecules.html#kssref-molecules-form-inputgroup">
+                        <span class="kss-nav__ref">2.1.2</span>
+                        <span class="kss-nav__name">Input group</span>
+                      </a>
+                    </li>
                     <li class="kss-nav__item ">
                       <a href="section-molecules.html#kssref-molecules-navigation">
                         <span class="kss-nav__ref">2.2</span>
-                        <span class="kss-nav__name">Molecules.navigation</span>
+                        <span class="kss-nav__name">Navigation</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
@@ -174,11 +180,12 @@
             <section class="kss-section kss-section--depth-2" id="kssref-molecules-form">
 
             <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>51</span></p>
 
               <a class="kss-section__permalink" href="#kssref-molecules-form">
                 <h2 class="kss-section__item kss-section__item--depth-2">
                   <span class="kss-section__ref">2.1</span>
-                  <span class="kss-section__name">Molecules.form</span>
+                  <span class="kss-section__name">Form</span>
                 </h2>
               </a>
 
@@ -190,7 +197,7 @@
             <section class="kss-section kss-section--depth-3" id="kssref-molecules-form-formgroup">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>37</span></p>
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>59</span></p>
 
               <a class="kss-section__permalink" href="#kssref-molecules-form-formgroup">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -230,6 +237,7 @@
 <div class="form-group [modifier]">
   <label>Select an option</label>
   <select>
+   <option selected="true" disabled>Select dropdown</option>
    <option value="option1">option1</option>
    <option value="option2">option2</option>
    <option value="option3">option3</option>
@@ -277,6 +285,7 @@
 <div class="form-group is-valid">
   <label>Select an option</label>
   <select>
+   <option selected="true" disabled>Select dropdown</option>
    <option value="option1">option1</option>
    <option value="option2">option2</option>
    <option value="option3">option3</option>
@@ -323,6 +332,7 @@
 <div class="form-group has-error">
   <label>Select an option</label>
   <select>
+   <option selected="true" disabled>Select dropdown</option>
    <option value="option1">option1</option>
    <option value="option2">option2</option>
    <option value="option3">option3</option>
@@ -368,6 +378,7 @@
 &lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
   &lt;label&gt;Select an option&lt;/label&gt;
   &lt;select&gt;
+   &lt;option selected&#x3D;&quot;true&quot; disabled&gt;Select dropdown&lt;/option&gt;
    &lt;option value&#x3D;&quot;option1&quot;&gt;option1&lt;/option&gt;
    &lt;option value&#x3D;&quot;option2&quot;&gt;option2&lt;/option&gt;
    &lt;option value&#x3D;&quot;option3&quot;&gt;option3&lt;/option&gt;
@@ -397,14 +408,63 @@
                 </article>
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-molecules-form-inputgroup">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>122</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-form-inputgroup">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.1.2</span>
+                  <span class="kss-section__name">Input group</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p><code>.input-group</code> help to space evenly radio and checkbox buttons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="form-group">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+  &lt;label&gt;What do you thing?&lt;/label&gt;
+  &lt;div class&#x3D;&quot;input-group&quot;&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio1&quot;&gt; Yes&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio2&quot;&gt; No&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio3&quot;&gt; Not sure&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-2" id="kssref-molecules-navigation">
 
             <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_navigation.scss</span>, line <span>62</span></p>
 
               <a class="kss-section__permalink" href="#kssref-molecules-navigation">
                 <h2 class="kss-section__item kss-section__item--depth-2">
                   <span class="kss-section__ref">2.2</span>
-                  <span class="kss-section__name">Molecules.navigation</span>
+                  <span class="kss-section__name">Navigation</span>
                 </h2>
               </a>
 
@@ -416,7 +476,7 @@
             <section class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-mainnavigation">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>molecules/_navigation.scss</span>, line <span>62</span></p>
+                <p class="kss-section__source">Source: <span>molecules/_navigation.scss</span>, line <span>70</span></p>
 
               <a class="kss-section__permalink" href="#kssref-molecules-navigation-mainnavigation">
                 <h3 class="kss-section__item kss-section__item--depth-3">

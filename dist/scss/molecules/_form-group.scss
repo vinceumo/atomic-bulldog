@@ -1,7 +1,17 @@
 // $textual-form-inputs-class is declare in atoms/form/inputs
 
 .form-group {
-  margin-bottom: spacer(3);
+  margin-bottom: spacer(5);
+
+  .input-group{
+    .input-label{
+      margin-right: spacer(3);
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
 
   &.is-valid {
     .form-text.is-valid {
@@ -34,6 +44,18 @@
   }
 }
 
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Form
+//
+// Styleguide Molecules.form
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
 // Form Group
 //
 // `.form-group` helps get even spacing in the form. It helps as well to style form validation with its modifiers.
@@ -59,6 +81,7 @@
 // <div class="form-group {{modifier_class}}">
 //   <label>Select an option</label>
 //   <select>
+//    <option selected="true" disabled>Select dropdown</option>
 //    <option value="option1">option1</option>
 //    <option value="option2">option2</option>
 //    <option value="option3">option3</option>
@@ -91,3 +114,26 @@
 //
 //
 // Styleguide Molecules.form.formgroup
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Input group
+//
+// `.input-group` help to space evenly radio and checkbox buttons
+//
+// markup:
+// <div class="form-group">
+//   <label>What do you thing?</label>
+//   <div class="input-group">
+//    <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+//    <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+//    <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+//   </div>
+//   <p class="form-text has-error">Opps, please check.</p>
+//   <p class="form-text is-valid">input is valid.</p>
+// </div>
+//
+//
+// Styleguide Molecules.form.inputgroup

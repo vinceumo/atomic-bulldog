@@ -13,14 +13,12 @@
 
 ### TODO
 
-* [ x ] Fall back for css grid https://github.com/zurb/foundation-sites/issues/10661
+* [ x ] Fall back for css grid
 * [ x ] a11y js integration with a11y.css
-* [ ] Atoms inputs
-* [ ] molecule card
-* [ ] molecule table
+* [ x ] Atoms inputs
+* [ x ] Variables redefine gray theme
+* [ x ] Icons
 * [ ] Atoms modifiers display flex grid + other classes to position 
 * [ ] Create a theme for kss
 * [ ] Dark theme
 * [ ] Contrast Theme
-* [ x ] Variables redefine gray theme
-* [ x ] Icons
