@@ -6,6 +6,8 @@
 
 Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
 
+Demo: https://vinceumo.github.io/atomic-bulldog-style-guide-demo/styleguide
+
 ## :boom: Atomic Design
 
 Atomic design is a methodology for helping to design and develop a `pattern system`.

@@ -1,4 +1,6 @@
-# Atomic Bulldog
+<p align="center"> 
+  <img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
+</p>
 
 > This pattern library is here to help to create and maintain a unified UI.
 
