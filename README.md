@@ -1,8 +1,10 @@
 # Atomic Bulldog :collision: :dog:
 
-![logo](https://image.ibb.co/mmS6Hc/Artboard_1.png)
+<p align="center"> 
+<img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
+</p>
 
-> Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
+Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
 
 ## :boom: Atomic Design
 
@@ -55,7 +57,7 @@ KSS settings can be changed in `kss-config.json`, you can add and remove CSS and
 The basic format for KSS documentation can be best explained in an example:
 
 ```scss
-.btn{
+.btn {
   //Style
 }
 
@@ -88,7 +90,7 @@ The basic format for KSS documentation can be best explained in an example:
 * The first line will be the title of the section, in this example it is `button`.
 * Then we have the description of the element, we can add markup as well (i.e to embed a video or caniuse table).
 * We can show an example we a snippet by adding `markup:` following by the element's HTML.
- * `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
+* `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
 * Finally the last line allows organize this section, In this example, it will be in Atoms/Button.
 
 ### :blue_book: KSS resources
@@ -104,7 +106,7 @@ Atomic Design does not come with a naming convention. The only convention is aro
 
 ## :tokyo_tower: Project Structure
 
-The heart of Atomic is the pattern system. To manage and create these patterns we use the `variables`  folder all the patterns will be declared in there and an associated function is created to reuse this pattern. For examples, colors are set in this folder that can be used with the Sass function `color(your color)` (See Sass variables page).
+The heart of Atomic is the pattern system. To manage and create these patterns we use the `variables` folder all the patterns will be declared in there and an associated function is created to reuse this pattern. For examples, colors are set in this folder that can be used with the Sass function `color(your color)` (See Sass variables page).
 
 As we saw in a previous section, Atomic Bulldog is base on the atomic design methodology. Naturally `atom` elements will go in the atoms file, `molecules` in molecules file etc.
 
@@ -134,9 +136,10 @@ Atomic Bulldog:
 |         \---icomoon
 ```
 
--------
+---
 
 With description:
+
 ```
 Atomic Bulldog:
 | \---scss
