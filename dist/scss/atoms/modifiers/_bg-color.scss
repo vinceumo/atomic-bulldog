@@ -1,0 +1,79 @@
+// background color variations
+@each $name, $theme in $color-themes {
+  .has-bg-#{$name} {
+    background-color: color($name, base);
+    color: color($name, contrast);
+  }
+}
+
+@each $name, $theme in $gray-themes {
+  .has-bg-gray-#{$name} {
+    background-color: color-gray($name);
+  }
+}
+
+.has-bg-gray-0 {
+  color: color-gray(100);
+}
+
+@for $i from 1 through 5 {
+  .has-bg-gray-#{$i}#{0}{
+    color: color-gray(100);
+  }
+}
+
+@for $i from 6 through 10 {
+  .has-bg-gray-#{$i}#{0} {
+    color: color-gray(0);
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Background colors
+//
+// markup:
+// <div class="{{modifier_class}} has-p-3">Content...</div>
+//
+// .has-bg-primary - Primary color
+// .has-bg-secondary - Secondary color
+// .has-bg-link - Link color
+// .has-bg-success - Success color
+// .has-bg-danger - Danger color
+// .has-bg-warning - warning color
+// .has-bg-light - light color
+// .has-bg-dark - dark color
+// .has-bg-gray-0 - gray 0
+// .has-bg-gray-10 - gray 10
+// .has-bg-gray-20 - gray 20
+// .has-bg-gray-30 - gray 30
+// .has-bg-gray-40 - gray 40
+// .has-bg-gray-50 - gray 50
+// .has-bg-gray-60 - gray 60
+// .has-bg-gray-70 - gray 70
+// .has-bg-gray-80 - gray 80
+// .has-bg-gray-100 - gray 100
+//
+// Styleguide Atoms.Modifiers.bgcolors
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Background theme invert
+//
+// markup:
+// <div class="theme-invert"><div class="{{modifier_class}} has-p-3">Content...</div></div>
+//
+// .has-bg-primary - Primary color
+// .has-bg-secondary - Secondary color
+// .has-bg-link - Link color
+// .has-bg-success - Success color
+// .has-bg-danger - Danger color
+// .has-bg-warning - warning color
+// .has-bg-light - light color
+// .has-bg-dark - dark color
+//
+// Styleguide Themes.Invert.Atoms.Modifiers.bgcolors

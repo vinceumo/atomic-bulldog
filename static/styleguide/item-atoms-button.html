@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atomic Bulldog - UI/pattern library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
+<link rel="stylesheet" href="../css/screen.css">
+<link rel="stylesheet" href="../css/themes/theme-invert.min.css">
+<link rel="stylesheet" href="../css/screen-fallback.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-atoms.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Atoms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-molecules.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Molecules</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-organisms.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Organisms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layouts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-templates.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Templates</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Sass variables</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-mixins.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Sass Mixins</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-functions.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Sass Functions</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-vendors.html">
+              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__name">Vendors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-themes.html">
+              <span class="kss-nav__ref">10</span>
+              <span class="kss-nav__name">Themes</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">11</span>
+              <span class="kss-nav__name">Project settings</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-atoms-button">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>atoms/_btn.scss</span>, line <span>124</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-atoms-button">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">1.4</span>
+                  <span class="kss-section__name">Buttons</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><button class="btn [modifier]">.btn .[modifier]</button>
+<button class="btn [modifier] is-outlined">.btn .[modifier] .is-outlined</button>
+<button class="btn [modifier] is-hovered">.btn .[modifier] .is-hover</button>
+<button class="btn [modifier] is-focused">.btn .[modifier] .is-focused</button>
+<button class="btn [modifier] is-rounded">.btn .[modifier] .is-rounded</button>
+<button class="btn [modifier] is-loading">.btn .[modifier] .is-loading</button>
+<button class="btn [modifier]" disabled>.btn .[modifier] disabled</button>
+<button class="btn [modifier] is-theme-default">.btn .[modifier] .is-theme-default</button></div>
+
+                  <h2 class="kss-modifiers__name">.is-primary</h2>
+
+                  <p class="kss-modifiers__description">Primary color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-primary">.btn .is-primary</button>
+<button class="btn is-primary is-outlined">.btn .is-primary .is-outlined</button>
+<button class="btn is-primary is-hovered">.btn .is-primary .is-hover</button>
+<button class="btn is-primary is-focused">.btn .is-primary .is-focused</button>
+<button class="btn is-primary is-rounded">.btn .is-primary .is-rounded</button>
+<button class="btn is-primary is-loading">.btn .is-primary .is-loading</button>
+<button class="btn is-primary" disabled>.btn .is-primary disabled</button>
+<button class="btn is-primary is-theme-default">.btn .is-primary .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-secondary</h2>
+
+                  <p class="kss-modifiers__description">Secondary color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-secondary">.btn .is-secondary</button>
+<button class="btn is-secondary is-outlined">.btn .is-secondary .is-outlined</button>
+<button class="btn is-secondary is-hovered">.btn .is-secondary .is-hover</button>
+<button class="btn is-secondary is-focused">.btn .is-secondary .is-focused</button>
+<button class="btn is-secondary is-rounded">.btn .is-secondary .is-rounded</button>
+<button class="btn is-secondary is-loading">.btn .is-secondary .is-loading</button>
+<button class="btn is-secondary" disabled>.btn .is-secondary disabled</button>
+<button class="btn is-secondary is-theme-default">.btn .is-secondary .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-link</h2>
+
+                  <p class="kss-modifiers__description">Link color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-link">.btn .is-link</button>
+<button class="btn is-link is-outlined">.btn .is-link .is-outlined</button>
+<button class="btn is-link is-hovered">.btn .is-link .is-hover</button>
+<button class="btn is-link is-focused">.btn .is-link .is-focused</button>
+<button class="btn is-link is-rounded">.btn .is-link .is-rounded</button>
+<button class="btn is-link is-loading">.btn .is-link .is-loading</button>
+<button class="btn is-link" disabled>.btn .is-link disabled</button>
+<button class="btn is-link is-theme-default">.btn .is-link .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-success</h2>
+
+                  <p class="kss-modifiers__description">Success color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-success">.btn .is-success</button>
+<button class="btn is-success is-outlined">.btn .is-success .is-outlined</button>
+<button class="btn is-success is-hovered">.btn .is-success .is-hover</button>
+<button class="btn is-success is-focused">.btn .is-success .is-focused</button>
+<button class="btn is-success is-rounded">.btn .is-success .is-rounded</button>
+<button class="btn is-success is-loading">.btn .is-success .is-loading</button>
+<button class="btn is-success" disabled>.btn .is-success disabled</button>
+<button class="btn is-success is-theme-default">.btn .is-success .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-danger</h2>
+
+                  <p class="kss-modifiers__description">Danger color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-danger">.btn .is-danger</button>
+<button class="btn is-danger is-outlined">.btn .is-danger .is-outlined</button>
+<button class="btn is-danger is-hovered">.btn .is-danger .is-hover</button>
+<button class="btn is-danger is-focused">.btn .is-danger .is-focused</button>
+<button class="btn is-danger is-rounded">.btn .is-danger .is-rounded</button>
+<button class="btn is-danger is-loading">.btn .is-danger .is-loading</button>
+<button class="btn is-danger" disabled>.btn .is-danger disabled</button>
+<button class="btn is-danger is-theme-default">.btn .is-danger .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-warning</h2>
+
+                  <p class="kss-modifiers__description">warning color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-warning">.btn .is-warning</button>
+<button class="btn is-warning is-outlined">.btn .is-warning .is-outlined</button>
+<button class="btn is-warning is-hovered">.btn .is-warning .is-hover</button>
+<button class="btn is-warning is-focused">.btn .is-warning .is-focused</button>
+<button class="btn is-warning is-rounded">.btn .is-warning .is-rounded</button>
+<button class="btn is-warning is-loading">.btn .is-warning .is-loading</button>
+<button class="btn is-warning" disabled>.btn .is-warning disabled</button>
+<button class="btn is-warning is-theme-default">.btn .is-warning .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-light</h2>
+
+                  <p class="kss-modifiers__description">light color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-light">.btn .is-light</button>
+<button class="btn is-light is-outlined">.btn .is-light .is-outlined</button>
+<button class="btn is-light is-hovered">.btn .is-light .is-hover</button>
+<button class="btn is-light is-focused">.btn .is-light .is-focused</button>
+<button class="btn is-light is-rounded">.btn .is-light .is-rounded</button>
+<button class="btn is-light is-loading">.btn .is-light .is-loading</button>
+<button class="btn is-light" disabled>.btn .is-light disabled</button>
+<button class="btn is-light is-theme-default">.btn .is-light .is-theme-default</button></div>
+                  <h2 class="kss-modifiers__name">.is-dark</h2>
+
+                  <p class="kss-modifiers__description">dark color</p>
+
+                  <div class="kss-modifiers__example"><button class="btn is-dark">.btn .is-dark</button>
+<button class="btn is-dark is-outlined">.btn .is-dark .is-outlined</button>
+<button class="btn is-dark is-hovered">.btn .is-dark .is-hover</button>
+<button class="btn is-dark is-focused">.btn .is-dark .is-focused</button>
+<button class="btn is-dark is-rounded">.btn .is-dark .is-rounded</button>
+<button class="btn is-dark is-loading">.btn .is-dark .is-loading</button>
+<button class="btn is-dark" disabled>.btn .is-dark disabled</button>
+<button class="btn is-dark is-theme-default">.btn .is-dark .is-theme-default</button></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;button class&#x3D;&quot;btn [modifier]&quot;&gt;.btn .[modifier]&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-outlined&quot;&gt;.btn .[modifier] .is-outlined&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-hovered&quot;&gt;.btn .[modifier] .is-hover&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-focused&quot;&gt;.btn .[modifier] .is-focused&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-rounded&quot;&gt;.btn .[modifier] .is-rounded&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-loading&quot;&gt;.btn .[modifier] .is-loading&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier]&quot; disabled&gt;.btn .[modifier] disabled&lt;/button&gt;
+&lt;button class&#x3D;&quot;btn [modifier] is-theme-default&quot;&gt;.btn .[modifier] .is-theme-default&lt;/button&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../js/kss.js"></script>
+<script src="../js/atomic-bulldog.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>

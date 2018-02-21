@@ -1,0 +1,71 @@
+.navigation-bar{
+  position: sticky;
+  top: -1px;
+  z-index: z(navigation-bar);
+  border-bottom: 1px solid color-gray(20);
+  background-color: color-gray(0);
+
+  .navigation-bar-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.is-active{
+    position: fixed;
+    width: 100%;
+
+    .brand, .burger{
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Navigation Bar
+//
+// Resize me
+//
+// Have accessible keys for mobile as well `esc` to close
+// and `tab` to navigate inside, using trapTabKey js function so we don't focus outside.
+//
+// markup:
+// <header class="navigation-bar has-py-3">
+//   <div class="navigation-bar-items" role="dialog">
+//       <div class="brand">
+//           <a href="#">Brand Name
+//               <span>v1.0.0</span>
+//           </a>
+//       </div>
+//       <nav id="main-navigation" class="navigation">
+//           <button class="burger">
+//               <span class="burger-icon">
+//                   <span></span>
+//               </span> Menu</button>
+//           <ul class="list-inline navigation-items">
+//               <li>
+//                   <a href="#">Home</a>
+//               </li>
+//               <li>
+//                   <a href="#">Shop</a>
+//               </li>
+//               <li>
+//                   <a href="#">Space Bears</a>
+//               </li>
+//               <li>
+//                   <a href="#">Mars Cars</a>
+//               </li>
+//               <li>
+//                   <a href="#">Contact</a>
+//               </li>
+//           </ul>
+//       </nav>
+//   </div>
+// </header>
+//
+//
+// Styleguide Organisms.navigationbar

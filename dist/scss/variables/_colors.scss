@@ -1,0 +1,243 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
+$color-prefix: --color-;
+$color-gray-prefix: --color-gray-;
+$color-themes: (
+  primary:
+    (
+      base: #4c5c8c,
+      dark: darken(#4c5c8c, 15%),
+      light: lighten(#4c5c8c, 15%),
+      transparent: transparentize(#4c5c8c, 0.5),
+      contrast: #ffffff
+    ),
+  secondary:
+    (
+      base: #212529,
+      dark: darken(#212529, 15%),
+      light: lighten(#212529, 15%),
+      transparent: transparentize(#212529, 0.5),
+      contrast: #ffffff
+    ),
+  text:
+    (
+      base: #212529,
+      dark: darken(#212529, 15%),
+      light: lighten(#212529, 15%),
+      transparent: transparentize(#212529, 0.5),
+      contrast: #ffffff
+    ),
+  link:
+    (
+      base: #4b7e9e,
+      dark: darken(#4b7e9e, 15%),
+      light: lighten(#4b7e9e, 15%),
+      transparent: transparentize(#4b7e9e, 0.5),
+      contrast: #ffffff
+    ),
+  success:
+    (
+      base: #4b9b50,
+      dark: darken(#4b9b50, 15%),
+      light: lighten(#4b9b50, 15%),
+      transparent: transparentize(#4b9b50, 0.5),
+      contrast: #ffffff
+    ),
+  danger:
+    (
+      base: #c65556,
+      dark: darken(#c65556, 15%),
+      light: lighten(#c65556, 15%),
+      transparent: transparentize(#c65556, 0.5),
+      contrast: #ffffff
+    ),
+  warning:
+    (
+      base: #d3b354,
+      dark: darken(#d3b354, 15%),
+      light: lighten(#d3b354, 15%),
+      transparent: transparentize(#d3b354, 0.5),
+      contrast: #ffffff
+    ),
+  light:
+    (
+      base: #efe5cf,
+      dark: darken(#efe5cf, 15%),
+      light: lighten(#efe5cf, 15%),
+      transparent: transparentize(#efe5cf, 0.5),
+      contrast: #343a40
+    ),
+  dark:
+    (
+      base: #343a40,
+      dark: darken(#343a40, 15%),
+      light: lighten(#343a40, 15%),
+      transparent: transparentize(#343a40, 0.5),
+      contrast: #efe5cf
+    )
+);
+
+$gray-themes: (
+  0: #ffffff,
+  10: #f8f9fa,
+  20: #e9ecef,
+  30: #dee2e6,
+  40: #ced4da,
+  50: #adb5bd,
+  60: #6c757d,
+  70: #495057,
+  80: #343a40,
+  90: #212529,
+  100: #000000
+);
+
+// ------------------------------
+// Set color function
+// ------------------------------
+// retrieve color from map with Sass ie. `color(primary, base)`
+@function color($color-name, $color-variant:null, $true-val:false) {
+  // if we enable css var
+  @if $use-css-var == true {
+    // we need to return the color value
+    @if $true-val == true {
+      // color variant is optional
+      @if ($color-variant != null) {
+        // map inception, need two deep
+        @return map-get(map-get($color-themes,$color-name),$color-variant);
+      } @else {
+        // Default color
+        @return map-get(map-get($color-themes,$color-name), base);
+      } // if we're only returning the CSS4 variable
+    } @else {
+      // color variant is optional
+      @if ($color-variant != null) {
+        // map inception, need two names
+        @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+      } @else {
+        // Default color, one name
+        @return var(#{$color-prefix}#{$color-name}-base);
+      }
+    }
+  } @else {
+    // color variant is optional
+    @if ($color-variant != null) {
+      // map inception, need two deep
+      @return map-get(map-get($color-themes,$color-name),$color-variant);
+    } @else {
+      // Default color
+      @return map-get(map-get($color-themes,$color-name), base);
+    }
+  }
+}
+@function color-gray($gray-theme, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($gray-themes, $gray-theme); // True Val
+    } @else {
+      @return var(#{$color-gray-prefix}#{$gray-theme});
+      // CSS Var
+    }
+  } @else {
+    @return map-get($gray-themes, $gray-theme); // Disabled CSS Var
+  }
+}
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $color in $color-themes {
+      @if type-of($color) == "map" {
+        @each $subname, $subcolor in $color {
+          #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+        }
+      } @else if type-of($color) == "color" {
+        #{$color-prefix}#{$name}: $color;
+      }
+    }
+    @each $name, $gray-theme in $gray-themes {
+      #{$color-gray-prefix}#{$name}: $gray-theme;
+    }
+  }
+}
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Colors
+//
+// Colors are in the map `$color-themes`. Each color themes have 5 variables:
+// * Base
+// * Dark
+// * Light
+// * Transparent
+// * Contrast
+//
+// Colors can be called in the sass project using the functions:
+//
+// `color($color-name, $color-variant:null, $true-val:false)` which will output by default the CSS variable
+//
+// Usage of font-family():
+// * `color(danger)` => `var(--color-danger-base)` If $use-css-var = true
+// * `color(danger)` => `#c65556` If $use-css-var = false
+// * `color(success, base, true)` => `#c65556`
+// * `color(success, light)` => `var(--color-success-light)` If $use-css-var = true
+// * `color(success, light)` => `#76bd7a` If $use-css-var = false
+// * `color(success, light, true)` => `#76bd7a`
+//
+// Styleguide Variables.colors
+
+// ------------------------------
+// ///////////////////////////////
+// ------------------------------
+
+// Grays
+//
+// Grays are in the map `$gray-themes`. This maps darken white (#ffffff) to black 10% by 10%
+//
+// Grays can be called in the sass project using the functions:
+//
+// `color-gray($gray-theme, $true-val:false)` which will output by default the CSS variable
+//
+// Usage of font-family():
+// * `color-gray(0)` => `var(--color-gray-0)` If $use-css-var = true
+// * `color-gray(100)` => `#000000` If $use-css-var = false
+// * `color-gray(60)` => `#666666` If $use-css-var = false
+//
+// <div class="has-bg-gray-0 has-p-3">0</div>
+// <div class="has-bg-gray-10 has-p-3">10</div>
+// <div class="has-bg-gray-20 has-p-3">20</div>
+// <div class="has-bg-gray-30 has-p-3">30</div>
+// <div class="has-bg-gray-40 has-p-3">40</div>
+// <div class="has-bg-gray-50 has-p-3">50</div>
+// <div class="has-bg-gray-60 has-p-3">60</div>
+// <div class="has-bg-gray-70 has-p-3">70</div>
+// <div class="has-bg-gray-80 has-p-3">80</div>
+// <div class="has-bg-gray-90 has-p-3">90</div>
+// <div class="has-bg-gray-100 has-p-3">100</div>
+//
+//
+// Styleguide Variables.colors.grays
+
+// ------------------------------
+// ///////////////////////////////
+// ------------------------------
+
+// Color Swatches
+//
+// <!--ONLY FOR KSS-->
+// <div id="kss-map-colors" class="theme-default">
+// <div class="kss-color-item" data-color="primary"></div>
+// <div class="kss-color-item" data-color="secondary"></div>
+// <div class="kss-color-item" data-color="text"></div>
+// <div class="kss-color-item" data-color="link"></div>
+// <div class="kss-color-item" data-color="success"></div>
+// <div class="kss-color-item" data-color="danger"></div>
+// <div class="kss-color-item" data-color="warning"></div>
+// <div class="kss-color-item" data-color="light"></div>
+// <div class="kss-color-item" data-color="dark"></div>
+// </div>
+//
+// Styleguide Variables.colors.swatches

@@ -1,0 +1,76 @@
+$textual-form-inputs-class: "
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="text"],
+  textarea,
+  select,
+  .input
+";
+
+input {
+  cursor: pointer;
+}
+
+#{$textual-form-inputs-class} {
+  display: block;
+  border: 1px solid color-gray(50);
+  padding: spacer(2);
+  color: color(text);
+  transition: border-color 0.3s ease-in-out;
+  outline: none;
+  width: 100%;
+
+  &:hover {
+    border-color: color-gray(60);
+  }
+
+  &:focus{
+    border-color: color(primary);
+    box-shadow:0 0 5px color(primary);
+  }
+
+  &::placeholder {
+    color: color-gray(50);
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Form elements
+//
+// Styleguide Atoms.Forms
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Inputs
+//
+// Markup:
+// <input type="email" name="test1" placeholder="email">
+// <input type="number" name="test2" placeholder="number">
+// <input type="password" name="test3" placeholder="password">
+// <input type="tel" name="test4" placeholder="tel">
+// <input type="text" name="test5" placeholder="text">
+// <textarea></textarea>
+// <input type="radio" name="test6" value="radio">
+// <input type="checkbox" name="test7" value="checkbox">
+// <select>
+//   <option value="option1">option1</option>
+//   <option value="option2">option2</option>
+//   <option value="option3">option3</option>
+//   <option value="option4">option4</option>
+// </select>
+//
+// Styleguide Atoms.Forms.inputs

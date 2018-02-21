@@ -1,0 +1,122 @@
+@each $key, $spacer in $spacers {
+  .has-py-#{$key},
+  .has-pt-#{$key},
+  .has-p-#{$key} {
+    padding-top: spacer($key);
+  }
+  .has-py-#{$key},
+  .has-pb-#{$key},
+  .has-p-#{$key} {
+    padding-bottom: spacer($key);
+  }
+  .has-px-#{$key},
+  .has-pl-#{$key},
+  .has-p-#{$key} {
+    padding-left: spacer($key);
+  }
+  .has-px-#{$key},
+  .has-pr-#{$key},
+  .has-p-#{$key} {
+    padding-right: spacer($key);
+  }
+
+  .has-my-#{$key},
+  .has-mt-#{$key},
+  .has-m-#{$key} {
+    margin-top: spacer($key);
+  }
+  .has-my-#{$key},
+  .has-mb-#{$key},
+  .has-m-#{$key} {
+    margin-bottom: spacer($key);
+  }
+  .has-mx-#{$key},
+  .has-ml-#{$key},
+  .has-m-#{$key} {
+    margin-left: spacer($key);
+  }
+  .has-mx-#{$key},
+  .has-mr-#{$key},
+  .has-m-#{$key} {
+    margin-right: spacer($key);
+  }
+}
+
+@each $bp, $bpKey in $breakpoints {
+  @each $key, $spacer in $spacers {
+    @include min(#{bp(#{$bp})}) {
+      .has-py-#{$bp}-#{$key},
+      .has-pt-#{$bp}-#{$key},
+      .has-p-#{$bp}-#{$key} {
+        padding-top: spacer($key);
+      }
+      .has-py-#{$bp}-#{$key},
+      .has-pb-#{$bp}-#{$key},
+      .has-p-#{$bp}-#{$key} {
+        padding-bottom: spacer($key);
+      }
+      .has-px-#{$bp}-#{$key},
+      .has-pl-#{$bp}-#{$key},
+      .has-p-#{$bp}-#{$key} {
+        padding-left: spacer($key);
+      }
+      .has-px-#{$bp}-#{$key},
+      .has-pr-#{$bp}-#{$key},
+      .has-p-#{$bp}-#{$key} {
+        padding-right: spacer($key);
+      }
+
+      .has-my-#{$bp}-#{$key},
+      .has-mt-#{$bp}-#{$key},
+      .has-m-#{$bp}-#{$key} {
+        margin-top: spacer($key);
+      }
+      .has-my-#{$bp}-#{$key},
+      .has-mb-#{$bp}-#{$key},
+      .has-m-#{$bp}-#{$key} {
+        margin-bottom: spacer($key);
+      }
+      .has-mx-#{$bp}-#{$key},
+      .has-ml-#{$bp}-#{$key},
+      .has-m-#{$bp}-#{$key} {
+        margin-left: spacer($key);
+      }
+      .has-mx-#{$bp}-#{$key},
+      .has-mr-#{$bp}-#{$key},
+      .has-m-#{$bp}-#{$key} {
+        margin-right: spacer($key);
+      }
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Spacing
+//
+// These classes allow setting padding (p) and margin (m)
+//
+// The classes are named using the format has-{property}{sides}-{size} for xs and has-{property}{sides}-{breakpoint}-{size} for the other breakpoints.
+//
+// Parameters:
+// * `size` - Size from the map $spacers from 0 to 6
+// * `sides` - Optional value. If no set then the 4 sides will be targeted, `x` target left and right, `y` top and bottom, `r` right, `l` left, `t` top, `b` bottom.
+// * `property` - `m` for margin, `p` for padding.
+//
+// Usage:
+// * `has-mt-3` => has margin top var(--spacer-3) => margin-top: var(--spacer-3);
+// * `has-p-sm-3` => has padding var(--spacer-3) from sm breakpoint
+// * `has-mx-lg-3` => has margin left and right var(--spacer-3) from lg breakpoint
+//
+// markup:
+// <div class="has-bg-primary has-p-1 has-p-sm-6 has-p-md-1 has-p-lg-6 has-p-xl-1">
+//  <div class="has-bg-success has-p-1">
+//    <p class="has-mt-6 has-mx-sm-1 has-mx-md-5 has-mt-lg-3">
+//      Age, inquies, ista parva sunt. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Non potes, nisi retexueris illa. De hominibus dici non necesse est. Nam quid possumus facere melius? Erit enim mecum, si tecum erit.
+//    </p>
+//  </div>
+// </div>
+//
+// Styleguide Atoms.Modifiers.Spacing

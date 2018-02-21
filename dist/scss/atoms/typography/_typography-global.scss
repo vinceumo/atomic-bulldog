@@ -1,0 +1,44 @@
+// ------------------------------
+// Root
+// ------------------------------
+html {
+  font-size: calc(#{font-size(root)} + 2px);
+
+  @include min(#{bp(sm)}) {
+    font-size: font-size(root);
+  }
+}
+
+// ------------------------------
+// General
+// ------------------------------
+body {
+  font-family: font-family(paragraph);
+  font-size: font-size(paragraph);
+  color: color(text);
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Typography
+//
+// Styleguide Atoms.Typography
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Font sizes
+//
+// Markup:
+// <p class="has-font-size-1">lorem ipsum font size 1</p>
+// <p class="has-font-size-2">lorem ipsum font size 2</p>
+// <p class="has-font-size-3">lorem ipsum font size 3</p>
+// <p class="has-font-size-4">lorem ipsum font size 4</p> 
+// <p class="has-font-size-5">lorem ipsum font size 5</p>
+// <p class="has-font-size-6">lorem ipsum font size 6</p>
+// <p class="has-font-size-p">lorem ipsum font size p</p>
+//
+// Styleguide Atoms.Modifiers.font-sizes

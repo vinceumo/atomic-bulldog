@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atomic Bulldog - UI/pattern library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
+<link rel="stylesheet" href="../css/screen.css">
+<link rel="stylesheet" href="../css/themes/theme-invert.min.css">
+<link rel="stylesheet" href="../css/screen-fallback.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-atoms.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Atoms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-molecules.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Molecules</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-organisms.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Organisms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layouts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-templates.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Templates</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Sass variables</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-mixins.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Sass Mixins</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-functions.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Sass Functions</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-vendors.html">
+              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__name">Vendors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-themes.html">
+              <span class="kss-nav__ref">10</span>
+              <span class="kss-nav__name">Themes</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">11</span>
+              <span class="kss-nav__name">Project settings</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-layout-grid-b">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>layouts/_grid.scss</span>, line <span>133</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-layout-grid-b">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.2.1</span>
+                  <span class="kss-section__name">Grid - Set number of columns</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>The number of columns can be change by adding .has-cols-{bp}-{num-of-cols}. bp is optional, number of columns goes from 1 to 12.</p>
+<p>{breakpoint} is set from the <code>$breakpoints</code> map (see variables), {size} are set as well in variables. It goes from 0 to 12 ($grid-columns).</p>
+<p>Resize the window to see changes.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="grid [modifier] has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.has-cols-md-1</h2>
+
+                  <p class="kss-modifiers__description">1 col layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-1 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-2</h2>
+
+                  <p class="kss-modifiers__description">2 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-2 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-3</h2>
+
+                  <p class="kss-modifiers__description">3 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-3 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-4</h2>
+
+                  <p class="kss-modifiers__description">4 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-4 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-5</h2>
+
+                  <p class="kss-modifiers__description">5 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-5 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-6</h2>
+
+                  <p class="kss-modifiers__description">6 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-6 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-7</h2>
+
+                  <p class="kss-modifiers__description">7 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-7 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-8</h2>
+
+                  <p class="kss-modifiers__description">8 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-8 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-9</h2>
+
+                  <p class="kss-modifiers__description">9 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-9 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-10</h2>
+
+                  <p class="kss-modifiers__description">10 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-10 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-11</h2>
+
+                  <p class="kss-modifiers__description">11 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-11 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-cols-md-12</h2>
+
+                  <p class="kss-modifiers__description">12 cols layout</p>
+
+                  <div class="kss-modifiers__example"><div class="grid has-cols-md-12 has-cols-5 has-grid-gap-3">
+  <div>
+    <div class="box">1</div>
+  </div>
+  <div>
+      <div class="box">2</div>
+  </div>
+  <div>
+      <div class="box">3</div>
+  </div>
+  <div>
+      <div class="box">4</div>
+  </div>
+  <div>
+      <div class="box">5</div>
+  </div>
+  <div>
+      <div class="box">6</div>
+  </div>
+  <div>
+      <div class="box">7</div>
+  </div>
+  <div>
+      <div class="box">8</div>
+  </div>
+  <div>
+      <div class="box">9</div>
+  </div>
+  <div>
+      <div class="box">10</div>
+  </div>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid [modifier] has-cols-5 has-grid-gap-3&quot;&gt;
+  &lt;div&gt;
+    &lt;div class&#x3D;&quot;box&quot;&gt;1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;5&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;7&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;8&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;9&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;div class&#x3D;&quot;box&quot;&gt;10&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../js/kss.js"></script>
+<script src="../js/atomic-bulldog.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>

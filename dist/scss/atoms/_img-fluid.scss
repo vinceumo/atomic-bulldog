@@ -1,0 +1,21 @@
+.img-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Images
+//
+// Responsive images class
+//
+// Markup:
+// <div style="max-width: 600px"> <!-- Just for KSS -->
+//  <img class="{{modifier_class}}" src="https://source.unsplash.com/random" alt="image description">
+// </div>
+//
+// .img-fluid - image is fluid
+//
+// Styleguide Atoms.images

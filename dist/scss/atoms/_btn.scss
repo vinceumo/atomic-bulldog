@@ -1,0 +1,174 @@
+// ------------------------------
+// Base button
+// ------------------------------
+button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  font-size: font-size(button);
+  font-family: font-family(paragraph);
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 2px solid color(dark);
+  color: color(dark);
+  border-radius: 0;
+  padding: spacer(3) spacer(5);
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+
+  &.is-rounded {
+    border-radius: 1000px;
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+    position: relative;
+
+    &:before {
+      content: "";
+      animation: spin 400ms infinite linear;
+      display: block;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      left: calc(50% - (1rem / 2));
+      top: calc(50% - (1rem / 2));
+      border-left-color: color(dark);
+      border-bottom-color: color(dark);
+    }
+  }
+}
+// ------------------------------
+// Loading animation
+// ------------------------------
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// ------------------------------
+// Button color variations
+// ------------------------------
+@each $name, $theme in $color-themes {
+  .btn.is-#{$name}:not(.is-outlined) {
+    color: color($name, contrast);
+    background-color: color($name, base);
+    border-color: color($name, base);
+
+    &:hover:not([disabled]),
+    &.is-hovered:not([disabled]),
+    &:focus:not([disabled]),
+    &.is-focused:not([disabled]) {
+      background-color: color($name, dark);
+      border-color: color($name, dark);
+      outline: none;
+    }
+
+    &.is-loading {
+      &:before {
+        border-left-color: color($name, contrast);
+        border-bottom-color: color($name, contrast);
+      }
+    }
+  }
+  
+  .btn.is-#{$name}.is-outlined {
+    color: color($name, base);
+    background-color: transparent;
+    border-color: color($name, base);
+
+    &:hover:not([disabled]),
+    &.is-hovered:not([disabled]),
+    &:focus:not([disabled]),
+    &.is-focused:not([disabled]) {
+      color: color($name, contrast);
+      background-color: color($name, base);
+      outline: none;
+    }
+
+    &.is-loading {
+      &:before {
+        border-left-color: color($name, base);
+        border-bottom-color: color($name, base);
+      }
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Buttons
+//
+// Markup:
+// <button class="btn {{modifier_class}}">.btn .{{modifier_class}}</button>
+// <button class="btn {{modifier_class}} is-outlined">.btn .{{modifier_class}} .is-outlined</button>
+// <button class="btn {{modifier_class}} is-hovered">.btn .{{modifier_class}} .is-hover</button>
+// <button class="btn {{modifier_class}} is-focused">.btn .{{modifier_class}} .is-focused</button>
+// <button class="btn {{modifier_class}} is-rounded">.btn .{{modifier_class}} .is-rounded</button>
+// <button class="btn {{modifier_class}} is-loading">.btn .{{modifier_class}} .is-loading</button>
+// <button class="btn {{modifier_class}}" disabled>.btn .{{modifier_class}} disabled</button>
+// <button class="btn {{modifier_class}} is-theme-default">.btn .{{modifier_class}} .is-theme-default</button>
+//
+// .is-primary - Primary color
+// .is-secondary - Secondary color
+// .is-link - Link color
+// .is-success - Success color
+// .is-danger - Danger color
+// .is-warning - warning color
+// .is-light - light color
+// .is-dark - dark color
+//
+// Styleguide Atoms.button
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Buttons theme invert
+//
+// Markup:
+// <div class="theme-invert">
+//     <button class="btn {{modifier_class}}">.btn .{{modifier_class}}</button>
+//     <button class="btn {{modifier_class}} is-outlined">.btn .{{modifier_class}} .is-outlined</button>
+//     <button class="btn {{modifier_class}} is-hovered">.btn .{{modifier_class}} .is-hover</button>
+//     <button class="btn {{modifier_class}} is-focused">.btn .{{modifier_class}} .is-focused</button>
+//     <button class="btn {{modifier_class}} is-rounded">.btn .{{modifier_class}} .is-rounded</button>
+//     <button class="btn {{modifier_class}} is-loading">.btn .{{modifier_class}} .is-loading</button>
+//     <button class="btn {{modifier_class}}" disabled>.btn .{{modifier_class}} disabled</button>
+//     <button class="btn {{modifier_class}} is-theme-default">.btn .{{modifier_class}} .is-theme-default</button>
+// <div>
+//
+// .is-primary - Primary color
+// .is-secondary - Secondary color
+// .is-link - Link color
+// .is-success - Success color
+// .is-danger - Danger color
+// .is-warning - warning color
+// .is-light - light color
+// .is-dark - dark color
+//
+// Styleguide Themes.Invert.Atoms.button

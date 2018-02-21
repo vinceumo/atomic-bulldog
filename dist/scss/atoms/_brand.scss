@@ -1,0 +1,37 @@
+.brand {
+  a {
+    font-size: calc(#{font-size(4)} * 0.8);
+    color: color(danger);
+
+    @include min(bp(md)){
+      font-size: font-size(4);
+    }
+
+    span {
+      font-size: calc(#{font-size(5)} * 0.8);
+      color: color(danger, transparent);
+      margin-left: spacer(2);
+
+      @include min(bp(md)){
+        font-size: font-size(5);
+      }
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Brand
+//
+// Use in Navigation bar
+//
+// Markup:
+// <div class="brand">
+//     <a href="#">Brand
+//         <span>v1.0.0</span>
+//     </a>
+// </div>
+//
+// Styleguide Atoms.brand

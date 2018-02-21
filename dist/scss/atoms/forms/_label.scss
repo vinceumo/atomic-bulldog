@@ -1,0 +1,30 @@
+label{
+  font-weight: bold;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: calc(#{font-size(6)} + 0.05rem);
+
+  &.input-label{
+    font-size: font-size(paragraph);
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+
+    input[type="radio"],
+    input[type="checkbox"]{
+      margin-right: spacer(1);
+  }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Label
+//
+// Markup:
+// <label>Test Label</label>
+// <label class="input-label">Test Label</label>
+//
+// Styleguide Atoms.Forms.label

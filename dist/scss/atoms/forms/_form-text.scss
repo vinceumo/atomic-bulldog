@@ -1,0 +1,31 @@
+.form-text{
+  font-size: 80%;
+  margin-bottom: spacer(0);
+
+  &.has-error{
+    display: none;
+    color: color(danger);
+  }
+
+  &.is-valid{
+    display: none;
+    color: color(success);
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Form Text
+//
+// Use to describe the input or form-group. Use an id for `aria-describedby`
+//
+// This class can be used to show an error message with `.has-error` or a valid message with `.is-valid`. These messages are displayed none by default, see `molecule/form-group`
+//
+// Markup:
+// <p id="emailHelp" class="form-text">We'll never share your email with anyone else.</p>
+// <p class="form-text has-error" style="display: block">Opps, please enter a valid email.</p> <!-style="display: block" just for KSS-->
+// <p class="form-text is-valid" style="display: block">Email is valid.</p> <!-style="display: block" just for KSS-->
+//
+// Styleguide Atoms.Forms.formtext

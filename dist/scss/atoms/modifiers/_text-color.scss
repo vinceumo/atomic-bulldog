@@ -1,0 +1,77 @@
+// font color variations
+@each $name, $theme in $color-themes {
+  .has-text-#{$name},
+  .has-text-#{$name} * {
+    color: color($name, base);
+  }
+}
+
+@each $name, $theme in $gray-themes {
+  .has-text-gray-#{$name},
+  .has-text-gray-#{$name} * {
+    color: color-gray($name);
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Text colors
+//
+// markup:
+//  <p class="{{modifier_class}}">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. 
+//    Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+//    Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+//    Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+//  </p>
+//
+// .has-text-primary - Primary color
+// .has-text-secondary - Secondary color
+// .has-text-text - Text color
+// .has-text-link - Link color
+// .has-text-success - Success color
+// .has-text-danger - Danger color
+// .has-text-warning - warning color
+// .has-text-light - light color
+// .has-text-dark - dark color
+// .has-text-gray-0 - gray 0
+// .has-text-gray-10 - gray 10
+// .has-text-gray-20 - gray 20
+// .has-text-gray-30 - gray 30
+// .has-text-gray-40 - gray 40
+// .has-text-gray-50 - gray 50
+// .has-text-gray-60 - gray 60
+// .has-text-gray-70 - gray 70
+// .has-text-gray-80 - gray 80
+// .has-text-gray-100 - gray 100
+//
+// Styleguide Atoms.Modifiers.textcolor
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Text colors theme invert
+//
+// markup:
+// <div class="theme-invert">
+//  <p class="{{modifier_class}}">
+//    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quisquam ea consequuntur nostrum sint. 
+//    Explicabo neque architecto sint voluptatibus ullam et ea recusandae nihil unde quos amet hic, ut iste? <br>
+//    Hoc sic expositum dissimile est superiori. Avaritiamne minuis? Prave, nequiter, turpiter cenabat; Dat enim intervalla et relaxat. Bonum patria: miserum exilium.
+//    Quid enim possumus hoc agere divinius? Non est ista, inquam, Piso, magna dissensio. Quid est enim aliud esse versutum?
+//  </p>
+// </div>
+//
+// .has-text-primary - Primary color
+// .has-text-secondary - Secondary color
+// .has-text-link - Link color
+// .has-text-success - Success color
+// .has-text-danger - Danger color
+// .has-text-warning - warning color
+// .has-text-light - light color
+// .has-text-dark - dark color
+//
+// Styleguide Themes.Invert.Atoms.Modifiers.textcolor

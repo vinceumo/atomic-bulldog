@@ -1,0 +1,58 @@
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Organisms
+//
+// `Organisms` are relatively complex components that form discrete sections of an interface.
+//
+// weight: 3
+//
+// Styleguide Organisms
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// Accessibility settings panel
+//
+// Accessibility settings allow to change the layout of the web application, It works using a class triggering the event and a data attribute setting the behavior
+//
+// Example:
+// * `.a11y-change-font-size` - data-target-font-size="behavior"
+//  * `reset` - data-target-font-size="reset"
+//  * `decrease` - data-target-font-size="decrease"
+//  * `increase` - data-target-font-size="increase"
+// * `.a11y-change-theme` - data-target-theme="theme class"
+//  * `theme-default` - data-target-font-size="theme-default"
+//  * `theme-invert` - data-target-font-size="theme-invert"
+//
+//
+// markup:
+// <div id="accessibility-settings" class="has-py-6 has-bg-primary">
+//     <div class="container has-text-center">
+//         <ul class="list-inline">
+//             <li class="has-font-weight-bold">Change font sizes:</li>
+//             <li>
+//                 <button class="a11y-change-font-size" data-target-font-size="reset">Reset font size</button>
+//             </li>
+//             <li>
+//                 <button class="a11y-change-font-size" data-target-font-size="decrease">Decrease font size</button>
+//             </li>
+//             <li>
+//                 <button class="has-font-size-5 a11y-change-font-size" data-target-font-size="increase">Increase font size</button>
+//             </li>
+//         </ul>
+//         <ul class="list-inline">
+//             <li class="has-font-weight-bold">Change theme:</li>
+//             <li>
+//                 <button class="a11y-change-theme" data-target-theme="theme-default">Default theme</button>
+//             </li>
+//             <li>
+//                 <button class="a11y-change-theme" data-target-theme="theme-invert">Invert theme</button>
+//             </li>
+//         </ul>
+//     </div>
+// </div>
+//
+// Styleguide Organisms.accessibility-settings

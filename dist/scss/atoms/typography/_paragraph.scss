@@ -1,0 +1,25 @@
+p,
+.is-p,
+.has-font-size-p{
+  font-size: font-size(paragraph);
+}
+
+p,
+.is-p {
+  margin-bottom: spacer(2);
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Paragraph
+//
+// Markup:
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat enim Polemonis. Bonum incolumis acies: misera caecitas. Hoc loco tenere se Triarius non potuit. Optime, inquam. Duo Reges: constructio interrete. </p>
+// <p>Sed plane dicit quod intellegit. Istam voluptatem perpetuam quis potest praestare sapienti? At ille pellit, qui permulcet sensum voluptate. Ac tamen hic mallet non dolere. </p>
+// <p>Re mihi non aeque satisfacit, et quidem locis pluribus. Bonum patria: miserum exilium. Paria sunt igitur. Quid sequatur, quid repugnet, vident. Quae cum dixisset, finem ille. Id enim natura desiderat. </p>
+// <p>Nulla erit controversia. Quid de Pythagora? </p>
+// <p>Age, inquies, ista parva sunt. Sed quanta sit alias, nunc tantum possitne esse tanta. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Restatis igitur vos; Gloriosa ostentatio in constituendo summo bono. Nos paucis ad haec additis finem faciamus aliquando; </p>
+//
+// Styleguide Atoms.Typography.paragraph

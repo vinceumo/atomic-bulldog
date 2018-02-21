@@ -1,0 +1,70 @@
+// ------------------------------
+// Sass Variables
+// ------------------------------
+$font-size-prefix: --font-size-;
+$font-sizes: (
+  root: 16px,
+  paragraph: 1rem,
+  1: 2.8125rem,
+  2: 2.5rem,
+  3: 2rem,
+  4: 1.5rem,
+  5: 1.25rem,
+  6: 1rem,
+  button: 1rem
+);
+
+// ------------------------------
+// Set font-size function
+// ------------------------------
+@function font-size($font-size, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($font-sizes, $font-size); // True Val
+    } @else {
+      @return var(#{$font-size-prefix}#{$font-size}); // CSS Var
+    }
+  } @else {
+    @return map-get($font-sizes, $font-size); // Disabled CSS Var
+  }
+}
+// ------------------------------
+// Set root variables
+// ------------------------------
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $font-size in $font-sizes {
+      #{$font-size-prefix}#{$name}: $font-size;
+    }
+  }
+}
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Font Sizes
+//
+// Font Sizes are in the map `$font-sizes`
+//
+// ---------------
+// * `root`: 16px,
+// * `paragraph`: 1rem,
+// * `1`: 2.8125rem,
+// * `2`: 2.5rem,
+// * `3`: 2rem,
+// * `4`: 1.5rem,
+// * `5`: 1.25rem,
+// * `6`: 1rem,
+// * `button`: 1rem
+// ---------------
+//
+// Font sizes can be called in the sass project using the functions:
+//
+// `font-sizes($font-size, $true-val:false)` which will output by default the CSS variable
+//
+// Usage of font-size():
+// * `font-family(2)` => `var(--font-size-2)` If $use-css-var = true
+// * `font-family(2)` => `2.5rem` If $use-css-var = false
+// * `font-family(2, true)` => `2.5rem`
+//
+// Styleguide Variables.fontsizes

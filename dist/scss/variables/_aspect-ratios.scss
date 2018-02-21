@@ -1,0 +1,45 @@
+$aspect-ratios: (
+  1x1: (
+    width: 1,
+    height: 1
+  ),
+  16x9: (
+    width: 16,
+    height: 9
+  ),
+  4x3: (
+    width: 4,
+    height: 3
+  ),
+  3x2: (
+    width: 3,
+    height: 2
+  ),
+  golden: (
+    width: 1.6180,
+    height: 1
+  ),
+  silver:(
+    width: 2.414,
+    height: 1
+  )
+);
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Aspect ratios
+//
+// Aspect ratios are sets in the map `$aspect-ratios`. They are use to define ratios for `.aspect-ratio-container` (Atom)
+//
+// ---------------
+// * `1x1`
+// * `16x9`
+// * `4x3`
+// * `golden`
+// * `silver`
+// ---------------
+//
+//
+// Styleguide Variables.Aspectratio

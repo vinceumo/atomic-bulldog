@@ -1,0 +1,108 @@
+.list-inline{
+  padding-left: 0;
+  list-style: none;
+
+  li{
+    margin-right: spacer(3);
+    display: inline-block;
+
+    @include last(1){
+      margin-right: 0;
+    }
+  }
+}
+
+.list-unstyle{
+  padding-left: 0;
+  list-style: none;
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// List
+//
+// Styleguide Atoms.Typography.list
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// ul
+//
+// Markup:
+// <ul>
+//   <li>item 1</li>
+//   <li>item 2
+//     <ul>
+//       <li>Sub item 1</li>
+//       <li>Sub item 2</li>
+//       <li>Sub item 3</li>
+//     </ul>
+//   </li>
+//   <li>item 3</li>
+//   <li>item 4</li>
+// </ul>
+//
+// Styleguide Atoms.Typography.list.ul
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// ol
+//
+// Markup:
+// <ol>
+//   <li>item 1</li>
+//   <li>item 2
+//     <ol>
+//       <li>Sub item 1</li>
+//       <li>Sub item 2</li>
+//       <li>Sub item 3</li>
+//     </ol>
+//   </li>
+//   <li>item 3</li>
+//   <li>item 4</li>
+// </ol>
+//
+// Styleguide Atoms.Typography.list.ol
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// list-inline
+//
+// Markup:
+// <ul class="list-inline">
+//   <li>item 1</li>
+//   <li>item 2</li>
+//   <li>item 3</li>
+//   <li>item 4</li>
+// </ul>
+//
+// Styleguide Atoms.Typography.list.list-inline
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// list unstyle
+//
+// Markup:
+// <ul class="list-unstyle">
+//   <li>item 1</li>
+//   <li>item 2
+//     <ul>
+//       <li>Sub item 1</li>
+//       <li>Sub item 2</li>
+//       <li>Sub item 3</li>
+//     </ul>
+//   </li>
+//   <li>item 3</li>
+//   <li>item 4</li>
+// </ul>
+//
+// Styleguide Atoms.Typography.list.list-unstyle

@@ -1,0 +1,82 @@
+h1,
+.is-h1,
+h2,
+.is-h2,
+h3,
+.is-h3,
+h4,
+.is-h4,
+h5,
+.is-h5,
+h6,
+.is-h6 {
+  font-family: font-family(title);
+  color: color(primary);
+  font-weight: normal;
+}
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .is-h#{$i},
+  .has-font-size-#{$i}{
+    font-size: font-size(#{$i});
+  }
+}
+
+h1,
+.is-h1 {
+  margin-top: spacer(6);
+  margin-bottom: spacer(4);
+}
+
+h2,
+.is-h2 {
+  margin-top: spacer(5);
+  margin-bottom: spacer(3);
+}
+
+h3,
+.is-h3 {
+  margin-top: spacer(4);
+  margin-bottom: spacer(2);
+}
+
+h4,
+.is-h4 {
+  margin-top: spacer(3);
+  margin-bottom: spacer(2);
+}
+
+h5,
+.is-h5 {
+  margin-top: spacer(3);
+  margin-bottom: spacer(1);
+}
+
+h6,
+.is-h6 {
+  margin-top: spacer(2);
+  margin-bottom: spacer(1);
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Titles
+//
+// Markup:
+// <h1>lorem ipsum heading 1</h1>
+// <h2>lorem ipsum heading 2</h2>
+// <h3>lorem ipsum heading 3</h3>
+// <h4>lorem ipsum heading 4</h4>
+// <h5>lorem ipsum heading 5</h5>
+// <h6>lorem ipsum heading 6</h6>
+// <p class="is-h1">lorem ipsum heading 1</p>
+// <p class="is-h2">lorem ipsum heading 2</p>
+// <p class="is-h3">lorem ipsum heading 3</p>
+// <p class="is-h4">lorem ipsum heading 4</p> 
+// <p class="is-h5">lorem ipsum heading 5</p>
+// <p class="is-h6">lorem ipsum heading 6</p>
+//
+// Styleguide Atoms.Typography.titles

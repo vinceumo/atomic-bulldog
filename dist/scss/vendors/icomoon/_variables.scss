@@ -1,0 +1,609 @@
+$icomoon-font-path: "/static/fonts/icomoon/" !default;
+$icon-prefix: --icon-;
+
+$icons: (
+  star: "\f005",
+  star-o: "\f006",
+  user: "\f007",
+  check: "\f00c",
+  close: "\f00d",
+  remove: "\f00d",
+  times: "\f00d",
+  search-plus: "\f00e",
+  search-minus: "\f010",
+  trash-o: "\f014",
+  home: "\f015",
+  download: "\f019",
+  inbox: "\f01c",
+  bookmark: "\f02e",
+  print: "\f02f",
+  chevron-left: "\f053",
+  chevron-right: "\f054",
+  chevron-up: "\f077",
+  chevron-down: "\f078",
+  twitter: "\f099",
+  facebook: "\f09a",
+  facebook-f: "\f09a",
+  github: "\f09b",
+  chain: "\f0c1",
+  link: "\f0c1",
+  envelope: "\f0e0",
+  linkedin: "\f0e1",
+  rotate-left: "\f0e2",
+  undo: "\f0e2",
+  angle-left: "\f104",
+  angle-right: "\f105",
+  angle-up: "\f106",
+  angle-down: "\f107"
+);
+
+// ------------------------------
+// Set icon function
+// ------------------------------
+@function icon($icon, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($icons, $icon); // True Val
+    } @else {
+      @return var(#{$icon-prefix}#{$icon}); // CSS Var
+    }
+  } @else {
+    @return map-get($icons, $icon); // Disabled CSS Var
+  }
+}
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $icon in $icons {
+      #{$icon-prefix}#{$name}: $icon;
+    }
+  }
+}
+
+// Icons
+//
+// Icon font are generated using https://icomoon.io/ (See vendors)
+//
+// Icomoon give sass files but these ones use variables. For better maintainability and theming the vendor have been changed so it uses a map instead of variables.
+//
+// Variables can be converted to a map using this tool:
+//
+// <p data-height="700" data-theme-id="dark" data-slug-hash="QQgGNb" data-default-tab="result" data-user="vinceumo" data-embed-version="2" data-pen-title="Convert Sass variables to map" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/QQgGNb/">Convert Sass variables to map</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+// <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+//
+// Icons can be called in the sass project using the functions:
+//
+// `icon($icon, $true-val:false)` which will output by default the CSS variable, You will need to set the font family as `font-family: font-family(icon)`
+//
+// Usage of icon():
+// * `icon(twitter)` => `var(--icon-twitter)` If $use-css-var = true
+// * `icon(twitter)` => `"\f099"` If $use-css-var = false
+// * `icon(twitter, true)` => `"\f099"
+//
+// Styleguide Variables.icons
+
+
+
+
+
+
+
+
+
+// ------------------------------
+// ///////////////////////////////
+// ------------------------------
+
+// Icons list
+//
+// (Markup copy and paste from icomoon example)
+//
+// Icons can be call in the markup using a class .icon-{target}, such as `<i class="icon-star"></i>` . It can be call using span or div as well.
+//
+// When using an icon in css you can use the function icon(target), such as icon(star).
+//
+// <div class="icomoon-demo">
+// <div class="clearfix mhl ptl">
+// <h1 class="mvm mtn fgc1">Grid Size: 14</h1>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-star">
+//         </span>
+//         <span class="mls"> icon-star</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f005" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf005;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-star-o">
+//         </span>
+//         <span class="mls"> icon-star-o</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f006" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf006;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-user">
+//         </span>
+//         <span class="mls"> icon-user</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f007" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf007;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-check">
+//         </span>
+//         <span class="mls"> icon-check</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f00c" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf00c;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-close">
+//         </span>
+//         <span class="mls"> icon-close</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f00d" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf00d;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-remove">
+//         </span>
+//         <span class="mls"> icon-remove</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f00d" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf00d;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-times">
+//         </span>
+//         <span class="mls"> icon-times</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f00d" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf00d;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-search-plus">
+//         </span>
+//         <span class="mls"> icon-search-plus</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f00e" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf00e;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-search-minus">
+//         </span>
+//         <span class="mls"> icon-search-minus</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f010" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf010;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-trash-o">
+//         </span>
+//         <span class="mls"> icon-trash-o</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f014" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf014;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-home">
+//         </span>
+//         <span class="mls"> icon-home</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f015" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf015;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-download">
+//         </span>
+//         <span class="mls"> icon-download</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f019" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf019;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-inbox">
+//         </span>
+//         <span class="mls"> icon-inbox</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f01c" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf01c;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-bookmark">
+//         </span>
+//         <span class="mls"> icon-bookmark</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f02e" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf02e;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-print">
+//         </span>
+//         <span class="mls"> icon-print</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f02f" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf02f;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-chevron-left">
+//         </span>
+//         <span class="mls"> icon-chevron-left</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f053" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf053;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-chevron-right">
+//         </span>
+//         <span class="mls"> icon-chevron-right</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f054" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf054;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-chevron-up">
+//         </span>
+//         <span class="mls"> icon-chevron-up</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f077" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf077;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-chevron-down">
+//         </span>
+//         <span class="mls"> icon-chevron-down</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f078" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf078;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-twitter">
+//         </span>
+//         <span class="mls"> icon-twitter</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f099" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf099;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-facebook">
+//         </span>
+//         <span class="mls"> icon-facebook</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f09a" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf09a;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-facebook-f">
+//         </span>
+//         <span class="mls"> icon-facebook-f</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f09a" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf09a;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-github">
+//         </span>
+//         <span class="mls"> icon-github</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f09b" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf09b;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-chain">
+//         </span>
+//         <span class="mls"> icon-chain</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0c1" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0c1;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-link">
+//         </span>
+//         <span class="mls"> icon-link</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0c1" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0c1;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-envelope">
+//         </span>
+//         <span class="mls"> icon-envelope</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0e0" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0e0;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-linkedin">
+//         </span>
+//         <span class="mls"> icon-linkedin</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0e1" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0e1;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-rotate-left">
+//         </span>
+//         <span class="mls"> icon-rotate-left</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0e2" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0e2;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-undo">
+//         </span>
+//         <span class="mls"> icon-undo</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f0e2" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf0e2;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-angle-left">
+//         </span>
+//         <span class="mls"> icon-angle-left</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f104" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf104;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-angle-right">
+//         </span>
+//         <span class="mls"> icon-angle-right</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f105" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf105;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-angle-up">
+//         </span>
+//         <span class="mls"> icon-angle-up</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f106" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf106;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// <div class="glyph fs1">
+//     <div class="clearfix bshadow0 pbs">
+//         <span class="icon-angle-down">
+//         </span>
+//         <span class="mls"> icon-angle-down</span>
+//     </div>
+//     <fieldset class="fs0 size1of1 clearfix hidden-false">
+//         <input type="text" readonly value="f107" class="unit size1of2" />
+//         <input type="text" maxlength="1" readonly value="&#xf107;" class="unitRight size1of2 talign-right" />
+//     </fieldset>
+//     <div class="fs0 bshadow0 clearfix hidden-true">
+//         <span class="unit pvs fgc1">liga: </span>
+//         <input type="text" readonly value="" class="liga unitRight" />
+//     </div>
+// </div>
+// </div>
+// </div>
+//
+// Styleguide Variables.icons.list

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atomic Bulldog - UI/pattern library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../css/themes/kss-overrides.min.css">
+<link rel="stylesheet" href="../css/screen.css">
+<link rel="stylesheet" href="../css/themes/theme-invert.min.css">
+<link rel="stylesheet" href="../css/screen-fallback.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Atomic Bulldog - UI/pattern library</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-atoms.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Atoms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-molecules.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Molecules</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-molecules.html#kssref-molecules-form">
+                        <span class="kss-nav__ref">2.1</span>
+                        <span class="kss-nav__name">Form</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-molecules.html#kssref-molecules-form-formgroup">
+                        <span class="kss-nav__ref">2.1.1</span>
+                        <span class="kss-nav__name">Form Group</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-molecules.html#kssref-molecules-form-inputgroup">
+                        <span class="kss-nav__ref">2.1.2</span>
+                        <span class="kss-nav__name">Input group</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-molecules.html#kssref-molecules-navigation">
+                        <span class="kss-nav__ref">2.2</span>
+                        <span class="kss-nav__name">Navigation</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-molecules.html#kssref-molecules-navigation-mainnavigation">
+                        <span class="kss-nav__ref">2.2.1</span>
+                        <span class="kss-nav__name">Main navigation</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-molecules.html#kssref-molecules-navigation-skip">
+                        <span class="kss-nav__ref">2.2.2</span>
+                        <span class="kss-nav__name">Skip Navigation</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-organisms.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Organisms</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-layout.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Layouts</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-templates.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Templates</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Sass variables</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-mixins.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Sass Mixins</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-functions.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Sass Functions</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-vendors.html">
+              <span class="kss-nav__ref">9</span>
+              <span class="kss-nav__name">Vendors</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-themes.html">
+              <span class="kss-nav__ref">10</span>
+              <span class="kss-nav__name">Themes</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">11</span>
+              <span class="kss-nav__name">Project settings</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-molecules">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/__documentation.scss</span>, line <span>5</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">2</span>
+                  <span class="kss-section__name">Molecules</span>
+                </h1>
+              </a>
+
+                <div class="kss-section__description"><p><code>Molecules</code> are collections of atoms that form relatively simple UI components.</p>
+</div>
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-molecules-form">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>51</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-form">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.1</span>
+                  <span class="kss-section__name">Form</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-molecules-form-formgroup">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>59</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-form-formgroup">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.1.1</span>
+                  <span class="kss-section__name">Form Group</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p><code>.form-group</code> helps get even spacing in the form. It helps as well to style form validation with its modifiers.</p>
+<p>Modifiers classes</p>
+<ul>
+<li><code>.is-valid</code> - Form group is valid</li>
+<li><code>.has-error</code> - Form group has error</li>
+</ul>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="form-group [modifier]">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label>Select an option</label>
+  <select>
+   <option selected="true" disabled>Select dropdown</option>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group [modifier]">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group [modifier]">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.is-valid</h2>
+
+                  <p class="kss-modifiers__description">Form group is valid</p>
+
+                  <div class="kss-modifiers__example"><div class="form-group is-valid">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label>Select an option</label>
+  <select>
+   <option selected="true" disabled>Select dropdown</option>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group is-valid">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group is-valid">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div></div>
+                  <h2 class="kss-modifiers__name">.has-error</h2>
+
+                  <p class="kss-modifiers__description">Form group has error</p>
+
+                  <div class="kss-modifiers__example"><div class="form-group has-error">
+  <label for="exampleEmail1">Email address</label>
+  <input type="email" id="exampleEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <p id="emailHelp" class="form-text mb-0">We'll never share your email with anyone else.</p>
+  <p class="form-text has-error">Opps, please enter a valid email.</p>
+  <p class="form-text is-valid">Email is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label for="message1">Your message</label>
+  <textarea id="message1" placeholder="Your message"></textarea>
+  <p class="form-text has-error">Opps, please enter a message.</p>
+  <p class="form-text is-valid">Message is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label>Select an option</label>
+  <select>
+   <option selected="true" disabled>Select dropdown</option>
+   <option value="option1">option1</option>
+   <option value="option2">option2</option>
+   <option value="option3">option3</option>
+   <option value="option4">option4</option>
+  </select>
+  <p class="form-text has-error">Opps, please select a value.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group has-error">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div>
+<div class="form-group has-error">
+ <label>Do you agree?</label>
+  <div>
+   <label class="input-label"><input type="checkbox" name="test8" value="checkbox"> I agree with <a href="#">Terms and conditions</a></label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label for&#x3D;&quot;exampleEmail1&quot;&gt;Email address&lt;/label&gt;
+  &lt;input type&#x3D;&quot;email&quot; id&#x3D;&quot;exampleEmail1&quot; aria-describedby&#x3D;&quot;emailHelp&quot; placeholder&#x3D;&quot;Enter email&quot;&gt;
+  &lt;p id&#x3D;&quot;emailHelp&quot; class&#x3D;&quot;form-text mb-0&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please enter a valid email.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;Email is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label for&#x3D;&quot;message1&quot;&gt;Your message&lt;/label&gt;
+  &lt;textarea id&#x3D;&quot;message1&quot; placeholder&#x3D;&quot;Your message&quot;&gt;&lt;/textarea&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please enter a message.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;Message is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label&gt;Select an option&lt;/label&gt;
+  &lt;select&gt;
+   &lt;option selected&#x3D;&quot;true&quot; disabled&gt;Select dropdown&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option1&quot;&gt;option1&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option2&quot;&gt;option2&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option3&quot;&gt;option3&lt;/option&gt;
+   &lt;option value&#x3D;&quot;option4&quot;&gt;option4&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please select a value.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+  &lt;label&gt;What do you thing?&lt;/label&gt;
+  &lt;div class&#x3D;&quot;input-group&quot;&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio1&quot;&gt; Yes&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio2&quot;&gt; No&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio3&quot;&gt; Not sure&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group [modifier]&quot;&gt;
+ &lt;label&gt;Do you agree?&lt;/label&gt;
+  &lt;div&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;test8&quot; value&#x3D;&quot;checkbox&quot;&gt; I agree with &lt;a href&#x3D;&quot;#&quot;&gt;Terms and conditions&lt;/a&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-molecules-form-inputgroup">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_form-group.scss</span>, line <span>122</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-form-inputgroup">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.1.2</span>
+                  <span class="kss-section__name">Input group</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p><code>.input-group</code> helps to space evenly radio and checkbox buttons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="form-group">
+  <label>What do you thing?</label>
+  <div class="input-group">
+   <label class="input-label"><input type="radio" name="test7" value="radio1"> Yes</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio2"> No</label>
+   <label class="input-label"><input type="radio" name="test7" value="radio3"> Not sure</label>
+  </div>
+  <p class="form-text has-error">Opps, please check.</p>
+  <p class="form-text is-valid">input is valid.</p>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+  &lt;label&gt;What do you thing?&lt;/label&gt;
+  &lt;div class&#x3D;&quot;input-group&quot;&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio1&quot;&gt; Yes&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio2&quot;&gt; No&lt;/label&gt;
+   &lt;label class&#x3D;&quot;input-label&quot;&gt;&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;test7&quot; value&#x3D;&quot;radio3&quot;&gt; Not sure&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class&#x3D;&quot;form-text has-error&quot;&gt;Opps, please check.&lt;/p&gt;
+  &lt;p class&#x3D;&quot;form-text is-valid&quot;&gt;input is valid.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-molecules-navigation">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_navigation.scss</span>, line <span>62</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-navigation">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">2.2</span>
+                  <span class="kss-section__name">Navigation</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-mainnavigation">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_navigation.scss</span>, line <span>70</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-navigation-mainnavigation">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.2.1</span>
+                  <span class="kss-section__name">Main navigation</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Resize me</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><nav id="main-navigation" class="navigation">
+    <button class="burger"><span class="burger-icon"><span></span></span> Menu</button>
+    <ul class="navigation-items">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Shop</a>
+        </li>
+        <li>
+            <a href="#">Space Bears</a>
+        </li>
+        <li>
+            <a href="#">Mars Cars</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;nav id&#x3D;&quot;main-navigation&quot; class&#x3D;&quot;navigation&quot;&gt;
+    &lt;button class&#x3D;&quot;burger&quot;&gt;&lt;span class&#x3D;&quot;burger-icon&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt; Menu&lt;/button&gt;
+    &lt;ul class&#x3D;&quot;navigation-items&quot;&gt;
+        &lt;li&gt;
+            &lt;a href&#x3D;&quot;#&quot;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href&#x3D;&quot;#&quot;&gt;Shop&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href&#x3D;&quot;#&quot;&gt;Space Bears&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href&#x3D;&quot;#&quot;&gt;Mars Cars&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href&#x3D;&quot;#&quot;&gt;Contact&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-molecules-navigation-skip">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>molecules/_skip-navigation.scss</span>, line <span>33</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-molecules-navigation-skip">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">2.2.2</span>
+                  <span class="kss-section__name">Skip Navigation</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Tab from here to reveal the skip navigation.</p>
+<p>This navigation is needed for accessibility reasons. It allows the users using screen readers to go directly
+to the main content</p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html">https://www.w3.org/TR/WCAG20-TECHS/G1.html</a></li>
+<li><a href="https://a11yproject.com/posts/skip-nav-links/">https://a11yproject.com/posts/skip-nav-links/</a></li>
+</ul>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div id="skip-navigation">
+  <a href="#main-content">Skip to content</a>
+  <a href="#">Skip to navigation</a>
+  <a href="#">Accessibility settings</a>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div id&#x3D;&quot;skip-navigation&quot;&gt;
+  &lt;a href&#x3D;&quot;#main-content&quot;&gt;Skip to content&lt;/a&gt;
+  &lt;a href&#x3D;&quot;#&quot;&gt;Skip to navigation&lt;/a&gt;
+  &lt;a href&#x3D;&quot;#&quot;&gt;Accessibility settings&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../js/kss.js"></script>
+<script src="../js/atomic-bulldog.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>

@@ -1,0 +1,111 @@
+$color-themes: (
+  primary:
+    (
+      base: invert(#4c5c8c),
+      dark: invert(darken(#4c5c8c, 15%)),
+      light: invert(lighten(#4c5c8c, 15%)),
+      trans: invert(transparentize(#4c5c8c, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  secondary:
+    (
+      base: invert(#212529),
+      dark: invert(darken(#212529, 15%)),
+      light: invert(lighten(#212529, 15%)),
+      trans: invert(transparentize(#212529, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  text:
+    (
+      base: invert(#212529),
+      dark: invert(darken(#212529, 15%)),
+      light: invert(lighten(#212529, 15%)),
+      trans: invert(transparentize(#212529, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  link:
+    (
+      base: invert(#4b7e9e),
+      dark: invert(darken(#4b7e9e, 15%)),
+      light: invert(lighten(#4b7e9e, 15%)),
+      trans: invert(transparentize(#4b7e9e, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  success:
+    (
+      base: invert(#4b9b50),
+      dark: invert(darken(#4b9b50, 15%)),
+      light: invert(lighten(#4b9b50, 15%)),
+      trans: invert(transparentize(#4b9b50, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  danger:
+    (
+      base: invert(#c65556),
+      dark: invert(darken(#c65556, 15%)),
+      light: invert(lighten(#c65556, 15%)),
+      trans: invert(transparentize(#c65556, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  warning:
+    (
+      base: invert(#d3b354),
+      dark: invert(darken(#d3b354, 15%)),
+      light: invert(lighten(#d3b354, 15%)),
+      trans: invert(transparentize(#d3b354, 0.5)),
+      contrast: invert(#ffffff)
+    ),
+  light:
+    (
+      base: invert(#efe5cf),
+      dark: invert(darken(#efe5cf, 15%)),
+      light: invert(lighten(#efe5cf, 15%)),
+      trans: invert(transparentize(#efe5cf, 0.5)),
+      contrast: invert(#343a40)
+    ),
+  dark:
+    (
+      base: invert(#343a40),
+      dark: invert(darken(#343a40, 15%)),
+      light: invert(lighten(#343a40, 15%)),
+      trans: invert(transparentize(#343a40, 0.5)),
+      contrast: invert(#efe5cf)
+    )
+);
+
+// Root inverted Theme
+@if $use-css-var == true {
+  #{$root-invert-theme} {
+    //Color variables
+    @each $name, $color in $color-themes {
+      @if type-of($color) == "map" {
+        @each $subname, $subcolor in $color {
+          #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+        }
+      } @else if type-of($color) == "color" {
+        #{$color-prefix}#{$name}: $color;
+      }
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Color Swatches
+//
+// <!--ONLY FOR KSS-->
+// <div id="kss-map-colors" class="theme-invert">
+//     <div class="kss-color-item" data-color="primary"></div>
+//     <div class="kss-color-item" data-color="secondary"></div>
+//     <div class="kss-color-item" data-color="text"></div>
+//     <div class="kss-color-item" data-color="link"></div>
+//     <div class="kss-color-item" data-color="success"></div>
+//     <div class="kss-color-item" data-color="danger"></div>
+//     <div class="kss-color-item" data-color="warning"></div>
+//     <div class="kss-color-item" data-color="light"></div>
+//     <div class="kss-color-item" data-color="dark"></div>
+// </div>
+//
+// Styleguide Themes.Invert.Variables.colorsswatches
