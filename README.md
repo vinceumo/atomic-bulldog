@@ -33,7 +33,7 @@ Example:
 * Brad Frost has written some great resources on the Atomic design methodology:
   * [Atomic design article](http://bradfrost.com/blog/post/atomic-web-design/)
   * [Atomic design book](http://atomicdesign.bradfrost.com/)
-  * [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE)
+  * [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE) :video_camera:
 * Other resources:
   * [10 reasons you should be using Atomic Design](https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771)
   * [Atomic design: how to design systems of components](https://uxdesign.cc/atomic-design-how-to-design-systems-of-components-ab41f24f260e)
