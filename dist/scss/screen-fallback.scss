@@ -1,5 +1,5 @@
 //Global settings
-@import "settings/atomic-bulldog-settings";
+$use-css-var: false;
 
 //functions
 @import "functions/em";
@@ -9,6 +9,7 @@
 @import "mixins/media-queries";
 
 //variables
+@import "variables/root-classes";
 @import "variables/breakpoints";
 @import "variables/grid";
 @import "variables/spacers";

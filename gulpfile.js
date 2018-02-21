@@ -1,6 +1,3 @@
-/// <binding BeforeBuild='scss, bundle' ProjectOpened='watch-scss, scss, watch-js, bundle' />
-//SASS config from https://www.sitepoint.com/simple-gulpy-workflow-sass/
-
 var gulp = require('gulp');
 var sass = require("gulp-sass");
 var sourcemaps = require('gulp-sourcemaps');

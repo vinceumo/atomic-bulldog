@@ -119,22 +119,25 @@
   <img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
 </p>
 
+<p><em>Version 1.0.0</em></p>
 <blockquote>
 <p>This pattern library is here to help to create and maintain a unified UI.</p>
 </blockquote>
 <h2 id="table-of-content">Table of content</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#set-up-atomic-bulldog">Setup Atomic Bulldog</a></li>
 <li><a href="#atomic-design">Atomic Design</a><ul>
-<li><a href="#resources">Atomic Design resources</a></li>
+<li><a href="#atomic-design-resources">Atomic Design resources</a></li>
 </ul>
 </li>
 <li><a href="#pattern-styleguide-node-kss-">Pattern styleguide (Node KSS)</a><ul>
 <li><a href="#kss-config">KSS Config</a>  </li>
 <li><a href="#kss-documentation-format">KSS documentation format</a></li>
-<li><a href="#KSS resources">KSS resources</a></li>
+<li><a href="#kss-resources">KSS resources</a></li>
 </ul>
 </li>
+<li><a href="#naming-convention">Naming convention</a></li>
 <li><a href="#project-structure">Project Structure</a></li>
 <li><a href="#recommended-vendors">Recommended vendors</a></li>
 <li><a href="#resources">Resources</a></li>
@@ -144,7 +147,18 @@
 <blockquote>
 <p>Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.</p>
 </blockquote>
-<h2 id="atomic-design">Atomic Design</h2>
+<h2 id="setup-atomic-bulldog">Setup Atomic Bulldog</h2>
+<p>Once this project clone you can run:</p>
+<pre><code>npm install
+</code></pre><p>Sass is compile using Gulp. You are free to use another task runner or compiler</p>
+<p>To compile your Sass, generate the live documentation and run BrowserSync on change run:</p>
+<pre><code>npm run startAtomicBulldog
+</code></pre><p>This command can be change in package.json</p>
+<p>If you only wants to run KSS once:</p>
+<pre><code>npm run kss
+</code></pre><p>If you only wants to run KSS on watch:</p>
+<pre><code>npm run kssWatch
+</code></pre><h2 id="atomic-design">Atomic Design</h2>
 <p>Atomic design is a methodology for helping to design and develop a <code>pattern system</code>.</p>
 <p>This methodology has been defined by <a href="http://bradfrost.com/">Brad Frost</a> as so:</p>
 <blockquote>

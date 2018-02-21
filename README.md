@@ -6,7 +6,52 @@
 
 Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
 
-Demo: https://vinceumo.github.io/atomic-bulldog-style-guide-demo/styleguide
+**Demo and default style**: https://vinceumo.github.io/atomic-bulldog-style-guide-demo/styleguide
+
+## Table of content
+
+* [Setup Atomic Bulldog](#floppy_disk-setup-atomic-bulldog)
+* [Atomic Design](#boom-atomic-design)
+ * [Atomic Design resources](#blue_book-atomic-design-resources)
+* [Pattern styleguide (Node KSS)](#books-pattern-styleguide-node-kss)
+ * [KSS Config](#wrench-kss-config)  
+ * [KSS documentation format](#page_facing_up-kss-documentation-format)
+ * [KSS resources](#blue_book-kss-resources)
+* [Naming convention](#triangular_ruler-naming-convention)
+* [Project Structure](#tokyo_tower-project-structure)
+* [Recommended vendors](#blue_book-recommended-vendors)
+* [Changelog](#changelog)
+
+## :floppy_disk: Setup Atomic Bulldog
+
+Once this project clone you can run:
+
+```
+npm install
+```
+
+Sass is compile using Gulp. You are free to use another task runner or compiler
+
+To compile your Sass, generate the live documentation and run BrowserSync on change run:
+
+```
+npm run startAtomicBulldog
+```
+
+This command can be change in package.json
+
+If you only wants to run KSS once:
+
+```
+npm run kss
+```
+
+If you only wants to run KSS on watch:
+
+```
+npm run kssWatch
+```
+
 
 ## :boom: Atomic Design
 
@@ -181,3 +226,58 @@ Atomic Bulldog:
 * [ ] Create a theme for kss
 * [ ] Dark theme
 * [ ] Contrast Theme
+
+## Changelog
+
+This section only show the last changelog
+To see all changelog ==> https://github.com/vinceumo/atomic-bulldog/blob/master/CHANGELOG.md
+
+## [1.0.0] - 2018-02-21
+
+Initial release of Atomic Bulldog
+
+### Added
+
+* Node KSS
+* Sass boilerplate
+  * Atoms
+    * Form elements
+    * Modifiers
+    * Typography
+    * Images
+    * Buttons
+    * Focus
+  * Functions
+    * em
+    * map-deep-get
+  * Layout
+    * Container sizes
+    * Grid
+    * Fallback grid
+  * mixins
+    * media-queries
+  * molecules
+    * form
+    * navigation
+    * skip-navigation
+  * Organisms
+    * Form
+    * navigation bar
+  * Theme
+    * Inverted
+  * Variables
+    * Aspect ratio
+    * Breakpoints
+    * Colors
+    * Container sizes
+    * Font families
+    * Font sizes
+    * Grid
+    * Root classes
+    * Spacers
+    * Z-index
+  * Vendors
+    * A11y
+    * icomoon
+    * family.scss
+    * bootstrap-reboot

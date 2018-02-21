@@ -2,27 +2,60 @@
   <img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
 </p>
 
+*Version 1.0.0*
+
 > This pattern library is here to help to create and maintain a unified UI.
 
 ## Table of content
 
 * [Introduction](#introduction)
+* [Setup Atomic Bulldog](#setup-atomic-bulldog)
 * [Atomic Design](#atomic-design)
- * [Atomic Design resources](#resources)
+ * [Atomic Design resources](#atomic-design-resources)
 * [Pattern styleguide (Node KSS)](#pattern-styleguide-node-kss-)
  * [KSS Config](#kss-config)  
  * [KSS documentation format](#kss-documentation-format)
- * [KSS resources](#KSS resources)
+ * [KSS resources](#kss-resources)
+* [Naming convention](#naming-convention)
 * [Project Structure](#project-structure)
 * [Recommended vendors](#recommended-vendors)
 * [Resources](#resources)
-
 
 ## Introduction
 
 This project is base on [Atomic Bulldog boilerplate](https://github.com/vinceumo/atomic-bulldog).
 
 > Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
+
+## Setup Atomic Bulldog
+
+Once this project clone you can run:
+
+```
+npm install
+```
+
+Sass is compile using Gulp. You are free to use another task runner or compiler
+
+To compile your Sass, generate the live documentation and run BrowserSync on change run:
+
+```
+npm run startAtomicBulldog
+```
+
+This command can be change in package.json
+
+If you only wants to run KSS once:
+
+```
+npm run kss
+```
+
+If you only wants to run KSS on watch:
+
+```
+npm run kssWatch
+```
 
 ## Atomic Design
 
