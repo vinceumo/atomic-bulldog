@@ -120,82 +120,27 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-2" id="kssref-layout-grid">
+            <header class="kss-section kss-section--depth-4" id="kssref-layout-grid-modifiers-dense">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>layouts/_grid.scss</span>, line <span>91</span></p>
+                <p class="kss-section__source">Source: <span>layouts/_grid.scss</span>, line <span>205</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-layout-grid">
-                <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.2</span>
-                  <span class="kss-section__name">Grid</span>
-                </h2>
+              <a class="kss-section__permalink" href="#kssref-layout-grid-modifiers-dense">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">4.2.2.2</span>
+                  <span class="kss-section__name">Grid dense</span>
+                </h4>
               </a>
 
-                <div class="kss-section__description"><p>Atomic Bulldog uses CSS grid layout for its grid. It only applies this grid to supported browsers using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40supports">CSS <code>@supports</code></a> rule.</p>
-<p>See <code>Grid fallback</code> if you need to use the fallback grid.</p>
-<p class="ciu_embed" data-feature="css-grid" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
-  <a href="http://caniuse.com/#feat=css-grid">Can I Use css-grid?</a> Data on support for the css-grid feature across the major browsers from caniuse.com.
-</p>
-<p class="ciu_embed" data-feature="css-supports-api" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
-  <a href="http://caniuse.com/#feat=css-supports-api">Can I Use css-supports-api?</a> Data on support for the css-supports-api feature across the major browsers from caniuse.com.
-</p>
-
-<p>The  grid is by default 12 columns base, This grid is two dimensional, meaning grid items can grow in the horizontal axis (has-col-{breakpoint}-{size}) and on the vertical axis (has-row-{breakpoint}-{size}).</p>
-<p>{breakpoint} is set from the <code>$breakpoints</code> map (see variables), {size} is set as well in variables. It goes from 0 to 12 ($grid-columns) by default or 0 up to 12 base on the number of columns set using <code>.has-cols-{bp}-{size}</code></p>
+                <div class="kss-section__description"><p><code>.is-dense</code> with <code>grid</code> will make the grid dense.</p>
+<blockquote>
+<p>Dense Is a keyword specifying that the auto-placement algorithm uses a “dense” packing algorithm, which attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.</p>
+</blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow">https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow</a></p>
 </div>
 
             </article>
 
-              <article class="kss-section__modifiers">
-                <h1 class="kss-modifiers__heading">Example</h1>
-
-
-                <div class="kss-modifiers__example"><div class="grid has-grid-gap-2 has-cols-3 has-cols-md-5 has-cols-lg-7">
-  <div class="has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2">
-    <div class="box">1</div>
-  </div>
-  <div class="has-col-3 has-col-md-2 has-col-lg-1">
-      <div class="box">2</div>
-  </div>
-  <div>
-      <div class="box">3</div>
-  </div>
-  <div class="has-col-md-2 has-col-lg-3">
-      <div class="box">4</div>
-  </div>
-  <div class="has-col-md-2 has-col-lg-6">
-      <div class="box">5</div>
-  </div>
-  <div>
-      <div class="box">6</div>
-  </div>
-</div></div>
-
-              </article>
-
-                <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;grid has-grid-gap-2 has-cols-3 has-cols-md-5 has-cols-lg-7&quot;&gt;
-  &lt;div class&#x3D;&quot;has-col-md-3 has-col-lg-1 has-row-md-2 has-row-lg-2&quot;&gt;
-    &lt;div class&#x3D;&quot;box&quot;&gt;1&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-3 has-col-md-2 has-col-lg-1&quot;&gt;
-      &lt;div class&#x3D;&quot;box&quot;&gt;2&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-      &lt;div class&#x3D;&quot;box&quot;&gt;3&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-md-2 has-col-lg-3&quot;&gt;
-      &lt;div class&#x3D;&quot;box&quot;&gt;4&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;has-col-md-2 has-col-lg-6&quot;&gt;
-      &lt;div class&#x3D;&quot;box&quot;&gt;5&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-      &lt;div class&#x3D;&quot;box&quot;&gt;6&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                </article>
 
             </header>
     </section>
