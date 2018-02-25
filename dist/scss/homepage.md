@@ -18,6 +18,9 @@
  * [KSS resources](#kss-resources)
 * [Naming convention](#naming-convention)
 * [Project Structure](#project-structure)
+* [CSS custom properties (CSS variables) and Sass variables](#css-custom-properties-css-variables-and-sass-variables)
+  * [CSS variables](#css-variables)
+  * [SCSS variables](#scss-variables)
 * [Recommended vendors](#recommended-vendors)
 * [Resources](#resources)
 
@@ -210,6 +213,82 @@ Atomic Bulldog:
 |     \---vendors - External resources
 |         +---a11y
 |         \---icomoon
+```
+
+## CSS custom properties (CSS variables) and Sass variables
+
+### CSS variables
+
+By default, this project compiles almost all of its variables to CSS variables.
+
+A flag is set up in the project `$use-css-var` in `_atomic-bulldog-settings.scss`, that can be changed if you do not want to use CSS variables.
+
+### SCSS variables
+
+This project uses mostly maps variables link to a function associated with this map.
+
+Sass Maps are used so it is easier to create a pattern and to follow it.
+
+Variables files follow this pattern:
+
+``` scss
+// ------------------------------
+// Sass Variables
+// ------------------------------
+
+// CSS variables prefix
+$variable-prefix: --variable-;
+
+// Map declaration
+$variables : (
+  var1: value1,
+  var2: value2,
+  var3: value3
+);
+
+// ------------------------------
+// Set function
+// ------------------------------
+
+// We link the map and prefix to a function
+
+@function functionToCallVariables($variable, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($variables, $variable); // True Val
+    } @else {
+      @return var(#{$variable-prefix}#{$variable}); // CSS Var
+    }
+  } @else {
+    @return map-get($variables, $variable); // Disabled CSS Var
+  }
+}
+
+// We call our map in the project using this function
+//
+// Example:
+// functionToCallVariables(var1) => --variable-var1
+// functionToCallVariables(var1, true) => value1
+// functionToCallVariables(var1) and $use-css-var: false => value1
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $variable in $variables {
+      #{$variable-prefix}#{$name}: $variable;
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Document you new variables
+
 ```
 
 ## Recommended vendors
