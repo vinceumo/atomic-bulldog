@@ -19,6 +19,9 @@ Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It
   * [KSS resources](#blue_book-kss-resources)
 * [Naming convention](#triangular_ruler-naming-convention)
 * [Project Structure](#tokyo_tower-project-structure)
+* [CSS custom properties (CSS variables) and Sass variables](#books-css-custom-properties-css-variables-and-sass-variables)
+  * [CSS variables](#css-variables)
+  * [SCSS variables](#scss-variables)
 * [Recommended vendors](#blue_book-recommended-vendors)
 * [Changelog](#changelog)
 
@@ -209,6 +212,83 @@ Atomic Bulldog:
 |         \---icomoon
 ```
 
+##  :books: CSS custom properties (CSS variables) and Sass variables
+
+### CSS variables
+
+By default, this project compiles almost all of its variables to CSS variables.
+
+A flag is set up in the project `$use-css-var` in `_atomic-bulldog-settings.scss`, that can be changed if you do not want to use CSS variables.
+
+### SCSS variables
+
+This project uses mostly maps variables link to a function associated with this map.
+
+Sass Maps are used so it is easier to create a pattern and to follow it.
+
+Variables files follow this pattern:
+
+``` scss
+// ------------------------------
+// Sass Variables
+// ------------------------------
+
+// CSS variables prefix
+$variable-prefix: --variable-;
+
+// Map declaration
+$variables : (
+  var1: value1,
+  var2: value2,
+  var3: value3
+);
+
+// ------------------------------
+// Set function
+// ------------------------------
+
+// We link the map and prefix to a function
+
+@function functionToCallVariables($variable, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($variables, $variable); // True Val
+    } @else {
+      @return var(#{$variable-prefix}#{$variable}); // CSS Var
+    }
+  } @else {
+    @return map-get($variables, $variable); // Disabled CSS Var
+  }
+}
+
+// We call our map in the project using this function
+//
+// Example:
+// functionToCallVariables(var1) => --variable-var1
+// functionToCallVariables(var1, true) => value1
+// functionToCallVariables(var1) and $use-css-var: false => value1
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $variable in $variables {
+      #{$variable-prefix}#{$name}: $variable;
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Document you new variables
+
+```
+
+
 ## :blue_book: Recommended vendors
 
 * https://github.com/edenspiekermann/a11y-dialog
@@ -216,12 +296,7 @@ Atomic Bulldog:
 
 ### :pencil2: TODO
 
-* [x] Fall back for css grid MVP
-* [x] a11y js integration with a11y.css MVP
-* [x] Atoms inputs MVP
-* [x] Variables redefine gray theme MVP
-* [x] Icons MVP
-* [ ] Atoms modifiers display flex grid + other classes to position MVP
+* [ ] Atoms modifiers display flex grid + other classes to position
 * [ ] Update documentation
 * [ ] Create a theme for kss
 * [ ] Dark theme

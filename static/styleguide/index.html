@@ -140,6 +140,11 @@
 </li>
 <li><a href="#naming-convention">Naming convention</a></li>
 <li><a href="#project-structure">Project Structure</a></li>
+<li><a href="#css-custom-properties-css-variables-and-sass-variables">CSS custom properties (CSS variables) and Sass variables</a><ul>
+<li><a href="#css-variables">CSS variables</a></li>
+<li><a href="#scss-variables">SCSS variables</a></li>
+</ul>
+</li>
 <li><a href="#recommended-vendors">Recommended vendors</a></li>
 <li><a href="#resources">Resources</a></li>
 </ul>
@@ -291,7 +296,72 @@
 |     \---vendors - External resources
 |         +---a11y
 |         \---icomoon
-</code></pre><h2 id="recommended-vendors">Recommended vendors</h2>
+</code></pre><h2 id="css-custom-properties-css-variables-and-sass-variables">CSS custom properties (CSS variables) and Sass variables</h2>
+<h3 id="css-variables">CSS variables</h3>
+<p>By default, this project compiles almost all of its variables to CSS variables.</p>
+<p>A flag is set up in the project <code>$use-css-var</code> in <code>_atomic-bulldog-settings.scss</code>, that can be changed if you do not want to use CSS variables.</p>
+<h3 id="scss-variables">SCSS variables</h3>
+<p>This project uses mostly maps variables link to a function associated with this map.</p>
+<p>Sass Maps are used so it is easier to create a pattern and to follow it.</p>
+<p>Variables files follow this pattern:</p>
+<pre><code class="lang-scss">// ------------------------------
+// Sass Variables
+// ------------------------------
+
+// CSS variables prefix
+$variable-prefix: --variable-;
+
+// Map declaration
+$variables : (
+  var1: value1,
+  var2: value2,
+  var3: value3
+);
+
+// ------------------------------
+// Set function
+// ------------------------------
+
+// We link the map and prefix to a function
+
+@function functionToCallVariables($variable, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($variables, $variable); // True Val
+    } @else {
+      @return var(#{$variable-prefix}#{$variable}); // CSS Var
+    }
+  } @else {
+    @return map-get($variables, $variable); // Disabled CSS Var
+  }
+}
+
+// We call our map in the project using this function
+//
+// Example:
+// functionToCallVariables(var1) =&gt; --variable-var1
+// functionToCallVariables(var1, true) =&gt; value1
+// functionToCallVariables(var1) and $use-css-var: false =&gt; value1
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $variable in $variables {
+      #{$variable-prefix}#{$name}: $variable;
+    }
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Document you new variables
+</code></pre>
+<h2 id="recommended-vendors">Recommended vendors</h2>
 <ul>
 <li><a href="https://github.com/edenspiekermann/a11y-dialog">https://github.com/edenspiekermann/a11y-dialog</a></li>
 <li><a href="https://a11yproject.com/patterns">https://a11yproject.com/patterns</a></li>

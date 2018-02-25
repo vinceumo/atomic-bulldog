@@ -16,7 +16,7 @@ $font-families: (
 );
 
 // ------------------------------
-// Set bp function
+// Set function
 // ------------------------------
 @function font-family($font-family, $true-val:false) {
   @if $use-css-var == true {
