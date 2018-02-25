@@ -19,7 +19,7 @@ Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It
   * [KSS resources](#blue_book-kss-resources)
 * [Naming convention](#triangular_ruler-naming-convention)
 * [Project Structure](#tokyo_tower-project-structure)
-* [CSS custom properties (CSS variables) and Sass variables](#books-css-customproperties-css-variables-and-sass-variables)
+* [CSS custom properties (CSS variables) and Sass variables](#books-css-custom-properties-css-variables-and-sass-variables)
   * [CSS variables](#css-variables)
   * [SCSS variables](#scss-variables)
 * [Recommended vendors](#blue_book-recommended-vendors)
