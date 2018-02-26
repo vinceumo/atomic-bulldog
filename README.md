@@ -301,6 +301,7 @@ $variables : (
 * [ ] Create a theme for kss
 * [ ] Dark theme
 * [ ] Contrast Theme
+* [ ] Try biticons for icons https://github.com/Bitersen/biticons
 
 ## Changelog
 
