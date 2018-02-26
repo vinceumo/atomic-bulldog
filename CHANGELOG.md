@@ -2,6 +2,14 @@
 
 http://keepachangelog.com/en/1.0.0/
 
+## [Unreleased]
+
+### Added
+
+* Added starter index.html
+* Placeholder favicons
+* Manifest.json
+
 ## [1.0.0] - 2018-02-21
 
 Initial release of Atomic Bulldog
