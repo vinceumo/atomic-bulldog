@@ -296,13 +296,19 @@ $variables : (
 
 ### :pencil2: TODO
 
+### [1.0.1]
+
 * [ ] Atoms modifiers display flex grid + other classes to position
 * [ ] Update documentation
 * [ ] Create a theme for kss
 * [ ] Dark theme
 * [ ] Contrast Theme
-* [ ] Try biticons for icons https://github.com/Bitersen/biticons
-* [ ] Layout and manifest.json
+* [ ] TODO list before going live
+
+### Backlog
+
+* [ ] Fork create themes using AB
+* [ ] Create a gh-page for this project
 
 ## Changelog
 
