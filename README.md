@@ -147,6 +147,7 @@ The basic format for KSS documentation can be best explained in an example:
 
 * [Build a Style Guide Straight from Sass](https://css-tricks.com/build-style-guide-straight-sass/)
 * [kss-node](https://github.com/kss-node/kss-node)
+* [Knyle Style Sheets Documentation](https://github.com/kss-node/kss/blob/spec/SPEC.md)
 * [Knyle Style Sheets](https://github.com/kneath/kss)
 * [Great style guide examples](http://styleguides.io/)
 
