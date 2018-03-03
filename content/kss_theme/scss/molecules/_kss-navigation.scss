@@ -1,0 +1,50 @@
+.kss-navigation{
+  
+  ul.kss-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    ul.kss-subnav{
+      list-style-type: none;
+      padding-left: spacer(2);
+      margin-bottom: spacer(3);
+
+      .kss-nav-link{
+        padding: spacer(1);
+      }
+
+      li.is-grandchild{
+        padding-left: spacer(2);
+      }
+    }
+  }
+
+  .kss-nav-link{
+    color: color-gray(70);
+    text-decoration: none;
+    padding: spacer(2);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+  
+    &:hover, &:focus {
+      background-color: color-gray(20);
+      outline-color: transparent;
+      border-color: transparent;
+      box-shadow: 0 0 0 transparent;
+    }
+
+    &.is-active{
+      background-color: color(primary, light);
+
+      &:hover, &:focus {
+        background-color: color(primary, light);
+      }
+    }
+
+    .kss-nav__ref{
+      font-size: calc(#{font-size(paragraph)} - 0.15rem);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.kss-sidebar {
+  height: 100vh;
+  padding: spacer(3);
+  background-color: color-gray(10);
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  z-index: z(kss-sidebar);
+  display: none;
+
+  &.is-active{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: spacer(6) spacer(3);
+  }
+
+  @include min(bp(lg)){
+    display: block;
+
+    &.is-active{
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      padding: spacer(3);
+    }
+  }
+}

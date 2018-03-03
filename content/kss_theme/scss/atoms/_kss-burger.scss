@@ -1,0 +1,95 @@
+$burger-size: 60px;
+$burger-color: color-gray(0);
+
+.kss-burger-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: z(kss-burger);
+
+  @include min(bp(lg)){
+    display: none;
+  }
+
+  &:after{
+    content: "";
+    border-style: solid;
+    border-width: 0 800px 320px 0;
+    border-color: transparent color(primary) transparent transparent;
+    position: absolute;
+    left: 0;
+    bottom: -320px;
+  }
+}
+
+button.kss-burger {
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  color: $burger-color;
+  background-color: color(primary);
+  display: flex;
+  padding: spacer(2) spacer(4);
+  align-items: center;
+
+  span.burger-icon {
+    display: block;
+    width: 25px;
+    height: 20px;
+    //FIX BLUR BUG/ISSUE ON CHROME
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
+
+    &:after,
+    &:before,
+    span {
+      width: 100%;
+      height: 2px;
+      border-radius: 100px;
+      position: absolute;
+      left: 0px;
+      background: $burger-color;
+      transform: rotate(0deg);
+      transition: all 0.4s;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+    }
+
+    &:after {
+      top: 0px;
+      margin-top: 0px;
+    }
+
+    &:before {
+      bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+    span {
+      top: 50%;
+      //margin-top: -2px;
+    }
+  }
+
+  &.is-active {
+    span.burger-icon {
+      &:after {
+        transform: rotate(135deg)translate(7px, -7px);
+      }
+
+      &:before {
+        transform: rotate(225deg);
+        bottom: 50%;
+        margin-bottom: -2px;
+      }
+
+      span {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}

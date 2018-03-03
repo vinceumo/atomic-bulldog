@@ -1,31 +1,36 @@
-# Atomic Bulldog :collision: :dog:
-
 <p align="center"> 
-<img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
+  <img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
 </p>
 
-Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
+*Version 1.0.0*
 
-**Demo and default style**: https://vinceumo.github.io/atomic-bulldog-style-guide-demo/styleguide
+> This pattern library is here to help to create and maintain a unified UI.
 
 ## Table of content
 
-* [Setup Atomic Bulldog](#floppy_disk-setup-atomic-bulldog)
-* [Atomic Design](#boom-atomic-design)
-  * [Atomic Design resources](#blue_book-atomic-design-resources)
-* [Pattern styleguide (Node KSS)](#books-pattern-styleguide-node-kss)
-  * [KSS Config](#wrench-kss-config)  
-  * [KSS documentation format](#page_facing_up-kss-documentation-format)
-  * [KSS resources](#blue_book-kss-resources)
-* [Naming convention](#triangular_ruler-naming-convention)
-* [Project Structure](#tokyo_tower-project-structure)
-* [CSS custom properties (CSS variables) and Sass variables](#books-css-custom-properties-css-variables-and-sass-variables)
+* [Introduction](#introduction)
+* [Setup Atomic Bulldog](#setup-atomic-bulldog)
+* [Atomic Design](#atomic-design)
+ * [Atomic Design resources](#atomic-design-resources)
+* [Pattern styleguide (Node KSS)](#pattern-styleguide-node-kss-)
+ * [KSS Config](#kss-config)  
+ * [KSS documentation format](#kss-documentation-format)
+ * [KSS resources](#kss-resources)
+* [Naming convention](#naming-convention)
+* [Project Structure](#project-structure)
+* [CSS custom properties (CSS variables) and Sass variables](#css-custom-properties-css-variables-and-sass-variables)
   * [CSS variables](#css-variables)
   * [SCSS variables](#scss-variables)
-* [Recommended vendors](#blue_book-recommended-vendors)
-* [Changelog](#changelog)
+* [Recommended vendors](#recommended-vendors)
+* [Resources](#resources)
 
-## :floppy_disk: Setup Atomic Bulldog
+## Introduction
+
+This project is base on [Atomic Bulldog boilerplate](https://github.com/vinceumo/atomic-bulldog).
+
+> Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
+
+## Setup Atomic Bulldog
 
 Once this project clone you can run:
 
@@ -55,8 +60,7 @@ If you only wants to run KSS on watch:
 npm run kssWatch
 ```
 
-
-## :boom: Atomic Design
+## Atomic Design
 
 Atomic design is a methodology for helping to design and develop a `pattern system`.
 
@@ -78,17 +82,17 @@ Example:
 
 > `Pages` apply real content to templates and articulate variations to demonstrate the final UI and test the resilience of the design system.
 
-### :blue_book: Atomic Design resources
+### Atomic Design resources
 
 * Brad Frost has written some great resources on the Atomic design methodology:
   * [Atomic design article](http://bradfrost.com/blog/post/atomic-web-design/)
   * [Atomic design book](http://atomicdesign.bradfrost.com/)
-  * [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE) :video_camera:
+  * [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE)
 * Other resources:
   * [10 reasons you should be using Atomic Design](https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771)
   * [Atomic design: how to design systems of components](https://uxdesign.cc/atomic-design-how-to-design-systems-of-components-ab41f24f260e)
 
-## :books: Pattern styleguide (Node KSS)
+## Pattern styleguide (Node KSS)
 
 A pattern library is a library of individual styles, components, and guidelines used for creating unified UI.
 
@@ -98,16 +102,16 @@ Atomic Bulldog uses Node KSS to generate its styleguide.
 
 > This is a Node.js implementation of KSS, "a documentation syntax for CSS" that's intended to have syntax readable by humans and machines. Hence, the kss-node software can be used to create a "living style guide".
 
-### :wrench: KSS Config
+### KSS Config
 
 KSS settings can be changed in `kss-config.json`, you can add and remove CSS and js files. You can as well change where the KSS documentation will be output.
 
-### :page_facing_up: KSS documentation format
+### KSS documentation format
 
 The basic format for KSS documentation can be best explained in an example:
 
 ```scss
-.btn {
+.btn{
   //Style
 }
 
@@ -140,10 +144,10 @@ The basic format for KSS documentation can be best explained in an example:
 * The first line will be the title of the section, in this example it is `button`.
 * Then we have the description of the element, we can add markup as well (i.e to embed a video or caniuse table).
 * We can show an example we a snippet by adding `markup:` following by the element's HTML.
-* `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
+ * `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
 * Finally the last line allows organize this section, In this example, it will be in Atoms/Button.
 
-### :blue_book: KSS resources
+### KSS resources
 
 * [Build a Style Guide Straight from Sass](https://css-tricks.com/build-style-guide-straight-sass/)
 * [kss-node](https://github.com/kss-node/kss-node)
@@ -151,19 +155,19 @@ The basic format for KSS documentation can be best explained in an example:
 * [Knyle Style Sheets](https://github.com/kneath/kss)
 * [Great style guide examples](http://styleguides.io/)
 
-## :triangular_ruler: Naming convention
+## Naming convention
 
 Atomic Design does not come with a naming convention. The only convention is around `modifiers` classes they start by 'has-'or 'is-', for example 'class="btn is-outlined is-primary"'
 
-## :tokyo_tower: Project Structure
+## Project Structure
 
-The heart of Atomic is the pattern system. To manage and create these patterns we use the `variables` folder all the patterns will be declared in there and an associated function is created to reuse this pattern. For examples, colors are set in this folder that can be used with the Sass function `color(your color)` (See Sass variables page).
+The heart of Atomic is the pattern system. To manage and create these patterns we use the `variables`  folder all the patterns will be declared in there and an associated function is created to reuse this pattern. For examples, colors are set in this folder that can be used with the Sass function `color(your color)` (See Sass variables page).
 
 As we saw in a previous section, Atomic Bulldog is base on the atomic design methodology. Naturally `atom` elements will go in the atoms file, `molecules` in molecules file etc.
 
 The layout folder contains the grid system of the project.
 
-### :house: Sass project structure:
+### Sass project structure:
 
 ```
 Atomic Bulldog:
@@ -187,10 +191,9 @@ Atomic Bulldog:
 |         \---icomoon
 ```
 
----
+-------
 
 With description:
-
 ```
 Atomic Bulldog:
 | \---scss
@@ -213,7 +216,7 @@ Atomic Bulldog:
 |         \---icomoon
 ```
 
-##  :books: CSS custom properties (CSS variables) and Sass variables
+## CSS custom properties (CSS variables) and Sass variables
 
 ### CSS variables
 
@@ -289,30 +292,15 @@ $variables : (
 
 ```
 
-
-## :blue_book: Recommended vendors
+## Recommended vendors
 
 * https://github.com/edenspiekermann/a11y-dialog
 * https://a11yproject.com/patterns
 
-### :pencil2: TODO
+## Resources
 
-* [ ] Atoms modifiers display flex grid + other classes to position
-* [ ] Update documentation
-* [ ] TODO list before going live
-* [ ] Fork create themes using AB
-* [ ] Create a gh-page for this project
-
-## Changelog
-
-This section only show the last changelog
-To see all changelog ==> https://github.com/vinceumo/atomic-bulldog/blob/master/CHANGELOG.md
-
-## [1.0.1] - 2018-03-03
-
-### Added
-
-* Added starter index.html
-* Placeholder favicons
-* Manifest.json
-* Atomic Bulldog kss theme
+* https://marijohannessen.github.io/color-contrast-checker/
+* https://www.w3.org/TR/WCAG20/
+* https://github.com/brunopulis/awesome-a11y
+* https://github.com/Khan/tota11y
+* https://github.com/github/lightcrawler

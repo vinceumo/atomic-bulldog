@@ -9,6 +9,10 @@ http://keepachangelog.com/en/1.0.0/
 * Added starter index.html
 * Placeholder favicons
 * Manifest.json
+* Atomic Bulldog kss them
+
+### Changed
+* File structure and names
 
 ## [1.0.0] - 2018-02-21
 
