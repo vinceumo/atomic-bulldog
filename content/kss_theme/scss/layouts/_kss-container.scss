@@ -1,0 +1,14 @@
+.kss-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  &:not(.is-fluid) {
+    margin: 0 auto;
+
+    @each $bp, $container-size in $container-sizes {
+      @include min(#{bp(#{$bp})}) {
+        width: container(#{$bp});
+      }
+    }
+  }
+}

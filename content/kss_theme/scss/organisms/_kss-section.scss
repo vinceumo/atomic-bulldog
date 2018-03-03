@@ -1,0 +1,142 @@
+.kss-section__permalink {
+  &:hover,
+  &:focus {
+    color: color(primary);
+    text-decoration: underline;
+  }
+}
+.kss-section__source {
+  color: color-gray(60);
+  font-size: calc(#{font-size(paragraph)} - 0.1rem);
+}
+
+.kss-section__description {
+  p {
+    color: color-gray(100);
+    font-family: font-family(paragraph);
+    font-size: font-size(paragraph);
+  }
+
+  a {
+    color: color(primary);
+
+    &:hover,
+    &:focus {
+      color: color(primary);
+      text-decoration: underline;
+    }
+  }
+
+  code {
+    background-color: color-gray(30);
+    border-radius: 5px;
+    padding-left: spacer(1);
+    padding-right: spacer(1);
+  }
+
+  blockquote {
+    background-color: color-gray(10);
+    padding: spacer(3);
+    border-left: spacer(2) solid color-gray(30);
+    margin-bottom: spacer(3);
+  }
+
+  .kss-iframe{
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.kss-section__example-container {
+  border-radius: 5px;
+  border: 3px solid color-gray(30);
+
+  pre[class*="language-"] {
+    margin: 0;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    background-color: color-gray(30);
+  }
+
+  .kss-section__examples {
+    padding: spacer(3);
+    overflow-x: auto;
+
+    .kss-modifiers__heading {
+      font-size: font-size(3);
+    }
+
+    code.kss-modifiers__name {
+      background-color: color-gray(30);
+      border-radius: 5px;
+      padding-left: spacer(1);
+      padding-right: spacer(1);
+      margin-top: spacer(5);
+    }
+
+    .kss-modifiers__example {
+      margin-top: spacer(3);
+      margin-bottom: spacer(6);
+      position: relative;
+
+      &:last-child {
+        margin-bottom: spacer(0);
+      }
+    }
+
+    .kss-box{
+      background: color(primary);
+      color: color(primary, contrast);
+      padding: spacer(3);
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#kss-map-colors{
+  .kss-color-item{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #CCCCCC;
+    background-color: #f5f5f5;
+
+    @media (min-width: 1025px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kss-color-item-child{
+      padding: 4px;
+      padding-top: 80px;
+      border: 1px solid #CCCCCC;
+
+      &:first-child{
+        grid-column: span 2;
+
+        @media (min-width: 1025px) {
+          grid-column: auto;
+          grid-row: span 2;
+        }
+      }
+
+      .kss-color-item-legend{
+        padding: 0.5rem 1rem;
+        background-color: #ffffff;
+        height: 100%;
+
+        p:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        p:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

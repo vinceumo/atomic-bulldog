@@ -1,0 +1,40 @@
+// ------------------------------
+// Import fonts
+// ------------------------------
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// ------------------------------
+// Sass Variables
+// ------------------------------
+$font-family-prefix: --font-family-;
+$font-families: (
+  paragraph: ("Open Sans", "Helvetica Neue", Arial, sans-serif),
+  title: ("Open Sans", "Helvetica Neue", Arial, sans-serif),
+  highlight: ("Open Sans", "Helvetica Neue", Arial, sans-serif),
+);
+
+// ------------------------------
+// Set function
+// ------------------------------
+@function font-family($font-family, $true-val:false) {
+  @if $use-css-var == true {
+    @if $true-val == true {
+      @return map-get($font-families, $font-family); //True Val
+    } @else {
+      @return var(#{$font-family-prefix}#{$font-family}); //CSS Var
+    }
+  } @else {
+    @return map-get($font-families, $font-family); //Disabled CSS Var
+  }
+}
+
+// ------------------------------
+// Set root variables
+// ------------------------------
+@if $use-css-var == true {
+  #{$root-default} {
+    @each $name, $font-family in $font-families {
+      #{$font-family-prefix}#{$name}: $font-family; //Not using em as not being use in media queries
+    }
+  }
+}

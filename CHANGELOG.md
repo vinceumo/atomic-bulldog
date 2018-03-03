@@ -2,6 +2,18 @@
 
 http://keepachangelog.com/en/1.0.0/
 
+## [1.0.1] - 2018-03-03
+
+### Added
+
+* Added starter index.html
+* Placeholder favicons
+* Manifest.json
+* Atomic Bulldog kss theme
+
+### Changed
+* File structure and names
+
 ## [1.0.0] - 2018-02-21
 
 Initial release of Atomic Bulldog

@@ -92,7 +92,7 @@ Example:
 
 A pattern library is a library of individual styles, components, and guidelines used for creating unified UI.
 
-Atomic Bulldog uses Node KSS to generate its styleguide. It uses [michelangelo theme](https://github.com/stamkracht/michelangelo) by default.
+Atomic Bulldog uses Node KSS to generate its styleguide.
 
 > Inspired by TomDoc, KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format. It is not a preprocessor, CSS framework, naming convention, or specificity guideline.
 
@@ -147,6 +147,7 @@ The basic format for KSS documentation can be best explained in an example:
 
 * [Build a Style Guide Straight from Sass](https://css-tricks.com/build-style-guide-straight-sass/)
 * [kss-node](https://github.com/kss-node/kss-node)
+* [Knyle Style Sheets Documentation](https://github.com/kss-node/kss/blob/spec/SPEC.md)
 * [Knyle Style Sheets](https://github.com/kneath/kss)
 * [Great style guide examples](http://styleguides.io/)
 
@@ -298,61 +299,20 @@ $variables : (
 
 * [ ] Atoms modifiers display flex grid + other classes to position
 * [ ] Update documentation
-* [ ] Create a theme for kss
-* [ ] Dark theme
-* [ ] Contrast Theme
+* [ ] TODO list before going live
+* [ ] Fork create themes using AB
+* [ ] Create a gh-page for this project
 
 ## Changelog
 
 This section only show the last changelog
 To see all changelog ==> https://github.com/vinceumo/atomic-bulldog/blob/master/CHANGELOG.md
 
-## [1.0.0] - 2018-02-21
-
-Initial release of Atomic Bulldog
+## [1.0.1] - 2018-03-03
 
 ### Added
 
-* Node KSS
-* Sass boilerplate
-  * Atoms
-    * Form elements
-    * Modifiers
-    * Typography
-    * Images
-    * Buttons
-    * Focus
-  * Functions
-    * em
-    * map-deep-get
-  * Layout
-    * Container sizes
-    * Grid
-    * Fallback grid
-  * mixins
-    * media-queries
-  * molecules
-    * form
-    * navigation
-    * skip-navigation
-  * Organisms
-    * Form
-    * navigation bar
-  * Theme
-    * Inverted
-  * Variables
-    * Aspect ratio
-    * Breakpoints
-    * Colors
-    * Container sizes
-    * Font families
-    * Font sizes
-    * Grid
-    * Root classes
-    * Spacers
-    * Z-index
-  * Vendors
-    * A11y
-    * icomoon
-    * family.scss
-    * bootstrap-reboot
+* Added starter index.html
+* Placeholder favicons
+* Manifest.json
+* Atomic Bulldog kss theme

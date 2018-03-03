@@ -21,8 +21,8 @@
   "scripts": {
     "startBrowserSync":
       "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
-    "kssWatch": "onchange \"dist/scss/**/*.scss\" -- npm run kss",
-    "kss": "kss --config dist/scss/kss-config.json",
+    "kssWatch": "onchange \"content/scss/**/*.scss\" -- npm run kss",
+    "kss": "kss --config content/scss/kss-config.json",
     "gulp": "gulp",
     "startAtomicBulldog": "start npm run kssWatch && start npm run gulp watch-scss && npm run startBrowserSync"
   }

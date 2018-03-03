@@ -1,0 +1,29 @@
+@for $i from 1 through 6 {
+  .kss-h#{$i} {
+    color: color-gray(100);
+    font-family: font-family(title);
+    font-size: font-size($i);
+    margin-bottom: spacer(1);
+  }
+}
+
+.kss-h1,
+.kss-h2 {
+  margin-top: spacer(8);
+}
+
+.kss-h3,
+.kss-h4 {
+  margin-top: spacer(6);
+}
+
+.kss-h5,
+.kss-h6 {
+  margin-top: spacer(4);
+}
+
+.kss-h1 {
+  .kss-section__ref {
+    color: color(primary);
+  }
+}
