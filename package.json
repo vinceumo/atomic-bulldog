@@ -19,8 +19,7 @@
     "browser-sync": "^2.18.13"
   },
   "scripts": {
-    "startBrowserSync":
-      "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+    "startBrowserSync": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
     "kssWatch": "onchange \"content/scss/**/*.scss\" -- npm run kss",
     "kss": "kss --config content/scss/kss-config.json",
     "gulp": "gulp",
