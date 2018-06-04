@@ -7,8 +7,8 @@ var gutil = require('gulp-util');
 var rename = require('gulp-rename');
 var purgeSourcemaps = require('gulp-purge-sourcemaps');
 
-var inputScss = "./content/kss_theme/scss/**/*.scss"; /*watches sub folders inside sass folder */
-var output = "./content/kss_theme/kss-assets/css";
+var inputScss = "./content/scss/**/*.scss"; /*watches sub folders inside sass folder */ 
+var output = "./dist/css"; 
 
 var sassOptions = {
   errLogToConsole: true,
