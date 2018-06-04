@@ -7,7 +7,8 @@
 
     @each $bp, $container-size in $container-sizes {
       @include min(#{bp(#{$bp})}) {
-        width: container(#{$bp});
+        width: 100%;
+        max-width: container(#{$bp});
       }
     }
   }

@@ -1,3 +1,31 @@
+$section-spacer: spacer(6);
+
+.has-section-spacer {
+    margin-top: $section-spacer;
+    margin-bottom: $section-spacer;
+
+    &.is-padding {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: $section-spacer;
+        padding-bottom: $section-spacer;
+    }
+
+    & > * {
+        @include first(1) {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        @include last(1) {
+            &:not(.btn) {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
 @each $key, $spacer in $spacers {
   .has-py-#{$key},
   .has-pt-#{$key},
@@ -120,3 +148,17 @@
 // </div>
 //
 // Styleguide Atoms.Modifiers.Spacing
+
+// Section Spacer
+//
+// `.has-section-spacer` allow us to get consistent spacing around each sections. It will remove any top spacing of the first children and any bottom spacing of the last one. By default it use margins but you can use padding as so `.has-section-spacer.is-padding `
+//
+// markup:
+// <div class="has-bg-decorative-2 has-section-spacer">
+//  <h1>Heading 1</h1>
+//  <p>
+//      Age, inquies, ista parva sunt. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Non potes, nisi retexueris illa. De hominibus dici non necesse est. Nam quid possumus facere melius? Erit enim mecum, si tecum erit.
+//   </p>
+// </div>
+//
+// Styleguide Atoms.Modifiers.Spacing.section

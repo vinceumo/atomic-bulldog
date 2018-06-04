@@ -297,8 +297,6 @@ $variables : (
 
 ### :pencil2: TODO
 
-* [ ] Atoms modifiers display flex grid + other classes to position
-* [ ] Update documentation
 * [ ] TODO list before going live
 * [ ] Fork create themes using AB
 * [ ] Create a gh-page for this project
@@ -308,11 +306,27 @@ $variables : (
 This section only show the last changelog
 To see all changelog ==> https://github.com/vinceumo/atomic-bulldog/blob/master/CHANGELOG.md
 
-## [1.0.1] - 2018-03-03
+## [1.1.0] - 2018-04-06
 
 ### Added
 
-* Added starter index.html
-* Placeholder favicons
-* Manifest.json
-* Atomic Bulldog kss theme
+* Responsive images examples
+* Background cover classes
+* Overlay atom
+* Screen reader atom
+* Global box shadow style
+* Display utilities
+* FLex utilities
+* Section spacer atom
+* Font families modifiers
+
+### Changed
+
+* KSS builder to atomic-bulldog-kss-theme 1.0.1
+* Inputs style
+* Global focus
+* Container sizing
+
+### Fixed
+
+* Buttons vertical alignment 

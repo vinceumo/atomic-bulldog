@@ -1,0 +1,19 @@
+﻿@each $font, $theme in $font-families {
+    .has-font-family-#{$font} {
+        font-family: font-family($font) !important;
+    }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Font families
+//
+// markup:
+// <h3 class="has-font-family-paragraph">Lorem ipsum font-family paragraph</h3>
+// <p class="has-font-family-title">Lorem ipsum font-family title</p>
+// <p class="has-font-family-highlight">Lorem ipsum font-family highlight</p> 
+//
+//
+// Styleguide Atoms.Modifiers.font-families

@@ -1,7 +1,17 @@
-*:focus {
-  outline-color: color(primary);
-  border-color: color(primary);
-  box-shadow:0 0 5px color(primary);
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+iframe,
+object,
+embed,
+[contenteditable],
+[tabindex]:not([tabindex^="-"]) {
+    &:focus {
+        @include focus-style;
+    }
 }
 
 // ------------------------------
@@ -10,7 +20,7 @@
 
 // Focus - global style
 //
-// Focus on this elements
+// Focus on this elements focus style is set in a mixin so it can be reuse around the project (see sass mixin/focus style)
 //
 // Markup:
 // <a href="#">Test Focus</a>

@@ -1,0 +1,17 @@
+﻿@mixin focus-style {
+    outline-color: color(primary);
+    border-color: color(primary);
+    box-shadow: 0 0 5px color(primary);
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// focus-style
+//
+// `@include focus-style`
+//
+// Global style for the focus state.
+//
+// Styleguide Mixins.focustyle

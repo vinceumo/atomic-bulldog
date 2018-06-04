@@ -1,0 +1,51 @@
+﻿.overlay {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize(#000, 0.7);
+        z-index: 0;
+    }
+    .overlay-content {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Overlay
+//
+// `.overlay` add a black tint transparent color to the background image, it needs a `.overlay-content` children
+//
+// markup:
+// <section class="picturefill-background bg-cover">
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
+//     <div class="overlay-content has-text-center">
+//         <h1>Overlay</h1>
+//     </div>
+// </section>
+// <!--No overlay-->
+// <section class="picturefill-background bg-cover">
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
+//     <div class="has-text-center">
+//         <h1>No Overlay</h1>
+//     </div>
+// </section>
+//
+// Styleguide Atoms.overlay

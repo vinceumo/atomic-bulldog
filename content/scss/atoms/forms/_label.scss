@@ -1,20 +1,20 @@
-label{
-  font-weight: bold;
-  margin-bottom: 0;
-  cursor: pointer;
-  font-size: calc(#{font-size(6)} + 0.05rem);
-
-  &.input-label{
+label {
     font-size: font-size(paragraph);
-    font-weight: normal;
-    display: inline-flex;
-    align-items: center;
+    font-weight: lighter;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: block;
 
-    input[type="radio"],
-    input[type="checkbox"]{
-      margin-right: spacer(1);
-  }
-  }
+    &.input-label {
+        font-size: font-size(paragraph);
+        font-weight: lighter;
+        display: inline-flex;
+        align-items: flex-start; //Because of the font use otherwise center
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: spacer(1);
+        }
+    }
 }
 
 // ------------------------------
