@@ -21,6 +21,7 @@
     
     <div class="kss-sidebar">
       <div class="kss-brand">
+        {{!-- <img src="kss-assets/img/logo.png"> --}}
         <p>{{options.title}}</p>
       </div>
       <div class="kss-search">
@@ -109,6 +110,10 @@
                   <span>{{source.filename}}</span>, line
                   <span>{{source.line}}</span>
                 </p>
+                <div>
+                  <button class="kss-btn kss-toggle-fullscreen">Toggle full screen</button>
+                  <a class="kss-btn kss-toggle-fullscreen" href="item-{{referenceURI}}.html" target="_blank">Open in new window</a>
+                </div>
                 {{/if}} {{#if description}}
                 <div class="kss-section__description">{{{description}}}</div>
                 {{/if}} {{#if parameters}}

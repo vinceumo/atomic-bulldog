@@ -1,37 +1,54 @@
 .kss-page-container {
-  @supports (display: grid) {
-    @include min(bp(lg)) {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      grid-template-areas:
-        "sidebar main"
-        "sidebar footer";
-      grid-gap: spacer(4);
-
-      .kss-sidebar {
-        grid-area: sidebar;
-      }
-
-      .kss-main {
-        grid-area: main;
-      }
-
-      .kss-footer {
-        grid-area: footer;
-        align-self: end;
+  &:not(.kss-is-full-width){
+    @supports (display: grid) {
+      @include min(bp(lg)) {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-areas:
+          "sidebar main"
+          "sidebar footer";
+        grid-gap: spacer(4);
+  
+        .kss-sidebar {
+          grid-area: sidebar;
+        }
+  
+        .kss-main {
+          grid-area: main;
+        }
+  
+        .kss-footer {
+          grid-area: footer;
+          align-self: end;
+        }
       }
     }
-  }
-
-  @supports not (display: grid) {
-    @supports (display: flex) {
+  
+    @supports not (display: grid) {
+      @supports (display: flex) {
+        @include min(bp(lg)) {
+          display: flex;
+  
+          .kss-sidebar {
+            width: 320px;
+          }
+  
+          .kss-main {
+            flex: 1;
+          }
+        }
+      }
+    }
+  
+    @media screen and (-ms-high-contrast: active),
+      screen and (-ms-high-contrast: none) {
       @include min(bp(lg)) {
         display: flex;
-
+  
         .kss-sidebar {
           width: 320px;
         }
-
+  
         .kss-main {
           flex: 1;
         }
@@ -39,17 +56,44 @@
     }
   }
 
-  @media screen and (-ms-high-contrast: active),
-    screen and (-ms-high-contrast: none) {
-    @include min(bp(lg)) {
-      display: flex;
+  &.kss-is-full-width {
+    @supports (display: grid) {
+      @include min(bp(lg)) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "sidebar"
+          "footer";  
+        .kss-sidebar {
+          grid-area: sidebar;
+          height: auto;
 
-      .kss-sidebar {
-        width: 320px;
+        }
+  
+        .kss-main {
+          grid-area: main;
+        }
+  
+        .kss-footer {
+          grid-area: footer;
+          align-self: end;
+        }
       }
+    }
 
-      .kss-main {
-        flex: 1;
+    .kss-container {
+      width: 100vw;
+      padding: 0;
+
+      .kss-section__example-container{
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+
+        .kss-section__examples{
+          padding: 0;
+        }
       }
     }
   }

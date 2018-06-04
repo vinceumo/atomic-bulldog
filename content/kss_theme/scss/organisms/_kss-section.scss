@@ -11,6 +11,9 @@
 }
 
 .kss-section__description {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
   p {
     color: color-gray(100);
     font-family: font-family(paragraph);
@@ -58,6 +61,17 @@
   code[class*="language-"],
   pre[class*="language-"] {
     background-color: color-gray(30);
+
+    ::-moz-selection {
+      background-color: color(primary);
+      color: color-gray(100);
+    }
+
+    /* Works in Safari */
+    ::selection {
+          background-color: color(primary);
+          color: color-gray(100);
+    }
   }
 
   .kss-section__examples {

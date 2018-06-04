@@ -1,0 +1,165 @@
+.media-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  &.is-top-left {
+      object-position: 0 0;
+  }
+
+  &.is-top-center {
+      object-position: 50% 0;
+  }
+
+  &.is-top-right {
+      object-position: 100% 0;
+  }
+
+  &.is-center-left {
+      object-position: 0 50%;
+  }
+
+  &.is-center-right {
+      object-position: 100% 50%;
+  }
+
+  &.is-bottom-left {
+      object-position: 0 100%;
+  }
+
+  &.is-bottom-center {
+      object-position: 50% 100%;
+  }
+
+  &.is-bottom-right {
+      object-position: 100% 100%;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+
+  &.is-focus-right-top {
+      background-position: right top;
+  }
+
+  &.is-focus-right-center {
+      background-position: right center;
+  }
+
+  &.is-focus-right-bottom {
+      background-position: right bottom;
+  }
+
+  &.is-focus-center-top {
+      background-position: center top;
+  }
+
+  &.is-focus-center-center {
+      background-position: center center;
+  }
+
+  &.is-focus-center-bottom {
+      background-position: center bottom;
+  }
+
+  &.is-focus-left-top {
+      background-position: left top;
+  }
+
+  &.is-focus-left-center {
+      background-position: left center;
+  }
+
+  &.is-focus-left-bottom {
+      background-position: left bottom;
+  }
+}
+
+// ------------------------------
+// KSS Documentation
+// ------------------------------
+
+// Media cover
+//
+// `.media-cover`
+//
+// Default position is center center
+//
+// Markup:
+// <div style="max-width: 500px"> <!-- Just for kss -->
+//  <div class="aspect-ratio-container is-silver">
+//    <div class="aspect-ratio-content">
+//      <img class="media-cover {{modifier_class}}"
+//      srcset="https://source.unsplash.com/random?preset=contain-xs 320w,
+//      https://source.unsplash.com/random?preset=contain-sm 570w,
+//      https://source.unsplash.com/random?preset=contain-md 860w,
+//      https://source.unsplash.com/random?preset=contain-lg 1150w,
+//      https://source.unsplash.com/random?preset=contain-xl 1400w"
+//      src="https://source.unsplash.com/random?preset=contain-xl"
+//      alt="Alternative text">
+//    </div>
+//  </div>
+// </div>
+//
+// .is-top-left - Top left
+// .is-top-center - Top center
+// .is-top-right - Top right
+// .is-center-left - Center left
+// .is-center-right - Center Right
+// .is-bottom-left - Bottom left
+// .is-bottom-center - Bottom center
+// .is-bottom-right -  Bottom right
+//
+// Styleguide Atoms.cover-media
+
+// Media cover responsive embedded video
+//
+// Can be used with videos as well
+//
+// Markup:
+// <div style="max-width: 500px"> <!-- Just for kss -->
+//  <div class="aspect-ratio-container is-silver">
+//    <div class="aspect-ratio-content">
+//      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aILlVYUSwPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+//    </div>
+//  </div>
+// </div>
+// <div style="max-width: 500px; margin-top: 1rem"> <!-- Just for kss -->
+//  <div class="aspect-ratio-container is-1x1">
+//    <div class="aspect-ratio-content">
+//      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aILlVYUSwPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+//    </div>
+//  </div>
+// </div>
+//
+// Styleguide Atoms.cover-media.video
+
+// Background cover
+//
+// `.bg-cover`
+//
+// Default position is center center
+//
+// Markup:
+// <div class="picturefill-background bg-cover {{modifier_class}}" style="height: 300px">
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
+//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
+// </div>
+//
+// .is-focus-right-top - right-top
+// .is-focus-right-center - right-center
+// .is-focus-right-bottom - right-bottom
+// .is-focus-center-top - center-top
+// .is-focus-center-center - center-center
+// .is-focus-center-bottom - center-bottom
+// .is-focus-left-top - left-top
+// .is-focus-left-center -  left-center
+// .is-focus-left-bottom -  left-bottom
+//
+// Styleguide Atoms.cover-bg

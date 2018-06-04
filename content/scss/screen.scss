@@ -9,9 +9,11 @@
 
 //mixins
 @import "mixins/media-queries";
+@import "mixins/focus-style";
 
 //variables
 @import "variables/aspect-ratios";
+@import "variables/box-shadow";
 @import "variables/root-classes";
 @import "variables/breakpoints";
 @import "variables/colors";
@@ -44,7 +46,11 @@
 @import "atoms/burger";
 @import "atoms/focus";
 @import "atoms/img-fluid";
-@import "atoms/media-cover";
+@import "atoms/media-and-bg-cover";
+@import "atoms/overlay";
+
+    //A11y
+    @import "atoms/a11y/screen-reader";
 
     //Forms
     @import "atoms/forms/form-text";
@@ -60,10 +66,13 @@
 
     //modifiers
     @import "atoms/modifiers/bg-color";
-    @import "atoms/modifiers/no-scroll";
+    @import "atoms/modifiers/box-shadow";
+    @import "atoms/modifiers/display";
+    @import "atoms/modifiers/flex";
     @import "atoms/modifiers/rounded";
     @import "atoms/modifiers/spacing";
     @import "atoms/modifiers/text-color";
+    @import "atoms/modifiers/text-font-family";
     @import "atoms/modifiers/text-position";
     @import "atoms/modifiers/text-transform";
 

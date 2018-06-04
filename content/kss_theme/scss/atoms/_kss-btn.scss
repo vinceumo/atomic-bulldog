@@ -1,0 +1,13 @@
+.kss-btn {
+    border: 1px solid color-gray(60);
+    color: color-gray(60);
+    background-color: transparent;
+    padding: 0.2rem 0.5rem;
+    line-height: 1;
+    display: inline-block;
+
+    &:hover{
+        color: color-gray(70);
+        text-decoration: underline;
+    }
+}

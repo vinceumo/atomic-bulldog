@@ -24,6 +24,10 @@ $(document).ready(function() {
     $(".kss-sidebar").toggleClass("is-active");
     $("body").toggleClass("kss-is-no-scroll");
   });
+
+  $(".kss-section").on("click", ".kss-toggle-fullscreen", function() {
+    $('.kss-page-container').toggleClass("kss-is-full-width");
+  });
 });
 
 function kssSearch() {

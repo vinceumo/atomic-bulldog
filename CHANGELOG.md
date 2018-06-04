@@ -2,6 +2,32 @@
 
 http://keepachangelog.com/en/1.0.0/
 
+## [1.1.0] - 2018-04-06
+
+### Added
+
+* Responsive images examples
+* Background cover classes
+* Overlay atom
+* Screen reader atom
+* Global box shadow style
+* Display utilities
+* FLex utilities
+* Section spacer atom
+* Font families modifiers
+
+### Changed
+
+* KSS builder to atomic-bulldog-kss-theme 1.0.1
+* Inputs style
+* Global focus
+* Container sizing
+
+### Fixed
+
+* Buttons vertical alignment 
+
+
 ## [1.0.1] - 2018-03-03
 
 ### Added
@@ -12,6 +38,7 @@ http://keepachangelog.com/en/1.0.0/
 * Atomic Bulldog kss theme
 
 ### Changed
+
 * File structure and names
 
 ## [1.0.0] - 2018-02-21
