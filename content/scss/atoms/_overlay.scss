@@ -26,24 +26,14 @@
 // `.overlay` add a black tint transparent color to the background image, it needs a `.overlay-content` children
 //
 // markup:
-// <section class="picturefill-background bg-cover">
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
+// <section class="bg-cover overlay" style="background-image: url(https://source.unsplash.com/random)">
 //     <div class="overlay-content has-text-center">
 //         <h1>Overlay</h1>
 //     </div>
 // </section>
 // <!--No overlay-->
-// <section class="picturefill-background bg-cover">
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
-//     <div class="has-text-center">
+// <section class="bg-cover" style="background-image: url(https://source.unsplash.com/random)">
+//     <div class="overlay-content has-text-center">
 //         <h1>No Overlay</h1>
 //     </div>
 // </section>
