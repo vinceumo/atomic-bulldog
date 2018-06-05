@@ -144,12 +144,7 @@
 // Default position is center center
 //
 // Markup:
-// <div class="picturefill-background bg-cover {{modifier_class}}" style="height: 300px">
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xs"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-sm" data-media="(min-width: 320px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-md" data-media="(min-width: 600px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-lg" data-media="(min-width: 900px)"></span>
-//     <span data-src="https://source.unsplash.com/random?preset=fullwidth-xl" data-media="(min-width: 1200px)"></span>
+// <div class="bg-cover {{modifier_class}}" style="background: url(https://source.unsplash.com); height: 300px">
 // </div>
 //
 // .is-focus-right-top - right-top
