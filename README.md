@@ -10,20 +10,28 @@ Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It
 
 ## Table of content
 
-* [Setup Atomic Bulldog](#floppy_disk-setup-atomic-bulldog)
-* [Atomic Design](#boom-atomic-design)
-  * [Atomic Design resources](#blue_book-atomic-design-resources)
-* [Pattern styleguide (Node KSS)](#books-pattern-styleguide-node-kss)
-  * [KSS Config](#wrench-kss-config)  
-  * [KSS documentation format](#page_facing_up-kss-documentation-format)
-  * [KSS resources](#blue_book-kss-resources)
-* [Naming convention](#triangular_ruler-naming-convention)
-* [Project Structure](#tokyo_tower-project-structure)
-* [CSS custom properties (CSS variables) and Sass variables](#books-css-custom-properties-css-variables-and-sass-variables)
-  * [CSS variables](#css-variables)
-  * [SCSS variables](#scss-variables)
-* [Recommended vendors](#blue_book-recommended-vendors)
-* [Changelog](#changelog)
+- [Atomic Bulldog :collision: :dog:](#atomic-bulldog-collision-dog)
+  - [Table of content](#table-of-content)
+  - [:floppy_disk: Setup Atomic Bulldog](#floppydisk-setup-atomic-bulldog)
+  - [:boom: Atomic Design](#boom-atomic-design)
+    - [:blue_book: Atomic Design resources](#bluebook-atomic-design-resources)
+  - [:books: Pattern styleguide (Node KSS)](#books-pattern-styleguide-node-kss)
+    - [:wrench: KSS Config](#wrench-kss-config)
+    - [:page_facing_up: KSS documentation format](#pagefacingup-kss-documentation-format)
+    - [:blue_book: KSS resources](#bluebook-kss-resources)
+  - [:triangular_ruler: Naming convention](#triangularruler-naming-convention)
+  - [:tokyo_tower: Project Structure](#tokyotower-project-structure)
+    - [:house: Sass project structure:](#house-sass-project-structure)
+  - [:books: CSS custom properties (CSS variables) and Sass variables](#books-css-custom-properties-css-variables-and-sass-variables)
+    - [CSS variables](#css-variables)
+    - [SCSS variables](#scss-variables)
+  - [:blue_book: Recommended vendors](#bluebook-recommended-vendors)
+    - [:pencil2: TODO](#pencil2-todo)
+  - [Changelog](#changelog)
+  - [[1.1.0] - 2018-04-06](#110---2018-04-06)
+    - [Added](#added)
+    - [Changed](#changed)
+    - [Fixed](#fixed)
 
 ## :floppy_disk: Setup Atomic Bulldog
 
@@ -46,7 +54,7 @@ This command can be change in package.json
 If you only wants to run KSS once:
 
 ```
-npm run kss
+npm run kssBuild
 ```
 
 If you only wants to run KSS on watch:

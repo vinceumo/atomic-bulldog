@@ -19,7 +19,7 @@ h6,
   h#{$i},
   .is-h#{$i},
   .has-font-size-#{$i}{
-    font-size: font-size(#{$i});
+    font-size: font-size($i);
   }
 }
 
