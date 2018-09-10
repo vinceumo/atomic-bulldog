@@ -683,28 +683,24 @@
             <p align="center"> 
   <img src="https://image.ibb.co/mmS6Hc/Artboard_1.png" alt="Atomic Bulldog Logo">
 </p>
-
 <p><em>Version 1.0.0</em></p>
 <blockquote>
 <p>This pattern library is here to help to create and maintain a unified UI.</p>
 </blockquote>
-<h2 id="table-of-content">Table of content</h2>
+<h2>Table of content</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#setup-atomic-bulldog">Setup Atomic Bulldog</a></li>
-<li><a href="#atomic-design">Atomic Design</a><ul>
+<li><a href="#atomic-design">Atomic Design</a></li>
 <li><a href="#atomic-design-resources">Atomic Design resources</a></li>
-</ul>
-</li>
-<li><a href="#pattern-styleguide-node-kss-">Pattern styleguide (Node KSS)</a><ul>
-<li><a href="#kss-config">KSS Config</a>  </li>
+<li><a href="#pattern-styleguide-node-kss-">Pattern styleguide (Node KSS)</a></li>
+<li><a href="#kss-config">KSS Config</a></li>
 <li><a href="#kss-documentation-format">KSS documentation format</a></li>
 <li><a href="#kss-resources">KSS resources</a></li>
-</ul>
-</li>
 <li><a href="#naming-convention">Naming convention</a></li>
 <li><a href="#project-structure">Project Structure</a></li>
-<li><a href="#css-custom-properties-css-variables-and-sass-variables">CSS custom properties (CSS variables) and Sass variables</a><ul>
+<li><a href="#css-custom-properties-css-variables-and-sass-variables">CSS custom properties (CSS variables) and Sass variables</a>
+<ul>
 <li><a href="#css-variables">CSS variables</a></li>
 <li><a href="#scss-variables">SCSS variables</a></li>
 </ul>
@@ -712,27 +708,31 @@
 <li><a href="#recommended-vendors">Recommended vendors</a></li>
 <li><a href="#resources">Resources</a></li>
 </ul>
-<h2 id="introduction">Introduction</h2>
+<h2>Introduction</h2>
 <p>This project is base on <a href="https://github.com/vinceumo/atomic-bulldog">Atomic Bulldog boilerplate</a>.</p>
 <blockquote>
 <p>Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.</p>
 </blockquote>
-<h2 id="setup-atomic-bulldog">Setup Atomic Bulldog</h2>
+<h2>Setup Atomic Bulldog</h2>
 <p>Once this project clone you can run:</p>
-<pre><code>npm install
-</code></pre><p>Sass is compile using Gulp. You are free to use another task runner or compiler</p>
+<pre class="hljs"><code class="language-">npm install
+</code></pre>
+<p>Sass is compile using Gulp. You are free to use another task runner or compiler</p>
 <p>To compile your Sass, generate the live documentation and run BrowserSync on change run:</p>
-<pre><code>npm run startAtomicBulldog
-</code></pre><p>This command can be change in package.json</p>
+<pre class="hljs"><code class="language-">npm run startAtomicBulldog
+</code></pre>
+<p>This command can be change in package.json</p>
 <p>If you only wants to run KSS once:</p>
-<pre><code>npm run kss
-</code></pre><p>If you only wants to run KSS on watch:</p>
-<pre><code>npm run kssWatch
-</code></pre><h2 id="atomic-design">Atomic Design</h2>
+<pre class="hljs"><code class="language-">npm run kss
+</code></pre>
+<p>If you only wants to run KSS on watch:</p>
+<pre class="hljs"><code class="language-">npm run kssWatch
+</code></pre>
+<h2>Atomic Design</h2>
 <p>Atomic design is a methodology for helping to design and develop a <code>pattern system</code>.</p>
 <p>This methodology has been defined by <a href="http://bradfrost.com/">Brad Frost</a> as so:</p>
 <blockquote>
-<p>Atomic Design details all that goes into creating and maintaining robust design systems, allowing you to roll out higher quality, more consistent UIs faster than ever before. This book introduces a methodology for thinking of our UIs as thoughtful hierarchies, discusses the qualities of effective pattern libraries, and showcases techniques to transform your team&#39;s design and development workflow.</p>
+<p>Atomic Design details all that goes into creating and maintaining robust design systems, allowing you to roll out higher quality, more consistent UIs faster than ever before. This book introduces a methodology for thinking of our UIs as thoughtful hierarchies, discusses the qualities of effective pattern libraries, and showcases techniques to transform your team's design and development workflow.</p>
 </blockquote>
 <p>Example:</p>
 <p><img src="http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png" alt="atomic design exemple"></p>
@@ -751,72 +751,72 @@
 <blockquote>
 <p><code>Pages</code> apply real content to templates and articulate variations to demonstrate the final UI and test the resilience of the design system.</p>
 </blockquote>
-<h3 id="atomic-design-resources">Atomic Design resources</h3>
+<h3>Atomic Design resources</h3>
 <ul>
-<li>Brad Frost has written some great resources on the Atomic design methodology:<ul>
+<li>Brad Frost has written some great resources on the Atomic design methodology:
+<ul>
 <li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic design article</a></li>
 <li><a href="http://atomicdesign.bradfrost.com/">Atomic design book</a></li>
 <li><a href="https://www.youtube.com/watch?v=wcAl0VXYBGE">Atomic Design: Create Design Systems, Not Pages</a></li>
 </ul>
 </li>
-<li>Other resources:<ul>
+<li>Other resources:
+<ul>
 <li><a href="https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771">10 reasons you should be using Atomic Design</a></li>
 <li><a href="https://uxdesign.cc/atomic-design-how-to-design-systems-of-components-ab41f24f260e">Atomic design: how to design systems of components</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="pattern-styleguide-node-kss-">Pattern styleguide (Node KSS)</h2>
+<h2>Pattern styleguide (Node KSS)</h2>
 <p>A pattern library is a library of individual styles, components, and guidelines used for creating unified UI.</p>
 <p>Atomic Bulldog uses Node KSS to generate its styleguide.</p>
 <blockquote>
 <p>Inspired by TomDoc, KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format. It is not a preprocessor, CSS framework, naming convention, or specificity guideline.</p>
 </blockquote>
 <blockquote>
-<p>This is a Node.js implementation of KSS, &quot;a documentation syntax for CSS&quot; that&#39;s intended to have syntax readable by humans and machines. Hence, the kss-node software can be used to create a &quot;living style guide&quot;.</p>
+<p>This is a Node.js implementation of KSS, &quot;a documentation syntax for CSS&quot; that's intended to have syntax readable by humans and machines. Hence, the kss-node software can be used to create a &quot;living style guide&quot;.</p>
 </blockquote>
-<h3 id="kss-config">KSS Config</h3>
+<h3>KSS Config</h3>
 <p>KSS settings can be changed in <code>kss-config.json</code>, you can add and remove CSS and js files. You can as well change where the KSS documentation will be output.</p>
-<h3 id="kss-documentation-format">KSS documentation format</h3>
+<h3>KSS documentation format</h3>
 <p>The basic format for KSS documentation can be best explained in an example:</p>
-<pre><code class="lang-scss">.btn{
-  //Style
+<pre class="hljs"><code class="language-scss"><span class="hljs-selector-class">.btn</span>{
+  <span class="hljs-comment">//Style</span>
 }
 
-// Buttons
-//
-// Description of the element
-//
-// Markup:
-// &lt;button class=&quot;btn {{modifier_class}}&quot;&gt;.btn .{{modifier_class}}&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-outlined&quot;&gt;.btn .{{modifier_class}} .is-outlined&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-hovered&quot;&gt;.btn .{{modifier_class}} .is-hover&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-focused&quot;&gt;.btn .{{modifier_class}} .is-focused&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-rounded&quot;&gt;.btn .{{modifier_class}} .is-rounded&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-loading&quot;&gt;.btn .{{modifier_class}} .is-loading&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}}&quot; disabled&gt;.btn .{{modifier_class}} disabled&lt;/button&gt;
-// &lt;button class=&quot;btn {{modifier_class}} is-theme-default&quot;&gt;.btn .{{modifier_class}} .is-theme-default&lt;/button&gt;
-//
-// .is-primary - Primary color
-// .is-secondary - Secondary color
-// .is-link - Link color
-// .is-success - Success color
-// .is-danger - Danger color
-// .is-warning - warning color
-// .is-light - light color
-// .is-dark - dark color
-//
-// Styleguide Atoms.button
+<span class="hljs-comment">// Buttons</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Description of the element</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Markup:</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}}"&gt;.btn .{{modifier_class}}&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-outlined"&gt;.btn .{{modifier_class}} .is-outlined&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-hovered"&gt;.btn .{{modifier_class}} .is-hover&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-focused"&gt;.btn .{{modifier_class}} .is-focused&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-rounded"&gt;.btn .{{modifier_class}} .is-rounded&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-loading"&gt;.btn .{{modifier_class}} .is-loading&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}}" disabled&gt;.btn .{{modifier_class}} disabled&lt;/button&gt;</span>
+<span class="hljs-comment">// &lt;button class="btn {{modifier_class}} is-theme-default"&gt;.btn .{{modifier_class}} .is-theme-default&lt;/button&gt;</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// .is-primary - Primary color</span>
+<span class="hljs-comment">// .is-secondary - Secondary color</span>
+<span class="hljs-comment">// .is-link - Link color</span>
+<span class="hljs-comment">// .is-success - Success color</span>
+<span class="hljs-comment">// .is-danger - Danger color</span>
+<span class="hljs-comment">// .is-warning - warning color</span>
+<span class="hljs-comment">// .is-light - light color</span>
+<span class="hljs-comment">// .is-dark - dark color</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Styleguide Atoms.button</span>
 </code></pre>
 <ul>
 <li>The first line will be the title of the section, in this example it is <code>button</code>.</li>
 <li>Then we have the description of the element, we can add markup as well (i.e to embed a video or caniuse table).</li>
-<li>We can show an example we a snippet by adding <code>markup:</code> following by the element&#39;s HTML.<ul>
+<li>We can show an example we a snippet by adding <code>markup:</code> following by the element's HTML.</li>
 <li><code>{{modifier_class}}</code> allow to show several example of the block with different classes here .is-primary, .is-secondary etc.</li>
-</ul>
-</li>
 <li>Finally the last line allows organize this section, In this example, it will be in Atoms/Button.</li>
 </ul>
-<h3 id="kss-resources">KSS resources</h3>
+<h3>KSS resources</h3>
 <ul>
 <li><a href="https://css-tricks.com/build-style-guide-straight-sass/">Build a Style Guide Straight from Sass</a></li>
 <li><a href="https://github.com/kss-node/kss-node">kss-node</a></li>
@@ -824,14 +824,14 @@
 <li><a href="https://github.com/kneath/kss">Knyle Style Sheets</a></li>
 <li><a href="http://styleguides.io/">Great style guide examples</a></li>
 </ul>
-<h2 id="naming-convention">Naming convention</h2>
-<p>Atomic Design does not come with a naming convention. The only convention is around <code>modifiers</code> classes they start by &#39;has-&#39;or &#39;is-&#39;, for example &#39;class=&quot;btn is-outlined is-primary&quot;&#39;</p>
-<h2 id="project-structure">Project Structure</h2>
+<h2>Naming convention</h2>
+<p>Atomic Design does not come with a naming convention. The only convention is around <code>modifiers</code> classes they start by 'has-'or 'is-', for example 'class=&quot;btn is-outlined is-primary&quot;'</p>
+<h2>Project Structure</h2>
 <p>The heart of Atomic is the pattern system. To manage and create these patterns we use the <code>variables</code>  folder all the patterns will be declared in there and an associated function is created to reuse this pattern. For examples, colors are set in this folder that can be used with the Sass function <code>color(your color)</code> (See Sass variables page).</p>
 <p>As we saw in a previous section, Atomic Bulldog is base on the atomic design methodology. Naturally <code>atom</code> elements will go in the atoms file, <code>molecules</code> in molecules file etc.</p>
 <p>The layout folder contains the grid system of the project.</p>
-<h3 id="sass-project-structure-">Sass project structure:</h3>
-<pre><code>Atomic Bulldog:
+<h3>Sass project structure:</h3>
+<pre class="hljs"><code class="language-">Atomic Bulldog:
 | \---scss
 |     +---atoms
 |     |   +---forms
@@ -850,9 +850,10 @@
 |     \---vendors
 |         +---a11y
 |         \---icomoon
-</code></pre><hr>
+</code></pre>
+<hr>
 <p>With description:</p>
-<pre><code>Atomic Bulldog:
+<pre class="hljs"><code class="language-">Atomic Bulldog:
 | \---scss
 |     +---atoms - UI elements that can’t be broken down any further and serve as the elemental building blocks of an interface.(brand, burger btn, img...)
 |     |   +---forms - (inputs, label, form description)
@@ -871,84 +872,85 @@
 |     \---vendors - External resources
 |         +---a11y
 |         \---icomoon
-</code></pre><h2 id="css-custom-properties-css-variables-and-sass-variables">CSS custom properties (CSS variables) and Sass variables</h2>
-<h3 id="css-variables">CSS variables</h3>
+</code></pre>
+<h2>CSS custom properties (CSS variables) and Sass variables</h2>
+<h3>CSS variables</h3>
 <p>By default, this project compiles almost all of its variables to CSS variables.</p>
 <p>A flag is set up in the project <code>$use-css-var</code> in <code>_atomic-bulldog-settings.scss</code>, that can be changed if you do not want to use CSS variables.</p>
-<h3 id="scss-variables">SCSS variables</h3>
+<h3>SCSS variables</h3>
 <p>This project uses mostly maps variables link to a function associated with this map.</p>
 <p>Sass Maps are used so it is easier to create a pattern and to follow it.</p>
 <p>Variables files follow this pattern:</p>
-<pre><code class="lang-scss">// ------------------------------
-// Sass Variables
-// ------------------------------
+<pre class="hljs"><code class="language-scss"><span class="hljs-comment">// ------------------------------</span>
+<span class="hljs-comment">// Sass Variables</span>
+<span class="hljs-comment">// ------------------------------</span>
 
-// CSS variables prefix
-$variable-prefix: --variable-;
+<span class="hljs-comment">// CSS variables prefix</span>
+<span class="hljs-variable">$variable-prefix</span>: --variable-;
 
-// Map declaration
-$variables : (
+<span class="hljs-comment">// Map declaration</span>
+<span class="hljs-variable">$variables</span> : (
   var1: value1,
   var2: value2,
   var3: value3
 );
 
-// ------------------------------
-// Set function
-// ------------------------------
+<span class="hljs-comment">// ------------------------------</span>
+<span class="hljs-comment">// Set function</span>
+<span class="hljs-comment">// ------------------------------</span>
 
-// We link the map and prefix to a function
+<span class="hljs-comment">// We link the map and prefix to a function</span>
 
-@function functionToCallVariables($variable, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($variables, $variable); // True Val
-    } @else {
-      @return var(#{$variable-prefix}#{$variable}); // CSS Var
+@function functionToCallVariables(<span class="hljs-variable">$variable</span>, <span class="hljs-variable">$true-val</span>:false) {
+  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$use-css-var</span> == true {
+    @<span class="hljs-keyword">if</span> <span class="hljs-variable">$true-val</span> == true {
+      @return map-get(<span class="hljs-variable">$variables</span>, <span class="hljs-variable">$variable</span>); <span class="hljs-comment">// True Val</span>
+    } @<span class="hljs-keyword">else</span> {
+      @return var(#{<span class="hljs-variable">$variable-prefix</span>}#{<span class="hljs-variable">$variable</span>}); <span class="hljs-comment">// CSS Var</span>
     }
-  } @else {
-    @return map-get($variables, $variable); // Disabled CSS Var
+  } @<span class="hljs-keyword">else</span> {
+    @return map-get(<span class="hljs-variable">$variables</span>, <span class="hljs-variable">$variable</span>); <span class="hljs-comment">// Disabled CSS Var</span>
   }
 }
 
-// We call our map in the project using this function
-//
-// Example:
-// functionToCallVariables(var1) =&gt; --variable-var1
-// functionToCallVariables(var1, true) =&gt; value1
-// functionToCallVariables(var1) and $use-css-var: false =&gt; value1
+<span class="hljs-comment">// We call our map in the project using this function</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Example:</span>
+<span class="hljs-comment">// functionToCallVariables(var1) =&gt; --variable-var1</span>
+<span class="hljs-comment">// functionToCallVariables(var1, true) =&gt; value1</span>
+<span class="hljs-comment">// functionToCallVariables(var1) and $use-css-var: false =&gt; value1</span>
 
-// ------------------------------
-// Set root variables
-// ------------------------------
+<span class="hljs-comment">// ------------------------------</span>
+<span class="hljs-comment">// Set root variables</span>
+<span class="hljs-comment">// ------------------------------</span>
 
-@if $use-css-var == true {
-  #{$root-default} {
-    @each $name, $variable in $variables {
-      #{$variable-prefix}#{$name}: $variable;
+@<span class="hljs-keyword">if</span> <span class="hljs-variable">$use-css-var</span> == true {
+  #{<span class="hljs-variable">$root-default</span>} {
+    @<span class="hljs-keyword">each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$variable</span> in <span class="hljs-variable">$variables</span> {
+      #{<span class="hljs-variable">$variable-prefix</span>}#{<span class="hljs-variable">$name</span>}: <span class="hljs-variable">$variable</span>;
     }
   }
 }
 
-// ------------------------------
-// KSS Documentation
-// ------------------------------
+<span class="hljs-comment">// ------------------------------</span>
+<span class="hljs-comment">// KSS Documentation</span>
+<span class="hljs-comment">// ------------------------------</span>
 
-// Document you new variables
+<span class="hljs-comment">// Document you new variables</span>
 
 </code></pre>
-<h2 id="recommended-vendors">Recommended vendors</h2>
+<h2>Recommended vendors</h2>
 <ul>
-<li><a href="https://github.com/edenspiekermann/a11y-dialog">https://github.com/edenspiekermann/a11y-dialog</a></li>
-<li><a href="https://a11yproject.com/patterns">https://a11yproject.com/patterns</a></li>
+<li>https://github.com/edenspiekermann/a11y-dialog</li>
+<li>https://a11yproject.com/patterns</li>
 </ul>
-<h2 id="resources">Resources</h2>
+<h2>Resources</h2>
 <ul>
-<li><a href="https://marijohannessen.github.io/color-contrast-checker/">https://marijohannessen.github.io/color-contrast-checker/</a></li>
-<li><a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></li>
-<li><a href="https://github.com/brunopulis/awesome-a11y">https://github.com/brunopulis/awesome-a11y</a></li>
-<li><a href="https://github.com/Khan/tota11y">https://github.com/Khan/tota11y</a></li>
-<li><a href="https://github.com/github/lightcrawler">https://github.com/github/lightcrawler</a></li>
+<li>https://marijohannessen.github.io/color-contrast-checker/</li>
+<li>https://www.w3.org/TR/WCAG20/</li>
+<li>https://github.com/brunopulis/awesome-a11y</li>
+<li>https://github.com/Khan/tota11y</li>
+<li>https://github.com/github/lightcrawler</li>
 </ul>
 
           </div>

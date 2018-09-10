@@ -800,13 +800,13 @@
                 <div class="kss-section__description"><blockquote>
 <p>The most straightforward way to use SassScript is to use variables. Variables begin with dollar signs, and are set like CSS properties</p>
 </blockquote>
-<p><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables">http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables</a>_</p>
+<p>http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_</p>
 <blockquote>
 <p>Maps represent an association between keys and values, where keys are used to look up values.
 They make it easy to collect values into named groups and access those groups dynamically.
-They have no direct parallel in CSS, although they&#39;re syntactically similar to media query expressions:</p>
+They have no direct parallel in CSS, although they're syntactically similar to media query expressions:</p>
 </blockquote>
-<p><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps">http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps</a></p>
+<p>http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps</p>
 <p>Sass variables helps to define patterns in the project. They are the core of this project.
 Most of this variables are define in maps and can be call using a function link to this map.</p>
 </div>
@@ -1160,9 +1160,9 @@ Most of this variables are define in maps and can be call using a function link 
 <p><code>font-sizes($font-size, $true-val:false)</code> which will output by default the CSS variable</p>
 <p>Usage of font-size():</p>
 <ul>
-<li><code>font-family(2)</code> =&gt; <code>var(--font-size-2)</code> If $use-css-var = true</li>
-<li><code>font-family(2)</code> =&gt; <code>2.5rem</code> If $use-css-var = false</li>
-<li><code>font-family(2, true)</code> =&gt; <code>2.5rem</code></li>
+<li><code>font-size(2)</code> =&gt; <code>var(--font-size-2)</code> If $use-css-var = true</li>
+<li><code>font-size(2)</code> =&gt; <code>2.5rem</code> If $use-css-var = false</li>
+<li><code>font-size(2, true)</code> =&gt; <code>2.5rem</code></li>
 </ul>
 </div>
                                </div>
@@ -1210,12 +1210,11 @@ Most of this variables are define in maps and can be call using a function link 
                   <a class="kss-btn kss-toggle-fullscreen" href="item-variables-icons.html" target="_blank">Open in new window</a>
                 </div>
                  
-                <div class="kss-section__description"><p>Icon font are generated using <a href="https://icomoon.io/">https://icomoon.io/</a> (See vendors)</p>
+                <div class="kss-section__description"><p>Icon font are generated using https://icomoon.io/ (See vendors)</p>
 <p>Icomoon give sass files but these ones use variables. For better maintainability and theming the vendor have been changed so it uses a map instead of variables.</p>
 <p>Variables can be converted to a map using this tool:</p>
-<p><p data-height="700" data-theme-id="dark" data-slug-hash="QQgGNb" data-default-tab="result" data-user="vinceumo" data-embed-version="2" data-pen-title="Convert Sass variables to map" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/QQgGNb/">Convert Sass variables to map</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p></p>
+<p data-height="700" data-theme-id="dark" data-slug-hash="QQgGNb" data-default-tab="result" data-user="vinceumo" data-embed-version="2" data-pen-title="Convert Sass variables to map" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/QQgGNb/">Convert Sass variables to map</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
 <p>Icons can be called in the sass project using the functions:</p>
 <p><code>icon($icon, $true-val:false)</code> which will output by default the CSS variable, You will need to set the font family as <code>font-family: font-family(icon)</code></p>
 <p>Usage of icon():</p>
@@ -1249,10 +1248,10 @@ Most of this variables are define in maps and can be call using a function link 
                 <div class="kss-section__description"><p>(Markup copy and paste from icomoon example)</p>
 <p>Icons can be call in the markup using a class .icon-{target}, such as <code>&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;</code> . It can be call using span or div as well.</p>
 <p>When using an icon in css you can use the function icon(target), such as icon(star).</p>
-<p><div class="icomoon-demo"></p>
-<p><div class="clearfix mhl ptl"></p>
-<p><h1 class="mvm mtn fgc1">Grid Size: 14</h1></p>
-<p><div class="glyph fs1">
+<div class="icomoon-demo">
+<div class="clearfix mhl ptl">
+<h1 class="mvm mtn fgc1">Grid Size: 14</h1>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-star">
         </span>
@@ -1266,8 +1265,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-star-o">
         </span>
@@ -1281,8 +1280,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-user">
         </span>
@@ -1296,8 +1295,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-check">
         </span>
@@ -1311,8 +1310,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-close">
         </span>
@@ -1326,8 +1325,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-remove">
         </span>
@@ -1341,8 +1340,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-times">
         </span>
@@ -1356,8 +1355,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-search-plus">
         </span>
@@ -1371,8 +1370,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-search-minus">
         </span>
@@ -1386,8 +1385,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-trash-o">
         </span>
@@ -1401,8 +1400,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-home">
         </span>
@@ -1416,8 +1415,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-download">
         </span>
@@ -1431,8 +1430,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-inbox">
         </span>
@@ -1446,8 +1445,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-bookmark">
         </span>
@@ -1461,8 +1460,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-print">
         </span>
@@ -1476,8 +1475,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-chevron-left">
         </span>
@@ -1491,8 +1490,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-chevron-right">
         </span>
@@ -1506,8 +1505,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-chevron-up">
         </span>
@@ -1521,8 +1520,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-chevron-down">
         </span>
@@ -1536,8 +1535,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-twitter">
         </span>
@@ -1551,8 +1550,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-facebook">
         </span>
@@ -1566,8 +1565,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-facebook-f">
         </span>
@@ -1581,8 +1580,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-github">
         </span>
@@ -1596,8 +1595,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-chain">
         </span>
@@ -1611,8 +1610,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-link">
         </span>
@@ -1626,8 +1625,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-envelope">
         </span>
@@ -1641,8 +1640,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-linkedin">
         </span>
@@ -1656,8 +1655,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-rotate-left">
         </span>
@@ -1671,8 +1670,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-undo">
         </span>
@@ -1686,8 +1685,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-angle-left">
         </span>
@@ -1701,8 +1700,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-angle-right">
         </span>
@@ -1716,8 +1715,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-angle-up">
         </span>
@@ -1731,8 +1730,8 @@ Most of this variables are define in maps and can be call using a function link 
         <span class="unit pvs fgc1">liga: </span>
         <input type="text" readonly value="" class="liga unitRight" />
     </div>
-</div></p>
-<p><div class="glyph fs1">
+</div>
+<div class="glyph fs1">
     <div class="clearfix bshadow0 pbs">
         <span class="icon-angle-down">
         </span>
@@ -1748,7 +1747,7 @@ Most of this variables are define in maps and can be call using a function link 
     </div>
 </div>
 </div>
-</div></p>
+</div>
 <style>
 .icomoon-demo h1{font-size:1.5em;font-weight:400}.icomoon-demo small{font-size:.66666667em}.icomoon-demo a{color:#e74c3c;text-decoration:none}.icomoon-demo a:focus,.icomoon-demo a:hover{box-shadow:0 1px #e74c3c}.icomoon-demo .bshadow0,.icomoon-demo input{box-shadow:inset 0 -2px #e7e7e7;padding:0}.icomoon-demo input:hover{box-shadow:inset 0 -2px #ccc}.icomoon-demo fieldset,.icomoon-demo input{font-family:sans-serif;font-size:1em;margin:0!important;padding:0!important;border:0!important}.icomoon-demo input{color:inherit;line-height:1.5;height:1.5em;padding:.25em 0}.icomoon-demo input:focus{outline:0;box-shadow:inset 0 -2px #449fdb}.icomoon-demo .glyph{font-size:16px;width:15em;padding-bottom:1em;margin-right:4em;margin-bottom:1em;float:left;overflow:hidden}.icomoon-demo .liga{width:80%;width:calc(100% - 2.5em)}.icomoon-demo .talign-right{text-align:right}.icomoon-demo .talign-center{text-align:center}.icomoon-demo .bgc1{background:#f1f1f1}.icomoon-demo .fgc1{color:#999}.icomoon-demo .fgc0{color:#000}.icomoon-demo p{margin-top:1em;margin-bottom:1em}.icomoon-demo .mvm{margin-top:.75em;margin-bottom:.75em}.icomoon-demo .mtn{margin-top:0}.icomoon-demo .mal,.icomoon-demo .mtl{margin-top:1.5em}.icomoon-demo .mal,.icomoon-demo .mbl{margin-bottom:1.5em}.icomoon-demo .mal,.icomoon-demo .mhl{margin-left:1.5em;margin-right:1.5em}.icomoon-demo .mhmm{margin-left:1em;margin-right:1em}.icomoon-demo .mls{margin-left:.25em}.icomoon-demo .ptl{padding-top:1.5em}.icomoon-demo .pbs,.icomoon-demo .pvs{padding-bottom:.25em}.icomoon-demo .pts,.icomoon-demo .pvs{padding-top:.25em}.icomoon-demo .unit{float:left}.icomoon-demo .unitRight{float:right}.icomoon-demo .size1of2{width:50%}.icomoon-demo .size1of1{width:100%}.icomoon-demo .clearfix:after,.icomoon-demo .clearfix:before{content:" ";display:table}.icomoon-demo .clearfix:after{clear:both}.icomoon-demo .hidden-true{display:none}.icomoon-demo .textbox0{width:3em;background:#f1f1f1;padding:.25em .5em;line-height:1.5;height:1.5em}.icomoon-demo #testDrive{display:block;padding-top:24px;line-height:1.5}.icomoon-demo .fs0{font-size:16px}.icomoon-demo .fs1{font-size:28px}
 </style></div>
@@ -1858,7 +1857,7 @@ Most of this variables are define in maps and can be call using a function link 
 <ul>
 <li><code>z(main-navigation)</code> =&gt; <code>10</code></li>
 </ul>
-<p><p data-height="500" data-theme-id="dark" data-slug-hash="MmQrbK" data-default-tab="css,result" data-user="vinceumo" data-embed-version="2" data-pen-title="z-index Sass management" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/MmQrbK/">z-index Sass management</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p></p>
+<p data-height="500" data-theme-id="dark" data-slug-hash="MmQrbK" data-default-tab="css,result" data-user="vinceumo" data-embed-version="2" data-pen-title="z-index Sass management" class="codepen">See the Pen <a href="https://codepen.io/vinceumo/pen/MmQrbK/">z-index Sass management</a> by Vincent Humeau (<a href="https://codepen.io/vinceumo">@vinceumo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></div>
                                </div>
 

@@ -63,8 +63,8 @@ $font-sizes: (
 // `font-sizes($font-size, $true-val:false)` which will output by default the CSS variable
 //
 // Usage of font-size():
-// * `font-family(2)` => `var(--font-size-2)` If $use-css-var = true
-// * `font-family(2)` => `2.5rem` If $use-css-var = false
-// * `font-family(2, true)` => `2.5rem`
+// * `font-size(2)` => `var(--font-size-2)` If $use-css-var = true
+// * `font-size(2)` => `2.5rem` If $use-css-var = false
+// * `font-size(2, true)` => `2.5rem`
 //
 // Styleguide Variables.fontsizes
