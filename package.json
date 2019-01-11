@@ -4,11 +4,10 @@
   "private": true,
   "gulp": {
     "src": {
-      "js": "content/js/custom/",
-      "jsVendors": "content/js/vendors/",
-      "scss": "content/scss/",
-      "images": "content/images/",
-      "dist": "dist/"
+      "js": "./content/js/",
+      "scss": "./content/scss/",
+      "images": "./content/images/",
+      "dist": "./dist/"
     },
     "selectors": {
       "all": "*",
@@ -24,24 +23,24 @@
     }
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^7.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-bundle-assets": "^2.29.0",
-    "gulp-clean-css": "^3.9.0",
+    "gulp-clean-css": "^4.0.0",
     "gulp-purge-sourcemaps": "^1.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-strip-comments": "^2.5.1",
-    "gulp-util": "^3.0.8",
-    "kss": "^3.0.0-beta.24",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-comments": "^2.5.2",
+    "kss": "^3.0.0-beta.25",
     "lazypipe": "^1.0.2",
-    "onchange": "^3.3.0",
-    "require-dir": "^0.3.1"
+    "onchange": "^5.2.0",
+    "require-dir": "^1.2.0"
   },
   "scripts": {
     "startBrowserSync": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
