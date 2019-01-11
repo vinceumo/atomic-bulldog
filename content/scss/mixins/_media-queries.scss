@@ -23,6 +23,12 @@
   }
 }
 
+@mixin ie-only {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+  }
+}
+
 // ------------------------------
 // KSS Documentation
 // ------------------------------
@@ -68,3 +74,19 @@
 // * `@media only screen and (max-width: 36em) {h2{font-size: 2.5rem;}`
 //
 // Styleguide Mixins.max
+
+// ------------------------------
+/////////////////////////////////
+// ------------------------------
+
+// ie-only{}
+//
+// `@include ie-only{}`
+//
+// Usage:
+// * `h2{@include ie-only{display: none;}`
+// 
+// Output:
+// * `@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {h2{display: none;}}`
+//
+// Styleguide Mixins.ie-only
