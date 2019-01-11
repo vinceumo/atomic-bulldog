@@ -486,14 +486,20 @@
             </li>
             
             <li class="">
+              <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-ie-only">
+                7.2 - ie-only{}
+              </a>
+            </li>
+            
+            <li class="">
               <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-max">
-                7.2 - max(#{bp(your bp)}){}
+                7.3 - max(#{bp(your bp)}){}
               </a>
             </li>
             
             <li class="">
               <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-min">
-                7.3 - min(#{bp(your bp)}){}
+                7.4 - min(#{bp(your bp)}){}
               </a>
             </li>
              
@@ -649,14 +655,20 @@
                 </a>
               </li>
               <li class="">
-                <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-max">
+                <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-ie-only">
                   <span class="kss-nav__ref">7.2 - </span>
+                  <span class="kss-nav__name">ie-only{}</span>
+                </a>
+              </li>
+              <li class="">
+                <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-max">
+                  <span class="kss-nav__ref">7.3 - </span>
                   <span class="kss-nav__name">max(#{bp(your bp)}){}</span>
                 </a>
               </li>
               <li class="">
                 <a class="kss-nav-link" href="section-mixins.html#kssref-mixins-min">
-                  <span class="kss-nav__ref">7.3 - </span>
+                  <span class="kss-nav__ref">7.4 - </span>
                   <span class="kss-nav__name">min(#{bp(your bp)}){}</span>
                 </a>
               </li>
@@ -760,18 +772,49 @@ They can even take arguments which allows you to produce a wide variety of style
                                </div>
 
            </section>
+                        <section class="kss-section" id="kssref-mixins-ie-only">
+
+              <div class="kss-section__content">
+                <a class="kss-section__permalink" href="#kssref-mixins-ie-only">
+                  <h2 class="kss-h2">
+                    <span class="kss-section__ref">7.2</span> -
+                    <span class="kss-section__name">ie-only{}</span>
+                  </h2>
+                </a>
+                <p class="kss-section__source">Source:
+                  <span>mixins/_media-queries.scss</span>, line
+                  <span>82</span>
+                </p>
+                <div>
+                  <button class="kss-btn kss-toggle-fullscreen">Toggle full screen</button>
+                  <a class="kss-btn kss-toggle-fullscreen" href="item-mixins-ie-only.html" target="_blank">Open in new window</a>
+                </div>
+                 
+                <div class="kss-section__description"><p><code>@include ie-only{}</code></p>
+<p>Usage:</p>
+<ul>
+<li><code>h2{@include ie-only{display: none;}</code></li>
+</ul>
+<p>Output:</p>
+<ul>
+<li><code>@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {h2{display: none;}}</code></li>
+</ul>
+</div>
+                               </div>
+
+           </section>
                         <section class="kss-section" id="kssref-mixins-max">
 
               <div class="kss-section__content">
                 <a class="kss-section__permalink" href="#kssref-mixins-max">
                   <h2 class="kss-h2">
-                    <span class="kss-section__ref">7.2</span> -
+                    <span class="kss-section__ref">7.3</span> -
                     <span class="kss-section__name">max(#{bp(your bp)}){}</span>
                   </h2>
                 </a>
                 <p class="kss-section__source">Source:
                   <span>mixins/_media-queries.scss</span>, line
-                  <span>52</span>
+                  <span>58</span>
                 </p>
                 <div>
                   <button class="kss-btn kss-toggle-fullscreen">Toggle full screen</button>
@@ -804,13 +847,13 @@ inside a mixin we will need to use sass interpolation, <code>#{bp()}</code>. Thi
               <div class="kss-section__content">
                 <a class="kss-section__permalink" href="#kssref-mixins-min">
                   <h2 class="kss-h2">
-                    <span class="kss-section__ref">7.3</span> -
+                    <span class="kss-section__ref">7.4</span> -
                     <span class="kss-section__name">min(#{bp(your bp)}){}</span>
                   </h2>
                 </a>
                 <p class="kss-section__source">Source:
                   <span>mixins/_media-queries.scss</span>, line
-                  <span>30</span>
+                  <span>36</span>
                 </p>
                 <div>
                   <button class="kss-btn kss-toggle-fullscreen">Toggle full screen</button>
