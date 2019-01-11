@@ -3,7 +3,7 @@
   "source": "",
   "mask": "*.scss",
   "placeholder": "[modifier]",
-  "destination": "../../dist/styleguide/",
+  "destination": "../../docs/styleguide/",
   "builder": "../kss_theme/",
   "css": [
     "../css/screen.css",

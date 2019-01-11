@@ -6,7 +6,7 @@
 
 Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It integrates Node KSS to automatically generate a live styleguide/pattern library.
 
-**Demo and default style**: https://vinceumo.github.io/atomic-bulldog-style-guide-demo/styleguide
+**Demo and default style**: https://vinceumo.github.io/atomic-bulldog/styleguide
 
 ## Table of content
 
@@ -51,16 +51,26 @@ npm run startAtomicBulldog
 
 This command can be change in package.json
 
-If you only wants to run KSS once:
+Other commands:
 
-```
-npm run kssBuild
-```
-
-If you only wants to run KSS on watch:
-
-```
+``` bash
+// Build kss styleguide
 npm run kssWatch
+
+// Watch kss styleguide
+npm run kssBuild
+
+// Build scss
+npm run gulp scssBuild
+
+// Watch scss
+npm run gulp scssWatch
+
+// Build js
+npm run gulp jsBuild
+
+// Watch js
+npm run gulp jsWatch
 ```
 
 

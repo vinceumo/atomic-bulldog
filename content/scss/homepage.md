@@ -8,21 +8,23 @@
 
 ## Table of content
 
-* [Introduction](#introduction)
-* [Setup Atomic Bulldog](#setup-atomic-bulldog)
-* [Atomic Design](#atomic-design)
- * [Atomic Design resources](#atomic-design-resources)
-* [Pattern styleguide (Node KSS)](#pattern-styleguide-node-kss-)
- * [KSS Config](#kss-config)  
- * [KSS documentation format](#kss-documentation-format)
- * [KSS resources](#kss-resources)
-* [Naming convention](#naming-convention)
-* [Project Structure](#project-structure)
-* [CSS custom properties (CSS variables) and Sass variables](#css-custom-properties-css-variables-and-sass-variables)
-  * [CSS variables](#css-variables)
-  * [SCSS variables](#scss-variables)
-* [Recommended vendors](#recommended-vendors)
-* [Resources](#resources)
+- [Table of content](#table-of-content)
+- [Introduction](#introduction)
+- [Setup Atomic Bulldog](#setup-atomic-bulldog)
+- [Atomic Design](#atomic-design)
+  - [Atomic Design resources](#atomic-design-resources)
+- [Pattern styleguide (Node KSS)](#pattern-styleguide-node-kss)
+  - [KSS Config](#kss-config)
+  - [KSS documentation format](#kss-documentation-format)
+  - [KSS resources](#kss-resources)
+- [Naming convention](#naming-convention)
+- [Project Structure](#project-structure)
+  - [Sass project structure:](#sass-project-structure)
+- [CSS custom properties (CSS variables) and Sass variables](#css-custom-properties-css-variables-and-sass-variables)
+  - [CSS variables](#css-variables)
+  - [SCSS variables](#scss-variables)
+- [Recommended vendors](#recommended-vendors)
+- [Resources](#resources)
 
 ## Introduction
 
@@ -48,16 +50,26 @@ npm run startAtomicBulldog
 
 This command can be change in package.json
 
-If you only wants to run KSS once:
+Other commands:
 
-```
-npm run kss
-```
-
-If you only wants to run KSS on watch:
-
-```
+``` bash
+// Build kss styleguide
 npm run kssWatch
+
+// Watch kss styleguide
+npm run kssBuild
+
+// Build scss
+npm run gulp scssBuild
+
+// Watch scss
+npm run gulp scssWatch
+
+// Build js
+npm run gulp jsBuild
+
+// Watch js
+npm run gulp jsWatch
 ```
 
 ## Atomic Design

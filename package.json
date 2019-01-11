@@ -7,7 +7,7 @@
       "js": "./content/js/",
       "scss": "./content/scss/",
       "images": "./content/images/",
-      "dist": "./dist/"
+      "dist": "./docs/"
     },
     "selectors": {
       "all": "*",
