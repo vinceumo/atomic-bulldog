@@ -4,14 +4,34 @@
 $color-prefix: --color-;
 $color-gray-prefix: --color-gray-;
 $color-themes: (
-  primary:
-    (
-      base: #4b7e9e,
-      dark: darken(#4b7e9e, 15%),
-      light: lighten(#4b7e9e, 20%),
-      transparent: transparentize(#4b7e9e, 0.5),
-      contrast: #ffffff
-    )
+  primary: (
+    base:
+      hsl(
+        var(--kssBrandColorH),
+        calc(var(--kssBrandColorS) * 1%),
+        calc(var(--kssBrandColorL) * 1%)
+      ),
+    dark:
+      hsl(
+        var(--kssBrandColorH),
+        calc(var(--kssBrandColorS) * 1%),
+        calc((var(--kssBrandColorL) - 15) * 1%)
+      ),
+    light:
+      hsl(
+        var(--kssBrandColorH),
+        calc(var(--kssBrandColorS) * 1%),
+        calc((var(--kssBrandColorL) + 20) * 1%)
+      ),
+    transparent:
+      hsla(
+        var(--kssBrandColorH),
+        calc(var(--kssBrandColorS) * 1%),
+        calc((var(--kssBrandColorL) + 20) * 1%),
+        0.5
+      ),
+    contrast: hsl(0, 0%, 100%)
+  )
 );
 
 $gray-themes: (
@@ -32,7 +52,7 @@ $gray-themes: (
 // Set color function
 // ------------------------------
 // retrieve color from map with Sass ie. `color(primary, base)`
-@function color($color-name, $color-variant:null, $true-val:false) {
+@function color($color-name, $color-variant: null, $true-val: false) {
   // if we enable css var
   @if $use-css-var == true {
     // we need to return the color value
@@ -40,10 +60,10 @@ $gray-themes: (
       // color variant is optional
       @if ($color-variant != null) {
         // map inception, need two deep
-        @return map-get(map-get($color-themes,$color-name),$color-variant);
+        @return map-get(map-get($color-themes, $color-name), $color-variant);
       } @else {
         // Default color
-        @return map-get(map-get($color-themes,$color-name), base);
+        @return map-get(map-get($color-themes, $color-name), base);
       } // if we're only returning the CSS4 variable
     } @else {
       // color variant is optional
@@ -59,14 +79,14 @@ $gray-themes: (
     // color variant is optional
     @if ($color-variant != null) {
       // map inception, need two deep
-      @return map-get(map-get($color-themes,$color-name),$color-variant);
+      @return map-get(map-get($color-themes, $color-name), $color-variant);
     } @else {
       // Default color
-      @return map-get(map-get($color-themes,$color-name), base);
+      @return map-get(map-get($color-themes, $color-name), base);
     }
   }
 }
-@function color-gray($gray-theme, $true-val:false) {
+@function color-gray($gray-theme, $true-val: false) {
   @if $use-css-var == true {
     @if $true-val == true {
       @return map-get($gray-themes, $gray-theme); // True Val

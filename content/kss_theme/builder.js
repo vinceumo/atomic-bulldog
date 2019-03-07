@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * This module is used to load the base KSS builder class needed by this builder
@@ -16,7 +16,6 @@
  * @module kss/builder/handlebars
  */
 
-
 // We want to extend kss-node's Handlebars builder so we can add options that
 // are used in our templates.
 let KssBuilderBaseHandlebars;
@@ -24,7 +23,7 @@ let KssBuilderBaseHandlebars;
 try {
   // In order for a builder to be "kss clone"-able, it must use the
   // require('kss/builder/path') syntax.
-  KssBuilderBaseHandlebars = require('kss/builder/base/handlebars');
+  KssBuilderBaseHandlebars = require("kss/builder/base/handlebars");
 } catch (e) {
   // The above require() line will always work.
   //
@@ -33,7 +32,7 @@ try {
   // which would allow node.js to find it with require('kss/anything'), forcing
   // you to write a long-winded comment and catch the error and try again using
   // a relative path.
-  KssBuilderBaseHandlebars = require('../base/handlebars');
+  KssBuilderBaseHandlebars = require("../base/handlebars");
 }
 
 /**
@@ -51,11 +50,70 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
     // Then tell kss which Yargs-like options this builder adds.
     this.addOptionDefinitions({
       title: {
-        group: 'Style guide:',
+        group: "Style guide:",
         string: true,
         multiple: false,
-        describe: 'Title of the style guide',
-        default: 'KSS Style Guide'
+        describe: "Title of the style guide",
+        default: "KSS Style Guide"
+      },
+      brandHsl: {
+        h: {
+          group: "Style guide:",
+          string: false,
+          multiple: false,
+          describe: "Hue brand color of the style guide",
+          default: "203"
+        },
+        s: {
+          group: "Style guide:",
+          string: false,
+          multiple: false,
+          describe: "Saturation brand color of the style guide",
+          default: "36"
+        },
+        l: {
+          group: "Style guide:",
+          string: false,
+          multiple: false,
+          describe: "Lightness brand color of the style guide",
+          default: "46"
+        }
+      }
+    });
+    this.addOptionDefinitions({
+      title: {
+        group: "Style guide:",
+        string: true,
+        multiple: false,
+        describe: "Title of the style guide",
+        default: "KSS Style Guide"
+      }
+    });
+    this.addOptionDefinitions({
+      brandColorHue: {
+        group: "Style guide:",
+        string: false,
+        multiple: false,
+        describe: "Hue brand color of the style guide",
+        default: "203"
+      }
+    });
+    this.addOptionDefinitions({
+      brandColorSaturation: {
+        group: "Style guide:",
+        string: false,
+        multiple: false,
+        describe: "Saturation brand color of the style guide",
+        default: "36"
+      }
+    });
+    this.addOptionDefinitions({
+      brandColorLightness: {
+        group: "Style guide:",
+        string: false,
+        multiple: false,
+        describe: "Lightness brand color of the style guide",
+        default: "46"
       }
     });
   }
@@ -88,39 +146,41 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
       // Allow a builder user to override the {{section [reference]}} helper
       // with the --extend setting. Since a user's handlebars helpers are
       // loaded first, we need to check if this helper already exists.
-      if (!this.Handlebars.helpers['section']) {
+      if (!this.Handlebars.helpers["section"]) {
         /**
          * Returns a single section, found by its reference
          * @param  {String} reference The reference to search for.
          */
-        this.Handlebars.registerHelper('section', function(reference, options) {
+        this.Handlebars.registerHelper("section", function(reference, options) {
           let section = options.data.root.styleGuide.sections(reference);
 
-          return section.toJSON ? options.fn(section.toJSON()) : options.inverse('');
+          return section.toJSON
+            ? options.fn(section.toJSON())
+            : options.inverse("");
         });
       }
 
       // Allow a builder user to override the {{eachSection [query]}} helper
       // with the --extend setting.
-      if (!this.Handlebars.helpers['eachSection']) {
+      if (!this.Handlebars.helpers["eachSection"]) {
         /**
          * Loop over a section query. If a number is supplied, will convert into
          * a query for all children and descendants of that reference.
          * @param  {Mixed} query The section query
          */
-        this.Handlebars.registerHelper('eachSection', function(query, options) {
+        this.Handlebars.registerHelper("eachSection", function(query, options) {
           let styleGuide = options.data.root.styleGuide;
 
           if (!query.match(/\bx\b|\*/g)) {
-            query = query + '.*';
+            query = query + ".*";
           }
           let sections = styleGuide.sections(query);
           if (!sections.length) {
-            return options.inverse('');
+            return options.inverse("");
           }
 
           let l = sections.length;
-          let buffer = '';
+          let buffer = "";
           for (let i = 0; i < l; i += 1) {
             buffer += options.fn(sections[i].toJSON());
           }

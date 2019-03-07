@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="kss-assets/css/atomic-bulldog-kss-theme.min.css"> {{{styles}}}
 </head>
 
-<body class="kss-body">
+<body class="kss-body"
+  style="--kssBrandColorH: {{options.brandColorHue}}; --kssBrandColorS: {{options.brandColorSaturation}}; --kssBrandColorL: {{options.brandColorLightness}};">
 
   <div class="kss-page-container">
     <div class="kss-burger-container">
       <button class="kss-burger"><span class="burger-icon"><span></span></span></button>
     </div>
-    
+
     <div class="kss-sidebar">
       <div class="kss-brand">
         {{!-- <img src="kss-assets/img/logo.png"> --}}
@@ -29,16 +30,17 @@
         <ul id="kss-search__list">
           {{#each menu}}
           <li>
-            <a class="kss-nav-link {{#if isActive}}is-active{{/if}} {{#if children}}has-children{{/if}}" href="section-{{referenceURI}}.html">
+            <a class="kss-nav-link {{#if isActive}}is-active{{/if}} {{#if children}}has-children{{/if}}"
+              href="section-{{referenceURI}}.html">
               {{referenceNumber}} - {{header}}
             </a>
             {{#if children}} {{#each children}}
-            <li class="{{#if isGrandChild}}is-grandchild{{/if}}">
-              <a class="kss-nav-link" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
-                {{referenceNumber}} - {{header}}
-              </a>
-            </li>
-            {{/each}} {{/if}}
+          <li class="{{#if isGrandChild}}is-grandchild{{/if}}">
+            <a class="kss-nav-link" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+              {{referenceNumber}} - {{header}}
+            </a>
+          </li>
+          {{/each}} {{/if}}
           </li>
           {{/each}}
         </ul>
@@ -54,7 +56,8 @@
           </li>
           {{#each menu}}
           <li>
-            <a class="kss-nav-link {{#if isActive}}is-active{{/if}} {{#if children}}has-children{{/if}}" href="section-{{referenceURI}}.html">
+            <a class="kss-nav-link {{#if isActive}}is-active{{/if}} {{#if children}}has-children{{/if}}"
+              href="section-{{referenceURI}}.html">
               <span class="kss-nav__ref">{{referenceNumber}} - </span>
               <span class="kss-nav__name">{{header}}</span>
             </a>
@@ -112,7 +115,8 @@
                 </p>
                 <div>
                   <button class="kss-btn kss-toggle-fullscreen">Toggle full screen</button>
-                  <a class="kss-btn kss-toggle-fullscreen" href="item-{{referenceURI}}.html" target="_blank">Open in new window</a>
+                  <a class="kss-btn kss-toggle-fullscreen" href="item-{{referenceURI}}.html" target="_blank">Open in new
+                    window</a>
                 </div>
                 {{/if}} {{#if description}}
                 <div class="kss-section__description">{{{description}}}</div>
@@ -157,8 +161,8 @@
               {{/if}} {{#if @first}}
           </header>
           {{else}}
-          </section>
-          {{/if}} {{/each}} {{/if}}
+        </section>
+        {{/if}} {{/each}} {{/if}}
         </section>
         <!-- /documentation. -->
       </div>

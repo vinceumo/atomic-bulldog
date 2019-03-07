@@ -1,5 +1,9 @@
 {
   "title": "Atomic Bulldog - UI/pattern library",
+  "brandColorHue": 203,
+  "brandColorSaturation": 36,
+  "brandColorLightness": 46,
+  "logo": "https://image.ibb.co/mmS6Hc/Artboard_1.png",
   "source": "",
   "mask": "*.scss",
   "placeholder": "[modifier]",

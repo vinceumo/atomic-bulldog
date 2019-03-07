@@ -7,6 +7,9 @@ const rename = require("gulp-rename");
 const purgeSourcemaps = require("gulp-purge-sourcemaps");
 const config = require("../package").gulp;
 
+// const inputScss = `content/kss_theme/scss/${config.selectors.scss}`; //KSS builder
+// const output = `content/kss_theme/kss-assets/css`; //KSS builder
+
 const inputScss = `${config.src.scss}${config.selectors.scss}`;
 const output = `${config.src.dist}/css`;
 
