@@ -28,10 +28,6 @@ Atomic Bulldog is a Scss(Sass) boilerplate base on atomic design methodology. It
   - [:blue_book: Recommended vendors](#bluebook-recommended-vendors)
     - [:pencil2: TODO](#pencil2-todo)
   - [Changelog](#changelog)
-  - [[1.1.0] - 2018-04-06](#110---2018-04-06)
-    - [Added](#added)
-    - [Changed](#changed)
-    - [Fixed](#fixed)
 
 ## :floppy_disk: Setup Atomic Bulldog
 
@@ -53,7 +49,7 @@ This command can be change in package.json
 
 Other commands:
 
-``` bash
+```bash
 // Build kss styleguide
 npm run kssWatch
 
@@ -72,7 +68,6 @@ npm run gulp jsBuild
 // Watch js
 npm run gulp jsWatch
 ```
-
 
 ## :boom: Atomic Design
 
@@ -98,13 +93,13 @@ Example:
 
 ### :blue_book: Atomic Design resources
 
-* Brad Frost has written some great resources on the Atomic design methodology:
-  * [Atomic design article](http://bradfrost.com/blog/post/atomic-web-design/)
-  * [Atomic design book](http://atomicdesign.bradfrost.com/)
-  * [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE) :video_camera:
-* Other resources:
-  * [10 reasons you should be using Atomic Design](https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771)
-  * [Atomic design: how to design systems of components](https://uxdesign.cc/atomic-design-how-to-design-systems-of-components-ab41f24f260e)
+- Brad Frost has written some great resources on the Atomic design methodology:
+  - [Atomic design article](http://bradfrost.com/blog/post/atomic-web-design/)
+  - [Atomic design book](http://atomicdesign.bradfrost.com/)
+  - [Atomic Design: Create Design Systems, Not Pages](https://www.youtube.com/watch?v=wcAl0VXYBGE) :video_camera:
+- Other resources:
+  - [10 reasons you should be using Atomic Design](https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771)
+  - [Atomic design: how to design systems of components](https://uxdesign.cc/atomic-design-how-to-design-systems-of-components-ab41f24f260e)
 
 ## :books: Pattern styleguide (Node KSS)
 
@@ -155,19 +150,19 @@ The basic format for KSS documentation can be best explained in an example:
 // Styleguide Atoms.button
 ```
 
-* The first line will be the title of the section, in this example it is `button`.
-* Then we have the description of the element, we can add markup as well (i.e to embed a video or caniuse table).
-* We can show an example we a snippet by adding `markup:` following by the element's HTML.
-* `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
-* Finally the last line allows organize this section, In this example, it will be in Atoms/Button.
+- The first line will be the title of the section, in this example it is `button`.
+- Then we have the description of the element, we can add markup as well (i.e to embed a video or caniuse table).
+- We can show an example we a snippet by adding `markup:` following by the element's HTML.
+- `{{modifier_class}}` allow to show several example of the block with different classes here .is-primary, .is-secondary etc.
+- Finally the last line allows organize this section, In this example, it will be in Atoms/Button.
 
 ### :blue_book: KSS resources
 
-* [Build a Style Guide Straight from Sass](https://css-tricks.com/build-style-guide-straight-sass/)
-* [kss-node](https://github.com/kss-node/kss-node)
-* [Knyle Style Sheets Documentation](https://github.com/kss-node/kss/blob/spec/SPEC.md)
-* [Knyle Style Sheets](https://github.com/kneath/kss)
-* [Great style guide examples](http://styleguides.io/)
+- [Build a Style Guide Straight from Sass](https://css-tricks.com/build-style-guide-straight-sass/)
+- [kss-node](https://github.com/kss-node/kss-node)
+- [Knyle Style Sheets Documentation](https://github.com/kss-node/kss/blob/spec/SPEC.md)
+- [Knyle Style Sheets](https://github.com/kneath/kss)
+- [Great style guide examples](http://styleguides.io/)
 
 ## :triangular_ruler: Naming convention
 
@@ -231,7 +226,7 @@ Atomic Bulldog:
 |         \---icomoon
 ```
 
-##  :books: CSS custom properties (CSS variables) and Sass variables
+## :books: CSS custom properties (CSS variables) and Sass variables
 
 ### CSS variables
 
@@ -247,7 +242,7 @@ Sass Maps are used so it is easier to create a pattern and to follow it.
 
 Variables files follow this pattern:
 
-``` scss
+```scss
 // ------------------------------
 // Sass Variables
 // ------------------------------
@@ -256,7 +251,7 @@ Variables files follow this pattern:
 $variable-prefix: --variable-;
 
 // Map declaration
-$variables : (
+$variables: (
   var1: value1,
   var2: value2,
   var3: value3
@@ -268,7 +263,7 @@ $variables : (
 
 // We link the map and prefix to a function
 
-@function functionToCallVariables($variable, $true-val:false) {
+@function functionToCallVariables($variable, $true-val: false) {
   @if $use-css-var == true {
     @if $true-val == true {
       @return map-get($variables, $variable); // True Val
@@ -304,47 +299,20 @@ $variables : (
 // ------------------------------
 
 // Document you new variables
-
 ```
-
 
 ## :blue_book: Recommended vendors
 
-* https://github.com/edenspiekermann/a11y-dialog
-* https://a11yproject.com/patterns
+- https://github.com/edenspiekermann/a11y-dialog
+- https://a11yproject.com/patterns
 
 ### :pencil2: TODO
 
-* [ ] TODO list before going live
-* [ ] Fork create themes using AB
-* [ ] Create a gh-page for this project
+- [ ] TODO list before going live
+- [ ] Fork create themes using AB
+- [ ] Create a gh-page for this project
 
 ## Changelog
 
 This section only show the last changelog
 To see all changelog ==> https://github.com/vinceumo/atomic-bulldog/blob/master/CHANGELOG.md
-
-## [1.1.0] - 2018-04-06
-
-### Added
-
-* Responsive images examples
-* Background cover classes
-* Overlay atom
-* Screen reader atom
-* Global box shadow style
-* Display utilities
-* FLex utilities
-* Section spacer atom
-* Font families modifiers
-
-### Changed
-
-* KSS builder to atomic-bulldog-kss-theme 1.0.1
-* Inputs style
-* Global focus
-* Container sizing
-
-### Fixed
-
-* Buttons vertical alignment 
