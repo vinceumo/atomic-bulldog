@@ -116,6 +116,15 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         default: "46"
       }
     });
+    this.addOptionDefinitions({
+      logo: {
+        group: "Style guide:",
+        string: true,
+        multiple: false,
+        describe: "Logo of the style guide",
+        default: "https://image.ibb.co/mmS6Hc/Artboard_1.png"
+      }
+    });
   }
 
   /**

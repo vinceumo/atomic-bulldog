@@ -1,18 +1,18 @@
-.list-inline{
+.list-inline {
   padding-left: 0;
   list-style: none;
 
-  li{
+  li {
     margin-right: spacer(3);
     display: inline-block;
 
-    @include last(1){
+    @include last(1) {
       margin-right: 0;
     }
   }
 }
 
-.list-unstyle{
+.list-unstyled {
   padding-left: 0;
   list-style: none;
 }
@@ -89,10 +89,10 @@
 /////////////////////////////////
 // ------------------------------
 
-// list unstyle
+// list unstyled
 //
 // Markup:
-// <ul class="list-unstyle">
+// <ul class="list-unstyled">
 //   <li>item 1</li>
 //   <li>item 2
 //     <ul>
@@ -105,4 +105,4 @@
 //   <li>item 4</li>
 // </ul>
 //
-// Styleguide Atoms.Typography.list.list-unstyle
+// Styleguide Atoms.Typography.list.list-unstyled

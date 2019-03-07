@@ -1,5 +1,6 @@
 .kss-page-container {
-  &:not(.kss-is-full-width){
+  background-color: color-gray(0);
+  &:not(.kss-is-full-width) {
     @supports (display: grid) {
       @include min(bp(lg)) {
         display: grid;
@@ -8,47 +9,48 @@
           "sidebar main"
           "sidebar footer";
         grid-gap: spacer(4);
-  
+
         .kss-sidebar {
           grid-area: sidebar;
         }
-  
+
         .kss-main {
           grid-area: main;
+          background-color: color-gray(0);
         }
-  
+
         .kss-footer {
           grid-area: footer;
           align-self: end;
         }
       }
     }
-  
+
     @supports not (display: grid) {
       @supports (display: flex) {
         @include min(bp(lg)) {
           display: flex;
-  
+
           .kss-sidebar {
             width: 320px;
           }
-  
+
           .kss-main {
             flex: 1;
           }
         }
       }
     }
-  
+
     @media screen and (-ms-high-contrast: active),
       screen and (-ms-high-contrast: none) {
       @include min(bp(lg)) {
         display: flex;
-  
+
         .kss-sidebar {
           width: 320px;
         }
-  
+
         .kss-main {
           flex: 1;
         }
@@ -64,17 +66,16 @@
         grid-template-areas:
           "main"
           "sidebar"
-          "footer";  
+          "footer";
         .kss-sidebar {
           grid-area: sidebar;
           height: auto;
-
         }
-  
+
         .kss-main {
           grid-area: main;
         }
-  
+
         .kss-footer {
           grid-area: footer;
           align-self: end;
@@ -86,12 +87,12 @@
       width: 100vw;
       padding: 0;
 
-      .kss-section__example-container{
+      .kss-section__example-container {
         border-left: 0;
         border-right: 0;
         border-radius: 0;
 
-        .kss-section__examples{
+        .kss-section__examples {
           padding: 0;
         }
       }
