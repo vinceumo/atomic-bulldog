@@ -1,5 +1,6 @@
 .kss-page-container {
   background-color: color-gray(0);
+
   &:not(.kss-is-full-width) {
     @supports (display: grid) {
       @include min(bp(lg)) {
