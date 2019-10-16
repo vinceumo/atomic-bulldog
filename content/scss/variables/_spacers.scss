@@ -19,15 +19,11 @@ $spacers: (
 // ------------------------------
 // Set spacer function
 // ------------------------------
-@function spacer($spacer, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($spacers, $spacer); //True Val
-    } @else {
-      @return var(#{$spacer-prefix}#{$spacer}); //CSS Var
-    }
+@function spacer($val, $true-val:false) {
+  @if $use-css-var and not $true-val {
+    @return var(#{$spacer-prefix}#{$val}); //CSS Var
   } @else {
-    @return map-get($spacers, $spacer); //Disabled CSS Var
+    @return map-get($spacers, $val); //Disabled CSS Var
   }
 }
 
