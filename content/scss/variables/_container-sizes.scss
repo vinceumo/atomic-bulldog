@@ -12,15 +12,11 @@ $container-sizes: (
 // ------------------------------
 // Set container function
 // ------------------------------
-@function container($container-size, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($container-sizes, $container-size); //True Val
-    } @else {
-      @return var(#{$container-size-prefix}#{$container-size}); //CSS Var
-    }
+@function container($val, $true-val:false) {
+  @if $use-css-var and not $true-val {
+    @return var(#{$container-size-prefix}#{$val}); 
   } @else {
-    @return map-get($container-sizes, $container-size); //Disabled CSS Var
+    @return map-get($container-sizes, $val);
   }
 }
 
