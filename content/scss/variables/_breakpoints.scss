@@ -18,15 +18,11 @@ $breakpoints: (
   @return em(map-get($breakpoints, $bp));
 }
 
-@function bp-var($bp, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($breakpoints, $bp); //True Val
-    } @else {
-      @return var(#{$bp-prefix}#{$bp}); //CSS Var
-    }
+@function bp-var($val, $true-val: false) {
+  @if $use-css-var and not $true-val {
+    @return var(#{$bp-prefix}#{$val}); //CSS Var
   } @else {
-    @return map-get($breakpoints, $bp); //Disabled CSS Var
+    @return map-get($breakpoints, $val); //Disabled CSS Var
   }
 }
 
