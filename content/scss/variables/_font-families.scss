@@ -18,15 +18,11 @@ $font-families: (
 // ------------------------------
 // Set function
 // ------------------------------
-@function font-family($font-family, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($font-families, $font-family); //True Val
-    } @else {
-      @return var(#{$font-family-prefix}#{$font-family}); //CSS Var
-    }
+@function font-family($val, $true-val: false) {
+  @if $use-css-var and not $true-val{
+    @return var(#{$font-family-prefix}#{$val}); //CSS Var
   } @else {
-    @return map-get($font-families, $font-family); //Disabled CSS Var
+    @return map-get($font-families, $val); //Disabled CSS Var
   }
 }
 
