@@ -96,50 +96,27 @@ $gray-themes: (
 // Set color function
 // ------------------------------
 // retrieve color from map with Sass ie. `color(primary, base)`
-@function color($color-name, $color-variant:null, $true-val:false) {
-  // if we enable css var
-  @if $use-css-var == true {
-    // we need to return the color value
-    @if $true-val == true {
-      // color variant is optional
-      @if ($color-variant != null) {
-        // map inception, need two deep
-        @return map-get(map-get($color-themes,$color-name),$color-variant);
-      } @else {
-        // Default color
-        @return map-get(map-get($color-themes,$color-name), base);
-      } // if we're only returning the CSS4 variable
+@function color($val, $color-variant: null, $true-val: false) {
+  @if $use-css-var and not $true-val  {
+    @if ($color-variant != null) {
+      @return var(#{$color-prefix}#{$val}-#{$color-variant});
     } @else {
-      // color variant is optional
-      @if ($color-variant != null) {
-        // map inception, need two names
-        @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
-      } @else {
-        // Default color, one name
-        @return var(#{$color-prefix}#{$color-name}-base);
-      }
+      @return var(#{$color-prefix}#{$val}-base);
     }
   } @else {
-    // color variant is optional
     @if ($color-variant != null) {
-      // map inception, need two deep
-      @return map-get(map-get($color-themes,$color-name),$color-variant);
+      @return map-deep-get($color-themes, $val, $color-variant); // map inception, need two deep
     } @else {
-      // Default color
-      @return map-get(map-get($color-themes,$color-name), base);
+      @return map-deep-get($color-themes, $val, base); // Default color
     }
   }
 }
-@function color-gray($gray-theme, $true-val:false) {
-  @if $use-css-var == true {
-    @if $true-val == true {
-      @return map-get($gray-themes, $gray-theme); // True Val
-    } @else {
-      @return var(#{$color-gray-prefix}#{$gray-theme});
-      // CSS Var
-    }
+
+@function color-gray($val, $true-val: false) {
+  @if $use-css-var and not $true-val {
+    @return var(#{$color-gray-prefix}#{$val}); // CSS Var
   } @else {
-    @return map-get($gray-themes, $gray-theme); // Disabled CSS Var
+    @return map-get($gray-themes, $val); // Disabled CSS Var
   }
 }
 
