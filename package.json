@@ -1,52 +1,31 @@
 {
+  "name": "atomic-bulldog",
   "version": "1.0.0",
-  "name": "atomic.bulldog",
-  "private": true,
-  "gulp": {
-    "src": {
-      "js": "./content/js/",
-      "scss": "./content/scss/",
-      "images": "./content/images/",
-      "dist": "./docs/"
-    },
-    "selectors": {
-      "all": "*",
-      "js": "**/*.js",
-      "css": "**/*.css",
-      "scss": "**/*.scss",
-      "html": "**/*.html",
-      "images": "**/*.{png,jpg,jpeg,gif,ico,svg}",
-      "fonts": "**/*.{eot,svg,ttf,woff,woff2}"
-    },
-    "main": {
-      "server": "index.js"
-    }
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-bundle-assets": "^2.29.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-purge-sourcemaps": "^1.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-strip-comments": "^2.5.2",
-    "kss": "^3.0.0-beta.25",
-    "lazypipe": "^1.0.2",
-    "onchange": "^5.2.0",
-    "require-dir": "^1.2.0"
-  },
+  "description": "",
   "scripts": {
-    "startBrowserSync": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
-    "kssWatch": "onchange \"content/scss/**/*.scss\" -- npm run kssBuild",
-    "kssBuild": "kss --config content/scss/kss-config.json",
-    "gulp": "gulp",
-    "startAtomicBulldog": "start npm run kssWatch && start npm run gulp scssWatch && npm run startBrowserSync"
-  }
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinceumo/atomic-bulldog.git"
+  },
+  "keywords": [],
+  "author": "vincent.humeau@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinceumo/atomic-bulldog/issues"
+  },
+  "homepage": "https://github.com/vinceumo/atomic-bulldog#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/web-components": "^6.0.28",
+    "babel-loader": "^8.1.0",
+    "lit-html": "^1.3.0",
+    "react-is": "^17.0.1"
+  },
+  "dependencies": {}
 }

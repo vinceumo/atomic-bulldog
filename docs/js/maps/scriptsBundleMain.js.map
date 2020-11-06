@@ -1,1 +1,0 @@
-{"version":3,"sources":["content/js/global.js"],"names":["hello","console","log"],"mappings":"AAAA,YAAA,IAAMA,OAAQ,aACdC,SAAQC,IAAIF","file":"scriptsBundleMain.js","sourcesContent":["const hello = \"hello world\";\r\nconsole.log(hello);"],"sourceRoot":"/source/"}
